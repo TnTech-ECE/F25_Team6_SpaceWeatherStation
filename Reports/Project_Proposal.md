@@ -9,37 +9,37 @@
 
 ### **Background**
 
-Modern society depends heavily on reliable communication and navigation systems, ranging from critical infrastructure to everyday Global Navigation Satellite Systems (GNSS)-enabled devices. Yet, these systems are constantly influenced by the ionosphere, a dynamic region of Earth’s upper atmosphere that can refract, delay, or disrupt radio signals. The most important parameter used to describe ionospheric effects is TEC. TEC refers to the total number of electrons present along a path between a signal transmitter and receiver. By definition, TEC is the integral of the electron density $N(s)$ along a path $ds$ between points $A$ and $B$ [1]:
+&nbsp; &nbsp; &nbsp; &nbsp; Modern society depends heavily on reliable communication and navigation systems, ranging from critical infrastructure to everyday Global Navigation Satellite Systems (GNSS)-enabled devices. Yet, these systems are constantly influenced by the ionosphere, a dynamic region of Earth’s upper atmosphere that can refract, delay, or disrupt radio signals. The most important parameter used to describe ionospheric effects is TEC. TEC refers to the total number of electrons present along a path between a signal transmitter and receiver. By definition, TEC is the integral of the electron density $N(s)$ along a path $ds$ between points $A$ and $B$ [1]:
 
 $$
 \text{TEC} = \int_A^B N(s) \, ds
 $$
 
-By convention, the measurement of a total electron content unit (TECU) is defined as follows:
+&nbsp; &nbsp; &nbsp; &nbsp; By convention, the measurement of a total electron content unit (TECU) is defined as follows:
 
 $$
 1~\text{TECU} = 10^{16}~\text{electrons/m}^2
 $$
 
-TEC varies considerably with time of day, geographic location, season, solar cycle, solar activity, geomagnetic storms, and atmospheric disturbances. The free electrons that make up TEC are concentrated in the ionosphere, roughly 80–600 km above Earth’s surface. In the ionosphere, atoms are ionized primarily by extreme ultraviolet (EUV) and x-ray solar radiation. The resulting electron density changes continuously with solar radiation and geomagnetic conditions. Additional disturbances, such as atmospheric waves and scintillation, further contribute to its variability. This dynamic behavior can both enhance long-distance radio communication and cause impairments such as delays, fading, scintillation, and even data loss [2][3][4]. Consequently, there is a strong demand for consistent measurement of electron content globally.
+&nbsp; &nbsp; &nbsp; &nbsp; TEC varies considerably with time of day, geographic location, season, solar cycle, solar activity, geomagnetic storms, and atmospheric disturbances. The free electrons that make up TEC are concentrated in the ionosphere, roughly 80–600 km above Earth’s surface. In the ionosphere, atoms are ionized primarily by extreme ultraviolet (EUV) and x-ray solar radiation. The resulting electron density changes continuously with solar radiation and geomagnetic conditions. Additional disturbances, such as atmospheric waves and scintillation, further contribute to its variability. This dynamic behavior can both enhance long-distance radio communication and cause impairments such as delays, fading, scintillation, and even data loss [2][3][4]. Consequently, there is a strong demand for consistent measurement of electron content globally.
 
-Due to the ionosphere being a plasma medium, the refractive index affects radio wave propagation. At high radio frequencies (HF), refraction caused by electrons can allow a radio signal to propagate over the horizon of the Earth, increasing communication range. However, TEC can also cause distortion and fading, resulting in data loss. At very high radio frequencies (VHF) and above, including GNSS, ionospheric effects appear as signal delays, phase shifts, and scintillation [1]. These disruptions reduce the accuracy and reliability of positioning, navigation, and timing (PNT) services critical to aviation, maritime, and telecommunication systems. To mitigate or take advantage of the effects of TEC, its levels must be accounted for during radio transmission.
+&nbsp; &nbsp; &nbsp; &nbsp; Due to the ionosphere being a plasma medium, the refractive index affects radio wave propagation. At high radio frequencies (HF), refraction caused by electrons can allow a radio signal to propagate over the horizon of the Earth, increasing communication range. However, TEC can also cause distortion and fading, resulting in data loss. At very high radio frequencies (VHF) and above, including GNSS, ionospheric effects appear as signal delays, phase shifts, and scintillation [1]. These disruptions reduce the accuracy and reliability of positioning, navigation, and timing (PNT) services critical to aviation, maritime, and telecommunication systems. To mitigate or take advantage of the effects of TEC, its levels must be accounted for during radio transmission.
 
-As more information becomes available for TEC analysis, accuracy and predictability will increase, leading to more effective ways of transmitting signals. In addition, a wealth of TEC data provides more opportunity for innovation within emerging fields related to ionospheric conditions.
+&nbsp; &nbsp; &nbsp; &nbsp; As more information becomes available for TEC analysis, accuracy and predictability will increase, leading to more effective ways of transmitting signals. In addition, a wealth of TEC data provides more opportunity for innovation within emerging fields related to ionospheric conditions.
 
-The scope required to build a TEC measurement system encompasses many fields of learning within engineering. A single person interested in building such a system has a high likelihood of becoming overwhelmed due to the complexity involved. This necessitates having a team of individuals to research and distill the information into a condensed process, allowing hobbyists to mitigate the time and expertise needed to complete a functional TEC measurement system.
+&nbsp; &nbsp; &nbsp; &nbsp; The scope required to build a TEC measurement system encompasses many fields of learning within engineering. A single person interested in building such a system has a high likelihood of becoming overwhelmed due to the complexity involved. This necessitates having a team of individuals to research and distill the information into a condensed process, allowing hobbyists to mitigate the time and expertise needed to complete a functional TEC measurement system.
 
-A major limiting factor to widespread involvement in measuring TEC is the expense of required equipment. Thus, the goal of this project is to create a replicable, open-source, affordable system that enables technically inclined hobbyists to observe TEC.
+&nbsp; &nbsp; &nbsp; &nbsp; A major limiting factor to widespread involvement in measuring TEC is the expense of required equipment. Thus, the goal of this project is to create a replicable, open-source, affordable system that enables technically inclined hobbyists to observe TEC.
 
-One way to measure TEC is to compute the time delay between two signals transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $N$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$ [1]. Equivalently, it can also be expressed as an added term in the measured pseudorange $S$:
+&nbsp; &nbsp; &nbsp; &nbsp; One way to measure TEC is to compute the time delay between two signals transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $N$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$ [1]. Equivalently, it can also be expressed as an added term in the measured pseudorange $S$:
 
 $$
 S = \rho - 40.31 f^2 \int_A^B N \, ds = \rho - 40.3 (\text{TEC}) f^2
 $$
 
-Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays. From the derivations below, we can see that the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity, and helps better determine errors in radio wave propagation through the ionosphere.
+&nbsp; &nbsp; &nbsp; &nbsp; Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays. From the derivations below, we can see that the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity, and helps better determine errors in radio wave propagation through the ionosphere.
 
-The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the x-axis of an orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1]:
+&nbsp; &nbsp; &nbsp; &nbsp; The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the x-axis of an orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1]:
 
 $$
 n^2 = 1 - 
@@ -64,9 +64,9 @@ Y_T = \frac{\omega_T}{\omega}, \quad
 Z = \frac{\omega_C}{\omega}
 $$
 
-Here, $\omega$ is the angular frequency of the carrier wave from the signal transmitter. Analogously, to the rest of the angular frequencies, $\omega_N$ is the angular frequency of the plasma, which is calculated by the formula $\omega_N^2 = \frac{N e^2}{\epsilon_0 m_e}$, with electron density $N$, electronic charge $e$, vacuum dielectric permittivity $\epsilon_0$, and electronic mass $m_e$, $\omega_H$ is the cyclotron angular frequency of free electrons, which is calculated by the formula $\omega_H = \frac{B_0 |e|}{m_e}$, with magnetic induction $B_0$, $\omega_T$ is the transverse component of $\omega_H$, and $\omega_L$ is the longitudinal component of $\omega_H$, defined as $\omega_T = \omega_H \sin \theta$ and $\omega_L = \omega_H \cos \theta$, and finally, $\omega_C$ is the angular frequency of collisions between electrons and heavy particles [1].
+&nbsp; &nbsp; &nbsp; &nbsp; Here, $\omega$ is the angular frequency of the carrier wave from the signal transmitter. Analogously, to the rest of the angular frequencies, $\omega_N$ is the angular frequency of the plasma, which is calculated by the formula $\omega_N^2 = \frac{N e^2}{\epsilon_0 m_e}$, with electron density $N$, electronic charge $e$, vacuum dielectric permittivity $\epsilon_0$, and electronic mass $m_e$, $\omega_H$ is the cyclotron angular frequency of free electrons, which is calculated by the formula $\omega_H = \frac{B_0 |e|}{m_e}$, with magnetic induction $B_0$, $\omega_T$ is the transverse component of $\omega_H$, and $\omega_L$ is the longitudinal component of $\omega_H$, defined as $\omega_T = \omega_H \sin \theta$ and $\omega_L = \omega_H \cos \theta$, and finally, $\omega_C$ is the angular frequency of collisions between electrons and heavy particles [1].
 
-Under certain conditions, the collisions of heavy particles can be neglected ($Z \approx 0$). By expanding Equation (4) using a Taylor series and neglecting the influence of the magnetic field ($\theta \approx 0$), the ionospheric refractive index simplifies to:
+&nbsp; &nbsp; &nbsp; &nbsp; Under certain conditions, the collisions of heavy particles can be neglected ($Z \approx 0$). By expanding Equation (4) using a Taylor series and neglecting the influence of the magnetic field ($\theta \approx 0$), the ionospheric refractive index simplifies to:
 
 $$
 n = 1 - X^2 = 1 - \frac{f_N^2}{f^2}
@@ -74,7 +74,7 @@ $$
 
 Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 
-To facilitate comparison of electron concentration in satellite trajectories with different elevation angles (slant TEC, sTEC), it is sometimes necessary to convert TEC values into their vertical equivalent (TECv). This represents the total number of electrons in a column perpendicular to the ground, under the thin-layer assumption of the ionosphere at a maximum altitude of 350 km. Accurate conversion from sTEC to TECv is essential for standardizing measurements, enabling meaningful integration into ionospheric models. Achieving this requires a robust, integrated system of hardware and software, and a dedicated team to research and implement the solution.
+&nbsp; &nbsp; &nbsp; &nbsp; To facilitate comparison of electron concentration in satellite trajectories with different elevation angles (slant TEC, sTEC), it is sometimes necessary to convert TEC values into their vertical equivalent (TECv). This represents the total number of electrons in a column perpendicular to the ground, under the thin-layer assumption of the ionosphere at a maximum altitude of 350 km. Accurate conversion from sTEC to TECv is essential for standardizing measurements, enabling meaningful integration into ionospheric models. Achieving this requires a robust, integrated system of hardware and software, and a dedicated team to research and implement the solution.
 
 
 #### **Specifications**
@@ -217,6 +217,7 @@ To facilitate comparison of electron concentration in satellite trajectories wit
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
