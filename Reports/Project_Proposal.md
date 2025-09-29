@@ -35,7 +35,7 @@ $$
 
 
 $$
-S = \rho - 40.3 \frac{1}{f^2} \int_{A}^{B} N \ ds = \rho - 40.3 \frac{\text{TEC}}{f^2}
+S = \rho - 40.3 \frac{1}{f^2} \int_{A}^{B} N \, ds = \rho - 40.3 \frac{\text{TEC}}{f^2}
 $$
 &nbsp; &nbsp; &nbsp; &nbsp; Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays. From the derivations below, we can see that the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity, and helps better determine errors in radio wave propagation through the ionosphere.
 
@@ -217,6 +217,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
