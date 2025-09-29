@@ -33,10 +33,10 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp; One way to measure TEC is to compute the time delay between two signals transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $N$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$ [1]. Equivalently, it can also be expressed as an added term in the measured pseudorange $S$:
 
-$$
-S = \rho - 40.31 f^2 \int_A^B N \, ds = \rho - 40.3 (\text{TEC}) f^2
-$$
 
+$$
+S = \rho - 40.3 \frac{1}{f^2} \int_{A}^{B} N \ ds = \rho - 40.3 \frac{\text{TEC}}{f^2}
+$$
 &nbsp; &nbsp; &nbsp; &nbsp; Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays. From the derivations below, we can see that the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity, and helps better determine errors in radio wave propagation through the ionosphere.
 
 &nbsp; &nbsp; &nbsp; &nbsp; The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the x-axis of an orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1]:
@@ -217,6 +217,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
