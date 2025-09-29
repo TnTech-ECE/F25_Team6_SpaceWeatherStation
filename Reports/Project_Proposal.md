@@ -15,7 +15,7 @@ $$
 \text{TEC} = \int_A^B N(s) \, ds
 $$
 
-&nbsp; &nbsp; &nbsp; &nbsp; By convention, the measurement of a total electron content unit (TECU) is defined as follows:
+By convention, the measurement of a total electron content unit (TECU) is defined as follows:
 
 $$
 1~\text{TECU} = 10^{16}~\text{electrons/m}^2
@@ -217,6 +217,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
