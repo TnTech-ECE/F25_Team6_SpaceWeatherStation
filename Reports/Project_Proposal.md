@@ -42,7 +42,8 @@ Here, $\rho$ is the distance between the satellite and receiver excluding atmosp
 The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the x-axis of an orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1]:
 
 $$
-n^2 = 1 - X(1 - iZ) - Y_T^2 (1 - X - iZ)^2 \pm \sqrt{Y_T^4 (1 - X - iZ)^2 + Y_L^2}
+n^2 = 1 - X (1 - i Z) - Y_T^2 \left( 1 - X - i Z \right)^2 \pm 
+\sqrt{ Y_T^4 \left( 1 - X - i Z \right)^4 + Y_L^2 }
 $$
 
 Where
@@ -208,3 +209,4 @@ To facilitate comparison of electron concentration in satellite trajectories wit
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
