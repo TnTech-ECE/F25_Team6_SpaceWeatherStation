@@ -1,9 +1,9 @@
 <h1 style="font-size:40px;">F25_Team 6_SpaceWeatherStation</h1>
 
 ## **Introduction**
-&nbsp; &nbsp; &nbsp; &nbsp; The goal of this project is to create a working prototype capable of measuring total electron content (TEC) in the ionosphere. The design shall be simple yet functional, affordable yet durable. The intention is to establish a foundational framework of hardware and software for hobbyists interested in measuring TEC. The project aims to create accessibility for the hobbyist both intellectually and financially, while maintaining flexibility for personal modifications. Team 6 seeks to develop a dynamic database that supports hobbyists worldwide in creating, innovating, and educating in regard to TEC. 
+&nbsp; &nbsp; &nbsp; &nbsp; Global reliance on communication, navigation, and positioning systems makes society increasingly vulnerable to disturbances in the ionosphere, where total electron content (TEC) refracts, delays, and disrupts radio signals. These disturbances reduce the accuracy and effectiveness of global navigation satellite system (GNSS) services, disrupting critical infrastructure in aviation, maritime operations, telecommunications, and everyday devices. Although anticipation of TEC interference could be limited by large amounts of accurately observed data, existing monitoring systems are often costly, technically complex, stationary, and geographically limited. This creates a barrier to broader participation in ionospheric research and limits the availability of distributed TEC measurements needed for accurate modeling.  
 
-&nbsp; &nbsp; &nbsp; &nbsp; The scope of this proposal includes outlining the background of TEC by addressing what has been accomplished, what is currently underway, and what is planned. This will clarify the need for the project, identify limiting factors, and inform the project specifications to maintain focus. The proposal will then define what constitutes a successful outcome, supported by details regarding budget, available and required expertise, and a timeline of key milestones. Finally, the proposal will conclude with a discussion of the broader implications of successfully completing the project. 
+&nbsp; &nbsp; &nbsp; &nbsp; To address this challenge, Team 6 is developing a low-cost, modular, and replicable prototype capable of measuring TEC from dual-frequency GNSS signals. The system integrates an antenna, receiver, processing unit, and expandable modules within a single housing compartment to support mobility, while remaining under $1,000. Propagation of the prototype is supported by thorough documentation for seamless hobbyist replication. By normalizing access to TEC measurement, the project expands opportunities for education, grassroots research, and innovation. Moreover, it contributes to a distributed global database of ionospheric conditions, enhancing collective understanding of space weather and its implications for modern infrastructure. 
 
 ## **Formulating the Problem**
 
@@ -218,6 +218,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
