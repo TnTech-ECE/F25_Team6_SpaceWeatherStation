@@ -319,7 +319,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 | Battery with solar panel | 150 |
 | Magnetometer | 15  |
 | Waterproofing material | 40  |
-| **Total** | **920** |
+| **Total** | **930** |
 
 ### **Personnel**
 
@@ -386,6 +386,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
