@@ -278,7 +278,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 - The sum of all the system’s components shall be under $1,000.  
 
-### Testing Methodology
+#### Testing Methodology
 
 - Accuracy
     - Each iteration of Team 6’s prototype shall record data for a minimum of one hour. 
@@ -405,6 +405,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Blake Hudson: Broader Implications, Ethics, and Responsibility as Engineers, Resources, Specifications and Constraints
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 - Jackson Taylor: Background, Measures of Success
+
 
 
 
