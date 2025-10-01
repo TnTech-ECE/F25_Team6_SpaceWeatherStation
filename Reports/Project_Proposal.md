@@ -67,7 +67,7 @@ $$
 &nbsp; &nbsp; &nbsp; &nbsp; Under certain conditions, the collisions of heavy particles can be neglected ($Z \approx 0$). Likewise, by expanding Equation (4) using a Taylor series and neglecting the influence of the magnetic field ($\theta \approx 0$), the ionospheric refractive index can be simplified greatly into the following expression [1].
 
 $$
-n = 1 - X^2 = 1 - \frac{f_N_e^2}{2f^2} = 1 - \frac{40.3 \, N_e}{f^2} \quad (5)
+n = 1 - X^2 = 1 - \frac{f_{N_e}^2}{2 f^2} = 1 - \frac{40.3 \, N_e}{f^2} \quad (5)
 $$
 
 Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
@@ -348,6 +348,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
