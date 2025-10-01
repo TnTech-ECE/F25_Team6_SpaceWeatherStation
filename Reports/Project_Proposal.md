@@ -83,7 +83,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 has consulted with the customer and developed preliminary system specifications and constraints to guide the design. These are outlined in the following sections. 
 
-##### System Capabilities
+**System Capabilities**
 
 - The system shall use a dual-tuned antenna to receive two signals from GNSS satellites simultaneously to obtain direct measurements of TEC.  
 - The system shall feature a signal processing unit capable of converting received GNSS signals into meaningful measurements, such as TEC values. This may be implemented using a DSP module or equivalent hardware.  
@@ -94,35 +94,35 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - The system shall have a storage system to record collected data from all applicable sensors for later analysis.  
 - The system shall feature a reliable power source to enable continuous operation including battery and/or wall power.  
 
-##### Modularity and Expandability
+**Modularity and Expandability**
 
 - The system shall enable easy component replacement.  
 - The system shall offer multiple input ports to support user-driven expansions.  
 - The system may include additional sensors to further demonstrate modularity.  
 
-##### Physical Reliability
+**Physical Reliability**
 
 - The system shall be waterproof up to an IPx4 ingress protection rating, allowing it to withstand splashing water from any direction, though it is not designed to be submerged [5].  
 - The system shall be securely mounted to a base to prevent displacement during severe weather.  
 
-##### Documentation and Replicability
+**Documentation and Replicability**
 
 - Documentation of the design and build process shall be published, enabling enthusiasts to replicate the system at a cost below $1,000.  
 
 ### **Constraints**
-##### Regulatory Compliance
+**Regulatory Compliance**
 
 - The system shall meet all applicable regulatory requirements in its deployment region, including spectrum allocations for passive GNSS reception as defined by the International Telecommunication Union (ITU) [6], and local regulations governing unlicensed ISM band operation.  
 - The receiver shall conform to the signal structure specifications of the GNSS bands it supports to ensure compatibility and measurement reliability [7].  
 - For short-range wireless communication, the system shall operate within approved ISM bands and comply with the applicable regional standards for those frequencies.  
 
-##### Operational Guidelines
+**Operational Guidelines**
 
 - The system shall be designed for passive reception of satellite signals to perform TEC calculations.  
 - The system shall not transmit to satellites or external systems.  
 - The system may transmit collected data to a local host device, such as a personal computer at the deployment site, for storage or further processing.  
 
-##### Safety and Environmental Guidelines
+**Safety and Environmental Guidelines**
 
 - The system shall include protective circuitry and automatic shutdowns to prevent hazards from overcurrent, overvoltage, or overheating.  
 - The system shall pose no risks to users from sharp edges, fire, or unstable mounting.  
@@ -405,6 +405,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Blake Hudson: Broader Implications, Ethics, and Responsibility as Engineers, Resources, Specifications and Constraints
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 - Jackson Taylor: Background, Measures of Success
+
 
 
 
