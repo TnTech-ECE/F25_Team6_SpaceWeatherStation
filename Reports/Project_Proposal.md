@@ -130,13 +130,93 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 
 ## **Survey of Existing Solutions**
 
-&nbsp; &nbsp; &nbsp; &nbsp; Several existing solutions for TEC measurement have been developed in both the amateur radio and scientific communities. A notable initiative is the Personal Space Weather Station (PSWS), an active project coordinated through the Ham Radio Science Citizen Investigation (HamSCI) \[8\]. The PSWS is designed as a modular system with different teams responsible for developing and documenting specific modules. These modules include single-channel Doppler monitors for tracking ionospheric disturbances, as well as ground-based magnetometers for measuring variations in the Earth's magnetic field. At its core, the PSWS seeks to make space weather research accessible to both professional researchers and amateur radio operators. The broader goal is to understand how ionospheric activity influences radio wave propagation.
 
-&nbsp; &nbsp; &nbsp; &nbsp; Team 6 is in contact with Dr. Anthea Jane Coster, a principal research scientist at Massachusetts Institute of Technology (MIT). Dr. Coster specializes in the physics of the ionosphere, magnetosphere, thermosphere, space weather, GNSS positioning and measurement accuracy, and radio wave propagation. She and her colleagues developed the first real-time ionospheric monitoring system based on GPS \[9\]. She has recommended that Team 6 consider using u-blox positioning chips and modules, widely used in this area of research.
+Several existing solutions for TEC measurement have been developed in both the amateur radio and scientific communities. Team 6 has surveyed these solutions, identifying three systems that will particularly guide the design process.  
 
-&nbsp; &nbsp; &nbsp; &nbsp; A pertinent example of a low-cost GNSS based TEC measurement system utilizing u-blox positioning chip and module is the ScintPi 3.0, developed by Dr. Fabiano S. Rodrigues and Josemaria Gomez Socola \[10\]. Dr. Rodrigues, a professor of physics at University of Texas at Dallas (UTD), has extensive expertise in upper atmospheric physics, ionospheric electrodynamics, remote sensing, and GNSS studies. The ScintPi 3.0, built for approximately \$564, employs a GNSS antenna, u-blox GPS breakout boards, and a Raspberry Pi 3 Model B+ to gather scintillation measurements in two frequencies and estimates of the ionospheric TEC. The ScintPi 3.0 was compared against the commercial grade ionospheric GNSS monitoring reference receiver, the Septentrio PolaRx5S, which sells for approximately \$29,000 \[11\]. Results showed that the ScintPi 3.0 phase TEC measurements align closely with the phase TEC measurements provided by PolaRx5S.
+### HamSCI Personal Weather Station (PSWS)
 
-&nbsp; &nbsp; &nbsp; &nbsp; Team 6 has done a thorough investigation into existing solutions for TEC measurement and has highlighted two significant projects in this research area. In addition, Team 6 will continue to utilize all resources available to adaptively develop the system throughout the plan, design, and build process.
+The HamSCI PSWS is an active project coordinated through HamSCI, designed as a modular, low-cost system designed to enable ground-based measurements of the ionosphere [8]. Different teams develop specific modules, such as single-frequency Doppler monitors for ionospheric disturbances and ground magnetometers, which can be combined in multi-instrument setups. The data collected by individual PSWS units are aggregated into a central database for space science and space weather research. Each module is designed to be easily replicable by hobbyists, educators, and citizen scientists at a price between $100 and $1,000. The system fosters collaboration across several reputable institutions including MIT Haystack Observatory, National Science Foundation, and NASA, providing ionospheric data for research purposes. At its core, the PSWS seeks to make space weather research accessible to both professional researchers and amateur radio operators.  
+
+**Pros**  
+- Accessible price point ($100-$1,000)  
+- Community-driven development  
+- Modular architecture  
+- Established data network  
+
+**Cons**  
+- No dual-frequency GPS capability  
+- No direct TEC measurement  
+- Single-purpose modules  
+- No unified interface  
+
+**Gaps**  
+- No dual frequency GNSS TEC sensing  
+- Lack of integrated multi-sensor platforms  
+- Limited portability and deployment flexibility  
+
+**Takeaways**  
+- Cost-effective target: $100-$1,000  
+- Integrated multi-sensor platform  
+- Direct TEC measurement with dual-frequency GNSS signals  
+- Unified interface  
+- Modular design  
+- Collaboration with HamSCI  
+
+### Millstone Real-Time TEC Ionospheric Monitoring System
+
+Developed at MIT Lincoln Laboratory, this system uses dual-frequency GPS signals to measure TEC, supporting the Millstone Hill Observatory satellite-tracking radar. Measurements are gathered every three seconds for each satellite in view and processed through a Kalman filter [9]. It uses a T14100 GPS receiver capable of tracking four satellites simultaneously (L1: 1575.42 MHz, L2: 1227.6 MHz) [10]. The dual-frequency TEC correction reduced standard deviation at the radar from 5.3 m to 1.4 m [9].  
+
+**Pros**  
+- Real-time TEC measurements  
+- Dual-frequency GPS capability  
+- Proven performance  
+- Concurrent satellite monitoring  
+
+**Cons**  
+- Outdated hardware  
+- Limited portability  
+- Limited satellite tracking  
+
+**Gaps**  
+- Single-purpose system  
+- Limited accessibility  
+- Limited TEC measurement resolution  
+
+**Takeaways**  
+- Dual-frequency TEC benchmark  
+- Sample rate: 1 measurement every 3 seconds per satellite  
+- Concurrent satellite tracking  
+- Expert guidance available  
+
+### ScintPi 3.0: Low Cost GNSS Ionospheric Monitor
+
+A low-cost GNSS-based TEC measurement system using u-blox chips and a Raspberry Pi 3 Model B+, built for approximately $564 [12]. Validated against the commercial Septentrio PolaRx5S ($29,000), it reliably detects TEC and scintillation events. Deployed in Brazil, it captured equatorial plasma bubbles and other ionospheric irregularities [12].  
+
+**Pros**  
+- Low-cost design  
+- Dual-frequency TEC measurements  
+- Validated performance  
+- Multi-constellation support  
+- Easily deployable  
+- Supports citizen science and education  
+
+**Cons**  
+- Single-purpose design  
+- Hardware dependency  
+- Limited runtime  
+- Data redundancy  
+
+**Gaps**  
+- Limited time resolution  
+- Data redundancy  
+
+**Takeaways**  
+- Affordable benchmark  
+- Rapid deployment  
+- Multi-constellation capability  
+
+Team 6 has conducted a thorough investigation of existing TEC measurement solutions, highlighting three significant projects in this research area. The team will continue to leverage all available resources to adaptively develop the system throughout the planning, design, and build process. Insights from the survey have strongly influenced the project’s specifications and constraints, confirming feasibility, clarifying limitations, and defining key design priorities and preferences.
+
 
 ## **Measures of Success**
 
@@ -250,6 +330,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
