@@ -15,32 +15,28 @@ $$
 \text{TEC} = \int_A^B N_e(s) \ ds
 $$
 
+&nbsp; &nbsp; &nbsp; &nbsp; TEC varies considerably with time of day, geographic location, season, solar cycle, solar activity, geomagnetic storms, and atmospheric disturbances. The free electrons that make up TEC are concentrated in the ionosphere, roughly 80–600 km above Earth’s surface. In the ionosphere, atoms are ionized primarily by extreme ultraviolet (EUV) and x-ray solar radiation. The resulting electron density changes continuously with solar radiation and geomagnetic conditions. Additional disturbances, such as atmospheric waves and scintillation, further contribute to its variability. This dynamic behavior can both enhance long-distance radio communication and cause impairments such as delays, fading, scintillation, and even data loss [2][3][4]. Consequently, there is a strong demand for consistent measurement of electron content globally.
+
+&nbsp; &nbsp; &nbsp; &nbsp; Due to the ionosphere being a plasma medium, the refractive index affects radio wave propagation. At high radio frequencies (HF), refraction caused by electrons can allow a radio signal to propagate over the horizon of the earth, allowing for an increased range of communication. However, TEC can also cause distortion and fading in the signal at these frequencies, resulting in data loss. At very high radio frequencies (VHF) and above, including GNSS, ionospheric effects appear as signal delays, phase shifts, and scintillation [1]. These disruptions reduce the accuracy and reliability of positioning, navigation, and timing (PNT) services critical to aviation, maritime, and telecommunication systems.  
+
 &nbsp; &nbsp; &nbsp; &nbsp; By convention, the measurement of a total electron content unit (TECU) is defined as follows:
 
 $$
 1~\text{TECU} = 10^{16}~\text{electrons/m}^2
 $$
 
-&nbsp; &nbsp; &nbsp; &nbsp; TEC varies considerably with time of day, geographic location, season, solar cycle, solar activity, geomagnetic storms, and atmospheric disturbances. The free electrons that make up TEC are concentrated in the ionosphere, roughly 80–600 km above Earth’s surface. In the ionosphere, atoms are ionized primarily by extreme ultraviolet (EUV) and x-ray solar radiation. The resulting electron density changes continuously with solar radiation and geomagnetic conditions. Additional disturbances, such as atmospheric waves and scintillation, further contribute to its variability. This dynamic behavior can both enhance long-distance radio communication and cause impairments such as delays, fading, scintillation, and even data loss [2][3][4]. Consequently, there is a strong demand for consistent measurement of electron content globally.
+&nbsp; &nbsp; &nbsp; &nbsp; To mitigate or take advantage of the effects of TEC, its levels must be accounted for during radio transmission. As more information becomes available for TEC analysis, accuracy and predictability will increase, leading to more effective ways of transmitting signals. In addition, a wealth of TEC data provides more opportunity and interest for innovation to occur within emerging fields related to ionospheric conditions. 
 
-&nbsp; &nbsp; &nbsp; &nbsp; Due to the ionosphere being a plasma medium, the refractive index affects radio wave propagation. At high radio frequencies (HF), refraction caused by electrons can allow a radio signal to propagate over the horizon of the Earth, increasing communication range. However, TEC can also cause distortion and fading, resulting in data loss. At very high radio frequencies (VHF) and above, including GNSS, ionospheric effects appear as signal delays, phase shifts, and scintillation [1]. These disruptions reduce the accuracy and reliability of positioning, navigation, and timing (PNT) services critical to aviation, maritime, and telecommunication systems. To mitigate or take advantage of the effects of TEC, its levels must be accounted for during radio transmission.
-
-&nbsp; &nbsp; &nbsp; &nbsp; As more information becomes available for TEC analysis, accuracy and predictability will increase, leading to more effective ways of transmitting signals. In addition, a wealth of TEC data provides more opportunity for innovation within emerging fields related to ionospheric conditions.
-
-&nbsp; &nbsp; &nbsp; &nbsp; The scope required to build a TEC measurement system encompasses many fields of learning within engineering. A single person interested in building such a system has a high likelihood of becoming overwhelmed due to the complexity involved. This necessitates having a team of individuals to research and distill the information into a condensed process, allowing hobbyists to mitigate the time and expertise needed to complete a functional TEC measurement system.
-
-&nbsp; &nbsp; &nbsp; &nbsp; A major limiting factor to widespread involvement in measuring TEC is the expense of required equipment. Thus, the goal of this project is to create a replicable, open-source, affordable system that enables technically inclined hobbyists to observe TEC.
-
-&nbsp; &nbsp; &nbsp; &nbsp; One way to measure TEC is to compute the time delay between two signals transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $N$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$ [1]. Equivalently, it can also be expressed as an added term in the measured pseudorange $S$:
-
+&nbsp; &nbsp; &nbsp; &nbsp; One way to measure TEC is to compute the time delay between two signals being transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $n$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$. Equivalently, it can also be expressed as an added term in the measured pseudo-range $S$ [2].
 
 $$
-S = \rho - 40.3 \frac{1}{f^2} \int_{A}^{B} N \ ds = \rho - 40.3 \frac{\text{TEC}}{f^2}
+S = \rho - \int_A^B (n - 1) \, ds = \rho - 40.3 \frac{1}{f^2} \int_A^B N_e(s) \, ds = \rho - 40.3 \frac{\text{TEC}}{f^2}
 $$
 
-&nbsp; &nbsp; &nbsp; &nbsp; Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays. From the derivations below, we can see that the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity, and helps better determine errors in radio wave propagation through the ionosphere.
+Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays and $f$ is the frequency of the delayed signal. From the derivations below, we can see the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity. Additionally, the errors in radio wave propagation through the ionosphere can be better determined.
 
-&nbsp; &nbsp; &nbsp; &nbsp; The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the x-axis of an orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1]:
+&nbsp; &nbsp; &nbsp; &nbsp; The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the $x$-axis of the orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1].
+
 
 $$
 n^2 = 1 - 
@@ -67,34 +63,70 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp; Here, $\omega$ is the angular frequency of the carrier wave from the signal transmitter. Analogously, to the rest of the angular frequencies, $\omega_N$ is the angular frequency of the plasma, which is calculated by the formula $\omega_N^2 = \frac{N e^2}{\epsilon_0 m_e}$, with electron density $N$, electronic charge $e$, vacuum dielectric permittivity $\epsilon_0$, and electronic mass $m_e$, $\omega_H$ is the cyclotron angular frequency of free electrons, which is calculated by the formula $\omega_H = \frac{B_0 |e|}{m_e}$, with magnetic induction $B_0$, $\omega_T$ is the transverse component of $\omega_H$, and $\omega_L$ is the longitudinal component of $\omega_H$, defined as $\omega_T = \omega_H \sin \theta$ and $\omega_L = \omega_H \cos \theta$, and finally, $\omega_C$ is the angular frequency of collisions between electrons and heavy particles [1].
 
-&nbsp; &nbsp; &nbsp; &nbsp; Under certain conditions, the collisions of heavy particles can be neglected ($Z \approx 0$). By expanding Equation (4) using a Taylor series and neglecting the influence of the magnetic field ($\theta \approx 0$), the ionospheric refractive index simplifies to:
+
+&nbsp; &nbsp; &nbsp; &nbsp; Under certain conditions, the collisions of heavy particles can be neglected ($Z \approx 0$). Likewise, by expanding Equation (4) using a Taylor series and neglecting the influence of the magnetic field ($\theta \approx 0$), the ionospheric refractive index can be simplified greatly into the following expression [1].
 
 $$
-n = 1 - X^2 = 1 - \frac{f_N^2}{f^2}
+n = 1 - X^2 = 1 - \frac{f_p^2}{f^2} = 1 - \frac{40.3 \, N_e}{f^2}
 $$
 
 Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 
-&nbsp; &nbsp; &nbsp; &nbsp; To facilitate comparison of electron concentration in satellite trajectories with different elevation angles (slant TEC, sTEC), it is sometimes necessary to convert TEC values into their vertical equivalent (TECv). This represents the total number of electrons in a column perpendicular to the ground, under the thin-layer assumption of the ionosphere at a maximum altitude of 350 km. Accurate conversion from sTEC to TECv is essential for standardizing measurements, enabling meaningful integration into ionospheric models. Achieving this requires a robust, integrated system of hardware and software, and a dedicated team to research and implement the solution.
+&nbsp; &nbsp; &nbsp; &nbsp; To facilitate the comparison of the electron concentration in satellite trajectories with different elevation angles, known as slant TEC (sTEC), it is sometimes necessary to convert the TEC values into their vertical equivalent (TECv). This parameter represents the total number of electrons in a column perpendicular to the ground. This transformation is performed under the assumption that the ionosphere can be approximated as a thin layer compressed at a maximum altitude of 350 km. Accurately converting TEC measurements from sTEC into TECv is essential for standardizing measurements. Ionospheric data models often utilize TECv data as an alternative to sTEC, enabling meaningful comparison and integration into ionospheric models.  
 
+&nbsp; &nbsp; &nbsp; &nbsp; The scope required to build a TEC measurement system encompasses many fields of learning within engineering. A single person interested in building said system has a high likelihood of becoming overwhelmed due to the complexity involved. This necessitates having a team of individuals to research and distill the information into a condensed process. By this, a hobbyist can mitigate the time and expertise needed to complete a system capable of measuring TEC. 
+
+&nbsp; &nbsp; &nbsp; &nbsp;Another limiting factor to widespread involvement in measuring TEC is the expense of required equipment. Thus, the goal of this project is to create a replicable, open sourced, affordable system by which, hobbyists with some technical background, is enabled in their pursuit of observing TEC. 
 
 #### **Specifications**
 
-&nbsp; &nbsp; &nbsp; &nbsp; Team 6 aims to design and build a low-cost modular system with data logging to support continuous TEC data collection. The system will primarily use dual GNSS signals to gather TEC measurements in the ionosphere. These measurements will be validated against published ionospheric data. The system will log data at a rate appropriate for capturing significant variations in TEC while remaining efficient for storage and analysis. It will enable easy component replacement and offer multiple input ports to support user-driven expansions. Additional sensors may be included to further demonstrate modularity.
+Team 6 has consulted with the customer and developed preliminary system specifications and constraints to guide the design. These are outlined in the following sections. 
 
-&nbsp; &nbsp; &nbsp; &nbsp; For safe operation in changing weather, the system will be waterproof up to an IPx4 ingress protection rating, allowing it to withstand splashing water from any direction, though it is not designed to be submerged \[5\]. The system shall also be securely mounted to a base to prevent displacement during severe weather.
+## System Capabilities
 
-&nbsp; &nbsp; &nbsp; &nbsp; The system will feature a reliable power source to enable continuous operation including battery and/or wall power. A dual-tuned antenna will receive signals from GNSS satellites simultaneously and a processing unit will perform calculations, converting the data into meaningful values. A storage system will record the collected data for later analysis. At minimum, the system will include a dual-tuned antenna, a processing unit, and a storage system.
+- The system shall use a dual-tuned antenna to receive two signals from GNSS satellites simultaneously to obtain direct measurements of TEC.  
+- The system shall feature a signal processing unit capable of converting received GNSS signals into meaningful measurements, such as TEC values. This may be implemented using a DSP module or equivalent hardware.  
+- The system may include a signal monitoring capability that computes metrics such as signal-to-noise ratio (SNR), carrier-to-noise density (C/N), or equivalent measures to assess the reliability of received GNSS signals.  
+- The system may have the capability to measure ionospheric scintillation events.  
+- The system shall include a microcontroller or single-board computer to perform calculations, data logging, and interface management.  
+- The system shall log data at a rate appropriate for capturing significant variations in TEC while remaining efficient for storage and analysis. Currently, a frequency of one measurement every three seconds per satellite is being considered.  
+- The system shall have a storage system to record collected data from all applicable sensors for later analysis.  
+- The system shall feature a reliable power source to enable continuous operation including battery and/or wall power.  
 
-&nbsp; &nbsp; &nbsp; &nbsp; All interior circuitry shall be simulated and tested thoroughly throughout the design and build process. Documentation of the design and build process will be published enabling enthusiasts to replicate the system at a cost below \$1,000.
+## Modularity and Expandability
+
+- The system shall enable easy component replacement.  
+- The system shall offer multiple input ports to support user-driven expansions.  
+- The system may include additional sensors to further demonstrate modularity.  
+
+## Physical Reliability
+
+- The system shall be waterproof up to an IPx4 ingress protection rating, allowing it to withstand splashing water from any direction, though it is not designed to be submerged [5].  
+- The system shall be securely mounted to a base to prevent displacement during severe weather.  
+
+## Documentation and Replicability
+
+- Documentation of the design and build process shall be published, enabling enthusiasts to replicate the system at a cost below $1,000.  
 
 #### **Constraints**
+## Regulatory Compliance
 
-&nbsp; &nbsp; &nbsp; &nbsp; The system shall comply with all applicable regulatory requirements in the regions where it could be deployed. At a minimum, this includes compliance with international spectrum allocations defined by the International Telecommunication Union (ITU) for passive GNSS reception, and adherence to local wireless communication regulations for unlicensed ISM band operation \[6\]. Safety and environmental requirements shall follow internationally recognized standards for electronic equipment to ensure global replicability.
+- The system shall meet all applicable regulatory requirements in its deployment region, including spectrum allocations for passive GNSS reception as defined by the International Telecommunication Union (ITU) [6], and local regulations governing unlicensed ISM band operation.  
+- The receiver shall conform to the signal structure specifications of the GNSS bands it supports to ensure compatibility and measurement reliability [7].  
+- For short-range wireless communication, the system shall operate within approved ISM bands and comply with the applicable regional standards for those frequencies.  
 
-&nbsp; &nbsp; &nbsp; &nbsp; The system shall be designed for the purpose of receiving satellite signals to perform TEC calculations. No transmissions are made to satellites or external systems during the process. Consequently, the collection of TEC data constitutes passive reception and is permitted by international regulations. The receiver shall conform to the defined signal structure specifications of the GNSS bands it supports to ensure compatibility and measurement reliability \[7\]. For short range wireless communication, the system shall operate within approved ISM bands and comply with the applicable regional standards for those frequencies.
+## Operational Guidelines
 
-&nbsp; &nbsp; &nbsp; &nbsp; Public health and safety are of utmost concern. The system shall incorporate protective circuitry and automatic shutdowns to prevent hazards from overcurrent, overvoltage, or overheating. Additionally, the system shall pose no risks to users from sharp edges, fire, or unstable mounting.
+- The system shall be designed for passive reception of satellite signals to perform TEC calculations.  
+- The system shall not transmit to satellites or external systems.  
+- The system may transmit collected data to a local host device, such as a personal computer at the deployment site, for storage or further processing.  
+
+## Safety and Environmental Guidelines
+
+- The system shall include protective circuitry and automatic shutdowns to prevent hazards from overcurrent, overvoltage, or overheating.  
+- The system shall pose no risks to users from sharp edges, fire, or unstable mounting.  
+- Safety and environmental requirements shall comply with internationally recognized standards for electronic equipment.  
+
 
 ## **Survey of Existing Solutions**
 
@@ -218,6 +250,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
