@@ -238,20 +238,63 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 ## **Measures of Success**
 
-&nbsp; &nbsp; &nbsp; &nbsp; Team 6 aims to measure the success of the TEC measurement system based on four factors: accuracy, reliability, usability, and cost-effectiveness.
+Team 6 aims to measure the success of the TEC measurement system based on four factors: accuracy, reliability, usability and accessibility, and cost-effectiveness. Below are the definitions of these factors with respect to the system and specific success criteria within each factor. Additionally, a testing methodology section briefly describes how the prototype will be tested. 
 
-- Accuracy
-  - The system's ability to gather TEC data that has minimal deviation from the published TEC reference data.
-  - The system's ability to reliably and accurately gather repeated readings are under the same conditions.
-- Reliability
-  - The system's resilience to faults, including battery life tests when applicable, emergency shutdown procedures, and performance under various environmental conditions.
-  - The system's durability in running continuously
-- Usability
-  - The ease of replicability for hobbyists using reference materials provided by Team 6.
-  - The system's capability to be transportable.
-  - The system's modularity shall be for ease of adaptation, troubleshooting, and repairs.
-- Cost-Effectiveness
-  - A monetary goal of providing the system for under \$1,000.
+#### Accuracy
+
+The system's ability to gather TEC data with minimal deviation from published TEC reference data. 
+
+- TEC measurements shall be validated against published ionospheric data, with a deviation below 15%. 
+- Each set of TEC measurements taken shall be sufficiently large to confirm accuracy. Each set shall span at least 60 minutes of data.  
+- Team 6 is considering capturing a TEC measurement every 3 seconds per viewable satellite.
+- The system’s ability to reliably and accurately gather repeated readings under similar conditions.
+- Each of Team 6’s measured datasets will be cross-referenced with datasets previously measured in similar conditions, with a deviation below 15%.  
+
+#### Reliability
+
+The system’s resilience to faults, including emergency shutdown procedures and performance under various environmental conditions. 
+
+- The system shall be designed to withstand and operate during external temperature extremes (0 to 105 degrees Fahrenheit). 
+- The system shall automatically shut down when its core approaches an unsafe temperature, mitigating damage in the event of overheating and safely storing measured data. An interior thermal sensor shall initiate shutdown procedures. 
+- The system shall withstand and operate during moderate rainfall without damage.
+- The system’s ability to operate over extended periods of time.
+- The system shall be designed to last a minimum of 24 hours on battery life alone.
+- For use with a battery and solar panel in conjunction, it shall operate perpetually (assuming adequate data storage), given it receives at least 6 hours of solar charging a day.
+- The system shall be able to run indefinitely when connected to a continuous power source (assuming adequate data storage).  
+
+#### Usability and Accessibility
+
+The ease of replicability for hobbyists using reference materials provided by Team 6. 
+
+- All publications and open-sourced documentation shall be sufficiently detailed and up to supervisor's standards. 
+- Each component shall be easily accessible for purchase globally at the time of publication.
+- The system’s capability to be transportable.
+- The system shall be able to fit within a one cubic foot enclosure, excluding a mounting system.
+- The system shall weigh under 25 lbs.
+- The system’s modularity shall be for ease of adaptation, troubleshooting, and repairs.
+- The system shall consist of discrete components for streamlined repairs.
+- Team 6 is capable of demonstrating full modularity by exchanging components connected to the prototype.  
+
+#### Cost-Effectiveness
+
+The sum of all the system’s components shall be under $1,000.  
+
+### Testing Methodology
+
+#### Accuracy
+
+- Each iteration of Team 6’s prototype shall record data for a minimum of one hour. 
+- To represent improvement in measurement accuracy, all datasets gathered throughout the project lifecycle shall be compiled in a single document.  
+
+#### Reliability
+
+- Before testing a prototype’s resilience to environmental factors, the housing of the system shall be tested thoroughly.  
+- Each component of the system shall be thoroughly stress tested to confirm full functionality prior to extended field use.  
+
+#### Usability
+
+- The prototype shall be fully assembled and disassembled. This will evaluate the system’s mobility and ease of deployment.  
+
 
 ## **Resources**
 
@@ -348,6 +391,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
