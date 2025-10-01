@@ -345,7 +345,14 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 ## **Specific Implications**
 
-&nbsp; &nbsp; &nbsp; &nbsp; By developing a low-cost TEC measurement device, the project makes measuring TEC more accessible. Currently, large-scale ionospheric monitoring systems can be cost prohibitive, limiting widespread development. A system built under \$1,000 drastically reduces expense. By making it more affordable, researchers, universities, and others alike can replicate and contribute to space weather research and monitoring more easily. Making this method of data collection increasingly accessible means more geographically distributed measurements, expanding the availability of ionospheric data for increased accuracy in modeling.
+&nbsp; &nbsp; &nbsp; &nbsp;Affordability is perhaps the most transformative aspect of this project, because cost is the single greatest barrier to widespread TEC monitoring. Commercial-grade systems often cost tens of thousands of dollars, restricting their deployment to government institutions and well-funded laboratories. By delivering a design that remains under $1,000, this project dramatically lowers the financial threshold for participation. Affordability directly enables scalability. Instead of a handful of centralized monitoring stations, hundreds of low-cost devices can be deployed across the globe. This normalization of TEC measurement ensures broader geographic coverage, critical for improving the accuracy of ionospheric models. Moreover, affordability aligns with educational and grassroots initiatives, allowing schools, universities, and hobbyists to contribute to scientific data collection in ways previously inaccessible. 
+
+Unlike traditional rigid and specialized TEC measurement systems, Team 6’s prototype is intentionally structured for components to be exchanged or additional components included without redesigning the entire prototype. This modular architecture benefits both the scope and design process. From a development perspective, modularity allows individual subsystems, such as the dual-frequency receiver, processing unit, or auxiliary sensors. Components shall be chosen and tested independently, simplifying troubleshooting and iterative refinement. For a hobbyist, modularity ensures the system is adaptable to future needs, enabling the integration of additional sensors to broaden the scope of collected data. This adaptability positions the system to be more than a static design, paving the way for ongoing experimentation, innovation, and collaborative research. 
+
+Making this system accessible ensures the device can be used and understood by a wide audience, not just specialists. Accessibility in this context includes clear documentation, open-source software, and the use of commonly available hardware. This empowers a diverse user base of university researchers, educators, and hobbyists alike to replicate, deploy, and contribute data with confidence. For customers and end users, accessibility means inclusion in advanced space weather research, removing technical barriers. They can meaningfully participate in a global scientific effort, with the device serving as both a research tool and educational platform. Emphasizing accessibility strengthens the project’s ability to generate widespread impact. As more people use the device, more geographically distributed data is collected, adding significant value to the global community. 
+
+The uniqueness of this project lies in its ability to bridge the gap between high-end scientific instrumentation and practical, community-driven research tools. By simultaneously solving the challenges of modularity, accessibility, and affordability, the system invites an unprecedented level of participation in TEC measurement. This ensures ionospheric monitoring can evolve beyond a specialized, resource-limited activity into a globally distributed, collaborative effort. In turn, this may ultimately lead to better models, more accurate predictions, and greater resilience of the technologies that depend on reliable GNSS services.
+
 
 
 ## **Broader Implications, Ethics, and Responsibility as Engineers**
@@ -386,6 +393,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
