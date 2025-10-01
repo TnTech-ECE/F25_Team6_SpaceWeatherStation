@@ -277,7 +277,7 @@ The ease of replicability for hobbyists using reference materials provided by Te
 
 #### Cost-Effectiveness
 
-The sum of all the system’s components shall be under $1,000.  
+- The sum of all the system’s components shall be under $1,000.  
 
 ### Testing Methodology
 
@@ -391,6 +391,7 @@ The sum of all the system’s components shall be under $1,000.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
