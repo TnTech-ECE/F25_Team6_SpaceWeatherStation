@@ -70,7 +70,7 @@ $$
 n = 1 - \frac{X}{2} = 1 - \frac{f_{N_e}^2}{2 f^2} = 1 - \frac{40.3 \ N_e}{f^2} \quad (5)
 $$
 
-Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
+Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N_e$.
 
 &nbsp; &nbsp; &nbsp; &nbsp; To facilitate the comparison of the electron concentration in satellite trajectories with different elevation angles, known as slant TEC (sTEC), it is sometimes necessary to convert the TEC values into their vertical equivalent (TECv). This parameter represents the total number of electrons in a column perpendicular to the ground. This transformation is performed under the assumption that the ionosphere can be approximated as a thin layer compressed at a maximum altitude of 350 km. Accurately converting TEC measurements from sTEC into TECv is essential for standardizing measurements. Ionospheric data models often utilize TECv data as an alternative to sTEC, enabling meaningful comparison and integration into ionospheric models.  
 
@@ -348,6 +348,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
