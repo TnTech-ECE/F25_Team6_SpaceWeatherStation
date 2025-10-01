@@ -400,12 +400,12 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 ## **Statement of Contributions**
 
-- Jack Bender: Specifications and Constraints, Survey of Existing Solutions, and Measures of Success, Final Review
+- Jack Bender: Specifications and Constraints, Survey of Existing Solutions, Measures of Success, Final Review
 - Kenny Creamer: Background, Specific Implications, References
 - Blake Hudson: Broader Implications, Ethics, and Responsibility as Engineers, Resources, Specifications and Constraints
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
+- Jackson Taylor: Background, Measures of Success
 
-- Jackson Taylor: Background
 
 
 
