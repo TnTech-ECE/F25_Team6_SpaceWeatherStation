@@ -310,8 +310,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 | Mounting Material | 50  |
 | PCB | 25  |
 | Coaxial Cable | 40  |
-| Raspberry Pi 5 | 80  |
-| Raspberry Pi 5 heatsink | 10  |
+| Processing Unit | 100  |
 | Micro SD card | 10  |
 | USB to Sata | 10  |
 | 1 TB 2.5" SSD | 50  |
@@ -387,6 +386,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
