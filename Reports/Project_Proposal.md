@@ -78,7 +78,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 
 &nbsp; &nbsp; &nbsp; &nbsp;Another limiting factor to widespread involvement in measuring TEC is the expense of required equipment. Thus, the goal of this project is to create a replicable, open sourced, affordable system by which, hobbyists with some technical background, is enabled in their pursuit of observing TEC. 
 
-#### **Specifications**
+### **Specifications**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 has consulted with the customer and developed preliminary system specifications and constraints to guide the design. These are outlined in the following sections. 
 
@@ -108,7 +108,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 
 - Documentation of the design and build process shall be published, enabling enthusiasts to replicate the system at a cost below $1,000.  
 
-#### **Constraints**
+### **Constraints**
 ##### Regulatory Compliance
 
 - The system shall meet all applicable regulatory requirements in its deployment region, including spectrum allocations for passive GNSS reception as defined by the International Telecommunication Union (ITU) [6], and local regulations governing unlicensed ISM band operation.  
@@ -250,6 +250,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
