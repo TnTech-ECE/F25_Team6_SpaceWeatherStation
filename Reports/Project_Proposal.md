@@ -369,34 +369,33 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 
 ## **References**
+[1]  E. D. Lopez, R. E. Hidalgo, and M. J. Carrera, “Preliminary mapping of ionospheric total electron content (TEC) over Ecuador using global positioning system (GPS) data,” arXiv preprint arXiv:2403.19053, 2024. [Online]. Available: https://arxiv.org/abs/2403.19053. [Accessed: Sep. 20, 2025].  
 
-[1] 	E. D. Lopez, R. E. Hidalgo, and M. J. Carrera, “Preliminary mapping of ionospheric total electron content (TEC) over Ecuador using global positioning system (GPS) data,” arXiv preprint arXiv:2403.19053, 2024. [Online]. Available: https://arxiv.org/abs/2403.19053 . [Accessed: Sep. 20, 2025]. 
+[2]  NOAA / NWS Space Weather Prediction Center, “Space Weather and GPS Systems,” Space Weather Prediction Center, National Oceanic and Atmospheric Administration. [Online]. Available: https://www.swpc.noaa.gov/impacts/space-weather-and-gps-systems. [Accessed: Sep. 19, 2025].  
 
-[2] 	NOAA / NWS Space Weather Prediction Center, “Space Weather and GPS Systems,” Space Weather Prediction Center, National Oceanic and Atmospheric Administration [Online]. Available: https://www.swpc.noaa.gov/impacts/space-weather-and-gps-systems . [Accessed: Sep. 19, 2025]. 
+[3]  NOAA / NWS Space Weather Prediction Center, “Ionosphere,” Space Weather Prediction Center, National Oceanic and Atmospheric Administration. [Online]. Available: https://www.swpc.noaa.gov/phenomena/ionosphere. [Accessed: Sep. 23, 2025].  
 
-[3] 	NOAA / NWS Space Weather Prediction Center, “Ionosphere,” Space Weather Prediction Center, National Oceanic and Atmospheric Administration, [Online]. Available: https://www.swpc.noaa.gov/phenomena/ionosphere . [Accessed: Sep. 23, 2025]. 
+[4]  A. Coster, “Using GNSS to Study Magnetosphere - Ionosphere Coupling,” PowerPoint slides, MIT Haystack Observatory. [Online]. [Accessed: Sep. 23, 2025].  
 
-[4] 	A. Coster, “Using GNSS to Study Magnetosphere - Ionosphere Coupling,” PowerPoint slides, MIT Haystack Observatory. [Online]. [Accessed: Sep. 23, 2025]. 
+[5]  B. Fogg, “IP rating guide: IP66, IPX7? Water-resistance explained,” Reviews.org, Nov. 03, 2021. [Online]. Available: https://www.reviews.org/au/mobile/ip-rating-guide/. [Accessed: Sep. 23, 2025].  
 
-[5] 	B. Fogg, “IP rating guide: IP66, IPX7? Water-resistance explained,” Reviews.org, Nov. 03, 2021. [Online]. Available: https://www.reviews.org/au/mobile/ip-rating-guide/. [Accessed: Sep. 23, 2025]. 
+[6]  “Radio Regulations – ITU,” International Telecommunication Union, 2024. [Online]. Available: https://www.itu.int/hub/publication/r-reg-rr-2024/. [Accessed: Sep. 21, 2025].  
 
-[6] 	“Radio Regulations – ITU,” International Telecommunication Union, 2024. Accessed: Sep. 25, 2025. [Online]. Available: https://www.itu.int/hub/publication/r-reg-rr-2024/ . [Accessed: Sep. 21, 2025]. 
+[7]  “Understanding satellite frequencies and GNSS receiver channels,” Global GPS Systems. [Online]. Available: https://globalgpssystems.com/gnss/understanding-satellite-frequencies-and-gnss-receiver-channels/. [Accessed: Sep. 25, 2025].  
 
-[7] 	“Understanding satellite frequencies and GNSS receiver channels,” Global GPS Systems. [Online]. Available: https://globalgpssystems.com/gnss/understanding-satellite-frequencies-and-gnss-receiver-channels/ [Accessed: Sep. 25, 2025]. 
+[8]  “Personal Space Weather Station (PSWS) — Overview,” HamSCI, 2025. [Online]. Available: https://hamsci.org/psws-overview. [Accessed: Sep. 23, 2025].  
 
-[8] 	“Personal Space Weather Station (PSWS) — Overview,” HamSCI, 2025. [Online]. Available: https://hamsci.org/psws-overview. [Accessed: Sep. 23, 2025]. 
+[9]  U.S. Defense Technical Information Center, ADA256916. [Online]. Available: https://apps.dtic.mil/sti/tr/pdf/ADA256916.pdf. [Accessed: Sep. 30, 2025].  
 
-[9]	U.S. Defense Technical Information Center, ADA256916, [Online]. Available: https://apps.dtic.mil/sti/tr/pdf/ADA256916.pdf . [Accessed: Sep. 30, 2025]. 
+[10]  P. Ward, Texas Instruments TI 4100 NAVSTAR Navigator, ION Museum. [Online]. Available: https://www.ion.org/museum/item_view.cfm?cid=3&scid=10&iid=22. [Accessed: Sep. 30, 2025].  
 
-[10]	P. Ward, Texas Instruments TI 4100 NAVSTAR Navigator, ION Museum, [Online]. Available: https://www.ion.org/museum/item_view.cfm?cid=3&scid=10&iid=22 . [Accessed: Sep. 30, 2025]. 
+[11]  “Anthea Jane Coster,” MIT Haystack Observatory. [Online]. Available: https://www.haystack.mit.edu/researcher/anthea-coster/. [Accessed: Sep. 23, 2025].  
 
-[11] 	“Anthea Jane Coster,” MIT Haystack Observatory. [Online]. Available: https://www.haystack.mit.edu/researcher/anthea-coster/. [Accessed: Sep. 23, 2025]. 
+[12]  J. Gómez Socola and F. S. Rodrigues, “ScintPi 2.0 and 3.0: low-cost GNSS-based monitors of ionospheric scintillation and total electron content,” Earth, Planets and Space, vol. 74, art. no. 185, Dec. 2022. [Online]. Available: https://earth-planets-space.springeropen.com/articles/10.1186/s40623-022-01743-x. [Accessed: Sep. 23, 2025].  
 
-[12] 	J. Gómez Socola and F. S. Rodrigues, “ScintPi 2.0 and 3.0: low-cost GNSS-based monitors of ionospheric scintillation and total electron content,” Earth, Planets and Space, vol. 74, art. no. 185, Dec. 2022. [Online]. Available: https://earth-planets-space.springeropen.com/articles/10.1186/s40623-022-01743-x. [Accessed: Sep. 23, 2025]. 
+[13]  “Septentrio PolaRx5TR RTK OEM Board GNSS GPS Module,” Alibaba, Product Detail. [Online]. Available: https://www.alibaba.com/product-detail/Septentrio-Polarx5tr-RTK-OEM-Board-Precision_1601231199008.html. [Accessed: Sep. 23, 2025].  
 
-[13] 	“Septentrio PolaRx5TR RTK OEM Board GNSS GPS Module,” Alibaba, Product Detail. [Online]. Available: https://www.alibaba.com/product-detail/Septentrio-Polarx5tr-RTK-OEM-Board-Precision_1601231199008.html. [Accessed: Sep. 23, 2025]. 
-
-[14] 	OpenAI, GPT-5, ChatGPT, San Francisco, CA, USA, 2025. [Online]. Available: https://chat.openai.com/. [Accessed: Sep. 20, 2025].
+[14]  OpenAI, GPT-5, ChatGPT, San Francisco, CA, USA, 2025. [Online]. Available: https://chat.openai.com/. [Accessed: Sep. 20, 2025].  
 
 
 ## **Statement of Contributions**
@@ -407,6 +406,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
