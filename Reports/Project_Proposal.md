@@ -30,7 +30,7 @@ $$
 &nbsp; &nbsp; &nbsp; &nbsp; One way to measure TEC is to compute the time delay between two signals being transmitted through the atmosphere. Two GNSS signals transmitted concurrently are received by an antenna connected to a signal processing unit. The difference of delay between the two signals is identified as a result. The delay of a signal passing through the ionosphere can be expressed as the integral of the ionospheric refractive index $n$ along the path $ds$ extending from the satellite at point $A$ to the receiver at point $B$. Equivalently, it can also be expressed as an added term in the measured pseudo-range $S$ [2].
 
 $$
-S = \rho - \int_A^B (n - 1) \, ds = \rho - 40.3 \frac{1}{f^2} \int_A^B N_e(s) \, ds = \rho - 40.3 \frac{\text{TEC}}{f^2} \quad (3)
+S = \rho - \int_A^B (n - 1) \ ds = \rho - 40.3 \frac{1}{f^2} \int_A^B N_e(s) \ ds = \rho - 40.3 \frac{\text{TEC}}{f^2} \quad (3)
 $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays and $f$ is the frequency of the delayed signal. From the derivations below, we can see the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity. Additionally, the errors in radio wave propagation through the ionosphere can be better determined.
@@ -348,6 +348,7 @@ Where $f_N^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N$.
 - Nolan Magee: Introduction, Budget, Personnel, Timeline, Final Review
 
 - Jackson Taylor: Background
+
 
 
 
