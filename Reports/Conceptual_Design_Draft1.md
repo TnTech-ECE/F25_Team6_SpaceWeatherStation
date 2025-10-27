@@ -69,7 +69,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The following sections examine design considerations for signal reception, central processing and control systems, storage, power, modularity, and enclosure. The goal being identification of components and design elements that support the prototype objective.
 
-###**Signal Reception**
+### **Signal Reception**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype will utilize dual-frequency GNSS signal observations to directly measure TEC with high accuracy. To achieve this, a dual-tuned Right-Hand Circularly Polarized (RHCP) antenna is proposed. RHCP is predominantly used for GNSS applications. This preference stems from the fact that most GNSS satellites transmit signals in RHCP, optimizing the system for uninterrupted signal reception. \[11\] Additionally, the antenna should have a spatial reception pattern that is close to hemispherical, meaning it can receive signals from all skyward directions. This spatial pattern improves coverage by maximizing the number of visible satellites. The antenna chosen shall be tuned to L1 (1,559-1,610 MHz) and L5 (1,164-1,215 MHz) bands.
 
@@ -87,13 +87,13 @@ Figure 1: Dual Patch Antenna Explodable View
 
 Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
-###**Central Processing and Control System (CPCS)**
+### **Central Processing and Control System (CPCS)**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype's CPCS manages all computational and control functions essential to device operation. It is responsible for performing TEC-related calculations, managing data storage, and executing system-level control tasks such as sensor monitoring and safety management.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The CPCS consists of two distinct functional domains: **RF signal conditioning and digitization**, and **computing and control platform**. The RF module performs all signal conditioning and digitization, outputting structured data for further computation. The data is then received by the computing and control platform, executing higher-level computations and overseeing system coordination.
 
-####**RF Signal Conditioning and Digitization**
+#### **RF Signal Conditioning and Digitization**
 
 **Software Defined Radio (SDR) Approach:**
 
@@ -116,7 +116,7 @@ Figure 4: u-blox ZED-FP9 Module w/sparkfun Breakout Board
 
 Figure 5: u-blox ZED-FP9 Module Block Diagram for L1 and L2
 
-####**Computing and Control Platform**
+#### **Computing and Control Platform**
 
 &nbsp; &nbsp; &nbsp; &nbsp;After the RF module outputs processed GNSS data, it is handled by the central computing platform, which manages TEC computation, system coordination, and data logging. Team 6 has considered implementing the full system using either a single-board computer (SBC) or a microcontroller (MCU)-based approach.
 
@@ -144,7 +144,7 @@ Figure 6: Example of Two MCUs
 
 Figure 7: Raspberry Pi 5 SBC
 
-###**Storage**
+### **Storage**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype requires a storage solution capable of reliably recording high-resolution TEC measurements, system health metrics, and additional sensor data over extended periods. Storage must support continuous data logging, fast read/write operations, and seamless interfacing with the central computing platform. To ensure long-term reliability and simplicity, Team 6 conducted a throughput analysis and performed a storage estimation. This was followed by an evaluation of several options, including traditional hard disk drives (HDDs), solid-state drives (SSDs), and removable flash-based media such as SD cards and USB thumb drives.
 
@@ -208,17 +208,17 @@ Figure 9: Thumb Drive Example
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to the USB thumb drive, the prototype will be capable of connecting to a local host server or workstation, enabling backup, visualization, and integration of logged GNSS measurements, system health metrics, and auxiliary data. The addition of the server provides supplementary storage and data analysis capabilities without affecting the prototype's on-device storage requirements. The choice to implement a USB thumb drive is based on throughput analysis, data estimation, and consideration of cost, reliability, and field deployability. The USB drive serves as the primary local storage for continuous TEC and system data logging. The prototype may also connect to the host server or workstation for centralized data aggregation.
 
-###**Power**
+### **Power**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Powering Team 6's prototype requires careful consideration of mobility, reliability, and operational environment. Various approaches, ranging from AC wall power to hybrid battery and solar configuration, offer different trade-offs in cost, complexity, and deployment flexibility. Team 6 evaluates these approaches to balance portability, autonomy, and modularity while ensuring continuous, safe operation of all subsystems, including the GNSS receiver, processing unit, and data storage.
 
-####**AC Wall Power Approach:**
+#### **AC Wall Power Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;A simple method for powering the prototype is through direct connection to a 120 V AC wall outlet. This approach provides a stable and continuous power source, ensuring reliable operation for all system components, including the GNSS receiver, processing unit, and data storage device. Wall-powered operation significantly reduces system complexity by eliminating the need for battery management circuitry, power conversion modules, and charge controllers.
 
 &nbsp; &nbsp; &nbsp; &nbsp;No energy storage component is required, resulting in a lower-cost build. This creates margin in the budget for higher-performance electronics. However, this approach imposes significant spatial limitations. The device can only operate in proximity to a building or facility with available mains power. Consequently, deployment flexibility and geographic coverage are greatly reduced. The system would be constrained to controlled environments such as research laboratories, homes, schools, and other desired observatories, making it unsuitable for widespread or remote field measurements.
 
-####**Standalone Rechargeable Battery Approach:**
+#### **Standalone Rechargeable Battery Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Using a rechargeable battery system capable of supplying all required electrical loads greatly improves mobility, deployment, and versatility. This enables the prototype to operate in isolated locations without dependance on infrastructure. A well-designed battery subsystem, such as a 12.8 V LiFePO₄ pack paired with a battery management system (BMS), provides the necessary current for the device's power rails through appropriate buck converters or voltage dividers.
 
@@ -227,7 +227,7 @@ Figure 9: Thumb Drive Example
 
 Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS
 
-####**Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
+#### **Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Incorporating a solar charging system alongside the onboard battery mitigates many limitations of the battery-only configuration. A solar panel coupled with a maximum power point tracking (MPPT) charge controller enables the device to operate for extended periods of time dependent on sunlight availability and energy demand. The use of the 12 V (nominal 12.8 V LiFePO₄) standard aligns with industry conventions for portable instrumentation and ensures compatibility with commonly available charge controllers and solar modules.
 
@@ -238,7 +238,7 @@ Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS
 
 Figure 11: 12V Solar Panel and 20A MPPT
 
-####**Hybrid AC/DC Rechargeable Battery Approach:**
+#### **Hybrid AC/DC Rechargeable Battery Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6's proposed solution adopts a hybrid rechargeable battery architecture that can be powered or recharged from either a 120 V AC wall main (via DC adapter) or a solar panel. This configuration provides an optimal balance between mobility, flexibility, and simplicity. Under this approach, the prototype draws power primarily from its onboard battery, while external charging sources can be connected and disconnected as needed.
 
@@ -253,7 +253,7 @@ Figure 12: AC and Solar Power Adapters
 
 &nbsp; &nbsp; &nbsp; &nbsp;The chosen approach maintains a good balance between power redundancy, safety, and cost efficiency. The inclusion of a BMS, MPPT, AC/DC, and DC/DC regulation circuitry ensures compliance with IEEE and IEC electrical safety standards while supporting continuous operation of the SBC, GNSS receiver, and storage subsystem. Overall, the hybrid rechargeable power design aligns with Team 6's objective of creating a robust, modular, and accessible prototype capable of deployment across both laboratory and remote field environments.
 
-###**Modularity**
+### **Modularity**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Robust modularity is a crucial specification for the prototype, enabling user-based servicing and expansion. Modularity ensures individual subsystems, such as the RF front end, computing platform, power management, and storage, can be upgraded, serviced, and replaced without a complete redesign. This approach supports long-term maintainability and aligns with the project's goal of enabling user-driven expansion and experimentation.
 
@@ -269,7 +269,7 @@ Figure 12: AC and Solar Power Adapters
 
 Figure 13: 40 Pin Male to Female Ribbon Cable
 
-###**Enclosure**
+### **Enclosure**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The system shall be housed in an enclosure designed for mobility, rapid deployment, and easy access in support of a variety of configurations. Team 6 draws inspiration from the ScintPi 3.0 design, exemplifying compact form factor, transportability, and user-friendly accessibility. The enclosure shall accommodate modular components, allowing for straightforward integration and replacement of the various modules and sensors within. This shall foster long-term serviceability and adaptability.
 
