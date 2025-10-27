@@ -526,14 +526,14 @@ Antenna and RF Module System
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ByhliP2Clg.png" alt="Antenna and RF Module Hardware Diagram" width="400">
+  <img src="https://hackmd.io/_uploads/ByhliP2Clg.png" alt="Antenna and RF Module Hardware Diagram" width="600">
   <p><strong>Figure 17:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
 </div>
 
 **Subsystem Flowchart**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/r1lZiPnAee.png" alt="Antenna and RF Module Flowchart" width="400">
+  <img src="https://hackmd.io/_uploads/r1lZiPnAee.png" alt="Antenna and RF Module Flowchart" width="600">
   <p><strong>Figure 18:</strong> <em>Antenna and RF Module Flowchart</em></p>
 </div>
 
@@ -553,7 +553,7 @@ System Interconnections
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/HJUGnP3Rle.png" alt="System Interconnections Block Diagram" width="600">
+  <img src="https://hackmd.io/_uploads/HJUGnP3Rle.png" alt="System Interconnections Block Diagram" width="800">
   <p><strong>Figure 19:</strong> <em>System Interconnections Block Diagram</em></p>
 </div>
 
@@ -582,7 +582,7 @@ Power System
 - This subsystem shall use components that are readily available for purchase and can be exchanged easily without physically altering any other component.
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ry-u2wnRll.png" alt="Power System Flowchart" width="400">
+  <img src="https://hackmd.io/_uploads/ry-u2wnRll.png" alt="Power System Flowchart" width="800">
   <p><strong>Figure 20:</strong> <em>Power System Flowchart</em></p>
 </div>
 
