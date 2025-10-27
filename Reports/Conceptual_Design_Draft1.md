@@ -156,7 +156,11 @@
 &nbsp; &nbsp; &nbsp; &nbsp;Despite these trade-offs, the combination of modularity, high processing capability, and extensive interface support, substantiates an SBC as the optimal choice for the prototype. Team 6 has elected to implement an SBC to provide both the computational power and design flexibility needed to support the innovative user-driven nature of the system. To address the limited number of built-in ADCs, an MCU or an external ADC module (ADC hat) may be integrated to work in tandem with the SBC. This enables analog sensor monitoring for system health metrics and any additional analog inputs.
 
 
-Figure 7: Raspberry Pi 5 SBC
+<div align="center">
+  <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="600">
+  <p><em>Figure 7: PCB hub layout showing modular connections for sensors and modules</em></p>
+</div>
+
 
 ## **Storage**
 
