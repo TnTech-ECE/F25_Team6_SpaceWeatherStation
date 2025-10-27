@@ -536,14 +536,14 @@ No direct user control of logging frequency or file management is required, thou
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ByhliP2Clg.png" alt="Antenna and RF Module Hardware Diagram" width="400">
+  <img src="https://hackmd.io/_uploads/rkdwev6Rlg.png" alt="Antenna and RF Module Hardware Diagram" width="400">
   <p><strong>Figure 17:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
 </div>
 
 **Subsystem Flowchart**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/r1lZiPnAee.png" alt="Antenna and RF Module Flowchart" width="400">
+  <img src="https://hackmd.io/_uploads/rJOvlDTRxl.png" alt="Antenna and RF Module Flowchart" width="400">
   <p><strong>Figure 18:</strong> <em>Antenna and RF Module Flowchart</em></p>
 </div>
 
