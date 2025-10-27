@@ -80,7 +80,7 @@
 - **Patch antennas** are commonly used in handheld GNSS devices due to their compact form factor and affordability. \[12\] They are a usual choice for RF engineers when designing a GNSS application, featuring a fairly hemispherical radiation pattern. Most off-the-shelf dual-frequency GNSS antennas use patch elements. \[13\] Therefore, a dual-tuned, multi-element patch antenna had been selected for the prototype.
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="400">
+  <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="600">
   <p><em>Figure 1: Dual-tuned GNSS patch antenna used in the system</em></p>
 </div>
 
