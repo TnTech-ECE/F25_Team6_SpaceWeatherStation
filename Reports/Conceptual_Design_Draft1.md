@@ -642,7 +642,7 @@ No direct user control of logging frequency or file management is required, thou
 
 ## **Budget**
 
-**Data Storage System Budget:**
+**Data Storage System:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be made up of a storage drive and an SBC. To keep options open for various specs for the SBC and the storage drive, a maximum expenditure of \$150 for the SBC and \$75 for the storage has been set as follows.
 
@@ -766,8 +766,8 @@ No direct user control of logging frequency or file management is required, thou
 ## **Timeline**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/r1c5Lu20xx.png" alt="Screenshot 2" width="1400">
-  <img src="https://hackmd.io/_uploads/Hk5q8_hRle.png" alt="Screenshot 1" width="1400"><br><br>
+  <img src="https://hackmd.io/_uploads/S1PtFvnCxl.png" alt="Hardware Block Diagram" width="1400"><br><br>
+  <img src="https://hackmd.io/_uploads/rJz6KwhCee.png" alt="Operation Flowchart" width="1400">
 </div>
 
 
