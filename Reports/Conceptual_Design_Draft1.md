@@ -140,8 +140,10 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;MCUs are excellent for analog sensor interfacing and low-level processing operations. However, MCUs alone are insufficient for handling the computationally intensive, modular, and expandable requirements of Team 6's prototype. Their limited number of I/O ports and communication interfaces restrict the ability to support multiple peripherals and expansion modules simultaneously. This makes them unsuitable as the primary processing platform.
 
-![Arduino MCU](https://hackmd.io/_uploads/HJNTcLhCgx.png)
-Figure 6: Example of Two MCUs
+<div align="center">
+  <img src="https://hackmd.io/_uploads/HJNTcLhCgx.png" alt="Arduino MCU" width="600">
+  <p><em>Figure 6: Arduino MCU used for system monitoring and auxiliary sensors</em></p>
+</div>
 
 **Single Board Computer (SBC) Approach:**
 
