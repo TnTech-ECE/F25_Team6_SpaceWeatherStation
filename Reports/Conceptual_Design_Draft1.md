@@ -118,7 +118,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1Ni9IhRel.png" alt="Screenshot of PCB Hub" width="600">
-  <p><strong>Figure 4: u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
+  <p><strong>Figure 4:</strong> u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
 </div>
 
 
