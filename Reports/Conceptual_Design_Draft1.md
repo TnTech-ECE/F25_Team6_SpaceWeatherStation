@@ -623,9 +623,9 @@ Data Storage System Budget:
 | Subsystem | Component | Budget |
 | --- | --- | --- |
 | Data Storage System 
-| Storage Drive (Thumb Drive) | \$25 |
-| Single-Board Computer (SBC)\* | \$120\* |
-| Total | \$145 |
+| --- | Storage Drive (Thumb Drive) | \$25 |
+| --- | Single-Board Computer (SBC)\* | \$120\* |
+| Total | --- | \$145 |
 
 Antenna and RF Module System:
 
