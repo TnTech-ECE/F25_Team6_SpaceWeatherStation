@@ -1,6 +1,6 @@
 <h1 style="font-size:40px;">F25 Team 6 Space Weather Station Conceptual Design</h1>
 
-## **Introduction**
+# **Introduction**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Global reliance on communication, navigation, and positioning systems makes society increasingly vulnerable to disturbances in the ionosphere, where total electron content (TEC) refracts, delays, and disrupts radio signals. These disturbances reduce the accuracy and effectiveness of global navigation satellite system (GNSS) services, disrupting critical infrastructure in aviation, maritime operations, telecommunications, and everyday devices. Although anticipation of TEC interference could be limited by large amounts of accurately observed data, existing monitoring systems are often costly, technically complex, stationary, and geographically limited. This creates a barrier to broader participation in ionospheric research and limits the availability of distributed TEC measurements needed for accurate modeling.
 
@@ -12,7 +12,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Additionally, this document integrates ethical, professional, and standards-based considerations into the design process, guaranteeing adherence and accountability to universal standards. It concludes with a refined resource plan encompassing the project budget, division of labor, and a Gantt chart representing the proposed timeline. This provides a solid foundation to successfully transition into the detailed design phase. 
 
-## **Restating the Fully Formulated Problem**
+# **Restating the Fully Formulated Problem**
 
 &nbsp; &nbsp; &nbsp; &nbsp;As discussed in Team 6's project proposal, modern society's dependence on communication, navigation, and timing systems makes it increasingly vulnerable to disruptions in the ionosphere. Variations in TEC can delay or distort GNSS radio signals \[1\]. These ionospheric disturbances undermine the accuracy and reliability of GNSS-based services supporting aviation, maritime operations, telecommunications, and numerous critical infrastructures. Therefore, accurate measurement of TEC is essential for understanding, predicting, and minimizing these effects.
 
@@ -93,9 +93,9 @@ Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
 &nbsp; &nbsp; &nbsp; &nbsp;The CPCS consists of two distinct functional domains: **RF signal conditioning and digitization**, and **computing and control platform**. The RF module performs all signal conditioning and digitization, outputting structured data for further computation. The data is then received by the computing and control platform, executing higher-level computations and overseeing system coordination.
 
-#### **RF Signal Conditioning and Digitization**
+### **RF Signal Conditioning and Digitization**
 
-##### **Software Defined Radio (SDR) Approach:**
+**Software Defined Radio (SDR) Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Utilizing an SDR is one approach for processing and digitizing GNSS signals. This method offers significant flexibility for the user while substantially increasing design complexity. Implementing an SDR requires extensive programming knowledge for handling IQ sampling, filtering, modulation, multipath rejection, and other digital signal processing tasks. Furthermore, these processes must be performed concurrently for multiple satellites, adding additional challenges. The primary goal of this prototype is to develop a simple yet functional system, enabling a hobbyist to measure TEC independently. While Team 6 will provide the necessary code regardless of the RF processing method chosen, using an SDR introduces unnecessary complexity, threatening the system's user-friendly appeal to the user. Additionally, SDRs do not offer a significant cost advantage and may exceed Team 6's budget to meet the required measurement accuracy.
 
