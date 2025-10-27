@@ -592,7 +592,7 @@ No direct user control of logging frequency or file management is required, thou
 - This subsystem shall use components that are readily available for purchase and can be exchanged easily without physically altering any other component.
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ry-u2wnRll.png" alt="Power System Flowchart" width="800">
+  <img src="https://hackmd.io/_uploads/rJEkHITCex.png" alt="Detailed Power System Flowchart" width="800">
   <p><strong>Figure 20:</strong> <em>Power System Flowchart</em></p>
 </div>
 
