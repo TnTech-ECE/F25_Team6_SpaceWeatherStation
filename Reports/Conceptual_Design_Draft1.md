@@ -1,5 +1,4 @@
-<h1 style="font-size:40px;">F25_Team 6_SpaceWeatherStation</h1>
-**Conceptual Design**
+<h1 style="font-size:40px;">F25_Team 6_SpaceWeatherStation Conceptual Design</h1>
 
 \## **Introduction**
 
