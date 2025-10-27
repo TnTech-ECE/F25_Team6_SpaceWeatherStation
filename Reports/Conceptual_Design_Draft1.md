@@ -266,11 +266,11 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
     <tr>
       <td align="center">
         <img src="https://hackmd.io/_uploads/ByuoQw2Clg.png" alt="12V Solar Panel" width="300"><br>
-        <em>12V Solar Panel</em>
+        <em>12V 20A MPPT Charge Controller</em> 
       </td>
       <td align="center">
         <img src="https://hackmd.io/_uploads/Sy_i7w2Cel.png" alt="12V 20A MPPT" width="300"><br>
-        <em>12V 20A MPPT Charge Controller</em>
+        <em>12V Solar Panel</em>
       </td>
     </tr>
   </table>
