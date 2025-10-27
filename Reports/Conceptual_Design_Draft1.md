@@ -1,6 +1,6 @@
 <h1 style="font-size:40px;">F25 Team 6 SpaceWeatherStation Conceptual Design</h1>
 
-\## **Introduction**
+## **Introduction**
 
 Global reliance on communication, navigation, and positioning systems makes society increasingly vulnerable to disturbances in the ionosphere, where total electron content (TEC) refracts, delays, and disrupts radio signals. These disturbances reduce the accuracy and effectiveness of global navigation satellite system (GNSS) services, disrupting critical infrastructure in aviation, maritime operations, telecommunications, and everyday devices. Although anticipation of TEC interference could be limited by large amounts of accurately observed data, existing monitoring systems are often costly, technically complex, stationary, and geographically limited. This creates a barrier to broader participation in ionospheric research and limits the availability of distributed TEC measurements needed for accurate modeling.
 
@@ -8,7 +8,7 @@ To address this challenge, Team 6 is developing a low-cost, modular, and replica
 
 The scope of the conceptual design outlines the background of TEC measurement and a thorough survey of existing solutions. This addresses the theoretical background and successful implementation of TEC measurement systems by others. This will clarify the need for the project, identify limiting factors, and inform the project specifications to maintain focus. The proposal will then define what constitutes a successful outcome, supported by details regarding budget, available and required expertise, and a timeline of key milestones. Finally, the proposal will conclude with a discussion of specific and broader implications of successfully completing the project.
 
-\## **Restating the Fully Formulated Problem**
+## **Restating the Fully Formulated Problem**
 
 As discussed in Team 6's project proposal, modern society's dependence on communication, navigation, and timing systems makes it increasingly vulnerable to disruptions in the ionosphere. Variations in TEC can delay or distort GNSS radio signals \[1\]. These ionospheric disturbances undermine the accuracy and reliability of GNSS-based services supporting aviation, maritime operations, telecommunications, and numerous critical infrastructures. Therefore, accurate measurement of TEC is essential for understanding, predicting, and minimizing these effects.
 
@@ -55,7 +55,7 @@ The inclusion of a dual-frequency GNSS receiver and high-capacity storage direct
 
 Together, these constraints define not only the engineering boundaries of the solution but also its broader mission, to deliver a reliable, affordable, and ethically engineered platform for advancing open ionospheric research.
 
-\## **Comparative Analysis of Potential Solutions**
+## **Comparative Analysis of Potential Solutions**
 
 The project proposal previously identified three established TEC measurement systems. Each system was developed to meet distinct objectives informing their respective designs. What follows is a comparative analysis of design methods and an evaluation of off-the-shelf components to determine the most suitable elements for Team 6's prototype.
 
@@ -286,7 +286,7 @@ PETG combines the advantages of both PLA and ABS, offering bond strength between
 
 Team 6 has elected to use PETG due to its superior mechanical strength, environmental stability, and manufacturability using readily available printers. Its resistance to cracking, warping, and degradation under a large range of temperatures directly supports the system's IPx4 weather resistance requirement and ensures long-term enclosure integrity. PETG therefore represents the most practical and reliable material for the project's mobile, modular, and field-deployable design objectives.
 
-\## **High-Level Solution**
+## **High-Level Solution**
 
 **High-Level Solution**
 
@@ -356,20 +356,20 @@ This design meets all stakeholder and customer objectives through the following 
 
 The proposed TEC measurement system represents a balanced integration of accuracy, affordability, and modularity. The design incorporates a dual-tuned GNSS antenna, RF receiver, and a computing subsystem composed of both an SBC and an additional MCU. The SBC handles high-speed TEC and scintillation computation, data logging, and visualization, while the MCU monitors system health and auxiliary sensors. All modules are connected through a standardized PCB hub that provides power distribution, modular expansion ports, and support for future sensors or processing modules. This architecture meets all functional, safety, and regulatory specifications, delivering a low-cost, replicable, and environmentally resilient GNSS-based ionospheric monitoring system optimized for research, educational deployment, and long-term adaptability.
 
-\### **Hardware Block Diagram \[Blake\]**
+### **Hardware Block Diagram**
 
 
 
 
 Figure 14: Hardware Block Diagram
 
-\### **Operational Flow Chart \[Blake\]**
+### **Operational Flow Chart**
 
 
 
 Figure 15: Operation Flowchart
 
-\## **Atomic Subsystem Specifications**
+## **Atomic Subsystem Specifications**
 
 Data Storage System
 
@@ -536,7 +536,7 @@ The Publication Subsystem is responsible for comprehensive documentation of all 
 
 By adhering to these requirements, the publication subsystem ensures that the project is thoroughly documented and reproducible, providing meaningful contributions to the scientific community and enabling continued research and innovation in ionospheric monitoring.
 
-\## **Ethical, Professional, and Standards Considerations**
+## **Ethical, Professional, and Standards Considerations**
 
 The deployment and use of TEC measurement systems carry broad implications across scientific, societal, and environmental contexts. In the scientific realm, accurate TEC data supports the study of ionospheric behavior, space weather phenomena, and their impact on systems dependent on satellite communication and navigation. These measurements aid researchers in understanding global atmospheric processes and support engineers in improving models capable of predicting disruptions in GPS and other critical services. Without reliable data, entire fields of research are limited in their ability to explain or mitigate natural events influencing everyday technologies.
 
@@ -548,11 +548,11 @@ Environmental considerations extend beyond scientific scope. The design and depl
 
 Finally, public safety must remain a priority. TEC measurement systems, while highly technical, ultimately serve the purpose of safeguarding critical infrastructure and ensuring that society can operate smoothly even during ionospheric disturbances. Engineers must approach their work with honesty and diligence, acknowledging the outputs of their systems could influence decisions with global impact. A strong awareness of these societal responsibilities helps ensure technological progress contributes positively to the public good rather than introducing new risks.
 
-\## **Resources**
+## **Resources**
 
 Project resources are allocated across three primary categories: budget, labor, and timeline. The budget ensures cost-effective component selection and material procurement within the project's \$1,000 constraint. The division of labor assigns specific subsystem responsibilities to team members based on technical expertise, while the timeline coordinates design, fabrication, testing, and documentation milestones to maintain steady project progress and accountability to guarantee on-time delivery.
 
-\### **Budget**
+### **Budget**
 
 Data Storage System Budget:
 
@@ -639,7 +639,7 @@ Below is the overall budget of the project. Most component prices are overestima
 
 \*SBC will be shared between Data Subsystem and RF Module Subsystem
 
-\### **Division of Labor**
+### **Division of Labor**
 
 - Power Supply Subsystem - Kenneth Creamer
   - Requirements: A thorough understanding of power systems and solar panels.
@@ -660,9 +660,9 @@ Below is the overall budget of the project. Most component prices are overestima
   - Requirements: Technical writing ability.
   - Responsible team member and rationale: Every member of the group shall contribute to the completion of the paper as documentation is completed.
 
-\### **Timeline**
+### **Timeline**
 
-\## **References**
+## **References**
 
 \[1\] TnTech ECE F25 Team 6, "Project Proposal," GitHub repository, 15 Oct. 2025. \[Online\]. Available: <https://github.com/TnTech-ECE/F25_Team6_SpaceWeatherStation/blob/main/Reports/Project_Proposal.md>. \[Accessed: Oct. 21 2025\].
 
@@ -696,7 +696,7 @@ Below is the overall budget of the project. Most component prices are overestima
 
 \[16\] OpenAI, GPT-5, ChatGPT, San Francisco, CA, USA, 2025. \[Online\]. Available: <https://chat.openai.com/>. \[Accessed: Sept. 20, 2025\].
 
-\## **Statement of Contributions**
+## **Statement of Contributions**
 
 Jack Bender: Comparative Analysis of Potential Solutions \[Signal Reception, CPCS, Storage, Modularity\], Atomic Subsystem Specifications \[System Interconnections\], Final Review
 
