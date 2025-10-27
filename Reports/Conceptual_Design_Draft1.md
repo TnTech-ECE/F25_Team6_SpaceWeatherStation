@@ -166,7 +166,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype requires a storage solution capable of reliably recording high-resolution TEC measurements, system health metrics, and additional sensor data over extended periods. Storage must support continuous data logging, fast read/write operations, and seamless interfacing with the central computing platform. To ensure long-term reliability and simplicity, Team 6 conducted a throughput analysis and performed a storage estimation. This was followed by an evaluation of several options, including traditional hard disk drives (HDDs), solid-state drives (SSDs), and removable flash-based media such as SD cards and USB thumb drives.
 
-**Throughput Analysis**
+###**Throughput Analysis**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou \[2\]. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is converted into a UBX file format containing satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific information. The SBC processes the UBX data to calculate TEC and scintillation measurements, storing them as single-precision floating point numbers, with 8 bytes per pair of TEC and scintillation values.
 
@@ -197,7 +197,7 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;The total throughput presented is an approximation due to the variable sizes of UBX and RINEX files. Team 6 has employed conservative calculations to account for a worst-case scenario across the three primary data streams. Additional contributions, including minor system metadata, housekeeping information, and occasional logging of auxiliary sensor measurements may slightly increase overall throughput. However, these effects are expected to be minimal. Incorporating a 20% buffer to account for the additional overhead creates an estimated total throughput of 53.8 kB/s.
 
-**Data Estimation**
+###**Data Estimation**
 
 A throughput of 53.8kB/s provides a basis for estimating daily storage requirements:
 
@@ -208,7 +208,7 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on this calculation and Team 6's goal of a field-deployable system, the required storage capacity can be approximated. The system should be capable of storing at least one month of continuous operation, corresponding to roughly 139 GB per month. Accounting for additional software and applications, a 256 GB storage drive provides ample space, leaving an estimated 117 GB available for user-driven expansions and auxiliary data.
 
-**Storage Mediums Considered**
+###**Storage Mediums Considered**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 is considering various storage options for the prototype, with the goal of identifying the most suitable solution for meeting the project's specifications and operational constraints. Key considerations include reliability under field conditions, continuous data logging capability, throughput requirements, and sufficient storage capacity for at least one month of autonomous operation. Based on the previously estimated total throughput of 53.8 kB/s and a monthly storage requirement of approximately 139 GB, the following options were evaluated:
 
@@ -361,11 +361,9 @@ $$
 
 # **High-Level Solution**
 
-**High-Level Solution**
-
 &nbsp; &nbsp; &nbsp; &nbsp;The high-level solution fulfills all specified system capabilities, constraints, and stakeholder objectives through a cost-effective, modular, and reliable architecture designed for ionospheric TEC measurement. The system integrates proven commercial components to ensure operational efficiency, environmental robustness, and expandability while maintaining a total cost not exceeding \$1,000. Each design decision is justified through comparative evaluation of alternative approaches to ensure the final configuration optimally balances accuracy, affordability, reliability, and regulatory compliance.
 
-**System Overview**
+##**System Overview**
 
 - The proposed system directly measures ionospheric TEC using simultaneous dual-frequency observations from GNSS signals. A dual-tuned patch antenna receives signals in the L1 and L5 frequency bands, providing broad coverage for multi-satellite tracking while maintaining low cost and compactness.
 - The L1 and L5 signals are processed by a u-blox dual-frequency GNSS receiver, which performs signal conditioning, filtering, and digitization. This approach is more suited to team 6's needs than SDR alternatives, offering a simpler, lower-power, and more accessible implementation for hobbyist replication and long-term deployment.
@@ -376,7 +374,7 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;The complete architecture satisfies all functional, operational, and regulatory constraints while emphasizing low cost, replicability, and modular expandability. The encapsulation of these requirements encourages broad adoption and community-driven development.
 
-**Design Justification and Alignment with Specifications**
+##**Design Justification and Alignment with Specifications**
 
 **Signal Reception**
 
@@ -425,17 +423,17 @@ $$
 - **Replicability:** Public design documentation supports community-driven replication and enhancement.
 - **Compliance:** Fully operation and adherence to GNSS and ISM regulations ensure legal and safe use.
 
-**Summary**
+##**Summary**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The proposed TEC measurement system represents a balanced integration of accuracy, affordability, and modularity. The design incorporates a dual-tuned GNSS antenna, RF receiver, and a computing subsystem composed of both an SBC and an additional MCU. The SBC handles high-speed TEC and scintillation computation, data logging, and visualization, while the MCU monitors system health and auxiliary sensors. All modules are connected through a standardized PCB hub that provides power distribution, modular expansion ports, and support for future sensors or processing modules. This architecture meets all functional, safety, and regulatory specifications, delivering a low-cost, replicable, and environmentally resilient GNSS-based ionospheric monitoring system optimized for research, educational deployment, and long-term adaptability.
 
-### **Hardware Block Diagram**
+# **Hardware Block Diagram**
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1PtFvnCxl.png" alt="Hardware Block Diagram" width="600">
   <p><strong>Figure 14:</strong> <em>Hardware Block Diagram</em></p>
 </div>
 
-### **Operational Flow Chart**
+# **Operational Flow Chart**
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJz6KwhCee.png" alt="Operation Flowchart" width="600">
@@ -445,7 +443,7 @@ $$
 
 # **Atomic Subsystem Specifications**
 
-Data Storage System
+##**Data Storage System**##
 
 **Overview**
 
@@ -521,7 +519,7 @@ No direct user control of logging frequency or file management is required, thou
 - The subsystem shall remain modular, allowing replacement and enabling expansion (e.g., switching to larger-capacity storage) without major redesign.
 - The subsystem shall consume minimal power, remaining within the limits provided by the power subsystem.
 
-Antenna and RF Module System
+##**Antenna and RF Module System**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The Antenna and RF Module System shall be responsible for receiving GNSS data for computation of TEC and scintillation measurements. The resulting measurements and other generated data shall then be sent to the data and storage subsystem for further analysis and processing.
 
@@ -550,7 +548,7 @@ Antenna and RF Module System
 </div>
 
 
-System Interconnections
+##**System Interconnections**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The system interconnections platform is responsible for providing a central connection site for all major modules and peripheral devices. This subsystem ensures the prototype remains modular, maintainable, and expandable, supporting user-driven experimentation. To achieve this, the system will implement a PCB hub approach, serving as a unified interface for routing power, data, control, and RF signals between modules. This maintains electrical integrity and ease of reconfiguration.
 
@@ -582,7 +580,7 @@ System Interconnections
 | MCU | Sensor GPIO | Input/Output | GPIO/UART/I2C/SPI/Power | Provides the system data as the control platform |
 | Storage | Digital Data / Power from SBC | Input: Commands from SBC / Output: Data to SBC | USB connected to SBC | Read/write operations for logged GNSS data, system health metrics, and user applications |
 
-Power System
+##**Power System**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The Power Subsystem is responsible for supplying all other subsystems with the necessary electrical parameters for them to function properly without fault. This subsystem also includes internal protection, preventing electrical faults from damaging other components.
 
@@ -599,7 +597,7 @@ Power System
 </div>
 
 
-Enclosure and Protection System
+##**Enclosure and Protection System**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The enclosure and protection system serves as the structural and environmental safeguard for the entire prototype, ensuring reliable performance under diverse operating conditions. Its primary role is to shield all internal subsystems from external hazards such as moisture, dust, and temperature fluctuations, while also mitigating internal risks like heat buildup or mechanical stress. To achieve this, the enclosure will be 3-D printed using PETG, a material and method selected for superior resistance to water, chemicals, and extreme temperatures. The design will incorporate precision-engineered mounts to securely position both internal and external components, provide multiple stable mounting configurations, and support modularity for efficient maintenance and future upgrades.
 
@@ -609,7 +607,7 @@ Enclosure and Protection System
 - This subsystem shall promote modularity of internal components.
 - The subsystem shall provide ease of access to all internal components.
 
-Publication
+##**Publication**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The Publication Subsystem is responsible for comprehensive documentation of all activities throughout the system's lifecycle, including planning, design, prototyping, and testing. This ensures the project processes, milestones, and results are clearly recorded and accessible, providing the necessary resources for replication and scientific dissemination.
 
@@ -642,7 +640,7 @@ Publication
 
 &nbsp; &nbsp; &nbsp; &nbsp;Project resources are allocated across three primary categories: budget, labor, and timeline. The budget ensures cost-effective component selection and material procurement within the project's \$1,000 constraint. The division of labor assigns specific subsystem responsibilities to team members based on technical expertise, while the timeline coordinates design, fabrication, testing, and documentation milestones to maintain steady project progress and accountability to guarantee on-time delivery.
 
-### **Budget**
+## **Budget**
 
 Data Storage System Budget:
 
@@ -744,7 +742,7 @@ Overall Budget:
 
 \*SBC will be shared between Data Subsystem and RF Module Subsystem
 
-### **Division of Labor**
+## **Division of Labor**
 
 - Power Supply Subsystem - Kenneth Creamer
   - Requirements: A thorough understanding of power systems and solar panels.
@@ -765,7 +763,7 @@ Overall Budget:
   - Requirements: Technical writing ability.
   - Responsible team member and rationale: Every member of the group shall contribute to the completion of the paper as documentation is completed.
 
-### **Timeline**
+## **Timeline**
 
 # **References**
 
