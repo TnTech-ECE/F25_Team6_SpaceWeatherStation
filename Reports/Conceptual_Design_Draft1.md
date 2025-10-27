@@ -671,14 +671,14 @@ Power System:
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
 
 | Power System | Item | Budget |
-| Solar Panel | \$75 |     |
+| Solar Panel | |  \$75    |
 | --- | --- | --- |     | --- |
-| Power Supply | \$25 |     |
-| MPPT Charge Controller | \$30 |     |
-| Battery (12V, 20Ah) | \$50 |     |
-| Transformer/Converters | \$20 |     |
-| Protection Components | \$25 |     |
-| Miscellaneous Cables | \$35 |     |
+| Power Supply |  |    \$25 |
+| MPPT Charge Controller | |   \$30   |
+| Battery (12V, 20Ah) |  |\$50     |
+| Transformer/Converters |  |  \$20   |
+| Protection Components |  |   \$25  |
+| Miscellaneous Cables | |   \$35   |
 | &nbsp; | &nbsp; | Total | \$260 |
 
 Enclosure System:
@@ -789,6 +789,6 @@ Kenneth Creamer-Harris: Restating the Problem, Comparative Analysis of Potential
 
 Blake Hudson: Atomic Subsystem Specifications \[Data Storage Subsystem\], High-Level Solution, Hardware Block Diagram, Operational Flow Chart.
 
-Nolan Magee: Introduction, division of labor, Timeline, and final review.
+Nolan Magee: Introduction, division of labor, Timeline, and Final Review.
 
 Jackson Taylor: Budget, Atomic Subsystem Specifications \[Antenna and RF Module Subsystem\]
