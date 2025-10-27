@@ -79,12 +79,12 @@
 - **Choke-ring antennas** provide near-hemispherical radiation and reception patterns, enabling observation of multiple satellites simultaneously. They also offer excellent multipath rejection and are capable of multi-frequency tuning. However, the cost surpasses Team 6's constraint of affordability.
 - **Patch antennas** are commonly used in handheld GNSS devices due to their compact form factor and affordability. \[12\] They are a usual choice for RF engineers when designing a GNSS application, featuring a fairly hemispherical radiation pattern. Most off-the-shelf dual-frequency GNSS antennas use patch elements. \[13\] Therefore, a dual-tuned, multi-element patch antenna had been selected for the prototype.
 
-
+![Dual Tuned Patch GNSS Antenna](https://hackmd.io/_uploads/S1JOqLnRll.jpg)
 Figure 1: Dual Patch Antenna Explodable View
 
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
-
+![Dual Tuned Patch GNSS Antenna Front](https://hackmd.io/_uploads/Sy4Fq8hAlg.png)
 Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
 ## **Central Processing and Control System (CPCS)**
@@ -99,7 +99,7 @@ Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
 &nbsp; &nbsp; &nbsp; &nbsp;Utilizing an SDR is one approach for processing and digitizing GNSS signals. This method offers significant flexibility for the user while substantially increasing design complexity. Implementing an SDR requires extensive programming knowledge for handling IQ sampling, filtering, modulation, multipath rejection, and other digital signal processing tasks. Furthermore, these processes must be performed concurrently for multiple satellites, adding additional challenges. The primary goal of this prototype is to develop a simple yet functional system, enabling a hobbyist to measure TEC independently. While Team 6 will provide the necessary code regardless of the RF processing method chosen, using an SDR introduces unnecessary complexity, threatening the system's user-friendly appeal to the user. Additionally, SDRs do not offer a significant cost advantage and may exceed Team 6's budget to meet the required measurement accuracy.
 
-
+![Screenshot 2025-10-18 at 2.11.00 PM](https://hackmd.io/_uploads/BJUc5I3Rxx.png)
 Figure 3: Example of an SDR Module
 
 **RF Module Approach:**
@@ -110,10 +110,10 @@ Figure 3: Example of an SDR Module
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on industry recommendations, design simplicity, and cost considerations, Team 6 has elected to implement a dedicated RF module in the prototype.
 
-
+![Screenshot 2025-10-18 at 1.40.32 PM](https://hackmd.io/_uploads/S1Ni9IhRel.png)
 Figure 4: u-blox ZED-FP9 Module w/sparkfun Breakout Board
 
-
+![Screenshot 2025-10-19 at 9.08.27 PM](https://hackmd.io/_uploads/rkv25LnClx.png)
 Figure 5: u-blox ZED-FP9 Module Block Diagram for L1 and L2
 
 ### **Computing and Control Platform**
@@ -128,7 +128,7 @@ Figure 5: u-blox ZED-FP9 Module Block Diagram for L1 and L2
 
 &nbsp; &nbsp; &nbsp; &nbsp;MCUs are excellent for analog sensor interfacing and low-level processing operations. However, MCUs alone are insufficient for handling the computationally intensive, modular, and expandable requirements of Team 6's prototype. Their limited number of I/O ports and communication interfaces restrict the ability to support multiple peripherals and expansion modules simultaneously. This makes them unsuitable as the primary processing platform.
 
-
+![Arduino MCU](https://hackmd.io/_uploads/HJNTcLhCgx.png)
 Figure 6: Example of Two MCUs
 
 **Single Board Computer (SBC) Approach:**
@@ -190,7 +190,7 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;SSDs offer advantages over HDDs, including static parts, high reliability, fast and consistent throughput, and compact form factors. Despite their benefits, SSDs are significantly more expensive than smaller flash-based media, which conflicts with Team 6's goal of developing a cost-effective prototype. Additionally, SSDs may consume more power and can be slightly more complex for software interfacing, requiring additional drivers or protocol management.
 
-
+![HDD vs SSD Interior](https://hackmd.io/_uploads/rJUyo8n0le.jpg)
 Figure 8: HDD vs. SDD Interior
 
 - **SD Cards**
