@@ -95,7 +95,7 @@ Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
 #### **RF Signal Conditioning and Digitization**
 
-**Software Defined Radio (SDR) Approach:**
+##### **Software Defined Radio (SDR) Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Utilizing an SDR is one approach for processing and digitizing GNSS signals. This method offers significant flexibility for the user while substantially increasing design complexity. Implementing an SDR requires extensive programming knowledge for handling IQ sampling, filtering, modulation, multipath rejection, and other digital signal processing tasks. Furthermore, these processes must be performed concurrently for multiple satellites, adding additional challenges. The primary goal of this prototype is to develop a simple yet functional system, enabling a hobbyist to measure TEC independently. While Team 6 will provide the necessary code regardless of the RF processing method chosen, using an SDR introduces unnecessary complexity, threatening the system's user-friendly appeal to the user. Additionally, SDRs do not offer a significant cost advantage and may exceed Team 6's budget to meet the required measurement accuracy.
 
