@@ -1,4 +1,4 @@
-<h1 style="font-size:40px;">F25 Team 6 SpaceWeatherStation Conceptual Design</h1>
+<h1 style="font-size:40px;">F25 Team 6 Space Weather Station Conceptual Design</h1>
 
 ## **Introduction**
 
