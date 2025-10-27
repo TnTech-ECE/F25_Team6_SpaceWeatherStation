@@ -69,7 +69,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The following sections examine design considerations for signal reception, central processing and control systems, storage, power, modularity, and enclosure. The goal being identification of components and design elements that support the prototype objective.
 
-**Signal Reception**
+###**Signal Reception**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype will utilize dual-frequency GNSS signal observations to directly measure TEC with high accuracy. To achieve this, a dual-tuned Right-Hand Circularly Polarized (RHCP) antenna is proposed. RHCP is predominantly used for GNSS applications. This preference stems from the fact that most GNSS satellites transmit signals in RHCP, optimizing the system for uninterrupted signal reception. \[11\] Additionally, the antenna should have a spatial reception pattern that is close to hemispherical, meaning it can receive signals from all skyward directions. This spatial pattern improves coverage by maximizing the number of visible satellites. The antenna chosen shall be tuned to L1 (1,559-1,610 MHz) and L5 (1,164-1,215 MHz) bands.
 
@@ -87,13 +87,13 @@ Figure 1: Dual Patch Antenna Explodable View
 
 Figure 2: Dual-Tuned Patch Antenna w/Coaxial
 
-**Central Processing and Control System (CPCS)**
+###**Central Processing and Control System (CPCS)**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype's CPCS manages all computational and control functions essential to device operation. It is responsible for performing TEC-related calculations, managing data storage, and executing system-level control tasks such as sensor monitoring and safety management.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The CPCS consists of two distinct functional domains: **RF signal conditioning and digitization**, and **computing and control platform**. The RF module performs all signal conditioning and digitization, outputting structured data for further computation. The data is then received by the computing and control platform, executing higher-level computations and overseeing system coordination.
 
-**RF Signal Conditioning and Digitization**
+####**RF Signal Conditioning and Digitization**
 
 **Software Defined Radio (SDR) Approach:**
 
@@ -116,7 +116,7 @@ Figure 4: u-blox ZED-FP9 Module w/sparkfun Breakout Board
 
 Figure 5: u-blox ZED-FP9 Module Block Diagram for L1 and L2
 
-**Computing and Control Platform**
+####**Computing and Control Platform**
 
 &nbsp; &nbsp; &nbsp; &nbsp;After the RF module outputs processed GNSS data, it is handled by the central computing platform, which manages TEC computation, system coordination, and data logging. Team 6 has considered implementing the full system using either a single-board computer (SBC) or a microcontroller (MCU)-based approach.
 
@@ -144,11 +144,12 @@ Figure 6: Example of Two MCUs
 
 Figure 7: Raspberry Pi 5 SBC
 
-**Storage**
+###**Storage**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype requires a storage solution capable of reliably recording high-resolution TEC measurements, system health metrics, and additional sensor data over extended periods. Storage must support continuous data logging, fast read/write operations, and seamless interfacing with the central computing platform. To ensure long-term reliability and simplicity, Team 6 conducted a throughput analysis and performed a storage estimation. This was followed by an evaluation of several options, including traditional hard disk drives (HDDs), solid-state drives (SSDs), and removable flash-based media such as SD cards and USB thumb drives.
 
 **Throughput Analysis**
+
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou **\[2\]**. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is converted into a UBX file format containing satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific information. The SBC processes the UBX data to calculate TEC and scintillation measurements, storing them as single-precision floating point numbers, with 8 bytes per pair of TEC and scintillation values.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The resulting throughput requirement for TEC and scintillation measurements is:
@@ -169,7 +170,7 @@ Total Throughput (B/s) = 40 kB/s (Map) + 3.2 kB/s (RINEX) + 1.6 kB/s (TEC + Scin
 
 &nbsp; &nbsp; &nbsp; &nbsp;The total throughput presented is an approximation due to the variable sizes of UBX and RINEX files. Team 6 has employed conservative calculations to account for a worst-case scenario across the three primary data streams. Additional contributions, including minor system metadata, housekeeping information, and occasional logging of auxiliary sensor measurements may slightly increase overall throughput. However, these effects are expected to be minimal. Incorporating a 20% buffer to account for the additional overhead creates an estimated total throughput of 53.8 kB/s.
 
-Data Estimation
+**Data Estimation**
 
 A throughput of 53.8kB/s provides a basis for estimating daily storage requirements:
 
@@ -177,26 +178,26 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on this calculation and Team 6's goal of a field-deployable system, the required storage capacity can be approximated. The system should be capable of storing at least one month of continuous operation, corresponding to roughly 139 GB per month. Accounting for additional software and applications, a 256 GB storage drive provides ample space, leaving an estimated 117 GB available for user-driven expansions and auxiliary data.
 
-Storage Mediums Considered
+**Storage Mediums Considered**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 is considering various storage options for the prototype, with the goal of identifying the most suitable solution for meeting the project's specifications and operational constraints. Key considerations include reliability under field conditions, continuous data logging capability, throughput requirements, and sufficient storage capacity for at least one month of autonomous operation. Based on the previously estimated total throughput of 53.8 kB/s and a monthly storage requirement of approximately 139 GB, the following options were evaluated:
 
-- Hard Disk Drives (HDDs)
+- **Hard Disk Drives (HDDs)**
 
 &nbsp; &nbsp; &nbsp; &nbsp;HDDs are widely available and cost-effective, offering high storage capacity at a relatively low price per gigabyte. However, they rely on mechanical components, making them vulnerable to shock, vibration, and harsh environmental conditions. Their power consumption is higher than solid-state alternatives, and latency can limit performance while logging data continuously. This makes them less ideal for a battery-powered or field-deployable prototype.
 
-- Solid-State Drives (SSDs)
+- **Solid-State Drives (SSDs)**
 
 &nbsp; &nbsp; &nbsp; &nbsp;SSDs offer advantages over HDDs, including static parts, high reliability, fast and consistent throughput, and compact form factors. Despite their benefits, SSDs are significantly more expensive than smaller flash-based media, which conflicts with Team 6's goal of developing a cost-effective prototype. Additionally, SSDs may consume more power and can be slightly more complex for software interfacing, requiring additional drivers or protocol management.
 
 
 Figure 8: HDD vs. SDD Interior
 
-- SD Cards
+- **SD Cards**
 
 &nbsp; &nbsp; &nbsp; &nbsp;SD Cards provide a compact, removable storage solution and are widely available at low cost. However, their throughput and write endurance can be limited, and consumer-grade SD cards may struggle with sustained continuous logging over long periods of time. Industrial-grade SD cards offer higher endurance but are more costly, conflicting with the cost goals for the prototype.
 
-- USB Thumb Drives
+- **USB Thumb Drives**
 
 &nbsp; &nbsp; &nbsp; &nbsp;USB Thumb Drives combine portability, low cost, and ease of use. Many modern drives provide sufficient throughput to easily handle the estimated 53.8 kB/s of data with minimal risk of write bottlenecks. While not as fast or robust as industrial SSDs, USB thumb drives offer a practical balance of reliability, cost, and simplicity for field deployment. This supports continuous operation lasting up to one month, aligning with Team 6's expected maximum data generation of roughly 139 GB per month.
 
@@ -207,17 +208,17 @@ Figure 9: Thumb Drive Example
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to the USB thumb drive, the prototype will be capable of connecting to a local host server or workstation, enabling backup, visualization, and integration of logged GNSS measurements, system health metrics, and auxiliary data. The addition of the server provides supplementary storage and data analysis capabilities without affecting the prototype's on-device storage requirements. The choice to implement a USB thumb drive is based on throughput analysis, data estimation, and consideration of cost, reliability, and field deployability. The USB drive serves as the primary local storage for continuous TEC and system data logging. The prototype may also connect to the host server or workstation for centralized data aggregation.
 
-**Power**
+###**Power**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Powering Team 6's prototype requires careful consideration of mobility, reliability, and operational environment. Various approaches, ranging from AC wall power to hybrid battery and solar configuration, offer different trade-offs in cost, complexity, and deployment flexibility. Team 6 evaluates these approaches to balance portability, autonomy, and modularity while ensuring continuous, safe operation of all subsystems, including the GNSS receiver, processing unit, and data storage.
 
-**AC Wall Power Approach:**
+####**AC Wall Power Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;A simple method for powering the prototype is through direct connection to a 120 V AC wall outlet. This approach provides a stable and continuous power source, ensuring reliable operation for all system components, including the GNSS receiver, processing unit, and data storage device. Wall-powered operation significantly reduces system complexity by eliminating the need for battery management circuitry, power conversion modules, and charge controllers.
 
 &nbsp; &nbsp; &nbsp; &nbsp;No energy storage component is required, resulting in a lower-cost build. This creates margin in the budget for higher-performance electronics. However, this approach imposes significant spatial limitations. The device can only operate in proximity to a building or facility with available mains power. Consequently, deployment flexibility and geographic coverage are greatly reduced. The system would be constrained to controlled environments such as research laboratories, homes, schools, and other desired observatories, making it unsuitable for widespread or remote field measurements.
 
-**Standalone Rechargeable Battery Approach:**
+####**Standalone Rechargeable Battery Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Using a rechargeable battery system capable of supplying all required electrical loads greatly improves mobility, deployment, and versatility. This enables the prototype to operate in isolated locations without dependance on infrastructure. A well-designed battery subsystem, such as a 12.8 V LiFePO₄ pack paired with a battery management system (BMS), provides the necessary current for the device's power rails through appropriate buck converters or voltage dividers.
 
@@ -226,7 +227,7 @@ Figure 9: Thumb Drive Example
 
 Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS
 
-**Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
+####**Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Incorporating a solar charging system alongside the onboard battery mitigates many limitations of the battery-only configuration. A solar panel coupled with a maximum power point tracking (MPPT) charge controller enables the device to operate for extended periods of time dependent on sunlight availability and energy demand. The use of the 12 V (nominal 12.8 V LiFePO₄) standard aligns with industry conventions for portable instrumentation and ensures compatibility with commonly available charge controllers and solar modules.
 
@@ -237,7 +238,7 @@ Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS
 
 Figure 11: 12V Solar Panel and 20A MPPT
 
-**Hybrid AC/DC Rechargeable Battery Approach:**
+####**Hybrid AC/DC Rechargeable Battery Approach:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6's proposed solution adopts a hybrid rechargeable battery architecture that can be powered or recharged from either a 120 V AC wall main (via DC adapter) or a solar panel. This configuration provides an optimal balance between mobility, flexibility, and simplicity. Under this approach, the prototype draws power primarily from its onboard battery, while external charging sources can be connected and disconnected as needed.
 
@@ -252,7 +253,7 @@ Figure 12: AC and Solar Power Adapters
 
 &nbsp; &nbsp; &nbsp; &nbsp;The chosen approach maintains a good balance between power redundancy, safety, and cost efficiency. The inclusion of a BMS, MPPT, AC/DC, and DC/DC regulation circuitry ensures compliance with IEEE and IEC electrical safety standards while supporting continuous operation of the SBC, GNSS receiver, and storage subsystem. Overall, the hybrid rechargeable power design aligns with Team 6's objective of creating a robust, modular, and accessible prototype capable of deployment across both laboratory and remote field environments.
 
-**Modularity**
+###**Modularity**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Robust modularity is a crucial specification for the prototype, enabling user-based servicing and expansion. Modularity ensures individual subsystems, such as the RF front end, computing platform, power management, and storage, can be upgraded, serviced, and replaced without a complete redesign. This approach supports long-term maintainability and aligns with the project's goal of enabling user-driven expansion and experimentation.
 
@@ -268,13 +269,13 @@ Figure 12: AC and Solar Power Adapters
 
 Figure 13: 40 Pin Male to Female Ribbon Cable
 
-**Enclosure**
+###**Enclosure**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The system shall be housed in an enclosure designed for mobility, rapid deployment, and easy access in support of a variety of configurations. Team 6 draws inspiration from the ScintPi 3.0 design, exemplifying compact form factor, transportability, and user-friendly accessibility. The enclosure shall accommodate modular components, allowing for straightforward integration and replacement of the various modules and sensors within. This shall foster long-term serviceability and adaptability.
 
 &nbsp; &nbsp; &nbsp; &nbsp;To achieve an IPx4 rating while maintaining ventilation, the enclosure design shall incorporate an enclosure nested within a larger enclosure. Interior walls are arranged to force any water entering the vent to travel upward along a convoluted path before reaching the internal cavity, effectively preventing water ingress while allowing passive airflow for thermal regulation. Additional airflow beneath the enclosure increases exposed surface area for heat dissipation, improving long-term thermal stability. The enclosure will be 3D printed, enabling rapid prototyping and low-cost production while maintaining structural integrity suitable for repeated field deployment. The 3D print files will be made publicly available, allowing users to modify and adapt the design for each specific application and environmental condition.
 
-Team 6 has identified three potential materials to use in creating the enclosure:
+&nbsp; &nbsp; &nbsp; &nbsp;Team 6 has identified three potential materials to use in creating the enclosure:
 
 - **Polylactic Acid (PLA) Approach**
 
