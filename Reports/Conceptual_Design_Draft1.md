@@ -249,8 +249,10 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;The advantages of a battery-only system include portability and operational independence critical for field experiments and distributed observation networks. However, this approach introduces engineering and safety challenges. The integration of rechargeable batteries necessitates protection circuits against overvoltage, short-circuit, and thermal runaway conditions. Without an external charging source, runtime is inherently limited by battery capacity, requiring careful energy budgeting and system shutdown protocols to prevent data corruption upon power depletion. This design also demands periodic maintenance and manual recharging, reducing long-term autonomy.
 
-
-Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS
+<div align="center">
+  <img src="https://hackmd.io/_uploads/HJOoXwnCxl.png" alt="System Block Diagram" width="600">
+  <p><em>Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS</em></p>
+</div>
 
 ### **Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
 
