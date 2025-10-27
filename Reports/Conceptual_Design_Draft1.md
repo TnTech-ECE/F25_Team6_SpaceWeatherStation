@@ -123,7 +123,7 @@
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="600">
+  <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="800">
   <p><em>Figure 5: Detailed view of the PCB hub layout</em></p>
 </div>
 
