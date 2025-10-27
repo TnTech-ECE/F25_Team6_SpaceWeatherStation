@@ -81,14 +81,14 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="600">
-  <p></strong>Figure 1: Dual Patch Antenna Explodable View</em></p>
+  <p><strong>Figure 1: Dual Patch Antenna Explodable View</em></p>
 </div>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/Sy4Fq8hAlg.png" alt="Dual Tuned Patch GNSS Antenna Front" width="400">
-  <p></strong>Figure 2: Dual-Tuned Patch Antenna w/Coaxial</em></p>
+  <p><strong>Figure 2: Dual-Tuned Patch Antenna w/Coaxial</em></p>
 </div>
 
 ## **Central Processing and Control System (CPCS)**
@@ -105,7 +105,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/BJUc5I3Rxx.png" alt="Screenshot of System Layout" width="600">
-  <p></strong>Figure 3: Example of an SDR Module</em></p> 
+  <p><strong>Figure 3: Example of an SDR Module</em></p> 
 </div>
 
 **RF Module Approach:**
@@ -118,13 +118,13 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1Ni9IhRel.png" alt="Screenshot of PCB Hub" width="600">
-  <p></strong>Figure 4: u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
+  <p><strong>Figure 4: u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
 </div>
 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="800">
-  <p></strong>Figure 5: u-blox ZED-F9P Module Block Diagram for L1 and L2</em></p>
+  <p><strong>Figure 5: u-blox ZED-F9P Module Block Diagram for L1 and L2</em></p>
 </div>
 
 
@@ -142,7 +142,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJNTcLhCgx.png" alt="Arduino MCU" width="600">
-  <p></strong>Figure 6: Example of Two MCUs</em></p>
+  <p><strong>Figure 6: Example of Two MCUs</em></p>
 </div>
 
 **Single Board Computer (SBC) Approach:**
@@ -158,7 +158,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="500">
-  <p></strong>Figure 7: Raspberry Pi 5 SBC</em></p>
+  <p><strong>Figure 7: Raspberry Pi 5 SBC</em></p>
 </div>
 
 
@@ -210,7 +210,7 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJUyo8n0le.jpg" alt="HDD vs SSD Interior" width="600">
-  <p></strong>Figure 8: HDD vs. SDD Interior</em></p>
+  <p><strong>Figure 8: HDD vs. SDD Interior</em></p>
 </div>
 
 
@@ -227,7 +227,7 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/r1ySXDnAxx.jpg" alt="System Overview Diagram" width="600">
-  <p></strong>Figure 9: Thumb Drive Example</em></p>
+  <p><strong>Figure 9: Thumb Drive Example</em></p>
 </div>
 
 
@@ -251,7 +251,7 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJOoXwnCxl.png" alt="System Block Diagram" width="600">
-  <p></strong>Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS</em></p>
+  <p><strong>Figure 10: 12V 20Ah LiFePO4 Battery w/Built in BMS</em></p>
 </div>
 
 ### **Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
