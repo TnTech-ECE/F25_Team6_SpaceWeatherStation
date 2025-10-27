@@ -168,23 +168,32 @@
 
 **Throughput Analysis**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou **\[2\]**. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is converted into a UBX file format containing satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific information. The SBC processes the UBX data to calculate TEC and scintillation measurements, storing them as single-precision floating point numbers, with 8 bytes per pair of TEC and scintillation values.
+&nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou \[2\]. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is converted into a UBX file format containing satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific information. The SBC processes the UBX data to calculate TEC and scintillation measurements, storing them as single-precision floating point numbers, with 8 bytes per pair of TEC and scintillation values.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The resulting throughput requirement for TEC and scintillation measurements is:
 
+$$
+\text{TEC + Scintillation Throughput (B/s)} = 8~\text{B/sample} \times 10~\text{samples/s} \times 20~\text{satellites} = 1.6~\text{kB/s}
+$$
+
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to TEC and scintillation measurements, the prototype will generate RINEX files for archival and scientific use. RINEX is widely considered the standard format for satellite observation data, ensuring compatibility with established GNSS analysis tools. RINEX files will be produced at a 1 Hz rate (every second), preserving accurate TEC values but does not capture high-frequency scintillation events.
 
-&nbsp; &nbsp; &nbsp; &nbsp;RINEX file size varies based on multiple factors; most notably the number of satellites in view, the number of observation types recorded, and the sampling rate. Older versions, such as RINEX 2.0, used a fixed 80-byte line format **\[14\].** Whereas modern versions, including RINEX 4.0, allow variable line lengths, typically shorter than 80 bytes.
+&nbsp; &nbsp; &nbsp; &nbsp;RINEX file size varies based on multiple factors; most notably the number of satellites in view, the number of observation types recorded, and the sampling rate. Older versions, such as RINEX 2.0, used a fixed 80-byte line format \[14\]. Whereas modern versions, including RINEX 4.0, allow variable line lengths, typically shorter than 80 bytes.
 
-&nbsp; &nbsp; &nbsp; &nbsp;For conservative planning, Team 6 assumes each line consists of one epoch, one satellite, and one frequency. An epoch is a snapshot of the orbit and measurements of a satellite at a specific moment in time **\[15\]**. Essentially, it is a single sample taken across all tracked satellites at a specific instant. With 20 satellites, 2 signals per satellite, and 1 epoch per second (1 Hz RINEX generation), each RINEX file will contain roughly 40 lines. At 80 bytes per line, this corresponds to:
+&nbsp; &nbsp; &nbsp; &nbsp;For conservative planning, Team 6 assumes each line consists of one epoch, one satellite, and one frequency. An epoch is a snapshot of the orbit and measurements of a satellite at a specific moment in time \[15\]. Essentially, it is a single sample taken across all tracked satellites at a specific instant. With 20 satellites, 2 signals per satellite, and 1 epoch per second (1 Hz RINEX generation), each RINEX file will contain roughly 40 lines. At 80 bytes per line, this corresponds to:
 
-Rinex Throughput (B/s) = 40 lines/s × 80 B/line = 3.2 kB/s
+$$
+\text{RINEX Throughput (B/s)} = 40~\text{lines/s} \times 80~\text{B/line} = 3.2~\text{kB/s}
+$$
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 may choose to render TEC maps on a 100x100 grid, with each cell holding a single TEC value of 4 bytes. If Team 6 produces a map every second, this would yield a throughput of 40 kB/s.
 
 Combining all data streams gives the total estimated throughput:
 
-Total Throughput (B/s) = 40 kB/s (Map) + 3.2 kB/s (RINEX) + 1.6 kB/s (TEC + Scintillation) = 44.8 kB/s
+$$
+\text{Total Throughput (B/s)} = 40~\text{kB/s (Map)} + 3.2~\text{kB/s (RINEX)} + 1.6~\text{kB/s (TEC + Scintillation)} = 44.8~\text{kB/s}
+$$
+
 
 &nbsp; &nbsp; &nbsp; &nbsp;The total throughput presented is an approximation due to the variable sizes of UBX and RINEX files. Team 6 has employed conservative calculations to account for a worst-case scenario across the three primary data streams. Additional contributions, including minor system metadata, housekeeping information, and occasional logging of auxiliary sensor measurements may slightly increase overall throughput. However, these effects are expected to be minimal. Incorporating a 20% buffer to account for the additional overhead creates an estimated total throughput of 53.8 kB/s.
 
@@ -192,7 +201,10 @@ Total Throughput (B/s) = 40 kB/s (Map) + 3.2 kB/s (RINEX) + 1.6 kB/s (TEC + Scin
 
 A throughput of 53.8kB/s provides a basis for estimating daily storage requirements:
 
-Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
+$$
+\text{Storage per Day} = 53.8~\text{kB/s} \times 3600~\text{s} \times 24~\text{hours} = 4.65~\text{GB/day}
+$$
+
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on this calculation and Team 6's goal of a field-deployable system, the required storage capacity can be approximated. The system should be capable of storing at least one month of continuous operation, corresponding to roughly 139 GB per month. Accounting for additional software and applications, a 256 GB storage drive provides ample space, leaving an estimated 117 GB available for user-driven expansions and auxiliary data.
 
