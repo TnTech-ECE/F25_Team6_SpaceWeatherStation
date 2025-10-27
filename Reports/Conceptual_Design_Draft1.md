@@ -116,11 +116,17 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on industry recommendations, design simplicity, and cost considerations, Team 6 has elected to implement a dedicated RF module in the prototype.
 
-![Screenshot 2025-10-18 at 1.40.32 PM](https://hackmd.io/_uploads/S1Ni9IhRel.png)
-Figure 4: u-blox ZED-FP9 Module w/sparkfun Breakout Board
+<div align="center">
+  <img src="https://hackmd.io/_uploads/S1Ni9IhRel.png" alt="Screenshot of PCB Hub" width="600">
+  <p><em>Figure 4: Screenshot of the PCB hub layout</em></p>
+</div>
 
-![Screenshot 2025-10-19 at 9.08.27 PM](https://hackmd.io/_uploads/rkv25LnClx.png)
-Figure 5: u-blox ZED-FP9 Module Block Diagram for L1 and L2
+
+<div align="center">
+  <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="600">
+  <p><em>Figure 5: Detailed view of the PCB hub layout</em></p>
+</div>
+
 
 ### **Computing and Control Platform**
 
