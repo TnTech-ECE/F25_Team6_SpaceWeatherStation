@@ -260,24 +260,23 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;This configuration enhances the device's operational autonomy, making it ideal for remote monitoring networks or long-term unattended deployments. However, the addition of solar power introduces new physical and electrical complexities. The panel increases the system's physical footprint, potentially reducing portability. Wiring between the MPPT, battery, and system load must be carefully designed to prevent reverse current flow and cross-charging between power inputs. Furthermore, system cost and assembly time increase due to additional components and mounting considerations. Despite these drawbacks, the solar-assisted configuration offers the best endurance-to-cost ratio for long-duration field applications.
 
-| 12V Class Solar Panel | 12V 20A MPPT |
-| --- | --- |
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://hackmd.io/_uploads/ByuoQw2Clg.png" alt="12V Solar Panel" width="300"><br>
-      <em>Figure 11: 12V class solar panel</em>
-    </td>
-    <td align="center">
-      <img src="https://hackmd.io/_uploads/Sy_i7w2Cel.png" alt="12V 20A MPPT" width="300"><br>
-      <em>Figure 12: 12V 20A MPPT charge controller</em>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://hackmd.io/_uploads/ByuoQw2Clg.png" alt="12V Solar Panel" width="300"><br>
+        <em>12V class solar panel</em>
+      </td>
+      <td align="center">
+        <img src="https://hackmd.io/_uploads/Sy_i7w2Cel.png" alt="12V 20A MPPT" width="300"><br>
+        <em>12V 20A MPPT charge controller</em>
+      </td>
+    </tr>
+  </table>
+  <p><strong>Figure 11:</strong> 12V Solar Panel and 20A MPPT</p>
+</div>
 
-
-Figure 11: 12V Solar Panel and 20A MPPT
 
 ### **Hybrid AC/DC Rechargeable Battery Approach:**
 
