@@ -675,23 +675,24 @@ Power System:
 | Subsystem | Item | Budget |
 | --- | --- | --- |
 | Power System
-| | Solar Panel | | $75 |
-| | Power Supply | | $25 |
-| | MPPT Charge Controller | |   $30   |
-| | Battery (12V, 20Ah) |  |$50     |
-| | Transformer/Converters |  |  $20   |
-| | Protection Components |  |   $25  |
-| | Miscellaneous Cables | |  $35   |
+| | Solar Panel | $75 |
+| | Power Supply | $25 |
+| | MPPT Charge Controller | $30   |
+| | Battery (12V, 20Ah) |$50 |
+| | Transformer/Converters | $20   |
+| | Protection Components |  $25  |
+| | Miscellaneous Cables | $35   |
 | Total | | $260 |
 
 Enclosure System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament.
 
-| Enclosure | Item | Budget |
-| Waterproofing Material | \$40 |
+| Subysystem | Item | Budget |
 | --- | --- | --- |
-| PETG Filament | \$50 |
+| Enclosure
+|| Waterproofing Material | \$40 |
+|| PETG Filament | \$50 |
 | Total | \$90 |
 
 Overall Budget:
@@ -701,28 +702,32 @@ Overall Budget:
 | Subsystem | Item | Budget |
 | --- | --- | --- |
 | Data and Storage System 
-| Storage Drive (Thumb Drive) | \$25 |
-| Single-Board Computer (SBC)\* | \$120\* |
-| Total | \$145 |
-| Antenna and RF Module System | RF Module | \$300 |
-| Dual-Tuned Patch Antenna | \$75 |
-| Total | \$375 |
-| System Interconnections | PCB | \$50 |
-| Miscellaneous Cables | \$25 |
-| Magnetometer | \$5 |
-| Microcontroller | \$20 |
-| Total | \$100 |
-| Power System | Solar Panel | \$75 |
-| Power Supply | \$25 |
-| MPPT Charge Controller | \$30 |
-| Battery (12V, 20Ah) | \$50 |
-| Transformer/Converters | \$20 |
-| Protection Components | \$25 |
-| Miscellaneous Cables | \$35 |
-| Total | \$260 |
-| Enclosure | Waterproofing Material | \$40 |
-| Mounting Material | \$50 |
-| Total | \$90 |
+|| Storage Drive (Thumb Drive) | \$25 |
+|| Single-Board Computer (SBC)\* | \$120\* |
+| Total || \$145 |
+| Antenna and RF Module System 
+|| RF Module | \$300 |
+|| Dual-Tuned Patch Antenna | \$75 |
+| Total || \$375 |
+| System Interconnections 
+|| PCB | \$50 |
+|| Miscellaneous Cables | \$25 |
+|| Magnetometer | \$5 |
+|| Microcontroller | \$20 |
+| Total || \$100 |
+| Power System 
+|| Solar Panel | \$75 |
+|| Power Supply | \$25 |
+|| MPPT Charge Controller | \$30 |
+|| Battery (12V, 20Ah) | \$50 |
+|| Transformer/Converters | \$20 |
+|| Protection Components | \$25 |
+|| Miscellaneous Cables | \$35 |
+| Total || \$260 |
+| Enclosure 
+|| Waterproofing Material | \$40 |
+|| Mounting Material | \$50 |
+| Total || \$90 |
 | Project Total |     | \$970 |
 
 \*SBC will be shared between Data Subsystem and RF Module Subsystem
