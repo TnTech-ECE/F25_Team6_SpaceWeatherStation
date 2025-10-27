@@ -766,8 +766,8 @@ No direct user control of logging frequency or file management is required, thou
 ## **Timeline**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/r1c5Lu20xx.png" alt="Screenshot 2" width="800">
-  <img src="https://hackmd.io/_uploads/Hk5q8_hRle.png" alt="Screenshot 1" width="800"><br><br>
+  <img src="https://hackmd.io/_uploads/r1c5Lu20xx.png" alt="Screenshot 2" width="1200">
+  <img src="https://hackmd.io/_uploads/Hk5q8_hRle.png" alt="Screenshot 1" width="1200"><br><br>
 </div>
 
 
