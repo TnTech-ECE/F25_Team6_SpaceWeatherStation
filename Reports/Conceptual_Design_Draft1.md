@@ -79,8 +79,10 @@
 - **Choke-ring antennas** provide near-hemispherical radiation and reception patterns, enabling observation of multiple satellites simultaneously. They also offer excellent multipath rejection and are capable of multi-frequency tuning. However, the cost surpasses Team 6's constraint of affordability.
 - **Patch antennas** are commonly used in handheld GNSS devices due to their compact form factor and affordability. \[12\] They are a usual choice for RF engineers when designing a GNSS application, featuring a fairly hemispherical radiation pattern. Most off-the-shelf dual-frequency GNSS antennas use patch elements. \[13\] Therefore, a dual-tuned, multi-element patch antenna had been selected for the prototype.
 
-![Dual Tuned Patch GNSS Antenna](https://hackmd.io/_uploads/S1JOqLnRll.jpg)
-Figure 1: Dual Patch Antenna Explodable View
+<div align="center">
+  <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="400">
+  <p><em>Figure 1: Dual-tuned GNSS patch antenna used in the system</em></p>
+</div>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
