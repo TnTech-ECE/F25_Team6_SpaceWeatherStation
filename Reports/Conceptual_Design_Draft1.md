@@ -632,9 +632,9 @@ Data Storage System Budget:
 | Subsystem | Component | Budget |
 | --- | --- | --- |
 | Data Storage System 
-| --- | Storage Drive (Thumb Drive) | \$25 |
-| --- | Single-Board Computer (SBC)\* | \$120\* |
-| Total | --- | \$145 |
+| | Storage Drive (Thumb Drive) | \$25 |
+| | Single-Board Computer (SBC)\* | \$120\* |
+| Total | | \$145 |
 
 Antenna and RF Module System:
 
@@ -643,8 +643,8 @@ Antenna and RF Module System:
 | Antenna and RF Module System | RF Module
 | \$300 |
 | --- | --- | --- |
-| Dual-Tuned Patch Antenna | \$75 |
-| Total | \$375 |
+|| Dual-Tuned Patch Antenna | \$75 |
+| Total || \$375 |
 
 System Interconnections:
 
