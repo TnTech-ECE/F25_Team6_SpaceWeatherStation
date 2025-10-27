@@ -290,11 +290,11 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
     <tr>
       <td align="center">
         <img src="https://hackmd.io/_uploads/B1YDrPh0lx.png" alt="19.5V 200W AC Power Adapter" width="300"><br>
-        <em>19.5V 200W XT60 AC Power Adapter</em>
+        <em>Solar MC4 to XT60 Adapter</em>
       </td>
       <td align="center">
         <img src="https://hackmd.io/_uploads/SkKPHPnClg.png" alt="Solar MC4 to XT60 Adapter" width="300"><br>
-        <em>Solar MC4 to XT60 Adapter</em>
+        <em>19.5V 200W XT60 AC Power Adapter</em>
       </td>
     </tr>
   </table>
