@@ -285,10 +285,21 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;This dual-source design improves deployment versatility, allowing the device to function both as a stationary laboratory instrument (plugged into wall power) and as a portable field unit (running on battery). By using modular, standalone charge controllers, each power source remains electrically isolated, preventing simultaneous back-feeding between the AC adapter and the solar input. This simplifies protection of circuitry and reduces the likelihood of electrical faults. Moreover, excluding a permanently attached solar panel reduces the system's physical footprint and enhances portability, while still providing the option for renewable charging when required.
 
-| 19.5V 200W XT60 AC Power Adapter | Solar MC4 to XT60 Adapter |
-| --- | --- |
-
-Figure 12: AC and Solar Power Adapters
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://hackmd.io/_uploads/B1YDrPh0lx.png" alt="19.5V 200W AC Power Adapter" width="300"><br>
+        <em>19.5V 200W XT60 AC Power Adapter</em>
+      </td>
+      <td align="center">
+        <img src="https://hackmd.io/_uploads/SkKPHPnClg.png" alt="Solar MC4 to XT60 Adapter" width="300"><br>
+        <em>Solar MC4 to XT60 Adapter</em>
+      </td>
+    </tr>
+  </table>
+  <p><strong>Figure 12:</strong> AC and Solar Power Adapters</p>
+</div>
 
 &nbsp; &nbsp; &nbsp; &nbsp;The hybrid approach offers significant engineering and operational advantages. It ensures that the system remains functional during power interruptions, supports hot-swappable charging inputs, and eliminates the need for constant supervision. Using widely available power connectors such as the XT60, DC barrel jacks, or Anderson Powerpole allows for easy field servicing and replacement without compromising structural integrity. The architecture also promotes modularity, enabling future users to upgrade components without redesigning the core electronics.
 
