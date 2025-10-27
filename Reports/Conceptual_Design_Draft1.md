@@ -266,16 +266,17 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
     <tr>
       <td align="center">
         <img src="https://hackmd.io/_uploads/ByuoQw2Clg.png" alt="12V Solar Panel" width="300"><br>
-        <em>12V class solar panel</em>
+        <em>12V Solar Panel</em>
       </td>
       <td align="center">
         <img src="https://hackmd.io/_uploads/Sy_i7w2Cel.png" alt="12V 20A MPPT" width="300"><br>
-        <em>12V 20A MPPT charge controller</em>
+        <em>12V 20A MPPT Charge Controller</em>
       </td>
     </tr>
   </table>
   <p><strong>Figure 11:</strong> 12V Solar Panel and 20A MPPT</p>
 </div>
+
 
 
 ### **Hybrid AC/DC Rechargeable Battery Approach:**
