@@ -168,7 +168,7 @@
 
 ### **Throughput Analysis**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou \[2\]. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is converted into a UBX file format containing satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific information. The SBC processes the UBX data to calculate TEC and scintillation measurements, storing them as single-precision floating point numbers, with 8 bytes per pair of TEC and scintillation values.
+&nbsp; &nbsp; &nbsp; &nbsp;The prototype periodically samples L1 and L5 signals for up to 20 satellites concurrently. The maximum sample rate of the u-blox ZED-F9P-05B module is 10 Hz (10 samples per second) across the constellations GPS, GLONASS, Galileo, and BeiDou \[2\]. Team 6 is using the ZED-F9P-05B as a reference module for all calculations made. Each sample is processed by the RF module and output as raw UBX packets. Relevant data, such as satellite pseudoranges, carrier phase, Doppler shifts, SNR, and other satellite-specific observables, are parsed from these packets by the SBC. This enables TEC and scintillation calculations to be performed, with the results stored as single-precision floating point numbers (8 bytes per pair of TEC and scintillation values).
 
 &nbsp; &nbsp; &nbsp; &nbsp;The resulting throughput requirement for TEC and scintillation measurements is:
 
@@ -176,9 +176,9 @@ $$
 \text{TEC + Scintillation Throughput (B/s)} = 8~\text{B/sample} \times 10~\text{samples/s} \times 20~\text{satellites} = 1.6~\text{kB/s}
 $$
 
-&nbsp; &nbsp; &nbsp; &nbsp;In addition to TEC and scintillation measurements, the prototype will generate RINEX files for archival and scientific use. RINEX is widely considered the standard format for satellite observation data, ensuring compatibility with established GNSS analysis tools. RINEX files will be produced at a 1 Hz rate (every second), preserving accurate TEC values but does not capture high-frequency scintillation events.
+&nbsp; &nbsp; &nbsp; &nbsp;In addition to TEC and scintillation measurements, the prototype will generate RINEX files for archival and scientific use. RINEX is widely considered the standard format for satellite observation data, ensuring compatibility with established GNSS analysis tools. From the UBX stream of 10 Hz, a 1 Hz snapshot of the observables is taken and appended as an epoch to an existing RINEX file. To save space, the UBX stream is discarded. This RINEX file preserves TEC values but does not capture high-frequency scintillation events. 
 
-&nbsp; &nbsp; &nbsp; &nbsp;RINEX file size varies based on multiple factors; most notably the number of satellites in view, the number of observation types recorded, and the sampling rate. Older versions, such as RINEX 2.0, used a fixed 80-byte line format \[14\]. Whereas modern versions, including RINEX 4.0, allow variable line lengths, typically shorter than 80 bytes.
+&nbsp; &nbsp; &nbsp; &nbsp;RINEX file size varies based on multiple factors, most notably the number of satellites in view, the number of observation types recorded, and the sampling rate. Older versions, such as RINEX 2.0, used a fixed 80-byte line format [14]. Whereas modern versions, including RINEX 4.0, allow variable line lengths, typically shorter than 80 bytes. 
 
 &nbsp; &nbsp; &nbsp; &nbsp;For conservative planning, Team 6 assumes each line consists of one epoch, one satellite, and one frequency. An epoch is a snapshot of the orbit and measurements of a satellite at a specific moment in time \[15\]. Essentially, it is a single sample taken across all tracked satellites at a specific instant. With 20 satellites, 2 signals per satellite, and 1 epoch per second (1 Hz RINEX generation), each RINEX file will contain roughly 40 lines. At 80 bytes per line, this corresponds to:
 
