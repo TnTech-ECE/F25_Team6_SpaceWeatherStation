@@ -225,7 +225,11 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 &nbsp; &nbsp; &nbsp; &nbsp;After evaluating these options Team 6 has elected to implement a USB thumb drive as the prototype storage medium. The USB drive will have 256 GB capacity and a storage format that can support files larger than 4 GB, such as exFAT or similar formats. This option offers true plug-and-play functionality, allowing easy insertion, removal, or replacement without additional hardware or system modifications. Modern USB 3.0 drives provide sufficient throughput for real-time TEC data logging and system monitoring. USB thumb drives are also cost-effective, providing ample storage capacity for continuous operation and additional user-driven experiments, while minimizing system complexity.
 
 
-Figure 9: Thumb Drive Example
+<div align="center">
+  <img src="https://hackmd.io/_uploads/r1ySXDnAxx.jpg" alt="System Overview Diagram" width="600">
+  <p><em>Figure 9: Thumb Drive Example</em></p>
+</div>
+
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to the USB thumb drive, the prototype will be capable of connecting to a local host server or workstation, enabling backup, visualization, and integration of logged GNSS measurements, system health metrics, and auxiliary data. The addition of the server provides supplementary storage and data analysis capabilities without affecting the prototype's on-device storage requirements. The choice to implement a USB thumb drive is based on throughput analysis, data estimation, and consideration of cost, reliability, and field deployability. The USB drive serves as the primary local storage for continuous TEC and system data logging. The prototype may also connect to the host server or workstation for centralized data aggregation.
 
