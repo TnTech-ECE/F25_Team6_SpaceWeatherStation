@@ -59,7 +59,7 @@ Together, these constraints define not only the engineering boundaries of the so
 
 The project proposal previously identified three established TEC measurement systems. Each system was developed to meet distinct objectives informing their respective designs. What follows is a comparative analysis of design methods and an evaluation of off-the-shelf components to determine the most suitable elements for Team 6's prototype.
 
-<u>Team 6's stated prototype objective:</u>
+Team 6's stated prototype objective:
 
 Team 6 aims to design and implement a low cost, modular prototype system capable of directly measuring ionospheric TEC using dual signal GNSS-based signal observations. The prototype will emphasize accuracy, reliability, and deployability. It will integrate essential functionality for signal acquisition, system control and processing, data logging, and power management. The system will be optimized for efficient operation in field environments and implemented at a total cost not exceeding \$1,000.
 
