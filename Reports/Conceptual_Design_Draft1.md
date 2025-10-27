@@ -492,10 +492,13 @@ operates independently from visualization and network layers, continuously recor
 
 No direct user control of logging frequency or file management is required, though these parameters may be configurable via the software interface.
 
-**Conceptual Functional Flow**![A screenshot of a computer screen
+**Conceptual Functional Flow**
 
+<div align="center">
+  <img src="https://hackmd.io/_uploads/ByVp5v3Cxx.png" alt="Data Storage Flow Chart" width="600">
+  <p><strong>Figure 16:</strong> <em>Data Storage Flow Chart</em></p>
+</div>
 
-Figure 16: Data Storage Flow Chart
 
 **Shall Statements**
 
@@ -522,12 +525,18 @@ Antenna and RF Module System
 **Subsystem Hardware Diagram**
 
 
-Figure 17: Antenna and RF Module Hardware Diagram
+<div align="center">
+  <img src="https://hackmd.io/_uploads/ByhliP2Clg.png" alt="Antenna and RF Module Hardware Diagram" width="600">
+  <p><strong>Figure 17:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
+</div>
 
 **Subsystem Flowchart**
 
+<div align="center">
+  <img src="https://hackmd.io/_uploads/r1lZiPnAee.png" alt="Antenna and RF Module Flowchart" width="600">
+  <p><strong>Figure 18:</strong> <em>Antenna and RF Module Flowchart</em></p>
+</div>
 
-Figure 18: Antenna and RF Module Flowchart
 
 System Interconnections
 
