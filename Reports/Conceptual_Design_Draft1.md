@@ -157,7 +157,7 @@
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="600">
+  <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="500">
   <p><em>Figure 7: Raspberry Pi 5 SBC</em></p>
 </div>
 
