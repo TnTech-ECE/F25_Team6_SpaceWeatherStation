@@ -84,11 +84,6 @@
   <p><strong>Figure 1:</strong> Dual Patch Antenna Explodable View</em></p>
 </div>
 
-<div align="center">
-  <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="600">
-  <p><strong>Figure 1:</strong> <em>Dual Patch Antenna Exploded View</em></p>
-</div>
-
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
 <div align="center">
