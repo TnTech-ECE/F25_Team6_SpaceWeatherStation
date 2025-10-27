@@ -636,7 +636,7 @@ Data Storage System Budget:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be made up of a storage drive and an SBC. To keep options open for various specs for the SBC and the storage drive, a maximum expenditure of \$150 for the SBC and \$75 for the storage has been set as follows.
 
-| Subsystem | Component | Budget |
+| Subsystem | Item | Budget |
 | --- | --- | --- |
 | Data Storage System 
 | | Storage Drive (Thumb Drive) | \$25 |
@@ -647,28 +647,31 @@ Antenna and RF Module System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. Given the large variation in cost for RF modules, the max budget for this component has been set at \$300.
 
-| Antenna and RF Module System | RF Module | \$300 |
+| Antenna and RF Module System | Item | Budget |
+|| RF Module | \$300 |
 | --- | --- | --- |
-| Dual-Tuned Patch Antenna | \$75 |
-| Total <br><br>&nbsp; | \$375 |
+|| Dual-Tuned Patch Antenna | \$75 |
+|| Total <br><br>&nbsp; | \$375 |
 
 
 System Interconnections:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together.
 
-| System Interconnections | PCB | \$50 |
-| --- | --- | --- |
-| Miscellaneous Cables | \$25 |
-| Magnetometer | \$5 |
-| Microcontroller | \$20 |
-| Total | \$100 |
+| System Interconnections | Item | Budget |
+|| PCB | \$50 |
+|| --- | --- | --- |
+|| Miscellaneous Cables | \$25 |
+|| Magnetometer | \$5 |
+|| Microcontroller | \$20 |
+| Total || \$100 |
 
 Power System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
 
-| Power System | Solar Panel | \$75 |     |
+| Power System | Item | Budget |
+| Solar Panel | \$75 |     |
 | --- | --- | --- |     | --- |
 | Power Supply | \$25 |     |
 | MPPT Charge Controller | \$30 |     |
@@ -682,7 +685,8 @@ Enclosure System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament.
 
-| Enclosure | Waterproofing Material | \$40 |
+| Enclosure | Item | Budget |
+| Waterproofing Material | \$40 |
 | --- | --- | --- |
 | PETG Filament | \$50 |
 | Total | \$90 |
@@ -691,7 +695,7 @@ Overall Budget:
 
 &nbsp; &nbsp; &nbsp; &nbsp;Below is the overall budget of the project. Most component prices are overestimated to allow for some wiggle room for part selections. However, the final design must be below \$1,000, so all subsystems should strive to be as under budget as possible.
 
-| Subsystem | Component | Budget |
+| Subsystem | Item | Budget |
 | --- | --- | --- |
 | Data and Storage System 
 | Storage Drive (Thumb Drive) | \$25 |
