@@ -648,10 +648,10 @@ Antenna and RF Module System:
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. Given the large variation in cost for RF modules, the max budget for this component has been set at \$300.
 
 | Antenna and RF Module System | Item | Budget |
-|| RF Module | \$300 |
 | --- | --- | --- |
-|| Dual-Tuned Patch Antenna | \$75 |
-|| Total <br><br>&nbsp; | \$375 |
+| | RF Module | \$300 |
+| | Dual-Tuned Patch Antenna | \$75 |
+| | Total <br><br>&nbsp; | \$375 |
 
 
 System Interconnections:
