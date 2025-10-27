@@ -319,7 +319,11 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 has elected to use the hub approach, maintaining flexibility for new sensors, communication interfaces, and auxiliary modules, preserving organized routing and reliable connections. Headers and expansion ports reduce wiring complexity, simplify assembly, and make it easier to replace modules or test new configurations.
 
 
-Figure 13: 40 Pin Male to Female Ribbon Cable
+<div align="center">
+  <img src="https://hackmd.io/_uploads/BkKlLP30gg.jpg" alt="40 Pin Ribbon Cable Connector" width="600">
+  <p><strong>Figure 13:</strong> 40 Pin Male to Female Ribbon Cable</p>
+</div>
+
 
 ## **Enclosure**
 
