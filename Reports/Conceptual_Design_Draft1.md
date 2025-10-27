@@ -59,7 +59,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Together, these constraints define not only the engineering boundaries of the solution but also its broader mission, to deliver a reliable, affordable, and ethically engineered platform for advancing open ionospheric research.
 
-## **Comparative Analysis of Potential Solutions**
+# **Comparative Analysis of Potential Solutions**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The project proposal previously identified three established TEC measurement systems. Each system was developed to meet distinct objectives informing their respective designs. What follows is a comparative analysis of design methods and an evaluation of off-the-shelf components to determine the most suitable elements for Team 6's prototype.
 
@@ -69,7 +69,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The following sections examine design considerations for signal reception, central processing and control systems, storage, power, modularity, and enclosure. The goal being identification of components and design elements that support the prototype objective.
 
-### **Signal Reception**
+## **Signal Reception**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype will utilize dual-frequency GNSS signal observations to directly measure TEC with high accuracy. To achieve this, a dual-tuned Right-Hand Circularly Polarized (RHCP) antenna is proposed. RHCP is predominantly used for GNSS applications. This preference stems from the fact that most GNSS satellites transmit signals in RHCP, optimizing the system for uninterrupted signal reception. \[11\] Additionally, the antenna should have a spatial reception pattern that is close to hemispherical, meaning it can receive signals from all skyward directions. This spatial pattern improves coverage by maximizing the number of visible satellites. The antenna chosen shall be tuned to L1 (1,559-1,610 MHz) and L5 (1,164-1,215 MHz) bands.
 
@@ -291,7 +291,7 @@ Figure 13: 40 Pin Male to Female Ribbon Cable
 
 &nbsp; &nbsp; &nbsp; &nbsp;Team 6 has elected to use PETG due to its superior mechanical strength, environmental stability, and manufacturability using readily available printers. Its resistance to cracking, warping, and degradation under a large range of temperatures directly supports the system's IPx4 weather resistance requirement and ensures long-term enclosure integrity. PETG therefore represents the most practical and reliable material for the project's mobile, modular, and field-deployable design objectives.
 
-## **High-Level Solution**
+# **High-Level Solution**
 
 **High-Level Solution**
 
@@ -374,7 +374,7 @@ Figure 14: Hardware Block Diagram
 
 Figure 15: Operation Flowchart
 
-## **Atomic Subsystem Specifications**
+# **Atomic Subsystem Specifications**
 
 Data Storage System
 
@@ -541,7 +541,7 @@ Publication
 
 &nbsp; &nbsp; &nbsp; &nbsp;By adhering to these requirements, the publication subsystem ensures that the project is thoroughly documented and reproducible, providing meaningful contributions to the scientific community and enabling continued research and innovation in ionospheric monitoring.
 
-## **Ethical, Professional, and Standards Considerations**
+# **Ethical, Professional, and Standards Considerations**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The deployment and use of TEC measurement systems carry broad implications across scientific, societal, and environmental contexts. In the scientific realm, accurate TEC data supports the study of ionospheric behavior, space weather phenomena, and their impact on systems dependent on satellite communication and navigation. These measurements aid researchers in understanding global atmospheric processes and support engineers in improving models capable of predicting disruptions in GPS and other critical services. Without reliable data, entire fields of research are limited in their ability to explain or mitigate natural events influencing everyday technologies.
 
@@ -553,7 +553,7 @@ Publication
 
 &nbsp; &nbsp; &nbsp; &nbsp;Finally, public safety must remain a priority. TEC measurement systems, while highly technical, ultimately serve the purpose of safeguarding critical infrastructure and ensuring that society can operate smoothly even during ionospheric disturbances. Engineers must approach their work with honesty and diligence, acknowledging the outputs of their systems could influence decisions with global impact. A strong awareness of these societal responsibilities helps ensure technological progress contributes positively to the public good rather than introducing new risks.
 
-## **Resources**
+# **Resources**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Project resources are allocated across three primary categories: budget, labor, and timeline. The budget ensures cost-effective component selection and material procurement within the project's \$1,000 constraint. The division of labor assigns specific subsystem responsibilities to team members based on technical expertise, while the timeline coordinates design, fabrication, testing, and documentation milestones to maintain steady project progress and accountability to guarantee on-time delivery.
 
@@ -667,7 +667,7 @@ Overall Budget:
 
 ### **Timeline**
 
-## **References**
+# **References**
 
 \[1\] TnTech ECE F25 Team 6, "Project Proposal," GitHub repository, 15 Oct. 2025. \[Online\]. Available: <https://github.com/TnTech-ECE/F25_Team6_SpaceWeatherStation/blob/main/Reports/Project_Proposal.md>. \[Accessed: Oct. 21 2025\].
 
@@ -701,7 +701,7 @@ Overall Budget:
 
 \[16\] OpenAI, GPT-5, ChatGPT, San Francisco, CA, USA, 2025. \[Online\]. Available: <https://chat.openai.com/>. \[Accessed: Sept. 20, 2025\].
 
-## **Statement of Contributions**
+# **Statement of Contributions**
 
 Jack Bender: Comparative Analysis of Potential Solutions \[Signal Reception, CPCS, Storage, Modularity\], Atomic Subsystem Specifications \[System Interconnections\], Final Review
 
