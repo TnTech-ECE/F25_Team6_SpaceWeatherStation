@@ -563,8 +563,8 @@ No direct user control of logging frequency or file management is required, thou
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/HJUGnP3Rle.png" alt="System Interconnections Block Diagram" width="800">
-  <p><strong>Figure 19:</strong> <em>System Interconnections Block Diagram</em></p>
+  <img src="https://hackmd.io/_uploads/ry81xbpRgx.svg" alt="Connections Diagram" width="800">
+  <p><strong>Figure 19:</strong> <em>Connections Diagram</em></p>
 </div>
 
 
