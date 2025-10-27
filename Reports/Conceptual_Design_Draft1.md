@@ -418,17 +418,18 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 &nbsp; &nbsp; &nbsp; &nbsp;The proposed TEC measurement system represents a balanced integration of accuracy, affordability, and modularity. The design incorporates a dual-tuned GNSS antenna, RF receiver, and a computing subsystem composed of both an SBC and an additional MCU. The SBC handles high-speed TEC and scintillation computation, data logging, and visualization, while the MCU monitors system health and auxiliary sensors. All modules are connected through a standardized PCB hub that provides power distribution, modular expansion ports, and support for future sensors or processing modules. This architecture meets all functional, safety, and regulatory specifications, delivering a low-cost, replicable, and environmentally resilient GNSS-based ionospheric monitoring system optimized for research, educational deployment, and long-term adaptability.
 
 ### **Hardware Block Diagram**
-
-
-
-
-Figure 14: Hardware Block Diagram
+<div align="center">
+  <img src="https://hackmd.io/_uploads/S1PtFvnCxl.png" alt="Hardware Block Diagram" width="600">
+  <p><strong>Figure 14:</strong> <em>Hardware Block Diagram</em></p>
+</div>
 
 ### **Operational Flow Chart**
 
+<div align="center">
+  <img src="https://hackmd.io/_uploads/rJz6KwhCee.png" alt="Operation Flowchart" width="600">
+  <p><strong>Figure 15:</strong> <em>Operation Flowchart</em></p>
+</div>
 
-
-Figure 15: Operation Flowchart
 
 # **Atomic Subsystem Specifications**
 
