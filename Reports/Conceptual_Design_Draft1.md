@@ -86,8 +86,10 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
-![Dual Tuned Patch GNSS Antenna Front](https://hackmd.io/_uploads/Sy4Fq8hAlg.png)
-Figure 2: Dual-Tuned Patch Antenna w/Coaxial
+<div align="center">
+  <img src="https://hackmd.io/_uploads/Sy4Fq8hAlg.png" alt="Dual Tuned Patch GNSS Antenna Front" width="400">
+  <p><em>Figure 2: Front view of the dual-tuned GNSS patch antenna</em></p>
+</div>
 
 ## **Central Processing and Control System (CPCS)**
 
