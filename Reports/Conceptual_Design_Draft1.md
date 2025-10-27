@@ -647,19 +647,21 @@ Antenna and RF Module System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. Given the large variation in cost for RF modules, the max budget for this component has been set at \$300.
 
-| Antenna and RF Module System | Item | Budget |
+| Subsystem | Item | Budget |
 | --- | --- | --- |
+| Antenna and RF Module System
 | | RF Module | \$300 |
 | | Dual-Tuned Patch Antenna | \$75 |
-| Total <br><br>&nbsp; | | \$375 |
+| Total | | \$375 |
 
 
 System Interconnections:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together.
 
-| System Interconnections | Item | Budget |
+| Subsystem | Item | Budget |
 | --- | --- | --- |
+| System Interconnections
 | | PCB | \$50 |
 | | Miscellaneous Cables | \$25 |
 | | Magnetometer | \$5 |
@@ -670,16 +672,17 @@ Power System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
 
-| Power System | Item | Budget |
+| Subsystem | Item | Budget |
 | --- | --- | --- |
-| | Solar Panel | |  \$75 |
-| | Power Supply |  |    \$25 |
-| | MPPT Charge Controller | |   \$30   |
-| | Battery (12V, 20Ah) |  |\$50     |
-| | Transformer/Converters |  |  \$20   |
-| | Protection Components |  |   \$25  |
-| | Miscellaneous Cables | |   \$35   |
-| &nbsp; | &nbsp; | Total | \$260 |
+| Power System
+| | Solar Panel | | $75 |
+| | Power Supply | | $25 |
+| | MPPT Charge Controller | |   $30   |
+| | Battery (12V, 20Ah) |  |$50     |
+| | Transformer/Converters |  |  $20   |
+| | Protection Components |  |   $25  |
+| | Miscellaneous Cables | |  $35   |
+| Total | | $260 |
 
 Enclosure System:
 
