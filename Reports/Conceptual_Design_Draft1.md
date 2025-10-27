@@ -622,7 +622,7 @@ Data Storage System Budget:
 
 | Subsystem | Component | Budget |
 | --- | --- | --- |
-| Data Storage System |
+| Data Storage System 
 | Storage Drive (Thumb Drive) | \$25 |
 | Single-Board Computer (SBC)\* | \$120\* |
 | Total | \$145 |
@@ -631,7 +631,8 @@ Antenna and RF Module System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. Given the large variation in cost for RF modules, the max budget for this component has been set at \$300.
 
-| Antenna and RF Module System | RF Module | \$300 |
+| Antenna and RF Module System | RF Module
+| \$300 |
 | --- | --- | --- |
 | Dual-Tuned Patch Antenna | \$75 |
 | Total | \$375 |
@@ -640,7 +641,8 @@ System Interconnections:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together.
 
-| System Interconnections | PCB | \$50 |
+| System Interconnections | PCB 
+| \$50 |
 | --- | --- | --- |
 | Miscellaneous Cables | \$25 |
 | Magnetometer | \$5 |
@@ -651,7 +653,8 @@ Power System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
 
-| Power System | Solar Panel | \$75 |     |
+| Power System | Solar Panel 
+| \$75 |     |
 | --- | --- | --- |     | --- |
 | Power Supply | \$25 |     |
 | MPPT Charge Controller | \$30 |     |
@@ -665,7 +668,8 @@ Enclosure System:
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament.
 
-| Enclosure | Waterproofing Material | \$40 |
+| Enclosure | Waterproofing Material 
+| \$40 |
 | --- | --- | --- |
 | PETG Filament | \$50 |
 | Total | \$90 |
@@ -676,7 +680,8 @@ Overall Budget:
 
 | Subsystem | Component | Budget |
 | --- | --- | --- |
-| Data and Storage System | Storage Drive (Thumb Drive) | \$25 |
+| Data and Storage System 
+| Storage Drive (Thumb Drive) | \$25 |
 | Single-Board Computer (SBC)\* | \$120\* |
 | Total | \$145 |
 | Antenna and RF Module System | RF Module | \$300 |
