@@ -81,14 +81,14 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="600">
-  <p><em>Figure 1: Dual-tuned GNSS patch antenna used in the system</em></p>
+  <p><em>Figure 1:Dual Patch Antenna Explodable View</em></p>
 </div>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Reception of both signals will be achieved by a single antenna, minimizing phase alignment issues and system complexity. The dual-tuned patch antenna will interface with the processing module via an SMA connector and a low-loss coaxial cable. This configuration minimizes signal attenuation and maintains GNSS signal integrity, critical for high-accuracy TEC measurements.
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/Sy4Fq8hAlg.png" alt="Dual Tuned Patch GNSS Antenna Front" width="400">
-  <p><em>Figure 2: Front view of the dual-tuned GNSS patch antenna</em></p>
+  <p><em>Figure 2:Dual-Tuned Patch Antenna w/Coaxial</em></p>
 </div>
 
 ## **Central Processing and Control System (CPCS)**
@@ -105,7 +105,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/BJUc5I3Rxx.png" alt="Screenshot of System Layout" width="600">
-  <p><em>Figure 3: Screenshot showing the system layout</em></p>
+  <p><em>Figure 3: Example of an SDR Module</em></p>
 </div>
 
 **RF Module Approach:**
@@ -118,13 +118,13 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1Ni9IhRel.png" alt="Screenshot of PCB Hub" width="600">
-  <p><em>Figure 4: Screenshot of the PCB hub layout</em></p>
+  <p><em>Figure 4: u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
 </div>
 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="800">
-  <p><em>Figure 5: Detailed view of the PCB hub layout</em></p>
+  <p><em>Figure 5: u-blox ZED-F9P Module Block Diagram for L1 and L2</em></p>
 </div>
 
 
@@ -142,7 +142,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJNTcLhCgx.png" alt="Arduino MCU" width="600">
-  <p><em>Figure 6: Arduino MCU used for system monitoring and auxiliary sensors</em></p>
+  <p><em>Figure 6: Example of Two MCUs</em></p>
 </div>
 
 **Single Board Computer (SBC) Approach:**
@@ -158,7 +158,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="600">
-  <p><em>Figure 7: PCB hub layout showing modular connections for sensors and modules</em></p>
+  <p><em>Figure 7: Raspberry Pi 5 SBC</em></p>
 </div>
 
 
@@ -208,8 +208,11 @@ Storage per Day = 53.8 kB/s × 3600 s × 24 hours = 4.65GB/day
 
 &nbsp; &nbsp; &nbsp; &nbsp;SSDs offer advantages over HDDs, including static parts, high reliability, fast and consistent throughput, and compact form factors. Despite their benefits, SSDs are significantly more expensive than smaller flash-based media, which conflicts with Team 6's goal of developing a cost-effective prototype. Additionally, SSDs may consume more power and can be slightly more complex for software interfacing, requiring additional drivers or protocol management.
 
-![HDD vs SSD Interior](https://hackmd.io/_uploads/rJUyo8n0le.jpg)
-Figure 8: HDD vs. SDD Interior
+<div align="center">
+  <img src="https://hackmd.io/_uploads/rJUyo8n0le.jpg" alt="HDD vs SSD Interior" width="600">
+  <p><em>Figure 8: HDD vs. SDD Interior</em></p>
+</div>
+
 
 - **SD Cards**
 
