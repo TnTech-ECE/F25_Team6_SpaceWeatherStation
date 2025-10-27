@@ -651,7 +651,7 @@ Antenna and RF Module System:
 | --- | --- | --- |
 | | RF Module | \$300 |
 | | Dual-Tuned Patch Antenna | \$75 |
-| | Total <br><br>&nbsp; | \$375 |
+| Total <br><br>&nbsp; | | \$375 |
 
 
 System Interconnections:
@@ -659,11 +659,11 @@ System Interconnections:
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together.
 
 | System Interconnections | Item | Budget |
-|| PCB | \$50 |
-|| --- | --- | --- |
-|| Miscellaneous Cables | \$25 |
-|| Magnetometer | \$5 |
-|| Microcontroller | \$20 |
+| --- | --- | --- |
+| | PCB | \$50 |
+| | Miscellaneous Cables | \$25 |
+| | Magnetometer | \$5 |
+| | Microcontroller | \$20 |
 | Total || \$100 |
 
 Power System:
@@ -671,14 +671,14 @@ Power System:
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
 
 | Power System | Item | Budget |
-| Solar Panel | |  \$75    |
-| --- | --- | --- |     | --- |
-| Power Supply |  |    \$25 |
-| MPPT Charge Controller | |   \$30   |
-| Battery (12V, 20Ah) |  |\$50     |
-| Transformer/Converters |  |  \$20   |
-| Protection Components |  |   \$25  |
-| Miscellaneous Cables | |   \$35   |
+| --- | --- | --- |
+| | Solar Panel | |  \$75 |
+| | Power Supply |  |    \$25 |
+| | MPPT Charge Controller | |   \$30   |
+| | Battery (12V, 20Ah) |  |\$50     |
+| | Transformer/Converters |  |  \$20   |
+| | Protection Components |  |   \$25  |
+| | Miscellaneous Cables | |   \$35   |
 | &nbsp; | &nbsp; | Total | \$260 |
 
 Enclosure System:
