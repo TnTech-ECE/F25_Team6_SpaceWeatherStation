@@ -693,7 +693,7 @@ Enclosure System:
 | Enclosure
 || Waterproofing Material | \$40 |
 || PETG Filament | \$50 |
-| Total | \$90 |
+| Total || \$90 |
 
 Overall Budget:
 
