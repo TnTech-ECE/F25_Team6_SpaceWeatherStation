@@ -434,14 +434,14 @@ $$
 
 # **Hardware Block Diagram**
 <div align="center">
-  <img src="https://hackmd.io/_uploads/S1PtFvnCxl.png" alt="Hardware Block Diagram" width="600">
+  <img src="https://hackmd.io/_uploads/ByZS5VZJ-l.png" alt="Hardware Block Diagram" width="600">
   <p><strong>Figure 15:</strong> <em>Hardware Block Diagram</em></p>
 </div>
 
 # **Operational Flow Chart**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/rJz6KwhCee.png" alt="Operation Flowchart" width="600">
+  <img src="https://hackmd.io/_uploads/SkQP54WyWe.png" alt="Operation Flowchart" width="600">
   <p><strong>Figure 16:</strong> <em>Operation Flowchart</em></p>
 </div>
 
@@ -510,7 +510,7 @@ No direct user control of logging frequency or file management is required, thou
 **Conceptual Functional Flow**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ByVp5v3Cxx.png" alt="Data Storage Flow Chart" width="600">
+  <img src="https://hackmd.io/_uploads/B1z0c4-1Ze.png" alt="Data Storage Flow Chart" width="600">
   <p><strong>Figure 17:</strong> <em>Data Storage Flow Chart</em></p>
 </div>
 
@@ -539,16 +539,16 @@ No direct user control of logging frequency or file management is required, thou
 
 **Subsystem Hardware Diagram**
 
-
 <div align="center">
-  <img src="https://hackmd.io/_uploads/rkdwev6Rlg.png" alt="Antenna and RF Module Hardware Diagram" width="400">
+  <img src="https://hackmd.io/_uploads/Sy4-j4ZkZe.png" alt="Antenna and RF Module Hardware Diagram" width="400">
   <p><strong>Figure 18:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
 </div>
+
 
 **Subsystem Flowchart**
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/rJOvlDTRxl.png" alt="Antenna and RF Module Flowchart" width="400">
+  <img src="https://hackmd.io/_uploads/H1gVsNZ1bx.png" alt="Antenna and RF Module Flowchart" width="400">
   <p><strong>Figure 19:</strong> <em>Antenna and RF Module Flowchart</em></p>
 </div>
 
@@ -568,9 +568,10 @@ No direct user control of logging frequency or file management is required, thou
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ry81xbpRgx.svg" alt="Connections Diagram" width="800">
-  <p><strong>Figure 20:</strong> <em>Connections Diagram</em></p>
+  <img src="https://hackmd.io/_uploads/ByL8jVbJbl.png" alt="Connections Diagram" width="800">
+  <p><strong>Figure 20:</strong> <em>System Interconnections Block Diagram</em></p>
 </div>
+
 
 
 &nbsp; &nbsp; &nbsp; &nbsp;The block diagram does not show the specific PCB trace connections other than general power buses. It instead highlights the use of a hub-based architecture for the prototype.
@@ -597,7 +598,7 @@ No direct user control of logging frequency or file management is required, thou
 - This subsystem shall use components that are readily available for purchase and can be exchanged easily without physically altering any other component.
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/r1WAGw6Rgg.png" alt="Detailed Power System Flowchart" width="800">
+  <img src="https://hackmd.io/_uploads/B109jVZyZl.png" alt="Detailed Power System Flowchart" width="800">
   <p><strong>Figure 21:</strong> <em>Power System Flowchart</em></p>
 </div>
 
