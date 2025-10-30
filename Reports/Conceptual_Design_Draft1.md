@@ -690,7 +690,9 @@ No direct user control of logging frequency or file management is required, thou
 | | Storage Drive (Thumb Drive) | \$25 |
 | | Single-Board Computer (SBC)\* | \$120\* |
 | Total | | \$145 |
+
   \*SBC will be shared between Data Subsystem and RF Module Subsystem 
+  
 **Antenna and RF Module System:**
 
 &nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. The justification for selecting these components is detailed in the ‘RF Signal Conditioning and Digitization’ and ‘Signal Reception’ subsections of the Comparative Analysis. The antenna shall receive GNSS signals, and the RF module shall process those signals. A dual-tuned patch antenna has been chosen for its low relative cost compared to other options, and the RF module approach has been chosen due to its design simplicity, industry recommendations, and cost considerations. Given the large variation in cost for RF modules, the max budget for this component has been set at US $300.
