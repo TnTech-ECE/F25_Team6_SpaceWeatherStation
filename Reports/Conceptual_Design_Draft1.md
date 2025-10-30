@@ -112,19 +112,24 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;An alternative solution for RF conditioning and digitization is using a dedicated dual-tuned GNSS signal processing unit. This approach was first introduced and recommended to Team 6 by Dr. Anthea Coster, a professor at MIT and expert in ionospheric studies. Supporting this recommendation, the ScintPi 3.0, discussed in the project proposal, also employs an RF module and produces data comparable to that of high-end TEC monitoring systems.
 
+<div align="center">
+  <img src="https://hackmd.io/_uploads/H1HpOEbJZe.png" alt="u-blox Module vs High-end System TEC Measurements" width="600">
+  <p><strong>Figure 4:</strong> u-blox Module (red) vs High-end System (black) TEC Measurements</p>
+</div>
+
 &nbsp; &nbsp; &nbsp; &nbsp;Many of these modules feature fully integrated RF conditioning and digitization, receiving an RF signal and outputting structured data (E.g. RINEX, UBX). They include a complete RF chain with filters and low-noise amplifiers. Furthermore, additional breakout boards can be purchased to interface with the units, requiring minimal coding experience while being cost-friendly. Dr. Coster specifically recommended a u-blox GNSS positioning chip as seen below. However, Team 6 is investigating alternative options to ensure the best RF module is implemented.
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on industry recommendations, design simplicity, and cost considerations, Team 6 has elected to implement a dedicated RF module in the prototype.
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1Ni9IhRel.png" alt="Screenshot of PCB Hub" width="600">
-  <p><strong>Figure 4:</strong> u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
+  <p><strong>Figure 5:</strong> u-blox ZED-F9P Module w/sparkfun Breakout Board</em></p>
 </div>
 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rkv25LnClx.png" alt="Screenshot of PCB Hub Detail" width="800">
-  <p><strong>Figure 5:</strong> u-blox ZED-F9P Module Block Diagram for L1 and L2</em></p>
+  <p><strong>Figure 6:</strong> u-blox ZED-F9P Module Block Diagram for L1 and L2</em></p>
 </div>
 
 
@@ -142,7 +147,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJNTcLhCgx.png" alt="Arduino MCU" width="600">
-  <p><strong>Figure 6:</strong> Example of Two MCUs</em></p>
+  <p><strong>Figure 7:</strong> Example of Two MCUs</em></p>
 </div>
 
 **Single Board Computer (SBC) Approach:**
@@ -158,7 +163,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1jj-D2Cgl.jpg" alt="PCB Hub Layout" width="500">
-  <p><strong>Figure 7:</strong> Raspberry Pi 5 SBC</em></p>
+  <p><strong>Figure 8:</strong> Raspberry Pi 5 SBC</em></p>
 </div>
 
 
@@ -222,7 +227,7 @@ $$
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJUyo8n0le.jpg" alt="HDD vs SSD Interior" width="600">
-  <p><strong>Figure 8:</strong> HDD vs. SDD Interior</em></p>
+  <p><strong>Figure 9:</strong> HDD vs. SDD Interior</em></p>
 </div>
 
 
@@ -239,7 +244,7 @@ $$
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/r1ySXDnAxx.jpg" alt="System Overview Diagram" width="600">
-  <p><strong>Figure 9:</strong> Thumb Drive Example</em></p>
+  <p><strong>Figure 10:</strong> Thumb Drive Example</em></p>
 </div>
 
 
@@ -263,7 +268,7 @@ $$
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJOoXwnCxl.png" alt="System Block Diagram" width="600">
-  <p><strong>Figure 10:</strong> 12V 20Ah LiFePO4 Battery w/Built in BMS</em></p>
+  <p><strong>Figure 11:</strong> 12V 20Ah LiFePO4 Battery w/Built in BMS</em></p>
 </div>
 
 ### **Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
@@ -286,7 +291,7 @@ $$
       </td>
     </tr>
   </table>
-  <p><strong>Figure 11:</strong> 12V Solar Panel and 20A MPPT</p>
+  <p><strong>Figure 12:</strong> 12V Solar Panel and 20A MPPT</p>
 </div>
 
 
@@ -310,7 +315,7 @@ $$
       </td>
     </tr>
   </table>
-  <p><strong>Figure 12:</strong> AC and Solar Power Adapters</p>
+  <p><strong>Figure 13:</strong> AC and Solar Power Adapters</p>
 </div>
 
 &nbsp; &nbsp; &nbsp; &nbsp;The hybrid approach offers significant engineering and operational advantages. It ensures that the system remains functional during power interruptions, supports hot-swappable charging inputs, and eliminates the need for constant supervision. Using widely available power connectors such as the XT60, DC barrel jacks, or Anderson Powerpole allows for easy field servicing and replacement without compromising structural integrity. The architecture also promotes modularity, enabling future users to upgrade components without redesigning the core electronics.
@@ -333,7 +338,7 @@ $$
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/BkKlLP30gg.jpg" alt="40 Pin Ribbon Cable Connector" width="600">
-  <p><strong>Figure 13:</strong> 40 Pin Male to Female Ribbon Cable</p>
+  <p><strong>Figure 14:</strong> 40 Pin Male to Female Ribbon Cable</p>
 </div>
 
 
@@ -430,14 +435,14 @@ $$
 # **Hardware Block Diagram**
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1PtFvnCxl.png" alt="Hardware Block Diagram" width="600">
-  <p><strong>Figure 14:</strong> <em>Hardware Block Diagram</em></p>
+  <p><strong>Figure 15:</strong> <em>Hardware Block Diagram</em></p>
 </div>
 
 # **Operational Flow Chart**
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJz6KwhCee.png" alt="Operation Flowchart" width="600">
-  <p><strong>Figure 15:</strong> <em>Operation Flowchart</em></p>
+  <p><strong>Figure 16:</strong> <em>Operation Flowchart</em></p>
 </div>
 
 
@@ -506,7 +511,7 @@ No direct user control of logging frequency or file management is required, thou
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/ByVp5v3Cxx.png" alt="Data Storage Flow Chart" width="600">
-  <p><strong>Figure 16:</strong> <em>Data Storage Flow Chart</em></p>
+  <p><strong>Figure 17:</strong> <em>Data Storage Flow Chart</em></p>
 </div>
 
 
@@ -537,14 +542,14 @@ No direct user control of logging frequency or file management is required, thou
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rkdwev6Rlg.png" alt="Antenna and RF Module Hardware Diagram" width="400">
-  <p><strong>Figure 17:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
+  <p><strong>Figure 18:</strong> <em>Antenna and RF Module Hardware Diagram</em></p>
 </div>
 
 **Subsystem Flowchart**
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJOvlDTRxl.png" alt="Antenna and RF Module Flowchart" width="400">
-  <p><strong>Figure 18:</strong> <em>Antenna and RF Module Flowchart</em></p>
+  <p><strong>Figure 19:</strong> <em>Antenna and RF Module Flowchart</em></p>
 </div>
 
 
@@ -564,7 +569,7 @@ No direct user control of logging frequency or file management is required, thou
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/ry81xbpRgx.svg" alt="Connections Diagram" width="800">
-  <p><strong>Figure 19:</strong> <em>Connections Diagram</em></p>
+  <p><strong>Figure 20:</strong> <em>Connections Diagram</em></p>
 </div>
 
 
@@ -593,7 +598,7 @@ No direct user control of logging frequency or file management is required, thou
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/r1WAGw6Rgg.png" alt="Detailed Power System Flowchart" width="800">
-  <p><strong>Figure 20:</strong> <em>Power System Flowchart</em></p>
+  <p><strong>Figure 21:</strong> <em>Power System Flowchart</em></p>
 </div>
 
 
