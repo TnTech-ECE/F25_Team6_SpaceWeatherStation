@@ -579,7 +579,7 @@ No direct user control of logging frequency or file management is required, thou
 | **Connected Subsystem** | **Signal Type** | **Signal Direction** | **Protocol** | **Notes** |
 | --- | --- | --- | --- | --- |
 | Power Supply/ Battery | DC Power | Input/Output | N/A | Provides regulated power rails to all connected devices |
-| RF Module | Analog RF / Digital GNSS Data | Input: Analog RF from antenna / Output: GNSS data to SBC routed through PCB | UART | Receives RF signal via coaxial cable. Outputs GNSS data file (e.g., RINEX or UBX) to SBC through PCB traces |
+| RF Module | Analog RF / Digital GNSS Data | Input: Analog RF from antenna / Output: GNSS data to SBC routed through PCB | UART/I2C | Receives RF signal via coaxial cable. Outputs GNSS data file (e.g., RINEX or UBX) to SBC through PCB traces |
 | SBC | GNSS Data / MCU Sensor Status / TEC Measurements / Peripheral Commands | Input: Data from RF module and MCU / Output: Commands to peripherals and logging devices | GPIO/UART/I2C/SPI/Power | Receives GNSS data and sensor status. Sends configuration commands, peripheral control signals, and processed TEC data |
 | MCU | Sensor GPIO | Input/Output | GPIO/UART/I2C/SPI/Power | Provides the system data as the control platform |
 | Storage | Digital Data / Power from SBC | Input: Commands from SBC / Output: Data to SBC | USB connected to SBC | Read/write operations for logged GNSS data, system health metrics, and user applications |
