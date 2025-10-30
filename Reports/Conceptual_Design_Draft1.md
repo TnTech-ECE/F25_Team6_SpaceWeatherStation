@@ -244,18 +244,20 @@ $$
 
 
 - **SD Cards**
-  -**Throughput:** Consumer-grade cards may support ~10-100 MB/s, reasonably consistent under continuous writes. 
-  -**Endurance:** Moderate write endurance with a risk of degradation if subjected to continuous high-volume writes over long periods.    
-  -**Reliability:** Compact form factor and removable with performance and durability that vary depending on the make and quality of the card. 
-  -**Power Consumption:** ~ 0.02 - 0.1 W 
-  -**Cost:** US $10-50 
+
+  - **Throughput:** Consumer-grade cards may support ~10-100 MB/s, reasonably consistent under        continuous writes. 
+  - **Endurance:** Moderate write endurance with a risk of degradation if subjected to                continuous high-volume writes over long periods.    
+  - **Reliability:** Compact form factor and removable with performance and durability that           vary depending on the make and quality of the card. 
+  - **Power Consumption:** ~ 0.02 - 0.1 W 
+  - **Cost:** US $10-50 
 
 - **USB Thumb Drives**
-  -**Throughput:** Modern USB 3.0 thumb drives support sustained throughput of ~100MB/s, consistent under continuous writes.  
-  -**Endurance:** Moderate write endurance, typically sufficient for several hundreds of gigabytes to a few terabytes over their lifetime.  
-  -**Reliability:** Solid-state, no moving parts, plug-and-play, and easily replaceable in the field.  
-  -**Power Consumption:** ~0.05 - 0.5 W 
-  -**Cost:** US $20-50 
+  
+  - **Throughput:** Modern USB 3.0 thumb drives support sustained throughput of ~100MB/s,             consistent under continuous writes.  
+  - **Endurance:** Moderate write endurance, typically sufficient for several hundreds of             gigabytes to a few terabytes over their lifetime.  
+  - **Reliability:** Solid-state, no moving parts, plug-and-play, and easily replaceable in the       field.  
+  - **Power Consumption:** ~0.05 - 0.5 W 
+  - **Cost:** US $20-50 
 
 &nbsp; &nbsp; &nbsp; &nbsp;After evaluating these options Team 6 has elected to implement a USB thumb drive as the prototype storage medium. The USB drive will have 256 GB capacity and a storage format that can support files larger than 4 GB, such as exFAT or similar formats. This option offers true plug-and-play functionality, allowing easy insertion, removal, or replacement without additional hardware or system modifications. Modern USB 3.0 drives provide sufficient throughput for real-time TEC data logging and system monitoring. USB thumb drives are also cost-effective, providing ample storage capacity for continuous operation and additional user-driven experiments, while minimizing system complexity.
 
