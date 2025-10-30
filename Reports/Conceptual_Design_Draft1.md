@@ -568,11 +568,9 @@ No direct user control of logging frequency or file management is required, thou
 
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/ByL8jVbJbl.png" alt="Connections Diagram" width="800">
+  <img src="https://hackmd.io/_uploads/r1ttCEZ1Wx.png" alt="Connections Diagram" width="800">
   <p><strong>Figure 20:</strong> <em>System Interconnections Block Diagram</em></p>
 </div>
-
-
 
 &nbsp; &nbsp; &nbsp; &nbsp;The block diagram does not show the specific PCB trace connections other than general power buses. It instead highlights the use of a hub-based architecture for the prototype.
 
