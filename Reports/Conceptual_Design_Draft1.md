@@ -50,10 +50,12 @@
   - Detailed documentation satisfies customer specifications and actively supports students, researchers, hobbyists, and the larger scientific community. Inclusion of comprehensive schematics, software and hardware manuals, and wiring diagrams ensures system replicability without the need for proprietary tools or specialized expertise. Comprehensive documentation moves the TEC measurement device beyond a prototype, becoming a replicable open-source platform for broader adoption. \[1, 9\]
 - The chosen design shall meet all applicable ITU standards
   - Constraint originates from customer specification and compliance with ITU standards, which prohibit unauthorized transmission within GNSS bands. Therefore, the system shall operate exclusively as a passive receiver. \[1\]
+  - Radio Regulations, Vol. I, Section 5: Frequency Allocations define the GNSS bands as space-to-Earth passive services, meaning no intentional radiation is allowed from user equipment [5]. 
 - The chosen design shall operate for short-range wireless communication within approved ISM bands and comply with the applicable regional standards for chosen frequencies.
   - Constraint originates from customer specifications, including a server-based system to remotely analyze TEC data.
-- The chosen design shall meet IPx4 waterproofing standards, thermal protection guidelines, and have the capability to be safely mounted.
+- The chosen design shall meet IPx4 splash resistant waterproofing standards, thermal protection guidelines, and have the capability to be safely mounted.
   - Environmental and safety constraints stem from engineering ethics and public safety standards, requiring IPx4 waterproofing, thermal protection, and secure mounting to prevent damage or injury during operation. \[10\]
+  - IEC 60529:2021 specifies the IP rating system in Clause 4 for environmental protection. It lists test paremeters that involve splashing water from all directions for 5 minutes and the varification of sealed conectors [10]. 
 
 &nbsp; &nbsp; &nbsp; &nbsp;In summary, the specifications, requirements, and constraints established by Team 6 form a foundational design framework, ensuring the TEC measurement system achieves scientific credibility and practical implementation. Each requirement spanning GNSS signal processing and antenna choice to data storage, power autonomy, and environmental durability, has been developed through careful alignment with customer expectations, existing industry standards, and ethical engineering practices. Collectively, these constraints guarantee the device will operate as a scientifically valid, robust, and sustainable research instrument.
 
@@ -75,11 +77,11 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The prototype will utilize dual-frequency GNSS signal observations to directly measure TEC with high accuracy. To achieve this, a dual-tuned Right-Hand Circularly Polarized (RHCP) antenna is proposed. RHCP is predominantly used for GNSS applications. This preference stems from the fact that most GNSS satellites transmit signals in RHCP, optimizing the system for uninterrupted signal reception. \[11\] Additionally, the antenna should have a spatial reception pattern that is close to hemispherical, meaning it can receive signals from all skyward directions. This spatial pattern improves coverage by maximizing the number of visible satellites. The antenna chosen shall be tuned to L1 (1,559-1,610 MHz) and L5 (1,164-1,215 MHz) bands.
 
-&nbsp; &nbsp; &nbsp; &nbsp;Team 6 has considered several antenna options including the helical, choke-ring, and patch antennas. While Helical and Choke-ring antennas are available as options, cost constraints nullify their viability for low-cost TEC measurement.
+&nbsp; &nbsp; &nbsp; &nbsp;The antenna selection was guided by metrics including gain, radiation pattern coverage, multi-frequency support, and cost, ensuring an optimal balance between performance and budget for accurate TEC measurements. Team 6 has considered several antenna options including the helical, choke-ring, and patch antennas. While Helical and Choke-ring antennas are available as options, cost constraints nullify their viability for low-cost TEC measurement.
 
-- **Helical antennas** are directional and provide high gain, making them well suited for high-precision GNSS applications. However, their radiation and reception patterns limit simultaneous multi-satellite monitoring. Additionally, helical antennas are relatively expensive, making them unsuitable for Team 6's budget constraints.
-- **Choke-ring antennas** provide near-hemispherical radiation and reception patterns, enabling observation of multiple satellites simultaneously. They also offer excellent multipath rejection and are capable of multi-frequency tuning. However, the cost surpasses Team 6's constraint of affordability.
-- **Patch antennas** are commonly used in handheld GNSS devices due to their compact form factor and affordability. \[12\] They are a usual choice for RF engineers when designing a GNSS application, featuring a fairly hemispherical radiation pattern. Most off-the-shelf dual-frequency GNSS antennas use patch elements. \[13\] Therefore, a dual-tuned, multi-element patch antenna had been selected for the prototype.
+- **Helical antennas** are directional and provide high gain, making them well suited for high-precision GNSS applications. However, their radiation and reception patterns limit simultaneous multi-satellite monitoring. With a slightly higher minimum cost of an estimated US $120 compared to the budgeted US $75, and the additional limitation of a narrow reception pattern, helical antennas are not an ideal choice for Team 6’s design.
+- **Choke-ring antennas** provide near-hemispherical radiation and reception patterns, enabling observation of multiple satellites simultaneously. They also offer excellent multipath rejection and are capable of multi-frequency tuning. However, their cost starts in the low thousands of dollars, well above Team 6’s budget constraints.
+- **Patch antennas**  are commonly used in handheld GNSS devices due to their compact form factor and affordability. [12] They are a usual choice for RF engineers when designing a GNSS application, featuring a fairly hemispherical radiation pattern. Most off-the-shelf dual-frequency GNSS antennas use patch elements. [13] These antennas are reasonably priced, typically ranging from US $30 to $100 depending on features and frequency coverage. Therefore, a dual-tuned, multi-element patch antenna has been selected for the prototype.
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1JOqLnRll.jpg" alt="Dual Tuned Patch GNSS Antenna" width="600">
@@ -103,7 +105,7 @@
 
 **Software Defined Radio (SDR) Approach:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;Utilizing an SDR is one approach for processing and digitizing GNSS signals. This method offers significant flexibility for the user while substantially increasing design complexity. Implementing an SDR requires extensive programming knowledge for handling IQ sampling, filtering, modulation, multipath rejection, and other digital signal processing tasks. Furthermore, these processes must be performed concurrently for multiple satellites, adding additional challenges. The primary goal of this prototype is to develop a simple yet functional system, enabling a hobbyist to measure TEC independently. While Team 6 will provide the necessary code regardless of the RF processing method chosen, using an SDR introduces unnecessary complexity, threatening the system's user-friendly appeal to the user. Additionally, SDRs do not offer a significant cost advantage and may exceed Team 6's budget to meet the required measurement accuracy.
+&nbsp; &nbsp; &nbsp; &nbsp;Utilizing an SDR is one approach for processing and digitizing GNSS signals. This method offers significant flexibility for the user while substantially increasing design complexity. Implementing an SDR requires extensive programming knowledge for handling IQ sampling, filtering, modulation, multipath rejection, and other digital signal processing tasks. Furthermore, these processes must be performed concurrently for multiple satellites, adding additional challenges. The primary goal of this prototype is to develop a simple yet functional system, enabling a hobbyist to measure TEC independently. While Team 6 will provide the necessary code regardless of the RF processing method chosen, using an SDR introduces unnecessary complexity, threatening the system’s user-friendly appeal to the user. A moderately capable SDR that supports L1 and L5 bands may cost approximately US $400, thereby ruling out any cost advantage over dedicated RF modules while adding complexity.
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/BJUc5I3Rxx.png" alt="Screenshot of System Layout" width="600">
@@ -119,7 +121,7 @@
   <p><strong>Figure 4:</strong> u-blox Module (red) vs High-end System (black) TEC Measurements</p>
 </div>
 
-&nbsp; &nbsp; &nbsp; &nbsp;Many of these modules feature fully integrated RF conditioning and digitization, receiving an RF signal and outputting structured data (E.g. RINEX, UBX). They include a complete RF chain with filters and low-noise amplifiers. Furthermore, additional breakout boards can be purchased to interface with the units, requiring minimal coding experience while being cost-friendly. Dr. Coster specifically recommended a u-blox GNSS positioning chip as seen below. However, Team 6 is investigating alternative options to ensure the best RF module is implemented.
+&nbsp; &nbsp; &nbsp; &nbsp;Many of these modules feature fully integrated RF conditioning and digitization, receiving an RF signal and outputting structured data (E.g. RINEX, UBX). They include a complete RF chain with filters and low-noise amplifiers. Furthermore, additional breakout boards can be purchased to interface with the units, requiring minimal coding experience while being cost-friendly (~US $300). Dr. Coster specifically recommended a u-blox GNSS positioning chip as seen below. However, Team 6 is investigating alternative options to ensure the best RF module is implemented.
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on industry recommendations, design simplicity, and cost considerations, Team 6 has elected to implement a dedicated RF module in the prototype.
 
@@ -141,9 +143,9 @@
 
 **Microcontroller Unit (MCU) Approach:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;An MCU is essentially a small computer on a single chip. It is designed to manage specific tasks within an embedded system without requiring a complex operating system. MCUs integrate processing, memory and input/output (I/O) peripherals-including timers, counters and analog-to-digital converters (ADCs)-into one efficient and cost-effective standalone unit \[3\]. They are ideal for directly interfacing with sensors monitoring system health. Other advantages, including low power consumption, minimal heat generation, and immediate startup make MCUs well-suited for field-deployable systems and user interfacing.
+&nbsp; &nbsp; &nbsp; &nbsp;An MCU is essentially a small computer on a single chip. It is designed to manage specific tasks within an embedded system without requiring a complex operating system. MCUs integrate processing, memory and input/output (I/O) peripherals—including timers, counters and analog-to-digital converters (ADCs)—into one efficient and cost-effective standalone unit [3]. They are ideal for directly interfacing with sensors monitoring system health. Other advantages, including low power consumption (~0.08W), minimal heat generation, and immediate startup make MCUs well-suited for field-deployable systems and user interfacing.
 
-&nbsp; &nbsp; &nbsp; &nbsp;Despite their advantages, MCUs have significant limitations. Their limited processing power and memory restrict their ability to perform complex tasks simultaneously, such as real-time TEC computation and rendering ionospheric models. Multi-tasking capabilities are also constrained. Running sensor monitoring, system control, data logging, and TEC computations can quickly exceed an MCU's resources. Additionally, while MCUs excel at low-level interfacing, they generally lack the high-level software ecosystem and modular expansion options needed to support advanced user-driven expansions.
+&nbsp; &nbsp; &nbsp; &nbsp;Despite their advantages, MCUs have significant limitations. Their limited processing power and memory restrict their ability to perform complex tasks simultaneously, such as real-time TEC computation and rendering ionospheric models. Unlike SBCs capable of multi-core GHz processing and gigabytes of memory, MCUs typically provide only a few hundred MHz and kilobytes to megabytes of memory, limiting their suitability for concurrent numerical and graphical workloads. Running sensor monitoring, system control, data logging, and TEC computations can quickly exceed an MCU’s resources. Additionally, while MCUs excel at low-level interfacing, they generally lack the high-level software ecosystem and modular expansion options needed to support advanced user-driven expansions.  
 
 &nbsp; &nbsp; &nbsp; &nbsp;MCUs are excellent for analog sensor interfacing and low-level processing operations. However, MCUs alone are insufficient for handling the computationally intensive, modular, and expandable requirements of Team 6's prototype. Their limited number of I/O ports and communication interfaces restrict the ability to support multiple peripherals and expansion modules simultaneously. This makes them unsuitable as the primary processing platform.
 
@@ -154,11 +156,11 @@
 
 **Single Board Computer (SBC) Approach:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;An SBC provides the processing power and flexibility necessary to support Team 6's prototype. SBCs typically feature multiple GPIO pins, USB ports, HDMI ports, and other interfaces, enabling high modularity and straightforward integration of additional hardware modules. This flexibility allows the prototype to go beyond its primary objective of TEC measurement, supporting user-driven expansions such as software-defined radios and other telecommunication experiments.
+&nbsp; &nbsp; &nbsp; &nbsp;An SBC provides the processing power and flexibility necessary to support Team 6’s prototype, featuring multi-core GHz processing and several gigabytes of RAM. SBCs typically feature multiple GPIO pins, USB ports, HDMI ports, and other interfaces, enabling high modularity and straightforward integration of additional hardware modules. This flexibility allows the prototype to go beyond its primary objective of TEC measurement, supporting user-driven expansions such as software-defined radios and other telecommunication experiments.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The surplus computing power of an SBC enables real-time TEC calculations while simultaneously handling system control tasks, data logging, and additional processing requirements. For example, Team 6 aims to render models of ionospheric data directly from the prototype, demanding significant computational resources that an SBC can readily provide. Furthermore, widely supported development tools and a robust user community ensure that custom features and experiments can be efficiently implemented.
 
-&nbsp; &nbsp; &nbsp; &nbsp;While an SBC can handle all tasks related to TEC measurement and provide a flexible platform for user expansion, there are some trade-offs. SBCs typically consume more power than MCUs, which warrants consideration for field-deployable systems. They also generate more heat, potentially necessitating cooling solutions, increasing the system's size. Running a full operating system adds to boot times and overall system complexity. Furthermore, most SBCs lack built-in analog-to-digital converters (ADCs). Thus, any analog input monitoring would require either external ADCs or a dedicated microcontroller to interface with the sensors.
+&nbsp; &nbsp; &nbsp; &nbsp;While an SBC can handle all tasks related to TEC measurement and provide a flexible platform for user expansion, there are some trade-offs. SBCs typically consume more power than MCUs (~10 W), which warrants consideration for field-deployable systems. They also generate more heat due to increased power consumption, potentially necessitating cooling solutions, and increasing the system’s size. Running a full operating system adds to boot times and overall system complexity. Furthermore, most SBCs lack built-in analog-to-digital converters (ADCs). Thus, any analog input monitoring would require either external ADCs or a dedicated microcontroller to interface with the sensors. 
 
 &nbsp; &nbsp; &nbsp; &nbsp;Despite these trade-offs, the combination of modularity, high processing capability, and extensive interface support, substantiates an SBC as the optimal choice for the prototype. Team 6 has elected to implement an SBC to provide both the computational power and design flexibility needed to support the innovative user-driven nature of the system. To address the limited number of built-in ADCs, an MCU or an external ADC module (ADC hat) may be integrated to work in tandem with the SBC. This enables analog sensor monitoring for system health metrics and any additional analog inputs.
 
@@ -217,15 +219,23 @@ $$
 
 ### **Storage Mediums Considered**
 
-&nbsp; &nbsp; &nbsp; &nbsp;Team 6 is considering various storage options for the prototype, with the goal of identifying the most suitable solution for meeting the project's specifications and operational constraints. Key considerations include reliability under field conditions, continuous data logging capability, throughput requirements, and sufficient storage capacity for at least one month of autonomous operation. Based on the previously estimated total throughput of 53.8 kB/s and a monthly storage requirement of approximately 139 GB, the following options were evaluated:
+&nbsp; &nbsp; &nbsp; &nbsp;Team 6 is considering various storage options for the prototype, aiming to meet throughput, endurance, reliability, and cost requirements for field deployment. Key requirements include sustaining a total throughput of ~53.8kB/s, continuous logging for at least one month (~139 GB), reliable operation under potential environmental stresses, and affordability. The following options were evaluated: 
 
 - **Hard Disk Drives (HDDs)**
 
-&nbsp; &nbsp; &nbsp; &nbsp;HDDs are widely available and cost-effective, offering high storage capacity at a relatively low price per gigabyte. However, they rely on mechanical components, making them vulnerable to shock, vibration, and harsh environmental conditions. Their power consumption is higher than solid-state alternatives, and latency can limit performance while logging data continuously. This makes them less ideal for a battery-powered or field-deployable prototype.
+  -**Throughput:** Typically hundreds of MB/s, sufficient for logging, but subject to latency during continuous writes.  
+  -**Endurance:** Limited by mechanical wear and vulnerable to shock and vibration.  
+  -**Reliability:** Mechanical components make them less suitable for portable, field-deployable systems.  
+  -**Power Consumption:** ~2-6 W 
+  -**Cost:** US $10-40 
 
 - **Solid-State Drives (SSDs)**
 
-&nbsp; &nbsp; &nbsp; &nbsp;SSDs offer advantages over HDDs, including static parts, high reliability, fast and consistent throughput, and compact form factors. Despite their benefits, SSDs are significantly more expensive than smaller flash-based media, which conflicts with Team 6's goal of developing a cost-effective prototype. Additionally, SSDs may consume more power and can be slightly more complex for software interfacing, requiring additional drivers or protocol management.
+  -**Throughput:** Hundreds of MB/s, consistent under continuous writes. 
+  -**Endurance:** Moderate write endurance with consumer SSDs typically supporting several hundred gigabytes to a few terabytes written over their lifetime.  
+  -**Reliability:** No moving parts, robust under vibration and shock, compact form-factors, slightly higher interface complexity. 
+  -**Power Consumption:** ~2-4 W 
+  -**Cost:** US $30-100 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJUyo8n0le.jpg" alt="HDD vs SSD Interior" width="600">
@@ -234,12 +244,18 @@ $$
 
 
 - **SD Cards**
-
-&nbsp; &nbsp; &nbsp; &nbsp;SD Cards provide a compact, removable storage solution and are widely available at low cost. However, their throughput and write endurance can be limited, and consumer-grade SD cards may struggle with sustained continuous logging over long periods of time. Industrial-grade SD cards offer higher endurance but are more costly, conflicting with the cost goals for the prototype.
+  -**Throughput:** Consumer-grade cards may support ~10-100 MB/s, reasonably consistent under continuous writes. 
+  -**Endurance:** Moderate write endurance with a risk of degradation if subjected to continuous high-volume writes over long periods.    
+  -**Reliability:** Compact form factor and removable with performance and durability that vary depending on the make and quality of the card. 
+  -**Power Consumption:** ~ 0.02 - 0.1 W 
+  -**Cost:** US $10-50 
 
 - **USB Thumb Drives**
-
-&nbsp; &nbsp; &nbsp; &nbsp;USB Thumb Drives combine portability, low cost, and ease of use. Many modern drives provide sufficient throughput to easily handle the estimated 53.8 kB/s of data with minimal risk of write bottlenecks. While not as fast or robust as industrial SSDs, USB thumb drives offer a practical balance of reliability, cost, and simplicity for field deployment. This supports continuous operation lasting up to one month, aligning with Team 6's expected maximum data generation of roughly 139 GB per month.
+  -**Throughput:** Modern USB 3.0 thumb drives support sustained throughput of ~100MB/s, consistent under continuous writes.  
+  -**Endurance:** Moderate write endurance, typically sufficient for several hundreds of gigabytes to a few terabytes over their lifetime.  
+  -**Reliability:** Solid-state, no moving parts, plug-and-play, and easily replaceable in the field.  
+  -**Power Consumption:** ~0.05 - 0.5 W 
+  -**Cost:** US $20-50 
 
 &nbsp; &nbsp; &nbsp; &nbsp;After evaluating these options Team 6 has elected to implement a USB thumb drive as the prototype storage medium. The USB drive will have 256 GB capacity and a storage format that can support files larger than 4 GB, such as exFAT or similar formats. This option offers true plug-and-play functionality, allowing easy insertion, removal, or replacement without additional hardware or system modifications. Modern USB 3.0 drives provide sufficient throughput for real-time TEC data logging and system monitoring. USB thumb drives are also cost-effective, providing ample storage capacity for continuous operation and additional user-driven experiments, while minimizing system complexity.
 
@@ -260,13 +276,13 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;A simple method for powering the prototype is through direct connection to a 120 V AC wall outlet. This approach provides a stable and continuous power source, ensuring reliable operation for all system components, including the GNSS receiver, processing unit, and data storage device. Wall-powered operation significantly reduces system complexity by eliminating the need for battery management circuitry, power conversion modules, and charge controllers.
 
-&nbsp; &nbsp; &nbsp; &nbsp;No energy storage component is required, resulting in a lower-cost build. This creates margin in the budget for higher-performance electronics. However, this approach imposes significant spatial limitations. The device can only operate in proximity to a building or facility with available mains power. Consequently, deployment flexibility and geographic coverage are greatly reduced. The system would be constrained to controlled environments such as research laboratories, homes, schools, and other desired observatories, making it unsuitable for widespread or remote field measurements.
+&nbsp; &nbsp; &nbsp; &nbsp;No energy storage component is required, resulting in a lower-cost build. This creates a margin in the budget for higher-performance electronics. However, this approach imposes significant spatial limitations. The device can only operate in proximity to a building or facility with available mains power. Consequently, deployment flexibility and geographic coverage are greatly reduced. The system would be constrained to controlled environments such as research laboratories, homes, schools, and other desired observatories, making it unsuitable for widespread or remote field measurements. Overall, the price for this subsystem is minimal at roughly $10-$30 since minimal componets would be used in this solution.
 
 ### **Standalone Rechargeable Battery Approach:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;Using a rechargeable battery system capable of supplying all required electrical loads greatly improves mobility, deployment, and versatility. This enables the prototype to operate in isolated locations without dependance on infrastructure. A well-designed battery subsystem, such as a 12.8 V LiFePO₄ pack paired with a battery management system (BMS), provides the necessary current for the device's power rails through appropriate buck converters or voltage dividers.
+&nbsp; &nbsp; &nbsp; &nbsp;Using a rechargeable battery system capable of supplying all required electrical loads greatly improves mobility, deployment, and versatility. This enables the prototype to operate in isolated locations without dependance on infrastructure. A well-designed battery subsystem, such as a 12.8 V LiFePO₄ pack paired with a battery management system (BMS), provides the necessary current for the device’s power rails through appropriate buck converters or voltage dividers. The battery itself would cost approximately US $60-$110, assuming the use of a 12.8 V LiFePO₄ 20Ah pack paired with a BMS. 
 
-&nbsp; &nbsp; &nbsp; &nbsp;The advantages of a battery-only system include portability and operational independence critical for field experiments and distributed observation networks. However, this approach introduces engineering and safety challenges. The integration of rechargeable batteries necessitates protection circuits against overvoltage, short-circuit, and thermal runaway conditions. Without an external charging source, runtime is inherently limited by battery capacity, requiring careful energy budgeting and system shutdown protocols to prevent data corruption upon power depletion. This design also demands periodic maintenance and manual recharging, reducing long-term autonomy.
+&nbsp; &nbsp; &nbsp; &nbsp;The advantages of a battery-only system include portability and operational independence critical for field experiments and distributed observation networks. However, this approach introduces engineering and safety challenges. The integration of rechargeable batteries necessitates protection circuits against overvoltage, short-circuit, and thermal runaway conditions. Because of these challenges, a cost esimate of US $10-$30 is added towards the cost of this subsystem to implement the necessary protection circuitry. Without an external charging source, runtime is inherently limited by battery capacity, requiring careful energy budgeting and system shutdown protocols to prevent data corruption upon power depletion. This design also demands periodic maintenance and manual recharging, reducing long-term autonomy. The overall cost of this subsystem would be approximately $150-$200 with the use of an affordable charge controller, battery, power supply and other supporting components. 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/HJOoXwnCxl.png" alt="System Block Diagram" width="600">
@@ -275,9 +291,9 @@ $$
 
 ### **Standalone Rechargeable Battery + Solar Capable Recharge Approach:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;Incorporating a solar charging system alongside the onboard battery mitigates many limitations of the battery-only configuration. A solar panel coupled with a maximum power point tracking (MPPT) charge controller enables the device to operate for extended periods of time dependent on sunlight availability and energy demand. The use of the 12 V (nominal 12.8 V LiFePO₄) standard aligns with industry conventions for portable instrumentation and ensures compatibility with commonly available charge controllers and solar modules.
+&nbsp; &nbsp; &nbsp; &nbsp;Incorporating a solar charging system alongside the onboard battery mitigates many limitations of the battery-only configuration. A solar panel coupled with a maximum power point tracking (MPPT), or a pulse width modulation (PWM) charge controller, enables the device to operate for extended periods of time dependent on sunlight availability and energy demand. Using this component would add a US $25-$90 addition to the overall cost of this subsystem, assuming the purchace of a 10A-20A rated charge controller. The use of the 12 V (nominal 12.8 V LiFePO₄) standard aligns with industry conventions for portable instrumentation and ensures compatibility with commonly available charge controllers and solar modules.
 
-&nbsp; &nbsp; &nbsp; &nbsp;This configuration enhances the device's operational autonomy, making it ideal for remote monitoring networks or long-term unattended deployments. However, the addition of solar power introduces new physical and electrical complexities. The panel increases the system's physical footprint, potentially reducing portability. Wiring between the MPPT, battery, and system load must be carefully designed to prevent reverse current flow and cross-charging between power inputs. Furthermore, system cost and assembly time increase due to additional components and mounting considerations. Despite these drawbacks, the solar-assisted configuration offers the best endurance-to-cost ratio for long-duration field applications.
+&nbsp; &nbsp; &nbsp; &nbsp;This configuration enhances the device’s operational autonomy, making it ideal for remote monitoring networks or long-term unattended deployments. However, the addition of solar power introduces new physical and electrical complexities. The panel increases the system’s physical footprint, potentially reducing portability. Wiring between the MPPT, battery, and system load must be carefully designed to prevent reverse current flow and cross-charging between power inputs. Furthermore, system cost and assembly time increase due to additional components and mounting considerations. Despite these drawbacks, the solar-assisted configuration offers the best endurance-to-cost ratio for long-duration field applications. The overall cost of this subsystem would be approximately US $200-$300 with the use of similar components found in the last solution. However, it adds additional costs for the solar panel and the adaptive cables for modular connections. 
 
 
 <div align="center">
@@ -322,6 +338,21 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;The hybrid approach offers significant engineering and operational advantages. It ensures that the system remains functional during power interruptions, supports hot-swappable charging inputs, and eliminates the need for constant supervision. Using widely available power connectors such as the XT60, DC barrel jacks, or Anderson Powerpole allows for easy field servicing and replacement without compromising structural integrity. The architecture also promotes modularity, enabling future users to upgrade components without redesigning the core electronics.
 
+&nbsp; &nbsp; &nbsp; &nbsp;Assuming the use of defined components mentioned earlier in this proposal, a predicted power draw analysis can be anticipated.
+
+| **Component** | **Nominal PD (Watts)** | **Peak PD (Watts)** | **Efficiency (%)** | **Max Loss (W)** |
+| --- | --- | --- | --- | --- |
+| Single-Board Computer (RasPi5) | 10.0 | 24.0 | &nbsp; | &nbsp; |
+| Microcontroller (RasPiPico) | 0.08 | 0.2 | &nbsp; | &nbsp; |
+| RF Module (u-blox ZED-F9P) | 0.7 | 1.0 | &nbsp; | &nbsp; |
+| USB Thumb (256GB) | 0.10 | 0.50 | &nbsp; | &nbsp; |
+| MPPT/PWM Controller | &nbsp; | &nbsp; | &nbsp; | 0.35 |
+| 3.3V buck/LDO | &nbsp; | &nbsp; | 85 to 90 | 1.7 |
+| 5V Buck Converter | &nbsp; | &nbsp; | 88 to 92 | 0.22 |
+| **TOTAL** | **10.94** | **25.08** | **88-90%** | **1.93** |
+
+&nbsp; &nbsp; &nbsp; &nbsp;With a 12 V 20 Ah LiFePO₄ battery, the system sustains operation for approximately 20 – 22 hours assuming normal draw (16 W) or 10 hours under peak conditions (25 W). When recharge via a 120 V AC adapter (19.5 V / 200 W), full recovery from 20% to 100% state-of-charge requires 1.5 – 2 hours. Solar recharging using a 12 V 100 W panel typically yields 5–6 A at midday, restoring full charge in 5 – 6 hours under optimal insolation. 
+
 &nbsp; &nbsp; &nbsp; &nbsp;The chosen approach maintains a good balance between power redundancy, safety, and cost efficiency. The inclusion of a BMS, MPPT, AC/DC, and DC/DC regulation circuitry ensures compliance with IEEE and IEC electrical safety standards while supporting continuous operation of the SBC, GNSS receiver, and storage subsystem. Overall, the hybrid rechargeable power design aligns with Team 6's objective of creating a robust, modular, and accessible prototype capable of deployment across both laboratory and remote field environments.
 
 ## **Modularity**
@@ -346,7 +377,7 @@ $$
 
 ## **Enclosure**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The system shall be housed in an enclosure designed for mobility, rapid deployment, and easy access in support of a variety of configurations. Team 6 draws inspiration from the ScintPi 3.0 design, exemplifying compact form factor, transportability, and user-friendly accessibility. The enclosure shall accommodate modular components, allowing for straightforward integration and replacement of the various modules and sensors within. This shall foster long-term serviceability and adaptability.
+&nbsp; &nbsp; &nbsp; &nbspThe system shall be housed in an enclosure designed for mobility, rapid deployment, and easy access in support of a variety of configurations. Team 6 draws inspiration from the ScintPi 3.0 design, exemplifying compact form factor, transportability, and user-friendly accessibility. The enclosure shall accommodate modular components, allowing for straightforward integration and replacement of the various modules and sensors within. This shall foster long-term serviceability and adaptability. Team 6 considered the following characteristics of 3D printing materials in deciding; such as ease of printing, thermal resistance, and mechanical strength to ensure durability and field suitability. This shall foster long-term serviceability and adaptability. 
 
 &nbsp; &nbsp; &nbsp; &nbsp;To achieve an IPx4 rating while maintaining ventilation, the enclosure design shall incorporate an enclosure nested within a larger enclosure. Interior walls are arranged to force any water entering the vent to travel upward along a convoluted path before reaching the internal cavity, effectively preventing water ingress while allowing passive airflow for thermal regulation. Additional airflow beneath the enclosure increases exposed surface area for heat dissipation, improving long-term thermal stability. The enclosure will be 3D printed, enabling rapid prototyping and low-cost production while maintaining structural integrity suitable for repeated field deployment. The 3D print files will be made publicly available, allowing users to modify and adapt the design for each specific application and environmental condition.
 
@@ -354,7 +385,7 @@ $$
 
 - **Polylactic Acid (PLA) Approach**
 
-    PLA is a widely used material known for its ease of printing, high dimensional accuracy, and smooth surface finish, making it ideal for rapid prototyping and aesthetic enclosures. However, PLA suffers from significant drawbacks in outdoor environments. It softens at low temperatures, is brittle under mechanical stress, and degrades over time when exposed to sunlight and moisture. While it provides affordable precision for early design iterations, its lack of toughness and heat resistance makes it unsuitable for field applications requiring long-term durability.
+    PLA is a widely used material known for its ease of printing, high dimensional accuracy, and smooth surface finish, making it ideal for rapid prototyping and aesthetic enclosures. However, PLA suffers from significant drawbacks in outdoor environments. It softens at low temperatures relative to other 3D printing materials (60-65 °C), is brittle under mechanical stress, and degrades over time when exposed to sunlight and moisture. While it provides affordable precision for early design iterations, its lack of toughness and long-term heat resistance makes it unsuitable for field applications requiring long-term durability. 
 
 - **Acrylonitrile Butadiene Styrene (ABS)** **Approach**
 
