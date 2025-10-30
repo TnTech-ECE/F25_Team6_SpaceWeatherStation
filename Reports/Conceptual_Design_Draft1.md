@@ -34,6 +34,8 @@
   - This requirement originates from customer needs for a programmable and modular system supporting future expansions. A processing platform is essential for data acquisition, timestamping, and device control. The choice between an SBC (e.g., Raspberry Pi 5, Raspberry Pi 02W) and a microcontroller (e.g., STM32) allows for either high-performance processing or low-power efficiency, depending on design preferences \[1, 3\].
 - The chosen design shall consist of a battery capable of recharging via wall main or solar panel with necessary electrical fault protections.
   - A rechargeable battery is essential for field autonomy and continuous operation independent of grid power. The inclusion of a rechargeable battery reflects an ethical and environmental concern, promoting sustainability by reducing single-use power sources. The requirement for safe operation and overcharge protection arises from safety engineering standards (IEEE/IEC) \[4, 5, 6\].
+  - IEEE Std 1657-2018 recommends procedures for battery handling and installation, such as fuse placement and connector design types in Section 4. In Section 7, it encourages labeling polarity, voltage, and capacity, making our modular system safe for the replication of others [4]. 
+IEC 62509:2010 Clause 8 specific efficiency testing and current limiting varification relevant to the charge controllers rated output ensuring safe operation while charging [4]. 
 - The chosen design may have the capability to measure ionospheric scintillation events.
   - This specification enhances the impact of the data collected and provides more insight for the scientific community concerning ionospheric conditions.
 - The chosen design shall consist of components that have a combined cost not exceeding \$1,000.
