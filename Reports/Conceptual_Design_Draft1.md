@@ -818,6 +818,6 @@ Kenneth Creamer-Harris: Restating the Problem, Comparative Analysis of Potential
 
 Blake Hudson: Atomic Subsystem Specifications \[Data Storage Subsystem\], High-Level Solution, Hardware Block Diagram, Operational Flow Chart.
 
-Nolan Magee: Introduction, division of labor, Timeline, and Final Review.
+Nolan Magee: Introduction, Division of Labor, Timeline, and Final Review.
 
 Jackson Taylor: Budget, Atomic Subsystem Specifications \[Antenna and RF Module Subsystem\]
