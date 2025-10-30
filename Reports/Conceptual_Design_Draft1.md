@@ -223,19 +223,19 @@ $$
 
 - **Hard Disk Drives (HDDs)**
 
-  -**Throughput:** Typically hundreds of MB/s, sufficient for logging, but subject to latency during continuous writes.  
-  -**Endurance:** Limited by mechanical wear and vulnerable to shock and vibration.  
-  -**Reliability:** Mechanical components make them less suitable for portable, field-deployable systems.  
-  -**Power Consumption:** ~2-6 W 
-  -**Cost:** US $10-40 
+  - **Throughput:** Typically hundreds of MB/s, sufficient for logging, but subject to latency during continuous writes.  
+  - **Endurance:** Limited by mechanical wear and vulnerable to shock and vibration.  
+  - **Reliability:** Mechanical components make them less suitable for portable, field-deployable systems.  
+  - **Power Consumption:** ~2-6 W 
+  - **Cost:** US $10-40 
 
 - **Solid-State Drives (SSDs)**
 
-  -**Throughput:** Hundreds of MB/s, consistent under continuous writes. 
-  -**Endurance:** Moderate write endurance with consumer SSDs typically supporting several hundred gigabytes to a few terabytes written over their lifetime.  
-  -**Reliability:** No moving parts, robust under vibration and shock, compact form-factors, slightly higher interface complexity. 
-  -**Power Consumption:** ~2-4 W 
-  -**Cost:** US $30-100 
+  - **Throughput:** Hundreds of MB/s, consistent under continuous writes. 
+  - **Endurance:** Moderate write endurance with consumer SSDs typically supporting several           hundred gigabytes to a few terabytes written over their lifetime.  
+  - **Reliability:** No moving parts, robust under vibration and shock, compact form-factors,         slightly higher interface complexity. 
+  - **Power Consumption:** ~2-4 W 
+  - **Cost:** US $30-100 
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/rJUyo8n0le.jpg" alt="HDD vs SSD Interior" width="600">
@@ -681,19 +681,17 @@ No direct user control of logging frequency or file management is required, thou
 
 **Data Storage System:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be made up of a storage drive and an SBC. To keep options open for various specs for the SBC and the storage drive, a maximum expenditure of \$150 for the SBC and \$75 for the storage has been set as follows.
-
+&nbsp; &nbsp; &nbsp; &nbsp;This system shall be made up of a storage drive and an SBC. The justification for selecting these components is detailed in the ‘Storage Mediums Considered’ and ‘Single Board Computer (SBC) Approach’ subsections of the Comparative Analysis. The SBC shall be used for data processing, and the thumb drive shall be used for data storage. The thumb drive has been chosen for its low cost and plug-and-play nature. The SBC approach has been chosen for its high processing capability and design flexibility. To keep options open for various specifications, the SBC and the storage drive shall not exceed US $120 for the SBC and $25 for the storage as shown below. 
 | Subsystem | Item | Budget |
 | --- | --- | --- |
 | Data Storage System 
 | | Storage Drive (Thumb Drive) | \$25 |
 | | Single-Board Computer (SBC)\* | \$120\* |
 | Total | | \$145 |
-
+  \*SBC will be shared between Data Subsystem and RF Module Subsystem 
 **Antenna and RF Module System:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. Given the large variation in cost for RF modules, the max budget for this component has been set at \$300.
-
+&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of an RF Module and Dual-Tuned Patch Antenna, which includes the required Coaxial Cable. The justification for selecting these components is detailed in the ‘RF Signal Conditioning and Digitization’ and ‘Signal Reception’ subsections of the Comparative Analysis. The antenna shall receive GNSS signals, and the RF module shall process those signals. A dual-tuned patch antenna has been chosen for its low relative cost compared to other options, and the RF module approach has been chosen due to its design simplicity, industry recommendations, and cost considerations. Given the large variation in cost for RF modules, the max budget for this component has been set at US $300.
 | Subsystem | Item | Budget |
 | --- | --- | --- |
 | Antenna and RF Module System
@@ -704,7 +702,7 @@ No direct user control of logging frequency or file management is required, thou
 
 **System Interconnections:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together.
+&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a PCB board, a magnetometer, a microcontroller, and any miscellaneous cables connecting each subsystem together. The PCB board shall act as a hub to connect all components and any additional devices to the system, as discussed in the Modularity subsection of the Comparative Analysis. The magnetometer is included in this budget so that modularity of the system can be demonstrated, as it is a cheap peripheral that can be attached to the system. The microcontroller shall allow the system to have ADC connections, further enabling user-driven expansion of the prototype. This subsystem’s budget also covers cost for any cabling between subsystems, accounted for under the Miscellaneous Cables section. 
 
 | Subsystem | Item | Budget |
 | --- | --- | --- |
@@ -717,7 +715,7 @@ No direct user control of logging frequency or file management is required, thou
 
 **Power System:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 50Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.
+&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of a power supply, MPPT charge controller, 12V 20Ah battery, transformer, miscellaneous cables, and as a demonstration of expandability, a solar panel shall be included.  The justification for selecting a solar panel, power supply, 12V battery, MPPT/PWM is discussed in the ‘Power’ subsection of the Comparative Analysis, as well as the ‘Power’ subsection of the Atomic Subsystem Analysis. The 12V battery provides all other electronic components with proper power input to function. The solar panel and power supply shall be used to charge and recharge the battery. Interfacing all the components requires voltage regulation. Therefore, the purchase of buck converters and voltage regulators is necessary. To interface all components, the use of miscellaneous adapters such as MC4/XT60 adapters, barrel jack or USB port wires is necessary, justifying the purchase of miscellaneous cables. To ensure protective integrity and a clean energy supply, the use of fuses, diodes, capacitors, and inductors prevents the risk of over/under voltage and current in an area where this is not present. This justifies the purchase of protection components. 
 
 | Subsystem | Item | Budget |
 | --- | --- | --- |
@@ -727,13 +725,13 @@ No direct user control of logging frequency or file management is required, thou
 | | MPPT Charge Controller | $30   |
 | | Battery (12V, 20Ah) |$50 |
 | | Transformer/Converters | $20   |
-| | Protection Components |  $25  |
+| | Protection/Filtering Components |  $25  |
 | | Miscellaneous Cables | $35   |
 | Total | | $260 |
 
 **Enclosure System:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament.
+&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament. The justification for selecting PETG filament can be found in the ‘Enclosure’ subsection of the Comparative Analysis. PETG filament as the primary material has been selected due to its mechanical strength, environmental stability, and manufacturability advantages. An additional US $40 has been included in this budget for additional waterproofing material that may be needed, such as rubber seals or other unforeseen expenditures. 
 
 | Subysystem | Item | Budget |
 | --- | --- | --- |
