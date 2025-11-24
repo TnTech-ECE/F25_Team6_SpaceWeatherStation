@@ -1,6 +1,6 @@
-*Detailed Design*
+****Detailed Design****
 
-*Function of the Subsystem*
+***Function of the Subsystem***
 
 The function of the subsystem is explained in the following shall statements
 
@@ -11,7 +11,7 @@ The function of the subsystem is explained in the following shall statements
 - The enclosure shall secure all components during transportation and implementation.
 - The design shall provide accessibility for troubleshooting and repairing every component.
 
-**Specifications and Constraints**
+***Specifications and Constraints***
 
 The following shall statements comprise the constraints and specifications of the enclosure.
 
@@ -24,7 +24,7 @@ The following shall statements comprise the constraints and specifications of th
 - The enclosure shall have a transparent barrier for viewing all internal components for observation during operation.
 - The enclosure shall allow for easy access for interchanging parts to promote modularity and flexibility in field and home applications.
 
-**Overview of Proposed Solution**
+***Overview of Proposed Solution***
 
 &nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. It is IP67 rated, exceeding the required waterproof rating. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from bug entry. The enclosure is NEMA 4 rated, providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
 
@@ -34,7 +34,7 @@ The following shall statements comprise the constraints and specifications of th
 ![ux_a25020800ux0987_ux_d01_1800x1800](https://hackmd.io/_uploads/S1VGd0eb-e.jpg)
 **Figure 2. Vent with Stainless Steel Mesh**
 
-**Buildable Schematic**
+***Buildable Schematic***
 
 ![710B15JyV2L._AC_SL1500_](https://hackmd.io/_uploads/rJNC9QW-bl.jpg)
 **Figure 3. Exterior Dimensional View**
@@ -43,7 +43,7 @@ The following shall statements comprise the constraints and specifications of th
 
 **Figure 4. Internal Component Layout**
 
-**BOM**
+***BOM***
 
 | **Component** | **Enclosure Box** | **Wire Mesh Vents** | **Liquid Seal Tight ½" fitting** | **1/2" Liquid Seal Tight Ferrule** |
 | --- | --- | --- | --- | --- |
@@ -55,11 +55,11 @@ The following shall statements comprise the constraints and specifications of th
 | **Purchasing Website URL** | [3] | [4] | [5] | [6] |
 | **Total** | **66.99** | **30.64** | **1.63** | **0.46** |
 
-**Analysis**
+***Analysis***
 
 &nbsp;&nbsp;&nbsp;&nbsp;Team 6 has concluded the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box is the optimal solution for the needs of the TEC measurement prototype. This enclosure exceeds the minimum required IPX-4 waterproof rating. Air vents will need to be added to meet the system's ventilation needs, which will decrease the waterproof rating. The vents included will be 4" x 4" with slats covering the exterior to deter water entry into the enclosure. The vents being a perfect square allow for the enclosure to be set up in a vertical or horizontal orientation, allowing users the flexibility of mounting to a wall, strapping to a tree, or simply lying flat on the ground. The enclosure is large enough to properly space components for ease of physical access, while leaving room for additional components, encouraging adaptability and modularity. The internal back plate is removable, which allows the user to easily transfer the entire component platform in and out of the box, facilitating speed and convenience. The grid design of the backplate accepts a large size variation in fasteners, removing the annoyance of requiring uniform hardware. This will also encourage experimentation and additions to the minimal function of the prototype. Team 6 had the intention of mounting a small transparent faceplate to the chosen enclosure. However, this enclosure's entire latched door is transparent, allowing viewing of the complete interior of the enclosure. The door utilizing stainless steel latches satisfied the requirement for easy access to the internal components without sacrificing sturdiness. Overall, this enclosure exceeds expectations in every regard, and while this specific box may not be accessible anywhere in the world, it exemplifies the characteristics of any enclosure a hobbyist may want to use in their own application.
 
-**References**
+***References***
 
 \[1\] <https://www.nema.org/docs/default-source/about-us-document-library/ansi-iec_60529-2020-contents-and-scopef0908377-f8db-4395-8aaa-97331d276fef.pdf?sfvrsn=29c118a6_3>
 
