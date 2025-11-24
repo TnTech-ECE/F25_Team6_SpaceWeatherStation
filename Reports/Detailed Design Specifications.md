@@ -25,7 +25,7 @@ Specification: The subsystem shall use a 4-layer FR-4 stackup consisting of:
 
 Rationale: FR-4 provides cost-effective material for moderate-speed interfaces (e.g. SPI). A 4-layer stackup improves signal routing, offers a full layer dedicated to ground, and simplifies power distribution.
 
-**Power Regulation and Inputs Specification**
+### **Power Regulation and Inputs Specification**
 
 Specification: The subsystem shall provide on-board power regulation supporting two standardized input options:
 
@@ -36,69 +36,69 @@ Power inputs shall include current protection, overvoltage protection, reverse p
 
 Rationale: Ensures safe and reliable operation while enabling flexible power options. Automatic preference for wall power reduces battery drain. 5V and 3.3V rails are industry-standard for embedded systems.
 
-**Expansion and Modularity Specification**
+### **Expansion and Modularity Specification**
 
 Specification: The subsystem shall provide expansion ports and optional module interfaces without interfering with primary board functions.
 
 Rationale: Modularity reduces redesign costs and extends functionality, addressing socio-economic factors related to long-term maintainability.
 
-**SBC and MCU Expansion Headers Specification**
+### **SBC and MCU Expansion Headers Specification**
 
 Specification: The subsystem shall provide parallel breakout headers exposing all GPIO pins of both the Raspberry Pi Pico and Raspberry Pi 4B directly on the PCB. Each header shall map one-to-one with the official Raspberry Pi Pico 40-pin pinout and the official Raspberry Pi 4B 40-pin GPIO pinout, maintaining numbering, orientation, and functionality.
 
 Rationale: Providing local breakouts of all SBC and MCU pins increases hardware flexibility, simplifies debugging, and enables easier prototyping. Additionally, users gain direct access to every available signal for measurement.
 
-**1.0 mm JST Connector Specification**
+### **1.0 mm JST Connector Specification**
 
 Specification: The subsystem shall use standardized 1.0mm JST connectors (e.g., JST-SH/Qwiic/STEMMA QT) for digital interfaces where appropriate.
 
 Rationale: Using these connectors for digital connection points maintains consistency and simplicity across the board and reduces mismatching of standardized connectors. This approach simplifies prototyping, minimizes wiring errors, and supports modular expansion and long-term maintainability.
 
-**Analog Input Specification**
+### **Analog Input Specification**
 
 Specification: The subsystem will provide direct access via screw terminals to analog-to-digital conversion (ADC) pins for easy interfacing with analog signals.
 
 Rationale: Direct access to ADC pins enables users to interface with analog peripherals seamlessly.
 
-### **Constraints**
+## **Constraints**
 
-**Physical and Electrical Routing Constraint**
+###**Physical and Electrical Routing Constraint**
 
 Constraint: The subsystem shall provide clear and optimized routing for power, data, and control traces, maintaining separation between digital, analog, and power signals. High speed connections will best avoid crossing breaks in power zones on lower layers.
 
 Rationale: Minimizes crosstalk caused by capacitive and inductive coupling, as well as other forms of electrical noise. These constraints stem from electromagnetic coupling behavior and the system's signal integrity requirements.
 
-**Signal Integrity and EMI Constraint**
+###**Signal Integrity and EMI Constraint**
 
 Constraint: The subsystem shall maintain a continuous nearby ground for all signal traces and minimize loop areas to limit EMI and noise, particularly on digital signals.
 
 Rationale: Even at moderate speeds like SPI, proper return paths and grounded planes help prevent interference, reduce signal disturbances, and maintain reliable communication between modules. Among the most critical issues are electromagnetic interference (EMI) and signal integrity (SI). Poorly managed interconnects, inconsistent grounding, or inadequate shielding can lead to signal degradation, system instability, and even regulatory failures \[1\].
 
-**Trace, Via, and Wire Design Constraint**
+###**Trace, Via, and Wire Design Constraint**
 
 Constraint: The subsystem shall select PCB trace widths, via diameters, and external wire gauges to accommodate expected current levels and shall use multiple parallel traces or wires when necessary to distribute current safely. These selections will be informed by IPC-2221 standards. IPC-2221 (Revision B effective 2012) is a generally accepted industry standard that defines a multitude of PCB design aspects \[2\]. Additionally, adequate copper areas will be used for thermal relief.
 
 Rationale: Proper trace, via, and wire sizing prevents excessive heating and voltage drop while maintaining reliable current delivery. Using parallel traces or wires reduces the risk of overloading a single conductor.
 
-**Standards-Based Interface Constraint**
+###**Standards-Based Interface Constraint**
 
 Constraint: The subsystem shall standardize electrical and physical interface connections using widely accepted header spacing, pin assignments, electrical circuits, and communication standards. I2C, SPI, and UART are commonly used as means for communication between devices within embedded systems due to their simplicity and ease of operation \[3\].
 
 Rationale: Alignment with industry standards ensures interoperability with third-party modules and supports ethical engineering practices by reducing error, increasing accessibility, and lowering long-term replacement costs.
 
-**PCB and Schematic Labeling Constraint**
+###**PCB and Schematic Labeling Constraint**
 
 Constraint: All PCB components, headers, connectors and wire entry points shall be clearly labeled with interface designators, pin numbers, and signal names on both the PCB silkscreen and the schematic. The PCB silkscreen will include all relevant information for the current version of the project.
 
 Rationale: Clear labeling improves assembly, debugging, testing, and maintenance. It reduces user error, simplifies documentation, and ensures consistency between the board and schematic. Proper labeling also facilitates modular expansion and long-term maintainability.
 
-**Form-Factor Constraint**
+###**Form-Factor Constraint**
 
 Constraint: The subsystem shall maintain a form-factor compatible with the enclosure and mounting requirements.
 
 Rationale: Ensures physical compatibility and manufacturability. This constraint is based on physical limitations of the enclosure subsystem.
 
-**Manufacturability and Assembly Constraint**
+###**Manufacturability and Assembly Constraint**
 
 Constraint: Component placement, footprints, and pad sizes shall comply with the capabilities and recommendations of the PCB manufacturer who will fabricate the PCB. These specifications come directly from PCBWay's PCB Capabilities \[4\]. The PCB design shall pass KiCad's design rules checker (DRC).
 
