@@ -40,7 +40,6 @@ The following shall statements comprise the constraints and specifications of th
 **Figure 3. Exterior Dimensional View**
 
 ![Screenshot 2025-11-23 185257](https://hackmd.io/_uploads/Hkqdhm-W-g.png)
-
 **Figure 4. Internal Component Layout**
 
 **BOM**
