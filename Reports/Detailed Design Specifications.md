@@ -12,7 +12,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The interconnections subsystem implements the PCB responsible for interconnecting modules, routing power and signals, providing physical interfaces, and selecting appropriate wiring to and from the board. The following specifications and constraints shape its design, each with the required rationale grounded in physics, system requirements, standards, ethics, and socio-economic considerations.
 
-**Specifications**
+### **Specifications**
 
 **PCB Stackup Specification**
 
@@ -60,7 +60,7 @@ Specification: The subsystem will provide direct access via screw terminals to a
 
 Rationale: Direct access to ADC pins enables users to interface with analog peripherals seamlessly.
 
-**Constraints**
+### **Constraints**
 
 **Physical and Electrical Routing Constraint**
 
