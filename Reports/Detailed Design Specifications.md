@@ -104,7 +104,7 @@ Constraint: Component placement, footprints, and pad sizes shall comply with the
 
 Rationale: Ensures the board can be reliably manufactured and assembled, reducing errors during soldering and inspection. Following manufacturer guidelines prevent issues such as solder bridging and component misalignment.
 
-## **Overview of Proposed Solution**
+# **Overview of Proposed Solution**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections subsystem is designed to provide a centralized platform for connecting all peripheral modules and subsystems. It implements this functionality through a PCB that delivers regulated power rails, standardized connectors, optimized signal routing, and mechanical stability. Additionally, proper cables have been selected to interface with all peripheral modules, ensuring reliable electrical connections and compatibility with the system's connectors. The following section provides a detailed overview of the proposed solution.
 
@@ -235,7 +235,7 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 &nbsp; &nbsp; &nbsp; &nbsp;Overall, the selected cables ensure that the System Interconnections PCB maintains electrical reliability, modularity, and safe current handling throughout the system. While not all edge connectors are actively used in the current configuration, they are included to demonstrate modularity and may be paired with the appropriate cables in future expansions or system modifications. Thoughtful cable selection and secure mechanical fastening support consistent performance, ease of assembly, and long-term maintainability of the system.
 
-## **Interface with Other Subsystems**
+# **Interface with Other Subsystems**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections PCB provides a centralized platform for interfacing with power sources, the MCU, SBC, and peripheral modules. Detailed connectivity ensures reliable power delivery, standardized data transfer, and clear signal routing.
 
@@ -267,21 +267,21 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 **Form Factor and Subsystem Integration**  
 &nbsp; &nbsp; &nbsp; &nbsp;The board layout facilitates straightforward placement of connectors and modules while maintaining a compact form factor compatible with the enclosure, including mounting holes designed for M1 screws. Signal assignment and protocol routing have been optimized to support the software subsystems, providing a standardized and modular platform for system development.
 
-## **3D Model of Custom Mechanical Components**
+# **3D Model of Custom Mechanical Components**
 
 
-## **Buildable Schematic**
+# **Buildable Schematic**
 
 &nbsp; &nbsp; &nbsp; &nbsp;All schematics were created in KiCad Schematic Editor. The power portion was designed collaboratively with the Power Subsystem lead. It is essential to include the power schematic within the Interconnections Subsystem documentation because it contains direct references to the PCB silkscreen. In addition to the power schematic, an SBC and MCU header-mapping schematic is provided, which uses bus structures to reduce visual clutter. This schematic also includes two status LEDs, enabling the user to send a signal to verify proper system functionality.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The external connector schematic outlines all access points on the board and details how each pin is powered. The RF connectors include a normally open solder jumper to ensure that only one power source can supply the RF module at a time, preventing potential damage. All pins are clearly identified using net labels, which automatically carry over into the PCB editor and support a streamlined workflow.
 
-## **Printed Circuit Board Layout**
+# **Printed Circuit Board Layout**
 
 
 Routing Layers
 
-## **BOM**
+# **BOM**
 
 | **Component** | **Total Price (\$US)** | **Quantity** | **Manufacturer** | **Part No.** | **Distributor** | **Distributor Part No.** | **Schematic Reference** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -336,7 +336,7 @@ Routing Layers
 | **PCB Printing** |     |
 | PCBWay Print | <https://www.pcbway.com/orderonline.aspx> |
 
-## **Analysis**
+# **Analysis**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections subsystem fulfills all specifications and constraints defined for the design. The selected 4-layer FR-4 stackup, with dedicated ground and power planes, satisfies the PCB stackup specification by supporting clean routing and reliable performance. The power design meets all requirements for dual-input operation, incorporating overvoltage protection, reverse-polarity protection through the full-bridge rectifier, proper decoupling, and automatic source prioritization via the TPS2121 power multiplexer. Both regulated 5V and 3.3V rails are distributed across the PCB with appropriately sized traces, vias, and copper fills.
 
@@ -346,7 +346,7 @@ Routing Layers
 
 &nbsp; &nbsp; &nbsp; &nbsp;Overall, the design satisfies all specifications and constraints through careful material selection, rigorous power and routing strategy, standardization of interfaces, and attention to manufacturability and system modularity.
 
-## **References**
+# **References**
 
 \[1\] "Eliminate EMI and Signal Integrity Issues in Multi-Board PCB Designs," _Altium_, Apr. 11, 2025. <https://resources.altium.com/p/emi-and-signal-integrity-multi-board-pcb-designs> (accessed Nov. 24, 2025).
 
