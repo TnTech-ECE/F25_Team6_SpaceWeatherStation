@@ -1,4 +1,4 @@
-# **System Interconnections Subsystem Detailed Design**
+<h1 style="font-size:40px;">System Interconnections Subsystem Detailed Design</h1>
 
 # **Function of the Subsystem**
 
