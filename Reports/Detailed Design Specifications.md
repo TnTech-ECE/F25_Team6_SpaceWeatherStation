@@ -72,17 +72,17 @@ Rationale: Minimizes crosstalk caused by capacitive and inductive coupling, as w
 
 Constraint: The subsystem shall maintain a continuous nearby ground for all signal traces and minimize loop areas to limit EMI and noise, particularly on digital signals.
 
-Rationale: Even at moderate speeds like SPI, proper return paths and grounded planes help prevent interference, reduce signal disturbances, and maintain reliable communication between modules. Among the most critical issues are electromagnetic interference (EMI) and signal integrity (SI). Poorly managed interconnects, inconsistent grounding, or inadequate shielding can lead to signal degradation, system instability, and even regulatory failures \[Altium EMI\].
+Rationale: Even at moderate speeds like SPI, proper return paths and grounded planes help prevent interference, reduce signal disturbances, and maintain reliable communication between modules. Among the most critical issues are electromagnetic interference (EMI) and signal integrity (SI). Poorly managed interconnects, inconsistent grounding, or inadequate shielding can lead to signal degradation, system instability, and even regulatory failures \[1\].
 
 **Trace, Via, and Wire Design Constraint**
 
-Constraint: The subsystem shall select PCB trace widths, via diameters, and external wire gauges to accommodate expected current levels and shall use multiple parallel traces or wires when necessary to distribute current safely. These selections will be informed by IPC-2221 standards. IPC-2221 (Revision B effective 2012) is a generally accepted industry standard that defines a multitude of PCB design aspects \[Altium IPC\]. Additionally, adequate copper areas will be used for thermal relief.
+Constraint: The subsystem shall select PCB trace widths, via diameters, and external wire gauges to accommodate expected current levels and shall use multiple parallel traces or wires when necessary to distribute current safely. These selections will be informed by IPC-2221 standards. IPC-2221 (Revision B effective 2012) is a generally accepted industry standard that defines a multitude of PCB design aspects \[2\]. Additionally, adequate copper areas will be used for thermal relief.
 
 Rationale: Proper trace, via, and wire sizing prevents excessive heating and voltage drop while maintaining reliable current delivery. Using parallel traces or wires reduces the risk of overloading a single conductor.
 
 **Standards-Based Interface Constraint**
 
-Constraint: The subsystem shall standardize electrical and physical interface connections using widely accepted header spacing, pin assignments, electrical circuits, and communication standards. I2C, SPI, and UART are commonly used as means for communication between devices within embedded systems due to their simplicity and ease of operation \[TotalPhase\].
+Constraint: The subsystem shall standardize electrical and physical interface connections using widely accepted header spacing, pin assignments, electrical circuits, and communication standards. I2C, SPI, and UART are commonly used as means for communication between devices within embedded systems due to their simplicity and ease of operation \[3\].
 
 Rationale: Alignment with industry standards ensures interoperability with third-party modules and supports ethical engineering practices by reducing error, increasing accessibility, and lowering long-term replacement costs.
 
@@ -100,7 +100,7 @@ Rationale: Ensures physical compatibility and manufacturability. This constraint
 
 **Manufacturability and Assembly Constraint**
 
-Constraint: Component placement, footprints, and pad sizes shall comply with the capabilities and recommendations of the PCB manufacturer who will fabricate the PCB. These specifications come directly from PCBWay's PCB Capabilities \[PCBWay Capabilities\]. The PCB design shall pass KiCad's design rules checker (DRC).
+Constraint: Component placement, footprints, and pad sizes shall comply with the capabilities and recommendations of the PCB manufacturer who will fabricate the PCB. These specifications come directly from PCBWay's PCB Capabilities \[4\]. The PCB design shall pass KiCad's design rules checker (DRC).
 
 Rationale: Ensures the board can be reliably manufactured and assembled, reducing errors during soldering and inspection. Following manufacturer guidelines prevent issues such as solder bridging and component misalignment.
 
@@ -110,11 +110,11 @@ Rationale: Ensures the board can be reliably manufactured and assembled, reducin
 
 **Substrate Material**
 
-&nbsp; &nbsp; &nbsp; &nbsp;It is essential when designing a PCB to first consider the speed of the signals on the board, as signal frequency strongly influences material selection and stackup. For the Personal Space Weather System, the highest-frequency signals present on the PCB will be SPI communications, which typically operate in the tens of megahertz. FR-4 is an industry standard PCB material that has been used for decades due to its good balance of electrical, mechanical, and thermal properties at a relatively low cost. Importantly, FR-4 performs reliably for frequencies from DC through the low-GHz range \[PCB Material\], making it well suited for the signal speeds in this design. Therefore, FR-4 is selected as the substrate material for the PCB.
+&nbsp; &nbsp; &nbsp; &nbsp;It is essential when designing a PCB to first consider the speed of the signals on the board, as signal frequency strongly influences material selection and stackup. For the Personal Space Weather System, the highest-frequency signals present on the PCB will be SPI communications, which typically operate in the tens of megahertz. FR-4 is an industry standard PCB material that has been used for decades due to its good balance of electrical, mechanical, and thermal properties at a relatively low cost. Importantly, FR-4 performs reliably for frequencies from DC through the low-GHz range \[5\], making it well suited for the signal speeds in this design. Therefore, FR-4 is selected as the substrate material for the PCB.
 
 **Stackup**
 
-&nbsp; &nbsp; &nbsp; &nbsp;Due to the complexity of connections being made between various modules in the prototype, a 4-layer board has been selected. The additional layers allow dense routing without signal congestion, provide uninterrupted ground and power planes, and improve the electrical performance and reliability of the interconnecting traces. A 4-layer configuration balances performance, cost, and space efficiency, making it ideal for applications that require moderate-to-high complexity, excellent signal integrity, and reliable power delivery \[AllElectroHub\].
+&nbsp; &nbsp; &nbsp; &nbsp;Due to the complexity of connections being made between various modules in the prototype, a 4-layer board has been selected. The additional layers allow dense routing without signal congestion, provide uninterrupted ground and power planes, and improve the electrical performance and reliability of the interconnecting traces. A 4-layer configuration balances performance, cost, and space efficiency, making it ideal for applications that require moderate-to-high complexity, excellent signal integrity, and reliable power delivery \[6\].
 
 &nbsp; &nbsp; &nbsp; &nbsp;The subsystem implements a 90x95mm 4-layer FR-4 PCB with the following stackup:
 
@@ -133,7 +133,7 @@ Rationale: Ensures the board can be reliably manufactured and assembled, reducin
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on the manufacturability and assembly constraints, the proposed PCB has passed KiCad's Design Rules Checker (DRC), which verifies that all board constraints are satisfied. These constraints follow the specifications provided by the manufacturer, PCBWay, including minimum trace width and spacing, via sizes, solder mask clearances, and silkscreen spacing. Adhering to these rules ensures reliable fabrication and reduces the risk of defects.
 
-&nbsp; &nbsp; &nbsp; &nbsp;The following figure specifies the manufacturer's specifications used \[PCBWay Capabilities\]:
+&nbsp; &nbsp; &nbsp; &nbsp;The following figure specifies the manufacturer's specifications used \[4\]:
 
 PCBWay Design Specifications
 
@@ -141,7 +141,7 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to meeting the minimum manufacturability specifications, the PCB must be capable of handling the electrical throughput required by the system. All trace widths and via diameters are sized safely to carry the expected maximum continuous currents without overheating. These calculations assume an ambient temperature of 40 °C, a temperature rise of 10 °C, a copper thickness of 1 oz/ft², and a via wall copper thickness of 0.018 mm, as specified by the manufacturer.
 
-&nbsp; &nbsp; &nbsp; &nbsp;The table below summarizes the expected maximum continuous currents along with the corresponding minimum trace widths and via diameters. Calculations were performed using the DigiKey Trace Width Calculator \[DigiKey Trace\] and the Best Technology Via Current Calculator \[Best Via\].
+&nbsp; &nbsp; &nbsp; &nbsp;The table below summarizes the expected maximum continuous currents along with the corresponding minimum trace widths and via diameters. Calculations were performed using the DigiKey Trace Width Calculator \[7\] and the Best Technology Via Current Calculator \[8\].
 
 | Source | Expected Continuous Maximum Current (A) | Minimum Trace Width (mm) | Minimum Via Diameter (mm) |
 | --- | --- | --- | --- |
@@ -162,7 +162,7 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;The strategy for PCB routing is critical to ensure reliable signal transmission, proper power delivery, and modular connectivity between system components. Careful routing minimizes interference between traces and maintains signal integrity. Routing decisions were guided by four primary considerations: signal integrity, power distribution, trace management, and connection site access.
 
-&nbsp; &nbsp; &nbsp; &nbsp;Data signal traces are kept on the top layer wherever possible, with the ground layer positioned between the signal traces and the power plane. This arrangement greatly reduces the likelihood of ground loops. By minimizing ground loop area, this strategy limits unwanted electromagnetic radiation, as a ground loop can otherwise act as an unintended antenna \[SIERRA\]. Additionally, the PCB incorporates a ground copper filled zone on the power plane at points where SPI connections cross, providing a low impedance return path and mitigating interference between signals. All ground fills are stitched to the main ground plane using vias, ensuring a continuous low impedance return path. Further reducing electromagnetic interference, routing is designed to combat crosstalk achieved by minimizing data signals crossing junctions on the power plane. Crosstalk occurs where there are rapid voltage and current transitions inducing voltages in adjacent traces due to inductive and capacitive coupling \[SIERRA Circuits\].
+&nbsp; &nbsp; &nbsp; &nbsp;Data signal traces are kept on the top layer wherever possible, with the ground layer positioned between the signal traces and the power plane. This arrangement greatly reduces the likelihood of ground loops. By minimizing ground loop area, this strategy limits unwanted electromagnetic radiation, as a ground loop can otherwise act as an unintended antenna \[9\]. Additionally, the PCB incorporates a ground copper filled zone on the power plane at points where SPI connections cross, providing a low impedance return path and mitigating interference between signals. All ground fills are stitched to the main ground plane using vias, ensuring a continuous low impedance return path. Further reducing electromagnetic interference, routing is designed to combat crosstalk achieved by minimizing data signals crossing junctions on the power plane. Crosstalk occurs where there are rapid voltage and current transitions inducing voltages in adjacent traces due to inductive and capacitive coupling \[9\].
 
 &nbsp; &nbsp; &nbsp; &nbsp;The use of a power plane greatly simplifies power distribution. Instead of routing individual traces for each voltage rail, entire planes are defined as filled copper zones regulated to their respective voltages. These zones are oriented to reduce EMI while spanning the board to deliver power efficiently to all components.
 
@@ -175,7 +175,7 @@ PCBWay Design Specifications
 
 **Power**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The PCB power design provides flexibility for the user by supporting two input sources: one for connection to mains power and another for portable operation via a battery system. This design involved a collaborative effort between the Power Subsystem lead (Kenneth Creamer) and the System Interconnections lead (Jack Bender) to achieve the proposed solution. Collaboration primarily focused on selecting surface-mount components with appropriate power ratings and form factors. The detailed signal path for both inputs is summarized in the Power Subsystem Detailed Design \[Detailed Design\]. This document provides specifics regarding the PCB and a general overview of the power components used.
+&nbsp; &nbsp; &nbsp; &nbsp;The PCB power design provides flexibility for the user by supporting two input sources: one for connection to mains power and another for portable operation via a battery system. This design involved a collaborative effort between the Power Subsystem lead (Kenneth Creamer) and the System Interconnections lead (Jack Bender) to achieve the proposed solution. Collaboration primarily focused on selecting surface-mount components with appropriate power ratings and form factors. The detailed signal path for both inputs is summarized in the Power Subsystem Detailed Design \[10\]. This document provides specifics regarding the PCB and a general overview of the power components used.
 
 &nbsp; &nbsp; &nbsp; &nbsp;The PCB power design includes a thorough analysis of component specifications to properly manage thermal signatures and current ratings.
 
@@ -225,7 +225,7 @@ JST 1 mm Pitch Connectors
 Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 - Crimped to a 40-position rectangular receptacle connector.
-- Powers the Raspberry Pi 4B via both 5V input pins in parallel, safely carrying the required current. 26 AWG wire has the capability of carrying 2.2A for chassis wiring \[American Wire\].
+- Powers the Raspberry Pi 4B via both 5V input pins in parallel, safely carrying the required current. 26 AWG wire has the capability of carrying 2.2A for chassis wiring \[11\].
 - Supports mechanical fastening to ensure stable connection.
 
 2-pin JST XH Cable - For RF module 5V and GND connection
