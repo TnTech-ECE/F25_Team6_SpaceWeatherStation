@@ -52,7 +52,7 @@ The following shall statements comprise the constraints and specifications of th
 | **Distributor** | **Amazon** | **Harfington** | **DigiKey** | **DigiKey** |
 | **Distributor Part Number** | **B0BCVGHF1J** | **1680132** | **1411153** | **1411233** |
 | **Quantity** | **1** | **4** | **1** | **1** |
-| **Purchasing Website URL** | https://www.amazon.com/Gratury-Transparent-Waterproof-Electrical-290%C3%97190%C3%97140mm/dp/B0BCVGHF1J/ref=sr_1_32?crid=2AIQZLKKD6YO2&dib=eyJ2IjoiMSJ9.5yFO9ykv_jtUwHfG9E-ClJoPNtKzNKLnhCSUHgm0RCwWiDU8nU5PfSYJsAad4dnjqMME9QKA0E33tPX7sHr7KUIIhV23ihhWDIYhTeLSZTqMnIJ1sVyavnSMrqpOnNoCJP44ckrF24ZifCbY80OvjskAQksd3M51foSfKY9pdMN9HBfCu-Xo4lL_1yaD9UNCE_lG4uGlp-aGB6imXn_5cSfQhR0E1XsmTkEHw1lvN2MqiYZ4ud8f0aAc-ruMJ6w0Ees8lgQIMX39ri3Kyp1IIHkqKowMHdap-KHpsj0Kvzg.2z8UVhXIVgwiyfXMLGwNaK7EvuCaY6AN3g6fdFEA4Q8&dib_tag=se&keywords=joinfworld%2Boutdoor%2Bwifi%2Benclosure%2Bwith%2Btransparent%2Bcover%2Bvented&nsdOptOutParam=true&qid=1763677894&sprefix=joinfworld%2Boutdoor%2Bwifi%2Benclosure%2Bwith%2Btransparent%2Bcover%2Bvente%2Caps%2C90&sr=8-32&th=1 |     |     |     |
+| **Purchasing Website URL** | [3] | [4] | [5] | [6] |
 | **Total** | **66.99** | **30.64** | **1.63** | **0.46** |
 
 **Analysis**
