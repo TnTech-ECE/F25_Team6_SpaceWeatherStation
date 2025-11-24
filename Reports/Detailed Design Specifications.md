@@ -1,6 +1,6 @@
-**Detailed Design**
+*Detailed Design*
 
-**Function of the Subsystem**
+*Function of the Subsystem*
 
 The function of the subsystem is explained in the following shall statements
 
