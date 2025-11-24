@@ -7,7 +7,7 @@ The function of the subsystem is explained in the following shall statements
 - The subsystem shall interact with all other subsystems by providing protection and structure for easy accessibility and intuitive field implementation.
 - The enclosure shall provide adequate air flow, allowing the prototype to be properly cooled for consistent operation.
 - The enclosure shall provide user friendly accessibility for troubleshooting and repairs.
-- The enclosure shall provide a robust waterproof case capable of withstanding bugs and weather conditions within reason.
+- The enclosure shall provide a robust waterproof case capable of withstanding insects and weather conditions within reason.
 - The enclosure shall secure all components during transportation and implementation.
 - The design shall provide accessibility for troubleshooting and repairing every component.
 
@@ -19,14 +19,14 @@ The following shall statements comprise the constraints and specifications of th
 - The enclosure shall be properly ventilated to prevent the internal subsystems from overheating.
 - The enclosure shall implement waterproof grommets or liquid sealtight fittings at every point of exterior penetration to create a consistent seal.
 - The enclosure shall include a small drain hole through the bottom of the enclosure to prevent water from being trapped inside the enclosure.
-- The enclosure shall hinder bugs from accessing the interior by protecting any exterior penetration.
+- The enclosure shall hinder insects from accessing the interior by protecting any exterior penetration.
 - The enclosure shall be made of a NEMA 4 rated enclosure ensuring proper protection for indoor and outdoor use. Resilient to weather, abrasions, and general deterioration. \[ANSI/NEMA 250-2020\]
 - The enclosure shall have a transparent barrier for viewing all internal components for observation during operation.
 - The enclosure shall allow for easy access for interchanging parts to promote modularity and flexibility in field and home applications.
 
 ***Overview of Proposed Solution***
 
-&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. It is IP67 rated, exceeding the required waterproof rating. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from bug entry. The enclosure is NEMA 4 rated, providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
+&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. It is IP67 rated, exceeding the required waterproof rating. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. The enclosure is NEMA 4 rated, providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
 
 ![81I+3fD0CeL._AC_SL1500_](https://hackmd.io/_uploads/Hy4GOCeWbe.jpg)
 **Figure 1. Full View of Proposed Enclosure**
