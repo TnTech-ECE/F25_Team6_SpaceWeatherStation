@@ -1,6 +1,6 @@
 # **System Interconnections Subsystem Detailed Design**
 
-## **Function of the Subsystem**
+# **Function of the Subsystem**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections platform serves as the central hub for electrically linking all major modules and peripheral devices within the prototype. It balances high system integration with modular flexibility, enabling seamless configuration, testing, and replacement of system components.
 
@@ -8,13 +8,13 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The subsystem lead (Jack Bender) oversees the full lifecycle of the PCB, including schematic development, layout design, fabrication oversight, and functional validation. This role also includes selection of interconnection standards, signal protocols, and power delivery strategies, ensuring that the PCB fulfills the design specifications and constraints while supporting both current and future system expansions.
 
-## **Specifications and Constraints**
+# **Specifications and Constraints**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The interconnections subsystem implements the PCB responsible for interconnecting modules, routing power and signals, providing physical interfaces, and selecting appropriate wiring to and from the board. The following specifications and constraints shape its design, each with the required rationale grounded in physics, system requirements, standards, ethics, and socio-economic considerations.
 
-### **Specifications**
+## **Specifications**
 
-**PCB Stackup Specification**
+### **PCB Stackup Specification**
 
 Specification: The subsystem shall use a 4-layer FR-4 stackup consisting of:
 
