@@ -28,15 +28,15 @@ The following shall statements comprise the constraints and specifications of th
 
 Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. It is IP67 rated, exceeding the required waterproof rating. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from bug entry. The enclosure is NEMA 4 rated, providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
 
-![ux_a25020800ux0987_ux_d01_1800x1800](https://hackmd.io/_uploads/S1VGd0eb-e.jpg)
+<img>A transparent, rectangular enclosure with a hinged door on the right side. The front face of the enclosure has a fine grid pattern. The enclosure appears to be made of clear plastic or acrylic.</img>
 **Figure 1. Full View of Proposed Enclosure**
 
-![81I+3fD0CeL._AC_SL1500_]
+
 **Figure 2. Vent with Stainless Steel Mesh**
 
 **Buildable Schematic**
 
-![Screenshot 2025-10-27 150137]
+
 **Figure 3. Exterior Dimensional View**
 
 **Figure 4. Internal Component Layout**
