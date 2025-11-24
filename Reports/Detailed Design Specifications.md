@@ -36,7 +36,7 @@ Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosu
 
 **Buildable Schematic**
 
-![Screenshot 2025-10-27 150137](https://hackmd.io/_uploads/rJ4zOClZ-e.png)
+![710B15JyV2L._AC_SL1500_](https://hackmd.io/_uploads/rJNC9QW-bl.jpg)
 **Figure 3. Exterior Dimensional View**
 
 **Figure 4. Internal Component Layout**
