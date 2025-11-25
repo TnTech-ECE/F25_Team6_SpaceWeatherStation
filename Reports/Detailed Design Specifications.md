@@ -160,8 +160,8 @@ PCBWay Design Specifications
 
 <p align="center">
   <!-- Swapped order: Full Bridge Rectifier on LEFT, Buck Converter on RIGHT -->
-  <img src="https://hackmd.io/_uploads/BJim8OMW-g.png" alt="Full Bridge Rectifier" width="300" />
-  <img src="https://hackmd.io/_uploads/S12EL_fWWg.png" alt="TPS62913 Buck Converter" width="300" />
+  <img src="https://hackmd.io/_uploads/BJim8OMW-g.png" alt="Full Bridge Rectifier" height="250" />
+  <img src="https://hackmd.io/_uploads/S12EL_fWWg.png" alt="TPS62913 Buck Converter" height="250" />
   <br />
   <strong>Figure 2:</strong> Full Bridge Rectifier (Left) and TPS62913 Buck Converter (Right)
 </p>
