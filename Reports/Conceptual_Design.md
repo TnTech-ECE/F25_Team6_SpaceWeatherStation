@@ -742,7 +742,7 @@ No direct user control of logging frequency or file management is required, thou
 
 &nbsp; &nbsp; &nbsp; &nbsp;**This system shall be composed of the enclosure box, wire mesh vents, and a ½" liquid seal tight fitting with a matching ferrule. The justification for selecting a prefabricated box is to be more inclusive for those wanting to replicate the prototype and may not have access to a 3D printer.**
 
-| **Enclosure** |
+| **Enclosure** || |
 | --- | --- | --- |
 | **Enclosure Box** | **\$73.39** |
 | **Wire Mesh Vents** | **\$33.61** |
