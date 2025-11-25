@@ -323,6 +323,25 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 &nbsp; &nbsp; &nbsp; &nbsp;The external connector schematic outlines all access points on the board and details how each pin is powered. The RF connectors include a normally open solder jumper to ensure that only one power source can supply the RF module at a time, preventing potential damage. All pins are clearly identified using net labels, which automatically carry over into the PCB editor and support a streamlined workflow.
 
+<p align="center">
+  <img src="https://hackmd.io/_uploads/rJ063_MZZl.png" alt="PCB Power Schematic" width="600" />
+  <br />
+  <strong>Figure 9:</strong> PCB Power Schematic
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/Sy0TndzW-l.png" alt="SBC and MCU Headers Schematic" width="600" />
+  <br />
+  <strong>Figure 10:</strong> SBC and MCU Headers Schematic
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/BJCp3uMbWg.png" alt="Edge Connector Schematic" width="600" />
+  <br />
+  <strong>Figure 11:</strong> Edge Connector Schematic
+</p>
+
+
 # **Printed Circuit Board Layout**
 
 
