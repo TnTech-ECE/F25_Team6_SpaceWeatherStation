@@ -207,7 +207,7 @@ PCBWay Design Specifications
   <br />
   <img src="https://hackmd.io/_uploads/rkkm9uGZZl.png" alt="Detailed Design TPS62913RPUR Layout" width="400" />
   <br />
-  <strong>Figure 4:</strong> Detailed Design TPS62913RPUR Layout (Left) and Datasheet Recommended TPS62913RPUR Layout (Right)
+  <strong>Figure 4:</strong> Datasheet Recommended TPS62913RPUR Layout (Right) and Detailed Design TPS62913RPUR Layout (Bottom) 
 </p>
 
 
