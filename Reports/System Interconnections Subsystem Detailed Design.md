@@ -205,7 +205,7 @@
   <br />
   <img src="https://hackmd.io/_uploads/rkkm9uGZZl.png" alt="Detailed Design TPS62913RPUR Layout" width="600" />
   <br />
-  <strong>Figure 4:</strong> Datasheet Recommended TPS62913RPUR Layout (Right) and Detailed Design TPS62913RPUR Layout (Bottom)
+  <strong>Figure 4:</strong> Datasheet Recommended TPS62913RPUR Layout (Top) and Detailed Design TPS62913RPUR Layout (Bottom)
 </p>
 
 
