@@ -292,6 +292,29 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 &nbsp; &nbsp; &nbsp; &nbsp;The board layout facilitates straightforward placement of connectors and modules while maintaining a compact form factor compatible with the enclosure, including mounting holes designed for M1 screws. Signal assignment and protocol routing have been optimized to support the software subsystems, providing a standardized and modular platform for system development.
 
 # **3D Model of Custom Mechanical Components**
+<p align="center">
+  <img src="https://hackmd.io/_uploads/rkEFjuzZZl.png" alt="Top View of 3D Rendered PCB" width="600" />
+  <br />
+  <strong>Figure 5:</strong> Top View of 3D Rendered PCB
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/HJoJ3Oz-Zx.png" alt="Bottom View of 3D Rendered PCB" width="600" />
+  <br />
+  <strong>Figure 6:</strong> Bottom View of 3D Rendered PCB
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/SJOzh_MW-e.png" alt="Power Input Side View" width="600" />
+  <br />
+  <strong>Figure 7:</strong> Power input side view of 3D Rendered PCB
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/B1ovhOfbZe.png" alt="Connector Side View" width="600" />
+  <br />
+  <strong>Figure 8:</strong> Connector side view of 3D Rendered PCB
+</p>
 
 
 # **Buildable Schematic**
