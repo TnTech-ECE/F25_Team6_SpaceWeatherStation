@@ -780,9 +780,11 @@ No direct user control of logging frequency or file management is required, thou
 || Miscellaneous Cables | \$35 |
 | Total || \$260 |
 | Enclosure 
-|| Waterproofing Material | \$40 |
-|| Mounting Material | \$50 |
-| Total || \$90 |
+|| Enclosure Box | \$73.39 |
+|| Wire Mesh Vents | \$33.61 |
+|| ½" Liquid Seal Tight Fitting | \$1.79 |
+|| ½" Liquid Seal Tight Ferrule | \$0.50 |
+| Total || \$109.29 |
 | Project Total |     | \$970 |
 
 \*SBC will be shared between Data Subsystem and RF Module Subsystem
