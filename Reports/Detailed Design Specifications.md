@@ -32,7 +32,7 @@
 - Wall adapter input
 - Battery input
 
-Power inputs shall include current protection, overvoltage protection, reverse polarity protection, and bulk capacitors. A power multiplexer (MUX) shall automatically prioritize the wall adapter when present. Both regulated 5V and 3.3V rails shall be distributed to all connectors and test points where necessary. Each IC shall include local decoupling capacitors placed near the power pin.
+&nbsp; &nbsp; &nbsp; &nbsp;Power inputs shall include current protection, overvoltage protection, reverse polarity protection, and bulk capacitors. A power multiplexer (MUX) shall automatically prioritize the wall adapter when present. Both regulated 5V and 3.3V rails shall be distributed to all connectors and test points where necessary. Each IC shall include local decoupling capacitors placed near the power pin.
 
 **Rationale:** Ensures safe and reliable operation while enabling flexible power options. Automatic preference for wall power reduces battery drain. 5V and 3.3V rails are industry-standard for embedded systems.
 
