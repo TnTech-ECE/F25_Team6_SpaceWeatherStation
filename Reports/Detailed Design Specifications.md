@@ -239,16 +239,16 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections PCB provides a centralized platform for interfacing with power sources, the MCU, SBC, and peripheral modules. Detailed connectivity ensures reliable power delivery, standardized data transfer, and clear signal routing.
 
-**Power Inputs**  
+### **Power Inputs**  
 &nbsp; &nbsp; &nbsp; &nbsp;The PCB includes two primary power input terminals: a USB-C connector and a barrel jack. The USB-C connector is configured to accept up to 5V at 3A, with trace widths and CC pin configurations designed to safely handle this continuous current, as detailed in the Power Subsystem Detailed Design. The barrel jack supports 12V at 1.6A, with trace widths selected to accommodate continuous current without excessive voltage drop or heating.
 
-**RF Module Interface**  
+### **RF Module Interface**  
 &nbsp; &nbsp; &nbsp; &nbsp;1mm pitch edge connectors are provided to interface with the RF module, supporting SPI, I2C, and UART communication protocols. These connections handle packets of data relating to Total Electron Content (TEC) and scintillation measurements. Additional pins are included for module state control. These are voltage-sensitive lines that allow the SBC to give or receive simple state information. A dedicated 5V power line and an extra 4-pin connector facilitate powering the module and accessing non-data signals.
 
-**Raspberry Pi 4B GPIO Ribbon Connection**  
+### **Raspberry Pi 4B GPIO Ribbon Connection**  
 &nbsp; &nbsp; &nbsp; &nbsp;A 40-pin ribbon connector provides complete access to all GPIO pins of the Raspberry Pi 4B, including power and ground. The ribbon uses 26 AWG wire, capable of safely carrying the required current when supplying both 5V pins in parallel. The ribbon is kept as short as possible to minimize voltage drop and reduce signal noise.
 
-**Peripheral 1 mm Pitch Connectors**  
+### **Peripheral 1 mm Pitch Connectors**  
 &nbsp; &nbsp; &nbsp; &nbsp;Several 1 mm pitch edge connectors are included for peripheral modules excluding the RF module:
 
 - LoRa module: interfaces with the MCU via SPI.
@@ -258,13 +258,13 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 &nbsp; &nbsp; &nbsp; &nbsp;These connectors are positioned close together to reduce routing complexity and improve accessibility while maintaining the board's compact form factor.
 
-**Analog Inputs**  
+### **Analog Inputs**  
 &nbsp; &nbsp; &nbsp; &nbsp;Two analog inputs are provided for simple voltage measurements. Each input includes a data line, a 3.3V supply, and a GND line, allowing direct connection to the MCU's ADC pins. Screw terminals are used to enable secure, ferrule-terminated wiring while preserving signal integrity.
 
-**Raspberry Pi Pico Female Header**  
+### **Raspberry Pi Pico Female Header**  
 &nbsp; &nbsp; &nbsp; &nbsp;A female through-hole header maps all 40 pins of the Raspberry Pi Pico MCU to the PCB, providing full input and output access to GPIOs, ADCs, and power rails. This mapping enables flexible interfacing for debugging, prototyping, and expansion.
 
-**Form Factor and Subsystem Integration**  
+### **Form Factor and Subsystem Integration**  
 &nbsp; &nbsp; &nbsp; &nbsp;The board layout facilitates straightforward placement of connectors and modules while maintaining a compact form factor compatible with the enclosure, including mounting holes designed for M1 screws. Signal assignment and protocol routing have been optimized to support the software subsystems, providing a standardized and modular platform for system development.
 
 # **3D Model of Custom Mechanical Components**
