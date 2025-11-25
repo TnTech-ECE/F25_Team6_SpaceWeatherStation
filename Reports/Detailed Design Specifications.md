@@ -140,8 +140,6 @@
   <p><strong>Figure 1:</strong> KiCad and PCBWay Constraints</p>
 </div>
 
-PCBWay Design Specifications
-
 ### **Tracing and Vias Constraints**
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to meeting the minimum manufacturability specifications, the PCB must be capable of handling the electrical throughput required by the system. All trace widths and via diameters are sized safely to carry the expected maximum continuous currents without overheating. These calculations assume an ambient temperature of 40 °C, a temperature rise of 10 °C, a copper thickness of 1 oz/ft², and a via wall copper thickness of 0.018 mm, as specified by the manufacturer.
@@ -343,9 +341,29 @@ Custom Ribbon Cable - 40-position IDC ribbon cable using 26 AWG wire
 
 
 # **Printed Circuit Board Layout**
+<p align="center">
+  <img src="https://hackmd.io/_uploads/Hyel0_MW-l.png" alt="PCB Layout w/ All Layers Visible" width="900" />
+  <br />
+  <strong>Figure 12:</strong> PCB Layout w/ All Layers Visible
+</p>
 
+<p align="center">
+  <img src="https://hackmd.io/_uploads/Hy9eRdz--e.png" alt="PCB Layout w/ Only Signal Layers Visible" width="900" />
+  <br />
+  <strong>Figure 13:</strong> PCB Layout w/ Only Signal Layers Visible
+</p>
 
-Routing Layers
+<p align="center">
+  <img src="https://hackmd.io/_uploads/ByX-0OfZbl.png" alt="PCB Layout w/ Only Ground Layer Visible" width="900" />
+  <br />
+  <strong>Figure 14:</strong> PCB Layout w/ Only Ground Layer Visible
+</p>
+
+<p align="center">
+  <img src="https://hackmd.io/_uploads/HyjzRuG-bx.png" alt="PCB Layout w/ Only Power Layer Visible" width="900" />
+  <br />
+  <strong>Figure 15:</strong> PCB Layout w/ Only Power Layer Visible
+</p>
 
 # **BOM**
 
