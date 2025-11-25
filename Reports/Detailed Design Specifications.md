@@ -108,11 +108,11 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The System Interconnections subsystem is designed to provide a centralized platform for connecting all peripheral modules and subsystems. It implements this functionality through a PCB that delivers regulated power rails, standardized connectors, optimized signal routing, and mechanical stability. Additionally, proper cables have been selected to interface with all peripheral modules, ensuring reliable electrical connections and compatibility with the system's connectors. The following section provides a detailed overview of the proposed solution.
 
-###**Substrate Material**
+### **Substrate Material**
 
 &nbsp; &nbsp; &nbsp; &nbsp;It is essential when designing a PCB to first consider the speed of the signals on the board, as signal frequency strongly influences material selection and stackup. For the Personal Space Weather System, the highest-frequency signals present on the PCB will be SPI communications, which typically operate in the tens of megahertz. FR-4 is an industry standard PCB material that has been used for decades due to its good balance of electrical, mechanical, and thermal properties at a relatively low cost. Importantly, FR-4 performs reliably for frequencies from DC through the low-GHz range \[5\], making it well suited for the signal speeds in this design. Therefore, FR-4 is selected as the substrate material for the PCB.
 
-###**Stackup**
+### **Stackup**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Due to the complexity of connections being made between various modules in the prototype, a 4-layer board has been selected. The additional layers allow dense routing without signal congestion, provide uninterrupted ground and power planes, and improve the electrical performance and reliability of the interconnecting traces. A 4-layer configuration balances performance, cost, and space efficiency, making it ideal for applications that require moderate-to-high complexity, excellent signal integrity, and reliable power delivery \[6\].
 
@@ -129,7 +129,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;This layer arrangement not only optimizes electrical performance and signal integrity but also respects manufacturability constraints, ensuring that the board can be reliably fabricated and assembled according to the chosen manufacturer's specifications. The 90x95mm dimensions provide a compact form factor that fits the enclosure while allowing sufficient space for component placement, routing, and connector access.
 
-###**Manufacturability Specifications**
+### **Manufacturability Specifications**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on the manufacturability and assembly constraints, the proposed PCB has passed KiCad's Design Rules Checker (DRC), which verifies that all board constraints are satisfied. These constraints follow the specifications provided by the manufacturer, PCBWay, including minimum trace width and spacing, via sizes, solder mask clearances, and silkscreen spacing. Adhering to these rules ensures reliable fabrication and reduces the risk of defects.
 
@@ -137,7 +137,7 @@
 
 PCBWay Design Specifications
 
-###**Tracing and Vias Constraints**
+### **Tracing and Vias Constraints**
 
 &nbsp; &nbsp; &nbsp; &nbsp;In addition to meeting the minimum manufacturability specifications, the PCB must be capable of handling the electrical throughput required by the system. All trace widths and via diameters are sized safely to carry the expected maximum continuous currents without overheating. These calculations assume an ambient temperature of 40 °C, a temperature rise of 10 °C, a copper thickness of 1 oz/ft², and a via wall copper thickness of 0.018 mm, as specified by the manufacturer.
 
@@ -158,7 +158,7 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;By carefully sizing traces and vias to handle the maximum expected currents and optimizing copper fills and trace lengths for both thermal and electrical performance, the PCB ensures reliable power distribution throughout the system. With these constraints met, the next critical step is routing, where signal paths are laid out to connect all modules effectively.
 
-###**Routing**
+### **Routing**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The strategy for PCB routing is critical to ensure reliable signal transmission, proper power delivery, and modular connectivity between system components. Careful routing minimizes interference between traces and maintains signal integrity. Routing decisions were guided by four primary considerations: signal integrity, power distribution, trace management, and connection site access.
 
@@ -173,7 +173,7 @@ PCBWay Design Specifications
 | SPI Signal Crossing w/ Ground Zone | Power Plane Routing |
 | --- | --- |
 
-###**Power**
+### **Power**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The PCB power design provides flexibility for the user by supporting two input sources: one for connection to mains power and another for portable operation via a battery system. This design involved a collaborative effort between the Power Subsystem lead (Kenneth Creamer) and the System Interconnections lead (Jack Bender) to achieve the proposed solution. Collaboration primarily focused on selecting surface-mount components with appropriate power ratings and form factors. The detailed signal path for both inputs is summarized in the Power Subsystem Detailed Design \[10\]. This document provides specifics regarding the PCB and a general overview of the power components used.
 
@@ -194,7 +194,7 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;Overall, the PCB power design balances flexibility, efficiency, and thermal management. By carefully selecting components, sizing traces and vias, following recommended layouts, and strategically positioning passive elements, the design delivers stable power to the system while maintaining safe operating temperatures and manufacturability.
 
-###**Component Selection and Labeling**
+### **Component Selection and Labeling**
 
 &nbsp; &nbsp; &nbsp; &nbsp;Component selection for the PCB was guided by considerations of electrical performance and form factor.
 
@@ -213,7 +213,7 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;All components are clearly labeled with reference designators, which can be cross-referenced with the schematic for assembly and verification purposes. This ensures reliable assembly, simplifies testing and debugging, and supports maintainability over the life of the system. Thoughtful component selection and consistent labeling contribute to the overall usability, maintainability, and modularity of the System Interconnections PCB.
 
-###**Cable Selection**
+### **Cable Selection**
 
 &nbsp; &nbsp; &nbsp; &nbsp;To ensure reliable electrical connections and maintain modularity across the system, careful consideration was given to cable selection. Cables were chosen to match the standardized edge connectors on the PCB, support the required current, and provide secure mechanical fastening where applicable. The following outlines the cables used for digital connections and power distribution.
 
