@@ -158,13 +158,12 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;In many areas of the board, larger traces are intentionally used to act as heatsinks, improving thermal management. This is particularly evident near the full-bridge rectifier, where the traces near diode terminals are 1.2mm. Additionally, filled copper zones are used to distribute current and dissipate heat, such as those surrounding the TPS62913 buck converters. Trace lengths are kept as short as possible to minimize resistance, reduce voltage drops, and maintain clean return paths, enhancing electrical performance and thermal efficiency.
 
-<div style="display: flex; justify-content: center; width: 100%; margin: 0 auto;">
-  <div style="text-align: center;">
-    <img src="https://hackmd.io/_uploads/S12EL_fWWg.png" alt="TPS62913 Buck Converter" width="300" style="vertical-align: middle; margin-right: 10px;">
-    <img src="https://hackmd.io/_uploads/BJim8OMW-g.png" alt="Full Bridge Rectifier" width="300" style="vertical-align: middle; margin-left: 10px;">
-    <p><strong>Figure 2:</strong> Full Bridge Rectifier (Right) and TPS62913 Buck Converter (Left)</p>
-  </div>
-</div>
+<p align="center">
+  <img src="https://hackmd.io/_uploads/S12EL_fWWg.png" alt="TPS62913 Buck Converter" width="300" />
+  <img src="https://hackmd.io/_uploads/BJim8OMW-g.png" alt="Full Bridge Rectifier" width="300" />
+  <br />
+  <strong>Figure 2:</strong> Full Bridge Rectifier (Right) and TPS62913 Buck Converter (Left)
+</p>
 
 
 
