@@ -400,9 +400,9 @@ Team 6 has identified three potential materials to use in creating the enclosure
 
 **Prefabricated Enclosure**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The enclosure and protection subsystem serves as the structural backbone of the overall design, ensuring that all internal components remain secure, accessible, and protected during field use. Its primary function is to provide a robust, weather-resistant housing to support intuitive implementation. Effective airflow for thermal regulation will need to be taken into account, as well as user-friendly access for troubleshooting, repairs, and modular component interchange. To meet these goals, the prefabricated enclosure is governed by strict minimum requirements, including ventilation requirements, insect mitigation, waterproof sealing through grommets or sealtight fittings, and compliance with IPX-4 and NEMA 4 protection standards. The Gratury 16.1" × 12.2" × 7.1" outdoor enclosure possesses an IP67 rating, offers a transparent cover for internal observation, and provides durable stainless-steel latching for repeated outdoor use. With the addition of ventilated openings fitted with metal mesh, this enclosure meets all structural, environmental, and accessibility requirements for reliable operation in both home and field environments.
+&nbsp; &nbsp; &nbsp; &nbsp;The enclosure and protection subsystem serves as the structural backbone of the overall design, ensuring that all internal components remain secure, accessible, and protected during field use. Its primary function is to provide a robust, weather-resistant housing to support intuitive implementation. Effective airflow for thermal regulation will need to be taken into account, as well as user-friendly access for troubleshooting, repairs, and modular component interchange. To meet these goals, the prefabricated enclosure is governed by strict minimum requirements, including ventilation requirements, insect mitigation, waterproof sealing through grommets or sealtight fittings, and compliance with IPX-4 and NEMA 4 protection standards. 
 
-&nbsp; &nbsp; &nbsp; &nbsp;In conclusion, team 6 has elected to use the Gratury 16.1" × 12.2" × 7.1" outdoor enclosure. This is justified by its clear alignment with every functional requirement and constraint of the TEC measurement prototype. Not only does it exceed the necessary waterproof rating, but its generous internal volume, removable backplate, and universal grid mounting pattern collectively provide an ease of access, adaptability, and modularity that a custom-built enclosure would struggle to match without significant additional effort or cost. The enclosure's transparent, fully latched door inherently satisfies the need for internal visibility, while maintaining durability through its stainless-steel hardware. The addition of slatted ventilation openings preserves both airflow and environmental protection. Its ability to be mounted in multiple orientations further enhances its real-world usability across a variety of field scenarios. Although this specific model may not be universally available, its performance in meeting and surpassing project requirements demonstrates why a prefabricated enclosure, especially one with comparable features, offers the most practical, efficient, and robust solution for both prototype development and future user adoption.
+&nbsp; &nbsp; &nbsp; &nbsp;In conclusion, team 6 has elected to use a prefabricated enclosure. This is justified by its ability to align with every functional requirement and constraint of the TEC measurement prototype. A custom-built enclosure would struggle to match the desired specifications without significant additional effort or cost and assumes the user has access to a 3D printer. Although team 6 will select a specific model, any model matching the desired criteria exemplified by the chosen enclosure shall adequately provide the most practical, efficient, and robust solution for both prototype development and future user adoption. 
 
 # **High-Level Solution**
 
@@ -643,10 +643,10 @@ No direct user control of logging frequency or file management is required, thou
 
 ## **Enclosure and Protection System**
 
-&nbsp; &nbsp; &nbsp; &nbsp;The enclosure and protection system serves as the structural and environmental safeguard for the entire prototype, ensuring reliable performance under diverse operating conditions. Its primary role is to shield all internal subsystems from external hazards such as moisture, dust, and temperature fluctuations, while also mitigating internal risks like heat buildup or mechanical stress. To achieve this, the enclosure will be 3-D printed using PETG, a material and method selected for superior resistance to water, chemicals, and extreme temperatures. The design will incorporate precision-engineered mounts to securely position both internal and external components, provide multiple stable mounting configurations, and support modularity for efficient maintenance and future upgrades.
+&nbsp; &nbsp; &nbsp; &nbsp;The enclosure and protection system serves as the structural and environmental safeguard for the entire prototype, ensuring reliable performance under diverse operating conditions. Its primary role is to shield all internal subsystems from external hazards such as moisture, dust, and temperature fluctuations, while also mitigating internal risks like heat buildup or mechanical stress. To achieve this, the enclosure shall be prefabricated from  NEMA 4 rated material for superior resistance to water, chemicals, and extreme temperatures. The chosen enclosure shall support modularity and accessibility for efficient maintenance and future upgrades.
 
-- This subsystem shall be 3-D printed using PETG, optimizing resilience against water, chemical, and heat interactions.
-- This subsystem shall contain mounts to securely hold all internal and external components.
+- This subsystem shall be prefabricated, optimizing resilience against water, chemical, and heat interactions.
+- This subsystem shall possess air vents for proper temperature regulation of the system.
 - This subsystem shall provide stability for a variety of mounting options.
 - This subsystem shall promote modularity of internal components.
 - The subsystem shall provide ease of access to all internal components.
@@ -740,14 +740,14 @@ No direct user control of logging frequency or file management is required, thou
 
 **Enclosure System:**
 
-&nbsp; &nbsp; &nbsp; &nbsp;This system shall be composed of waterproofing material and PETG filament. The justification for selecting PETG filament can be found in the ‘Enclosure’ subsection of the Comparative Analysis. PETG filament as the primary material has been selected due to its mechanical strength, environmental stability, and manufacturability advantages. An additional US $40 has been included in this budget for additional waterproofing material that may be needed, such as rubber seals or other unforeseen expenditures. 
+&nbsp; &nbsp; &nbsp; &nbsp;**This system shall be composed of the enclosure box, wire mesh vents, and a ½" liquid seal tight fitting with a matching ferrule. The justification for selecting a prefabricated box is to be more inclusive for those wanting to replicate the prototype and may not have access to a 3D printer.**
 
-| Subysystem | Item | Budget |
+| **Enclosure** | **Enclosure Box** | **\$73.39** |
 | --- | --- | --- |
-| Enclosure
-|| Waterproofing Material | \$40 |
-|| PETG Filament | \$50 |
-| Total || \$90 |
+| **Wire Mesh Vents** | **\$33.61** |
+| **½" Liquid Seal Tight Fitting** | **\$1.79** |
+| **½" Liquid Seal Tight Ferrule** | **\$0.50** |
+| **Total** | **\$109.29** |
 
 **Overall Budget:**
 
