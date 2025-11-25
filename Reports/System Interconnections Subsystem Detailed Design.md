@@ -48,7 +48,7 @@
 
 **Rationale:** Providing local breakouts of all SBC and MCU pins increases hardware flexibility, simplifies debugging, and enables easier prototyping. Additionally, users gain direct access to every available signal for measurement.
 
-### **1.0 mm JST Connector Specification**
+### **1.0mm JST Connector Specification**
 
 **Specification:** The subsystem shall use standardized 1.0mm JST connectors (e.g., JST-SH/Qwiic/STEMMA QT) for digital interfaces where appropriate.
 
@@ -116,7 +116,7 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Due to the complexity of connections being made between various modules in the prototype, a 4-layer board has been selected. The additional layers allow dense routing without signal congestion, provide uninterrupted ground and power planes, and improve the electrical performance and reliability of the interconnecting traces. A 4-layer configuration balances performance, cost, and space efficiency, making it ideal for applications that require moderate-to-high complexity, excellent signal integrity, and reliable power delivery \[6\].
 
-&nbsp; &nbsp; &nbsp; &nbsp;The subsystem implements a 90x95mm 4-layer FR-4 PCB with the following stackup:
+&nbsp; &nbsp; &nbsp; &nbsp;The subsystem implements a 90x95mm, 1.6mm thick, 4-layer FR-4 PCB with the following stackup:
 
 - Top Layer: Signal Layer
   - Includes all components and connection points for power, debugging, and interfacing with external modules.
