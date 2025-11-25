@@ -135,6 +135,11 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;The following figure specifies the manufacturer's specifications used \[4\]:
 
+<div align="center">
+  <img src="https://hackmd.io/_uploads/BJgQE_fbZg.png" alt="KiCad and PCBWay Constraints" width="600">
+  <p><strong>Figure 1:</strong> KiCad and PCBWay Constraints</p>
+</div>
+
 PCBWay Design Specifications
 
 ### **Tracing and Vias Constraints**
