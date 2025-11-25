@@ -203,12 +203,13 @@ PCBWay Design Specifications
 &nbsp; &nbsp; &nbsp; &nbsp;The TPS2121RUXR voltage multiplexer and TPS62913RPUR buck converter were selected in part because of their compact surface-mount footprints, which optimize board space but necessitate precise soldering techniques. To ensure reliable solder joints, these components require reflow soldering, as hand-soldering is impractical for such small packages. The layout of the TPS62913RPUR closely follows the recommendations provided in the datasheet, including copper filled zones and proper placement of components specified. While both devices are highly efficient, the TPS62913RPUR may have a small thermal signature under continuous high-current operation. Proper copper pours and thermal reliefs are incorporated into the PCB layout to dissipate heat effectively and maintain safe operating temperatures.
 
 <p align="center">
-  <img src="https://hackmd.io/_uploads/BJNKuOMWWx.png" alt="Datasheet Recommended TPS62913RPUR Layout" width="400" />
+  <img src="https://hackmd.io/_uploads/BJNKuOMWWx.png" alt="Datasheet Recommended TPS62913RPUR Layout" width="600" />
   <br />
-  <img src="https://hackmd.io/_uploads/rkkm9uGZZl.png" alt="Detailed Design TPS62913RPUR Layout" width="400" />
+  <img src="https://hackmd.io/_uploads/rkkm9uGZZl.png" alt="Detailed Design TPS62913RPUR Layout" width="600" />
   <br />
-  <strong>Figure 4:</strong> Datasheet Recommended TPS62913RPUR Layout (Right) and Detailed Design TPS62913RPUR Layout (Bottom) 
+  <strong>Figure 4:</strong> Datasheet Recommended TPS62913RPUR Layout (Right) and Detailed Design TPS62913RPUR Layout (Bottom)
 </p>
+
 
 
 &nbsp; &nbsp; &nbsp; &nbsp;Decoupling and bypass capacitors are strategically positioned near both the USB-C and barrel jack input connectors as well as close to the TPS2121RUXR and TPS62913RPUR power pins. This placement helps stabilize the voltage at the entry points and at the devices themselves, minimizing ripple voltage and ensuring clean, reliable power under varying load conditions. Additional passive components for power conditioning are similarly arranged to optimize current paths and reduce localized thermal buildup. Thoughtful positioning of these components contributes to reliable operation and improved thermal performance.
