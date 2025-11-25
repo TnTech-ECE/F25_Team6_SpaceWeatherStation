@@ -181,8 +181,14 @@ PCBWay Design Specifications
 
 &nbsp; &nbsp; &nbsp; &nbsp;Overall, the PCB routing strategy balances performance, power delivery, and accessibility. Careful attention to signal integrity, power distribution, trace management, and connection site access ensures an efficient board with straightforward access to all connection points for testing, debugging, and future expansion. These routing decisions directly satisfy the physical and electrical routing constraint by ensuring signal integrity, minimizing interference, and maintaining organized, electrically sound trace paths.
 
-| SPI Signal Crossing w/ Ground Zone | Power Plane Routing |
-| --- | --- |
+<p align="center">
+  <!-- Swapped order: SPI Signal Crossing on LEFT, Power Plane Routing on RIGHT -->
+  <img src="https://hackmd.io/_uploads/rybJ_OzbWx.png" alt="SPI Signal Crossing w/ Ground Zone" height="250" />
+  <img src="https://hackmd.io/_uploads/rkTyOuMbZe.png" alt="Power Plane Routing" height="250" />
+  <br />
+  <strong>Figure 3:</strong> SPI Signal Crossing w/ Ground Zone (Left) and Power Plane Routing (Right)
+</p>
+
 
 ### **Power**
 
