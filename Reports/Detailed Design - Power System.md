@@ -14,9 +14,9 @@ The Power Subsystem is governed by a set of design constraints that ensure safe,
 
 The specifications and rational for each component for the power system are as follows:
 
-1.  This power subsystem shall implement a battery of at least 260Wh of usable energy
-- As discussed later in the document, the nominal power draw of all components will be ~8W total, with a theoretical max continuous power draw of 20W [2, 3, 4, 5]. 
-- Assuming at least 230Wh of usable energy, this amount would give a nominal energy life of ~30-32 hours and ~12-13 hours at maximum load, which is within the specified constraints of the conceptual design of 15-hour average usage [6]
+1.  This power subsystem shall implement a battery of at least 235Wh of usable energy
+- As discussed later in the document, the nominal power draw of all components will be ~8W total, with a theoretical max continuous power draw of 21W [2, 3, 4, 5]. 
+- Assuming at least 235Wh of usable energy, this amount would give a nominal energy life of ~30-32 hours and ~9-11 hours at maximum load, which is within the specified constraints of the conceptual design of 15-hour average usage [6]
 
 2.  This subsystem shall implement a charge controller capable of regulating all current flow to and from the energy storage solution
 - As discussed later in this documentation, the use of a LiFePO4 will require a charge controller to be implemented to regulate charge current of the battery [6,  7]
@@ -105,7 +105,7 @@ The power subsystem for Team 6’s TEC measurement device is implemented as a hy
 
 ## System Architecture
 The overall architecture of the system is defined as follows.
-1.  Energy is stored in a 12.8V LiFePO₄ battery sized to provide ≥ 190Wh usable capacity.
+1.  Energy is stored in a 12.8V LiFePO₄ battery sized to provide ≥ 235Wh usable capacity.
 2.  Storage solution can recharge from either a 120 VAC to 19.5V DC XT60 power supply or an optional 100W 12V solar panel.
 3.  All charge and discharge currents are managed through a 20A rated  LiFePO₄-compatible PWM charge controller.
 4.  Energy is distributed through the central PCB, which provides tightly regulated 5V and 3.3V rails with low ripple for the processing and RF components.
@@ -113,26 +113,51 @@ The overall architecture of the system is defined as follows.
 
 **Battery Component**: For Team 6’s functional prototype, we have chosen the ZapLitho 12V 22Ah with a 30A BMS [7].The integrated Battery Management System (BMS) provides over-charge, over-discharge, over-current, and over-temperature protections, satisfying the constraint that lithium storage must include internal fault mitigation to reduce thermal-runaway and short-circuit risk.
 
-Assuming 85–90% usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, which is  ≥ 190Wh  satisfying the subsystem specification. At a nominal system draw of ≈8W and a theoretical  maximum continuous draw of ≈17W, the system runtime equates to  23.7 hours and 12.7 hours respectively. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge.
+Assuming 85–90% usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, which is  ≥ 235Wh  satisfying the subsystem specification. At a nominal system draw of ≈8W and a theoretical  maximum continuous draw of ≈21W, the system runtime equates to  30.0 and 11.9 hours respectively. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge. An XT60 to O-Ring Adapter purchased from amazon will be used to connect this battery to the charge controller. A 30A inline fuse will be connected to this device to protect the charge controller from electrical faults, and add a layer of protection in addition to the battery management system.
 
 <div align="center">
     <img width="712" height="735" alt="Screenshot 2025-11-24 205510" src="https://github.com/user-attachments/assets/3c99c4da-1631-43a0-a4ad-c0e22737c993" />
     <p><strong>Figure 1:</strong> ZapLitho 12V 22Ah Battery with BMS</em></p>
 </div>
 
+<div align="center">
+    <img width="688" height="753" alt="image" src="https://github.com/user-attachments/assets/0857110a-3b7f-4cfd-9b34-d1845dade4ee" />
+    <p><strong>Figure 2:</strong> XT60 to O-Ring Adapter</em></p>
+</div>
+
 **Charge Controller Component**: For a charge controller, Team 6 has chosen to implement the Limu Solar LTB Series 20A PWM Solar Charge Controller for our functional prototype [12]. This device supports LiFePO₄, lithium  chemistries, uses a three-stage PWM charging algorithm, and accepts solar inputs up to 50V while managing a 20A battery charge and load current.
 
-The controller’s battery terminals connect directly to the LiFePO₄ pack, and its load terminals feed the 12V bus that supplies the PCB and any future 12 V accessories. The specific connector scheme and wiring gauge for these interfaces will be defined in a later section of the detailed design.
+The controller’s battery terminals connect directly to the LiFePO₄ pack, and its load terminals feed the 12V bus that supplies the PCB and any future 12 V accessories. The specific connector scheme and wiring gauge for these interfaces will be defined in a later section of the detailed design. 12AWG wire will be implemented to all connected components in order to be able to handle the charge contollers 20A rated max current draw. These wires will be black and red in order to differentiate positive and negative terminals within the system. In line fuses will be connected between critical components such as the battery and charge controller, and the charge source and controller. This will add extra fault protections in order to protect all connected components. These connections will be soldered and heatshrunk to provide stability. In the case of the charge source and battery inputs, XT60 connectors will be used to terminate wires. This will provide quick disconnects between components such as the battery and charging source to provide modularity and compatability with chosen components. A MALE barrel jack cable will be connected to the output terminal of the charge controller, giving this device the ability to connect with the PCB and provide power.
 
 <div align="center">
     <img width="840" height="656" alt="Screenshot 2025-11-24 210257" src="https://github.com/user-attachments/assets/9e2252d1-cb16-491f-8abf-df5d0ca4614c" />
-    <p><strong>Figure 2:</strong> Charge Controller (20A, 12/24V)</em></p>
+    <p><strong>Figure 3:</strong> Charge Controller (20A, 12/24V)</em></p>
 </div>
 
-**DC Power Supply Component**: For mains charging of Team 6’s functional prototype, we have decided to use the SUPULSE 200W AC power adapter with 19.5V, 10.3A DC output and an XT60 connector [14]. This supply is designed for RC LiPo charging, and its 19.5V DC output falls directly within the PV input range of the solar charge controller, allowing it to be treated as a “synthetic solar panel” when plugged into the controller’s PV terminals.  
+<div align="center">
+    <img width="860" height="821" alt="image" src="https://github.com/user-attachments/assets/db38af1c-99be-45bd-8350-21c276defd15" />
+    <p><strong>Figure 4:</strong> XT60 Male and Female Wire Terminals</em></p>
+</div>
+
+<div align="center">
+    <img width="748" height="846" alt="image" src="https://github.com/user-attachments/assets/25d90f6e-c7d0-461b-8eb6-89f155fd0db0" />
+    <p><strong>Figure 5:</strong> 16AWG Barrel Jack Connectors</em></p>
+</div>
+
+<div align="center">
+    <img width="838" height="801" alt="image" src="https://github.com/user-attachments/assets/f41964af-de7b-4212-bbb0-d16f6a5067a7" />
+    <p><strong>Figure 6:</strong> 12AWG Inlne Fuse Holder</em></p>
+</div>
+
+<div align="center">
+    <img width="796" height="795" alt="image" src="https://github.com/user-attachments/assets/97f3c4fa-fd8e-413f-99a8-6eec9b447ec1" />
+    <p><strong>Figure 7:</strong> Black and Red 12AWG Wire</em></p>
+</div>
+
+**DC Power Supply Component**: For mains charging of Team 6’s functional prototype, we have decided to use the SUPULSE 200W AC power adapter with 19.5V, 10.3A DC output and an XT60 connector [14]. This supply is designed for RC LiPo charging, and its 19.5V DC output falls directly within the PV input range of the solar charge controller, allowing it to be treated as a “synthetic solar panel” when plugged into the controller’s PV terminals. A 25A inline fuse will be connected to this device to protect the charge controller from electrical faults from the charging source.
 <div align="center">
     <img width="838" height="703" alt="Screenshot 2025-11-24 205510" src="https://github.com/user-attachments/assets/11fac487-ae81-48df-b2f9-73f8b71a5af3" />
-    <p><strong>Figure 3:</strong> XT60 AC/DC Power Supply (19.5V, 10.3A, 200W)</em></p>
+    <p><strong>Figure 8:</strong> XT60 AC/DC Power Supply (19.5V, 10.3A, 200W)</em></p>
 </div>
 
 **Solar Panel Component**: This subsystem gives the user the ability to charge the device through two means of charging. The ability to charge the device via solar panel is given by the selected PWM charge controller above.
@@ -140,7 +165,12 @@ The controller’s battery terminals connect directly to the LiFePO₄ pack, and
 For our functional prototype, Team 6 has selected the Rvpozwer 18BB 100-Watt Solar Panel [15]. This is a 12V monocrystalline N-type panel with 18-busbar cells and claimed module efficiency up to 25%. The panel is mechanically compact at roughly 40 in × 18 in and weighs about 6 kg, with an anodized aluminum frame and tempered glass front. The components' advertised specifications and price were among the best compared to other options offered by the distributor. This component is also within the specified price given in the conceptual design [6].  
 <div align="center">
     <img width="632" height="675" alt="Screenshot 2025-11-24 210809" src="https://github.com/user-attachments/assets/6d3a8fc3-b4a4-44ea-877b-cc3f3b4e50de" />
-    <p><strong>Figure 4:</strong> N-Type Monocrystalline 18BB 100W 12V Solar Panel)</em></p>
+    <p><strong>Figure 9:</strong> N-Type Monocrystalline 18BB 100W 12V Solar Panel)</em></p>
+</div>
+
+<div align="center">
+    <img width="894" height="833" alt="image" src="https://github.com/user-attachments/assets/3e0d9243-82d8-4109-8b54-d36af35e4963" />
+    <p><strong>Figure 10:</strong> MC4 to XT60 Adapter </em></p>
 </div>
 
 **PCB Power Rail Components**: The PCB power section provides the final stage of regulated, protected, and selectable power for all digital and RF subsystems, using a combination of the TPS2121 Power Multiplexer, TPS62913 Buck Converters, board-level filtering components, and two user-selectable input connectors. This portion of the subsystem is designed to meet the system’s constraints on modularity, ripple performance, voltage stability, and safety, without requiring the reader to understand the low-level circuit mechanisms. 
@@ -158,7 +188,7 @@ A second TPS62913 buck converter then generates the regulated 3.3V rail for the 
 
 <div align="center">
     <img width="795" height="323" alt="Screenshot 2025-11-24 211904" src="https://github.com/user-attachments/assets/21f408bd-5921-4a15-bb84-73294a03945b" />
-    <p><strong>Figure 5:</strong> 5-3.3V Ripple and Ripple FFT after all filtering [21]</em></p>
+    <p><strong>Figure 11:</strong> 5-3.3V Ripple and Ripple FFT after all filtering [21]</em></p>
 </div>
 
 For users wishing to run the device directly from USB-C power, the PCB includes the Abra CON-USB-C-CL connector [17], capable of supporting 20VDC at 3A. Two 5.1 kΩ pull-down resistors on CC1 and CC2 establish proper sink-side CC negotiation. The VBUS path is protected with a 3A/5A-trip polyfuse, followed by a USB-side TVS diode (5V standoff, 6.4V breakdown, 9.2V clamp). The smoothed VBUS feed is then routed into the TPS2121 multiplexer, with a local voltage divider providing the 4V PR1 signal to establish USB-priority. 
@@ -173,7 +203,7 @@ The PCB power section acts as the final interface between the main battery/charg
 Below is a rough schematic of the PCB layout for the distribution of power rails, filtering, and external input. A table of all devices below clarifies specific components within this schematic, to a reference to their specific datasheet.
 <div align="center">
     <img width="3123" height="913" alt="Screenshot_2025-11-23_at_6 42 16_AM" src="https://github.com/user-attachments/assets/7e519f87-c389-4c1c-95ed-9470138b61fa" />
-    <p><strong>Figure 6:</strong> PCB Power Schematic [13]</em></p>
+    <p><strong>Figure 12:</strong> PCB Power Schematic [13]</em></p>
 </div>
 
 | Component | Schematic Symbol | Datasheet Link |
@@ -208,7 +238,7 @@ Below is a rough schematic of the PCB layout for the distribution of power rails
 
 <div align="center">
     <img width="688" height="567" alt="image" src="https://github.com/user-attachments/assets/af7b6fd5-aa83-4abe-8408-4252fe88514b" />
-    <p><strong>Figure 7:</strong> High Level Power Subsystem Flowchart</em></p> 
+    <p><strong>Figure 13:</strong> High Level Power Subsystem Flowchart</em></p> 
 </div>
 
 ## Bill Of Materials
@@ -267,12 +297,12 @@ Therefore, some components may also be reflected in that respective detailed des
 | XT60 AC/DC Power Supply (19.5V, 10.3A, 200W) | https://www.amazon.com/gp/product/B08L39D2NY/ |
 | PWM Charge Controller (20A, 12/24V) | https://www.amazon.com/Controller-Monitoring-Regulator-Lead-Acid-Protections/dp/B0FN7Q2X3L |
 | LiFePO4 Battery (22Ah, 12V) | www.amazon.com/gp/product/B0F1FRBMG3/ |
-| MC4 to XT60 FEMALE Adapter | https://www.amazon.com/gp/product/B08L39D2NY/ |
+| MC4 to XT60 FEMALE Adapter | www.amazon.com/MENTBERY-Connector-Extension-Charging-Cable/dp/B0DPZRXLYN/ |
 | 12 AWG Black/Red Wire | www.amazon.com/gp/product/B0D12VYLGV/ |
 | 10 Pair XT60H Bullet Connectors | https://www.amazon.com/gp/product/B07Q2SJSZ1/ |
 | 2Pack 16AWG Barrel Jack Connectors | https://www.amazon.com/gp/product/B0BLYMVWNP/ |
 | 4 Pack 12AWG Inline Fuse Holder w/ Fuses | https://www.amazon.com/Anyongora-Inline-Waterproof-Automotive-Standard/dp/B0CL7MLY6T/ |
-| XT60 to O ring Connector | www.amazon.com/gp/product/B0F1FRBMG3/ |
+| XT60 to O ring Connector | https://www.amazon.com/ELFCULB-Terminal-Connector-Battery-Portable/dp/B0C9DDVM8P/ |
 | USBC Power Connector | https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/UJC-HP2-3-SMT-TR/21555847 |
 | Barrel Jack | https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-063AH/2161208 |
 | 22uF Electrolytic Capacitor | https://www.digikey.com/en/products/detail/nic-components-corp/NACE220M35V6-3X5-5TR13F/2232043 |
