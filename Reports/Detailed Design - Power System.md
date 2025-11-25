@@ -14,9 +14,9 @@ The Power Subsystem is governed by a set of design constraints that ensure safe,
 
 The specifications and rational for each component for the power system are as follows:
 
-1.  This power subsystem shall implement a battery of at least 190Wh of usable energy
-- As discussed later in the document, the nominal power draw of all components will be ~8W total, with a theoretical max continuous power draw of 20W [2,  3, 4,  5]
-- Assuming at least 230Wh of usable energy, this amount would give a nominal energy life of ~23-24 hours and ~12-13 hours at maximum load, which is within the specified constraints of the conceptual design of 15-hour average usage [6]
+1.  This power subsystem shall implement a battery of at least 260Wh of usable energy
+- As discussed later in the document, the nominal power draw of all components will be ~8W total, with a theoretical max continuous power draw of 20W [2, 3, 4, 5]. 
+- Assuming at least 230Wh of usable energy, this amount would give a nominal energy life of ~30-32 hours and ~12-13 hours at maximum load, which is within the specified constraints of the conceptual design of 15-hour average usage [6]
 
 2.  This subsystem shall implement a charge controller capable of regulating all current flow to and from the energy storage solution
 - As discussed later in this documentation, the use of a LiFePO4 will require a charge controller to be implemented to regulate charge current of the battery [6,  7]
@@ -42,24 +42,24 @@ To always provide safe operation, the subsystem shall be designed with the follo
 To Interface with all required components, the power subsystem must follow the following applicable constraints:
 
 1.  The power subsystem shall be capable of delivering at least 25 W continuous output across all rails with a peak capability of ≥ 30  W for transient events
-- The nominal power draw of all chosen main components discussed in other subsystems is ~8W, where the max power draw is ~17W. This includes the Raspberry Pi4B, Raspberry Pi Pico, Ublox NEO F9P, Ublox dual tuned patch antenna, USB thumb drive and power dissipated over PCB components [2, 3, 4, 5]
-- Due to component boot inrush and transient events, being able to support up to 25W of continuous power will provide enough headroom for these components to properly function
+- The nominal power draw of all chosen main components discussed in other subsystems is ~8W, where the maximum power draw is ~21W. This includes the Raspberry Pi4B, Raspberry Pi Pico, Ublox NEO F9P, Ublox dual-tuned patch antenna, USB thumb drive, and power dissipated over PCB components [2, 3, 4, 5].
+- Due to component boot inrush and transient events, being able to support up to 25W of continuous power will provide enough headroom for these components to properly function. 
 
-2.  The 5 V rail shall supply at least 3A continuous, supporting the Raspberry Pi 4B, RF module interface boards, USB peripherals, and any future 5 V accessories.
-- According to the RaspBerry Pi 4B, in order to support all peripherals, it requires at least  a 3A input at 5V. Therefore, our system shall supply these specifications with enough headroom for additional devices if needed [2]
+2.  The 5V rail shall supply at least 3A continuous, supporting the Raspberry Pi 4B, RF module interface boards, USB peripherals, and any future 5V accessories 
+- According to the Raspberry Pi 4B, in order to support all peripherals, it requires at least a 3A input at 5V. Therefore, our system shall supply these specifications with enough headroom for additional devices if needed [2].
 
-3.  The 3.3 V rail shall supply at least 1 A continuous, powering the Raspberry Pico, GNSS control logic, level shifters, and digital/analog sensors.
-- According to their respective datasheets, all 3.3V based components must be fed proper power specifications due to their sensitive internal components [3, 4]
+3.  The 3.3V rail shall supply at least 1A continuous, powering the Raspberry Pi Pico, GNSS control logic, level shifters, and digital/analog sensors 
+- According to their respective datasheets, all 3.3V-based components must be fed proper power specifications due to their sensitive internal components [3, 4].
 
 4.  Regulated rails (5 V, 3.3 V) shall remain within ±5% of nominal voltage under all normal operating load conditions.
 - According to the Pi foundations hardware documentation, the Raspberry Pi4B requires a 5.0V input with a tolerance of ±5%. Therefore, this should be supplied to ensure proper functionality [2]
 
-5.  The 5 V and 3.3 V rails shall maintain output ripple < 50 mVpp in the frequency bands that could interfere with GNSS reception, to prevent degradation of RF performance.
-- The Raspberry Pi Pico uses the RP2040 MCU, whose recommended operating voltage is 3.3 V ±10%, however stable operation and peripheral accuracy rely on tighter regulation (< ±5%). The RP2040 datasheet notes I/O characteristics and ADC accuracy degrade when VDD exceeds recommended limits. Thus, ±5% ensures full ADC accuracy and digital timing integrity [3]
+5.  The 5V and 3.3V rails shall maintain output ripple < 50mVpp in the frequency bands that could interfere with GNSS reception, to prevent degradation of RF performance.
+- The Raspberry Pi Pico uses the RP2040 MCU, whose recommended operating voltage is 3.3V ±10%, however stable operation and peripheral accuracy rely on tighter regulation (< ±5%). The RP2040 datasheet notes I/O characteristics and ADC accuracy degrade when VDD exceeds recommended limits. Thus, ±5% ensures full ADC accuracy and digital timing integrity [3]
 - The U-blox M8/M9 GNSS Hardware Integration Guide states that the ripple on the supply must be less than 50 mVpp. Switching power supplies must be carefully filtered to avoid degrading GNSS sensitivity [4]
 
 ## Overview of Proposed Solution
-The power subsystem for Team 6’s TEC measurement device is implemented as a hybrid AC/Solar capable rechargeable architecture built around a 12 V-class LiFePO₄ battery, a 20A PWM charge controller, a 200W 19.5 V XT60 AC power supply, an optional 100 W 12 V solar panel. A central PCB is implemented that provides low-voltage rails for the Raspberry Pi 4B, Raspberry Pi Pico, u-blox NEO-F9P module, and supporting electronics. Below is the comprehensive power budget for all components this subsystem needs to provide.
+The power subsystem for Team 6’s TEC measurement device is implemented as a hybrid AC/Solar capable rechargeable architecture built around a 12 V-class LiFePO₄ battery, a 20A PWM charge controller, a 200W 19.5V XT60 AC power supply, an optional 100W 12V solar panel. A central PCB is implemented that provides low-voltage rails for the Raspberry Pi 4B, Raspberry Pi Pico, u-blox NEO-F9P module, and supporting electronics. Below is the comprehensive power budget for all components this subsystem needs to provide.
 
 **Power Budget (Nominal Operation)**
 | Input Voltage | Component | Quantity | Current (A) | Power (W) | Regulator Type | Efficiency (%) |
@@ -105,31 +105,31 @@ The power subsystem for Team 6’s TEC measurement device is implemented as a hy
 
 ## System Architecture
 The overall architecture of the system is defined as follows.
-1.  Energy is stored in a 12.8 V LiFePO₄ battery sized to provide ≥ 190 Wh usable capacity.
-2.  Storage solution can recharge from either a 120 VAC to 19.5 V DC XT60 power supply or an optional 100 W 12 V solar panel.
+1.  Energy is stored in a 12.8V LiFePO₄ battery sized to provide ≥ 190Wh usable capacity.
+2.  Storage solution can recharge from either a 120 VAC to 19.5V DC XT60 power supply or an optional 100W 12V solar panel.
 3.  All charge and discharge currents are managed through a 20A rated  LiFePO₄-compatible PWM charge controller.
-4.  Energy is distributed through the central PCB, which provides tightly regulated 5 V and 3.3 V rails with low ripple for the processing and RF components.
+4.  Energy is distributed through the central PCB, which provides tightly regulated 5V and 3.3V rails with low ripple for the processing and RF components.
 5.  Layered protection and fusing is implemented that satisfies IEEE/IEC safety expectations and mitigates hazards associated with lithium-based storage.
 
-**Battery Component**: For Team 6’s functional prototype, we have chosen the ZapLitho 12 V 22 Ah with a 30 A BMS [7].The integrated Battery Management System (BMS) provides over-charge, over-discharge, over-current, and over-temperature protections, satisfying the constraint that lithium storage must include internal fault mitigation to reduce thermal-runaway and short-circuit risk.
+**Battery Component**: For Team 6’s functional prototype, we have chosen the ZapLitho 12V 22Ah with a 30A BMS [7].The integrated Battery Management System (BMS) provides over-charge, over-discharge, over-current, and over-temperature protections, satisfying the constraint that lithium storage must include internal fault mitigation to reduce thermal-runaway and short-circuit risk.
 
-Assuming 85–90 % usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, which is  ≥ 190 Wh  satisfying the subsystem specification. At a nominal system draw of ≈ 8 W and a theoretical  maximum continuous draw of ≈17 W, the system runtime equates to  23.7 hours and 12.7 hours respectively. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge.
+Assuming 85–90% usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, which is  ≥ 190Wh  satisfying the subsystem specification. At a nominal system draw of ≈8W and a theoretical  maximum continuous draw of ≈17W, the system runtime equates to  23.7 hours and 12.7 hours respectively. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge.
 
 <div align="center">
     <img width="712" height="735" alt="Screenshot 2025-11-24 205510" src="https://github.com/user-attachments/assets/3c99c4da-1631-43a0-a4ad-c0e22737c993" />
     <p><strong>Figure 1:</strong> ZapLitho 12V 22Ah Battery with BMS</em></p>
 </div>
 
-**Charge Controller Component**: For a charge controller, Team 6 has chosen to implement the Limu Solar LTB Series 20A PWM Solar Charge Controller for our functional prototype [12]. This device supports LiFePO₄, lithium  chemistries, uses a three-stage PWM charging algorithm, and accepts solar inputs up to 50 V while managing a 20 A battery charge and load current.
+**Charge Controller Component**: For a charge controller, Team 6 has chosen to implement the Limu Solar LTB Series 20A PWM Solar Charge Controller for our functional prototype [12]. This device supports LiFePO₄, lithium  chemistries, uses a three-stage PWM charging algorithm, and accepts solar inputs up to 50V while managing a 20A battery charge and load current.
 
-The controller’s battery terminals connect directly to the LiFePO₄ pack, and its load terminals feed the 12 V bus that supplies the PCB and any future 12 V accessories. The specific connector scheme and wiring gauge for these interfaces will be defined in a later section of the detailed design.
+The controller’s battery terminals connect directly to the LiFePO₄ pack, and its load terminals feed the 12V bus that supplies the PCB and any future 12 V accessories. The specific connector scheme and wiring gauge for these interfaces will be defined in a later section of the detailed design.
 
 <div align="center">
     <img width="840" height="656" alt="Screenshot 2025-11-24 210257" src="https://github.com/user-attachments/assets/9e2252d1-cb16-491f-8abf-df5d0ca4614c" />
     <p><strong>Figure 2:</strong> Charge Controller (20A, 12/24V)</em></p>
 </div>
 
-**DC Power Supply Component**: For mains charging of Team 6’s functional prototype, we have decided to use the SUPULSE 200 W AC power adapter with 19.5 V, 10.3 A DC output and an XT60 connector  [14].  This supply is designed for RC LiPo charging, and its 19.5 V DC output falls directly within the PV input range of the solar charge controller, allowing it to be treated as a “synthetic solar panel” when plugged into the controller’s PV terminals.
+**DC Power Supply Component**: For mains charging of Team 6’s functional prototype, we have decided to use the SUPULSE 200W AC power adapter with 19.5V, 10.3A DC output and an XT60 connector [14]. This supply is designed for RC LiPo charging, and its 19.5V DC output falls directly within the PV input range of the solar charge controller, allowing it to be treated as a “synthetic solar panel” when plugged into the controller’s PV terminals.  
 <div align="center">
     <img width="838" height="703" alt="Screenshot 2025-11-24 205510" src="https://github.com/user-attachments/assets/11fac487-ae81-48df-b2f9-73f8b71a5af3" />
     <p><strong>Figure 3:</strong> XT60 AC/DC Power Supply (19.5V, 10.3A, 200W)</em></p>
@@ -137,35 +137,35 @@ The controller’s battery terminals connect directly to the LiFePO₄ pack, and
 
 **Solar Panel Component**: This subsystem gives the user the ability to charge the device through two means of charging. The ability to charge the device via solar panel is given by the selected PWM charge controller above.
 
-For our functional prototype, Team 6 has selected the Rvpozwer 18BB 100-Watt Solar Panel [15]. This is a 12 V monocrystalline N-type panel with 18-busbar cells and claimed module efficiency up to 25%. The panel is mechanically compact at roughly 40 in × 18 in and weighs about 6 kg, with an anodized aluminum frame and tempered glass front. The components advertised specifications and price were among the best compared to other options offered by the distributor. This component is also within the specified price given in the conceptual design [6].
+For our functional prototype, Team 6 has selected the Rvpozwer 18BB 100-Watt Solar Panel [15]. This is a 12V monocrystalline N-type panel with 18-busbar cells and claimed module efficiency up to 25%. The panel is mechanically compact at roughly 40 in × 18 in and weighs about 6 kg, with an anodized aluminum frame and tempered glass front. The components' advertised specifications and price were among the best compared to other options offered by the distributor. This component is also within the specified price given in the conceptual design [6].  
 <div align="center">
     <img width="632" height="675" alt="Screenshot 2025-11-24 210809" src="https://github.com/user-attachments/assets/6d3a8fc3-b4a4-44ea-877b-cc3f3b4e50de" />
     <p><strong>Figure 4:</strong> N-Type Monocrystalline 18BB 100W 12V Solar Panel)</em></p>
 </div>
 
-**PCB Power Rail Components**: The PCB power section provides the final stage of regulated, protected, and selectable power for all digital and RF subsystems, using a combination of the TPS2121 Power Multiplexer, TPS62913 Buck Converters, board-level filtering components, and two user-selectable input connectors. This portion of the subsystem is designed to meet the system’s constraints on modularity, ripple performance, voltage stability, and safety, without requiring the reader to understand the low-level circuit mechanisms.
+**PCB Power Rail Components**: The PCB power section provides the final stage of regulated, protected, and selectable power for all digital and RF subsystems, using a combination of the TPS2121 Power Multiplexer, TPS62913 Buck Converters, board-level filtering components, and two user-selectable input connectors. This portion of the subsystem is designed to meet the system’s constraints on modularity, ripple performance, voltage stability, and safety, without requiring the reader to understand the low-level circuit mechanisms. 
 The board supports two power-entry options:
 1.  12 V Barrel Jack Input (CUI Devices PJ-063AH Barrel Jack) [16] 
 2.  5 V USB-C Input (Abra CON-USB-C-CL 5A Power Connector) [17]
     
-The PCB includes a barrel-jack input rated for up to 24 VDC and 8 A. This input is protected by a bidirectional polyfuse with a 1.5 A hold and 3 A trip rating, satisfying the project requirement for upstream overcurrent protection between critical components [18]. A bidirectional TVS diode (SMBJ15CA) with a 15 V reverse standoff, 16.7 V breakdown voltage, and 24.4 V clamping voltage is placed across the input, and four SS32 Schottky diodes (20 V, 3 A) are arranged in a full-bridge configuration to ensure correct polarity regardless of how the barrel connector is wired. Together, these components protect the system by clamping surges, preventing reverse-polarity faults, and limiting over-voltage excursions at the input [19], while the Schottky diodes provide the advantage of low forward voltage and reduced thermal dissipation [20]. Additional smoothing capacitors filter the rectified input, enabling the barrel jack to operate as a universal DC plug-in interface.
+The PCB includes a barrel-jack input rated for up to 24VDC and 8A. This input is protected by a bidirectional polyfuse with a 1.5A hold and 3A trip rating, satisfying the project requirement for upstream overcurrent protection between critical components [18]. A bidirectional TVS diode (SMBJ15CA) with a 15V reverse standoff, 16.7V breakdown voltage, and 24.4V clamping voltage is placed across the input, and four SS32 Schottky diodes (20V, 3A) are arranged in a full-bridge configuration to ensure correct polarity regardless of how the barrel connector is wired. Together, these components protect the system by clamping surges, preventing reverse-polarity faults, and limiting over-voltage excursions at the input [19], while the Schottky diodes provide the advantage of low forward voltage and reduced thermal dissipation [20]. Additional smoothing capacitors filter the rectified input, enabling the barrel jack to operate as a universal DC plug-in interface. 
 
-The protected 12V input is stepped down to 5V using a TPS62913 synchronous buck converter. The TPS6291x family provides high efficiency, low output ripple, and low noise switching performance appropriate for RF-sensitive designs [21]. In this design, VIN is tied to EN and S-CONFIG, which selects a 2.2 MHz switching frequency; the recommended 470 nF capacitor sets up a 5ms soft-start timing. The PSNS pin is tied to ground to disable current-sense reporting. The PG pin is unused and left floating per datasheet guidance. A 2.2 µH inductor is selected as required for outputs above 3.3 V when switching at 2.2 MHz, and the SW node is routed with proper filtering to reduce switch-node ringing. Voltage regulation is achieved using the device’s 0.8 V reference via a resistive divider, designed per datasheet recommendations. All external components follow TI’s reference design values [21]. The resulting 5 V rail then supplies the Raspberry Pi 4B, RF modules, and USB storage devices.
+The protected 12V input is stepped down to 5V using a TPS62913 synchronous buck converter. The TPS6291x family provides high efficiency, low output ripple, and low noise switching performance appropriate for RF-sensitive designs [21]. In this design, VIN is tied to EN and S-CONFIG, which selects a 2.2 MHz switching frequency; the recommended 470 nF capacitor sets up a 5ms soft-start timing. The PSNS pin is tied to ground to disable current-sense reporting. The PG pin is unused and left floating per datasheet guidance. A 2.2 µH inductor is selected as required for outputs above 3.3V when switching at 2.2 MHz, and the SW node is routed with proper filtering to reduce switch-node ringing. Voltage regulation is achieved using the device’s 0.8V reference via a resistive divider, designed per datasheet recommendations. All external components follow TI’s reference design values [21]. The resulting 5V rail then supplies the Raspberry Pi 4B, RF modules, and USB storage devices. 
 
-The regulated 5 V output feeds the TPS2121 power multiplexer, which also receives the USB-C input through its independent channel. A resistive divider sets the CP2 pin to 2 V. The TPS212x family supports Dual-Input, Single-Output (DISO) multiplexing and provides automatic detection, prioritization, and seamless source transition between the available power inputs [22]. Prioritization is established by raising PR1 above CP2; in this design, PR1 receives 4 V from the USB-C path, ensuring that USB-C is selected whenever both sources are present. Section 7.5 of the TPS2121 datasheet specifies a 29.8 kΩ resistor on ILIM for a typical 3.5 A output limit. A 1 µF capacitor on the SS pin sets an 88 V/s output slew rate, defining a controlled soft start. OV pins are not used and tied to the ground. This configuration satisfies system modularity requirements by enabling automatic selection between LiFePO₄ battery power and USB-C external power.
+The regulated 5V output feeds the TPS2121 power multiplexer, which also receives the USB-C input through its independent channel. A resistive divider sets the CP2 pin to 2V. The TPS212x family supports Dual-Input, Single-Output (DISO) multiplexing and provides automatic detection, prioritization, and seamless source transition between the available power inputs [22]. Prioritization is established by raising PR1 above CP2; in this design, PR1 receives 4V from the USB-C path, ensuring that USB-C is selected whenever both sources are present. Section 7.5 of the TPS2121 datasheet specifies a 29.8 kΩ resistor on ILIM for a typical 3.5A output limit. A 1 µF capacitor on the SS pin sets an 88 V/s output slew rate, defining a controlled soft start. OV pins are not used and tied to the ground. This configuration satisfies system modularity requirements by enabling automatic selection between LiFePO₄ battery power and USB-C external power. 
 
-A second TPS62913 buck converter then generates the regulated 3.3 V rail for the Raspberry Pi Pico, GNSS control logic, sensors, and level shifters. Both buck stages use TI-recommended LC networks and filtering, which reduces conducted noise, switching ripple, and high-frequency transients. This configuration ensures the design meets the system’s strict ripple constraints, particularly those required for GNSS receiver performance. A figure later in this document illustrates the expected ripple based on the manufacturer’s recommended filtering network [21].
+A second TPS62913 buck converter then generates the regulated 3.3V rail for the Raspberry Pi Pico, GNSS control logic, sensors, and level shifters. Both buck stages use TI-recommended LC networks and filtering, which reduces conducted noise, switching ripple, and high-frequency transients. This configuration ensures the design meets the system’s strict ripple constraints, particularly those required for GNSS receiver performance. A figure later in this document illustrates the expected ripple based on the manufacturer’s recommended filtering network [21]. 
 
 <div align="center">
     <img width="795" height="323" alt="Screenshot 2025-11-24 211904" src="https://github.com/user-attachments/assets/21f408bd-5921-4a15-bb84-73294a03945b" />
     <p><strong>Figure 5:</strong> 5-3.3V Ripple and Ripple FFT after all filtering [21]</em></p>
 </div>
 
-For users wishing to run the device directly from USB-C power, the PCB includes the Abra CON-USB-C-CL connector [17], capable of supporting 20 VDC at 3 A. Two 5.1 kΩ pull-down resistors on CC1 and CC2 establish proper sink-side CC negotiation. The VBUS path is protected with a 3 A/5 A-trip polyfuse, followed by a USB-side TVS diode (5 V standoff, 6.4 V breakdown, 9.2 V clamp). The smoothed VBUS feed is then routed into the TPS2121 multiplexer, with a local voltage divider providing the 4 V PR1 signal to establish USB-priority.
+For users wishing to run the device directly from USB-C power, the PCB includes the Abra CON-USB-C-CL connector [17], capable of supporting 20VDC at 3A. Two 5.1 kΩ pull-down resistors on CC1 and CC2 establish proper sink-side CC negotiation. The VBUS path is protected with a 3A/5A-trip polyfuse, followed by a USB-side TVS diode (5V standoff, 6.4V breakdown, 9.2V clamp). The smoothed VBUS feed is then routed into the TPS2121 multiplexer, with a local voltage divider providing the 4V PR1 signal to establish USB-priority. 
 
-The TPS2121 automatically switches between the 5 V derived from the 12 V battery and the 5 V supplied via USB-C, ensuring seamless transitions and maximizing battery longevity. This behavior aligns with system requirements for reliability, modularity, and field flexibility. Together, the PCB power architecture acts as the final regulated interface between the energy subsystem and the low-voltage electronics, providing stable 5 V and 3.3 V rails with low ripple, integrated protection against surges and reverse polarity, and compliance with IEEE/IEC expectations for safe power delivery. Overall, this stage ensures robust, low-noise, and reliable power for all downstream subsystems.
+The TPS2121 automatically switches between the 5V derived from the 12V battery and the 5V supplied via USB-C, ensuring seamless transitions and maximizing battery longevity. This behavior aligns with system requirements for reliability, modularity, and field flexibility. Together, the PCB power architecture acts as the final regulated interface between the energy subsystem and the low-voltage electronics, providing stable 5V and 3.3V rails with low ripple, integrated protection against surges and reverse polarity, and compliance with IEEE/IEC expectations for safe power delivery. Overall, this stage ensures robust, low-noise, and reliable power for all downstream subsystems. 
 
-The PCB power section acts as the final interface between the main battery/charger system and all low-voltage electronics, ensuring devices receive clean, stable power. The two buck converters generate low-noise 5 V and 3.3 V rails required by the Pi, Pico, and GNSS module, meeting the system’s voltage-regulation and ripple constraints. Integrated protection elements provide overcurrent, surge, and reverse-polarity safety consistent with IEEE/IEC constraints. Overall, this design stage ensures reliable, low-ripple power delivery to all subsystems.
+The PCB power section acts as the final interface between the main battery/charger system and all low-voltage electronics, ensuring devices receive clean, stable power. The two buck converters generate low-noise 5V and 3.3V rails required by the Pi, Pico, and GNSS module, meeting the system’s voltage-regulation and ripple constraints. Integrated protection elements provide overcurrent, surge, and reverse-polarity safety consistent with IEEE/IEC constraints. Overall, this design stage ensures reliable, low-ripple power delivery to all subsystems. 
 
 **For more information on the PCB  component configuration  and topology within this subsystem, see Team 6’s detailed design of the PCB interconnections  by Jack Bender** [13].
 
@@ -212,9 +212,9 @@ Below is a rough schematic of the PCB layout for the distribution of power rails
 </div>
 
 ## Bill Of Materials
-Below is a comprehensive list of all necessary  components apart  of this subsystem. All components are listed with their manufacturer, part number, quantity, price, and purchasing URL. Note that the nature of the power subsystem specifically extends into the Interfacing/PCB subsystem [13].
+Below is a comprehensive list of all necessary components that are a part of this subsystem. All components are listed with their manufacturer, part number, quantity, price, and purchasing URL. Note that the nature of the power subsystem specifically extends into the Interfacing/PCB subsystem [13].  
 
-Therefore, some components may also be reflected in that respective detailed design document. Therefore, the price of these components shall be obviously reflected in the bill of materials as Total price of MAIN components and total price of ALL components, which include the main components plus components used for the PCB integration. At the end of this table, both main and all components of pre-tax and post-tax total cost are reflected respectively. The United States of Tennessee average state and federal tax rates in the year of 2025  were taken into consideration for post-tax calculations. Delivery and packaging costs were not reflected in this bill of materials.
+Therefore, some components may also be reflected in that respective detailed design document. Therefore, the price of these components shall be obviously reflected in the bill of materials as Total price of MAIN components and total price of ALL components, which include the main components plus components used for the PCB integration. At the end of this table, both the main and all components of pre-tax and post-tax total cost are reflected, respectively. The United States of Tennessee's average state and federal tax rates in the year 2025 were taken into consideration for post-tax calculations. Delivery and packaging costs were not reflected in this bill of materials.
 
 **BOM: Material Specifications**
 | Component | Total Cost(US$) | Quantity | Manufacturer | Part No. | Distributor | Distributor Part No. |
@@ -302,14 +302,14 @@ Therefore, some components may also be reflected in that respective detailed des
 | Buck Converter | https://www.digikey.com/en/products/detail/texas-instruments/TPS62913RPUR/14004311 |
 | Power MUX | https://www.digikey.com/en/products/detail/texas-instruments/TPS2121RUXR/9859001 |
 
-As discussed in Team 5’s conceptual design, the allocated budget for the power subsystem was a total of $260. This price point did not include components needed for the PCB and was originally going to be a part of the PCB interconnections subsystem. However, after careful consideration, Team 6 has decided to incorporate these components into the Power subsystem, since this document goes into detail about the choice of components.
+As discussed in Team 5’s conceptual design, the allocated budget for the power subsystem was a total of $260. This price point did not include components needed for the PCB and was originally going to be a part of the PCB interconnections subsystem. However, after careful consideration, Team 6 has decided to incorporate these components into the Power subsystem, since this document goes into detail about the choice of components. 
 
-Team 6 also realized that the need for a LiFePO4 battery is needed for our design, since energy  efficiency, charge rate, and weight to energy storage ratio are essential variables to choosing  a battery. This also required us to get a larger battery than we originally planned to implement, since we originally did not account for energy storage headroom to not discharge the battery fully. This decision finally snowballed into needing to purchase a more capable power supply than originally intended for which increased cost. Team 6 also does not account for sales taxation when budgeting all components.
+Team 6 also realized that the need for a LiFePO4 battery is needed for our design, since energy efficiency, charge rate, and weight-to-energy-storage ratio are essential variables to choosing a battery. This also required us to get a larger battery than we originally planned to implement, since we originally did not account for energy storage headroom to not discharge the battery fully. This decision finally snowballed into needing to purchase a more capable power supply than originally intended for which increased the cost. Team 6 also does not account for sales taxation when budgeting all components. 
 
-Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This puts this subsystem over budget by $54.87. Analyzing this price point, by eliminating the optional solar panel and adapter, this would put this subsystem withing Team 6’s allocated budget.
+Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This puts this subsystem over budget by $54.87. Analyzing this price point, by eliminating the optional solar panel and adapter, this would put this subsystem within Team 6’s allocated budget. 
 
 ## Analysis of Solution
-**Energy Storage**: The energy storage component has been chosen to be a nominal 12.8 V LiFePO₄ pack with 22Ah capacity providing roughly 240-280  Wh nameplate capacity and > 4,000 charge cycles. The reasoning behind the choice of a lithium-based battery chemistry is the following.
+**Energy Storage**: The energy storage component has been chosen to be a nominal 12.8V LiFePO₄ pack with 22Ah capacity, providing roughly 240-280Wh nameplate capacity and > 4,000 charge cycles. The reasoning behind the choice of a lithium-based battery chemistry is the following. 
 
 1.  High cycle life providing an average of 3,000+ deep cycles
     
@@ -320,10 +320,9 @@ Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This p
 3.  Inherently safer behavior and better thermal stability than other lithium chemistries, which aligns with IEEE/IEC safety considerations discussed in the conceptual design.
     
 
-LiFePO₄ chemistry provides better cycle life capacity that other battery chemistries such as lead acid. It also provides great energy to weight ratio which is ideal for a portable device solution. Phosphate-based chemistry does make this choice worse than Lithium-Ion or LiPo based batteries. However, it is less prone to dangerous reactions in the event of electrical failure. Since this system will run for prolonged periods of time unattended, this is an important consideration when choosing between battery chemistries.
+LiFePO₄ chemistry provides better cycle life capacity than other battery chemistries, such as lead acid. It also provides a great energy-to-weight ratio, which is ideal for a portable device solution. Phosphate-based chemistry does make this choice worse than Lithium-Ion or LiPo-based batteries. However, it is less prone to dangerous reactions in the event of electrical failure. Since this system will run for prolonged periods of time unattended, this is an important consideration when choosing between battery chemistries. 
 
-**Charge Controller**: As discussed earlier in this document, all current flowing into or out of the battery is routed through an acceptable 20A 12V PWM charge controller. This device supports LiFePO₄, lithium chemistries, uses a three-stage PWM charging algorithm, and accepts solar inputs while managing a 20A maximum battery charge and load current. Below is an overview of the charge controller's functionality.
-
+Charge Controller: As discussed earlier in this document, all current flowing into or out of the battery is routed through an acceptable 20A 12V PWM charge controller. This device supports LiFePO₄, lithium chemistries, uses a three-stage PWM charging algorithm, and accepts solar inputs while managing a 20A maximum battery charge and load current. Below is an overview of the charge controller's functionality. 
 1.  Regulates current to and from the battery based on measured battery conditions
     
 
@@ -338,17 +337,17 @@ LiFePO₄ chemistry provides better cycle life capacity that other battery chemi
 
 By interposing this controller between both charging sources and the battery, the subsystem enforces the constraint that all current flow to and from the energy storage solution shall be regulated. It also aligns with conceptual-design guidance that a LiFePO₄-based system must incorporate a dedicated charge controller to meet IEEE/IEC safety practices. Providing integrated fault protections, this device satisfies applicable constraints.
 
-**DC Power Supply (AC Adapter)**: The AC-to-DC power supply serves as the primary charging option for the subsystem, enabling users to recharge the LiFePO₄ battery in situations where solar availability is limited or when fast turnaround is needed. By converting 120 VAC mains into a regulated 19.5 V DC output, the adapter provides an electrical input that behaves similarly to a fixed-voltage 12 V-class solar panel when connected to the PWM charge controller. The adapter remains a power source  only, the charge controller continues to regulate all charging behavior. This ensures full compatibility with LiFePO₄ charging requirements and maintains compliance with subsystem constraints regarding regulated current flow into the battery.
+**DC Power Supply (AC Adapter)**: The AC-to-DC power supply serves as the primary charging option for the subsystem, enabling users to recharge the LiFePO₄ battery in situations where solar availability is limited or when fast turnaround is needed. By converting 120VAC mains into a regulated 19.5V DC output, the adapter provides an electrical input that behaves similarly to a fixed-voltage 12V-class solar panel when connected to the PWM charge controller. The adapter remains a power source only, the charge controller continues to regulate all charging behavior. This ensures full compatibility with LiFePO₄ charging requirements and maintains compliance with subsystem constraints regarding regulated current flow into the battery.
 
 Below is an overview of how the AC adapter meets functional and safety requirements:
 
-1.  Provides a stable 19.5 V DC output within the acceptable PV-input voltage range of the 20 A PWM controller
+1.  Provides a stable 19.5V DC output within the acceptable PV-input voltage range of the 20A PWM controller
     
 
 2.  Behaves electrically like a fixed-voltage DC source, which PWM controllers are designed to accept without requiring solar-specific I–V curve characteristics
     
 
-3.  Delivers up to ~200 W, remaining safely below the charge controller's input power rating
+3.  Delivers up to ~200W, remaining safely below the charge controller's input power rating
     
 
 4.  Chosen component is designed for pulsed, rapid-load environments (RC battery chargers), making it tolerant of PWM switching behavior
@@ -357,11 +356,11 @@ Below is an overview of how the AC adapter meets functional and safety requireme
 5.  Implementation commonly used in industry and laboratory environments as a stand-in for solar panels during testing, system evaluation, or indoor charging scenarios
     
 
-Because a PWM controller regulates charging by rapidly connecting and disconnecting the PV input, it does not rely on the non-linear solar I–V curve that MPPT controllers require. Thus, a constant-voltage adapter is fully compatible as long as it remains within PV-input specifications. The charge controller continues to manage bulk, absorption, and float stages according to LiFePO₄ requirements, while the adapter simply provides the DC energy needed.
+Because a PWM controller regulates charging by rapidly connecting and disconnecting the PV input, it does not rely on the non-linear solar I–V curve that MPPT controllers require. Thus, a constant-voltage adapter is fully compatible as long as it remains within PV-input specifications. The charge controller continues to manage bulk, absorption, and float stages according to LiFePO₄ requirements, while the adapter simply provides the DC energy needed. 
 
-Safety concerns are mitigated through several layers of protection. The charge controller includes PV-side and battery-side protections such as reverse-polarity, over-voltage, over-current, and short-circuit safeguarding. The LiFePO₄ battery’s integrated BMS provides cell-level protections including over-charge, over-discharge, over-current, and thermal limits. At the system level, additional fusing protects both the adapter path and battery path. Together, these measures ensure that no unregulated or unsafe current path exists from the AC mains to the battery.
+Safety concerns are mitigated through several layers of protection. The charge controller includes PV-side and battery-side protections such as reverse-polarity, over-voltage, over-current, and short-circuit safeguarding. The LiFePO₄ battery’s integrated BMS provides cell-level protections including over-charge, over-discharge, over-current, and thermal limits. At the system level, additional fusing protects both the adapter path and battery path. Together, these measures ensure that no unregulated or unsafe current path exists from the AC mains to the battery. 
 
-Finally, the adapter’s XT60 output integrates cleanly into the subsystem’s modular design. The XT60 interface allows users to easily swap between solar input, the AC adapter, or laboratory bench supplies without modifying internal electronics. With its 19.5 V, 10.3 A output, the adapter can recharge the system rapidly, typically within 1.5–2 hours, while fully aligning with all design constraints for safe, efficient battery charging.
+Finally, the adapter’s XT60 output integrates cleanly into the subsystem’s modular design. The XT60 interface allows users to easily swap between solar input, the AC adapter, or laboratory bench supplies without modifying internal electronics. With its 19.5V, 10.3A output, the adapter can recharge the system rapidly, typically within 1.5–2 hours, while fully aligning with all design constraints for safe, efficient battery charging. 
 
 **Solar Panel**:  The chosen panel construction also offers advantages over competing low-cost alternatives. The monocrystalline N-type cells and multi-bus-bar structure used in this model are typically associated with higher conversion efficiencies and improved shade tolerance compared to older polycrystalline or 5-bus-bar panels. This improves energy yield per unit area and enhances real-world performance when irradiance is variable in conditions that directly affect GNSS measurements. The panel’s physical design, including a tempered-glass front and aluminum frame, aligns with outdoor durability expectations while remaining light enough to be carried, mounted, or stowed easily. It also uses standard MC4 connectors, which simplifies integration with the rest of the power subsystem and supports modular field setup with extension cables, folding configurations, or parallel/series arrangements for future scalability.
 
