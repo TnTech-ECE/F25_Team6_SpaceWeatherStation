@@ -20,9 +20,9 @@ The following is a list of constraints applicable to this subsystem. The propose
 
 The proposed solution for this subsystem is to use a GNSS RF module with a dual-tuned patch antenna that can receive L1/L5 GNSS signals, extract the needed signal data, and transfer the data to the SBC of the Data and Storage Subsystem. The SBC will then compute the TEC computations, which will be stored by the Data and Storage Subsystem along with other satellite identification data.
 
-<img width="609" height="790" alt="image" src="https://github.com/user-attachments/assets/2b1621a9-241f-4d85-83bc-46f6d212090b" />
+<p align="center"><img width="609" height="790" alt="image" src="https://github.com/user-attachments/assets/2b1621a9-241f-4d85-83bc-46f6d212090b" /></p>
 
-__Figure 1:__ _Antenna and RF Module Hardware Diagram_
+<p align="center"><b>Figure 1:</b> <i>Antenna and RF Module Hardware Diagram</i></p>
 
 ## **TEC Computation Method**
 
@@ -30,39 +30,39 @@ For more information on what TEC is and the physics behind it, refer to the Proj
 
 Before TEC computation can be discussed, it is necessary to define what a signal's pseudorange is, as it is used in determining TEC. A signal's pseudorange, P, is the estimated distance between a transmitter and receiver, computed by multiplying the difference of the received and sent timestamps of the transmitted signal by the speed of light, c \[3\].
 
-$$P = c(t_s-t_r)$$ (1)
+<p align="center">$$P = c(t_s-t_r)$$ (1)</p>
 
 The difference between two signals' pseudoranges along the same path can be rewritten as the following formula, with respect to the TEC of the pseudorange \[3\]:
 
-$$P_1-P_2=40.3\frac{TEC_p}{f_1^2}-40.3\frac{TEC_p}{f_2^2}$$ (2)
+<p align="center">$$P_1-P_2=40.3\frac{TEC_p}{f_1^2}-40.3\frac{TEC_p}{f_2^2}$$ (2)</p>
 
 In the above formula, each frequency and pseudorange pair correspond to a signal that travels along the same path between the transmitter and receiver. The above equation can be rewritten as follows \[3\]:
 
-$$TEC_p=\frac{1}{40.3}(\frac{f_1f_2}{f_1-f_2})(P_1-P_2)$$ (3)
+<p align="center">$$TEC_p=\frac{1}{40.3}(\frac{f_1f_2}{f_1-f_2})(P_1-P_2)$$ (3)</p>
 
-Equation 3 clearly shows that if the pseudorange and frequency of two separate signals transmitted across the same path is known, then the straight-line TEC for that path can be calculated. This TEC value is referred to as the slant TEC, as in reference to GNSS transmitters and receivers on the earth, the path the transmissions taken are "slanted" with respect to a vertical path through the atmosphere \[3\].
+Equation 3 clearly shows that if the pseudorange and frequency of two separate signals transmitted across the same path is known, then the straight-line TEC for that path can be calculated. This TEC value is referred to as the slant TEC, because it is the TEC value of the "slanted" beam path of the signal through the atmosphere from the satellite to the receiver. \[3\].
 
 Applying these principles, it is necessary to select an RF module that can determine the pseudoranges for two separate signal frequencies transmitted from GNSS satellites. The constraints of this subsystem, as discussed in the above section, require the module to receive the L1 and L5 GNSS frequencies specifically. Additionally, to record the location of the path of each TEC measurement, the module will need to be able to determine the position of the receiver, as well as the position of any measured satellites.
 
 The RF module that has been selected to meet these constraints is the SparkFun GNSS-RTK L1/L5 NEO-F9P Breakout Board. This module contains a u-blox NEO-F9P chip, which is an L1/L5 GNSS receiver which boasts centimeter level accuracy, capable of connecting to four concurrent GNSS systems \[4\]. This module can easily measure the pseudorange and carrier phase of received GNSS signals, as well as determine satellite identification and positional data, making it ideal for gathering information for TEC measurements \[5\]. This module has configurable interfaces for UART, SPI, and I2C connections, allowing it to easily connect and communicate with a chosen SBC of the data storage system \[6\].
 
-<img width="513" height="513" alt="image" src="https://github.com/user-attachments/assets/598f23a6-2dcf-45af-9a3e-f2c93a63ec00" />
+<p align="center"><img width="513" height="513" alt="image" src="https://github.com/user-attachments/assets/598f23a6-2dcf-45af-9a3e-f2c93a63ec00" /></p>
 
-__Figure 2:__ _SparkFun DNSS-RTK L1/L5 Breakout NEO-F9P_
+<p align="center"><b>Figure 2:</b> <i>SparkFun DNSS-RTK L1/L5 Breakout NEO-F9P</i></p>
 
 The antenna that has been selected for this subsystem is the u-blox ANN-MB1 L1/L5 multi-band high precision GNSS antenna. This antenna is tuned to the L1 and L5 GNSS frequencies, allowing the subsystem to receive both signals concurrently. It is also a patch antenna, which allows for affordability and quality of the signal. This antenna is also fully compatible with the NEO-F9P module, making it ideal for this solution \[7\].
 
-<img width="386" height="386" alt="image" src="https://github.com/user-attachments/assets/20c46f6a-b1c6-44c3-b6f9-4ba43f5d1ac8" />
+<p align="center"><img width="386" height="386" alt="image" src="https://github.com/user-attachments/assets/20c46f6a-b1c6-44c3-b6f9-4ba43f5d1ac8" /></p>
 
-__Figure 3:__ _ANN-MB1 u-blox antenna_
+<p align="center"><b>Figure 3:</b> <i>ANN-MB1 u-blox antenna</i></p>
 
 ## **Interface with Other Subsystems**
 
 The RF Module and Antenna Subsystem shall connect to the Power subsystem and the Data and Storage Subsystem via the System Interconnections Subsystem, all whilst being housed within the Enclosure Subsystem. Below is a diagram of the connections between the hardware of the RF Module and Antenna Subsystem and the other subsystems.
 
-<img width="814" height="461" alt="image" src="https://github.com/user-attachments/assets/9617886f-bf1c-4fb9-8164-4aa8d777ea70" />
+<p align="center"><img width="814" height="461" alt="image" src="https://github.com/user-attachments/assets/9617886f-bf1c-4fb9-8164-4aa8d777ea70" /></p>
 
-__Figure 4:__ _Subsystem Connections_
+<p align="center"><b>Figure 4:</b> <i>Subsystem Connections</i></p>
 
 All the connections between the subsystems of this project run through the System Interconnections Subsystem via a central PCB. The signals that shall connect the RF Module and Antenna Subsystem to the rest of the project and the nature of the data contained within are given below.
 
@@ -77,9 +77,9 @@ For the UART connection to work properly, both devices must have their baud rate
 The NEO-F9P uses the UBX protocol to communicate with host computers. This is a proprietary protocol designed by u-blox, the manufacturers of the NEO-F9P. This protocol sends frames consisting of two sync characters, a message class, a message ID, the length of the payload, the said payload, and a checksum. Each frame is formatted as in the following diagram from the NEO-F9P documentation \[5\]:
 
 
-<img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/bfc7fb8f-c5e6-4259-98ff-62d34aba22e1" />
+<p align="center"><img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/bfc7fb8f-c5e6-4259-98ff-62d34aba22e1" /></p>
 
-__Figure 5:__ _UBX Frame Structure_
+<p align="center"><b>Figure 5:</b> <i>UBX Frame Structure</i></p>
 
 The first section of the frame, the preamble, consists of two synch characters. These signify the beginning of the frame. The next segment, the message class and ID, signify what kind of message is contained in the frame. The message class identifies what group of messages the contained payload aligns with. The message ID defines what specific message is in the payload. Finally, the frame ends with a checksum, which is used to verify that the received data is valid \[5\].
 
@@ -99,20 +99,21 @@ The buildable schematic of this subsystem can be found in the Detailed Design Sp
 
 ## **Flowchart**
 
-The general operational flow of the RF Module and Antenna Subsystem is as follows.
+This subsystem shall have three separate programmed functions to operate within the overall system that can be called by the system when needed. Those functions are the NEO-F9P Initialization Function, the Receiver Location Data Acquisition Function, and the TEC Computation and Satellite Data Acquisition Function. Any of these functions can be called by the system when needed.
 
-- On bootup, the SBC shall send required configuration commands to the RF module. It is assumed that certain settings, such as baud rate, have already been configured correctly on the NEO-F9P.
-- When the overall system is ready, the SBC will poll the NEO-F9P via a UBX message for the locational data of the measurement device.
-- Once the locational data of the receiver has been acquired, the SBC will poll the NEO-F9P via UBX for connected satellites' identification, position, signal type, pseudoranges, and carrier phases. The received data shall then be stored in a vector of variable structures and analyzed by the SBC to determine what satellites have both L1 and L5 signal data.
-- The data for each measured satellite which includes L1 and L5 signal data shall then be used to compute TEC measurements for those select satellites, following formula 3.
-- Finally, the data shall be passed to the Data and Storage Subsystem section of the operational program to be further processed and stored.
-- The RF Module and Antenna Subsystem shall repeat step 3 of this operational flow onward when requested to by the rest of the system.
+The NEO-F9P Initialization Function shall likely only be called on bootup of the device. This function shall send initial configuration commands using the UBX protocol over the UART connection between the SBC and NEO-F9P to set up the NEO-F9P device for operation.
 
-<img width="975" height="726" alt="image" src="https://github.com/user-attachments/assets/a91a7b81-5b9f-43d4-b2ad-c7da7481bfeb" />
+The Receiver Location Data Acquisition Function shall poll the NEO-F9P using the UBX protocol to obtain the locational data of the receiver. This function will likely only be called by the device during initial bootup, as the device is not intended to be moved when it has been set up in a location to measure TEC values.
 
-Figure 6: _Operational Flowchart_
+The TEC Computation and Satellite Data Acquisition Function shall poll the NEO-F9P using the UBX protocol to get the identification, position, signal type, pseudoranges, and carrier phases of all acquired satellites. This data shall then be analyzed by the SBC to determine which satellites have both an L1 and L5 signal. The valid satellites shall then have TEC measurements computed using equation 3, which shall then be passed on to the rest of the system for further analysis and storage. This function shall be called every time the system wishes to make a TEC measurement.
+
+<p align="center"><img width="975" height="726" alt="image" src="https://github.com/user-attachments/assets/a91a7b81-5b9f-43d4-b2ad-c7da7481bfeb" /></p>
+
+<p align="center"><b>Figure 6:</b> <i>Operational Flowchart</i></p>
 
 **Bill of Materials**
+
+A comprehensive list of all expenses required for this subsystem is provided below. The total cost is $55.05 less than the allocated $375 budget. Note that the cost of any connective wires for this subsystem is covered by the System Interconnections Subsystem.
 
 | Component | SparkFun GNSS-RTK L1/L5 Breakout - NEO-F9P (Qwiic) | ANN-MB1 L1/L5 Multi-Band GNSS antenna |
 | --- | --- | --- |
@@ -125,7 +126,7 @@ Figure 6: _Operational Flowchart_
 | URL | <https://www.sparkfun.com/sparkfun-gnss-rtk-l1-l5-breakout-neo-f9p-qwiic.html?gad_source=1&gad_campaignid=17479024039&gclid=Cj0KCQiAoZDJBhC0ARIsAERP-F_VOQB7xlmAha4Z4P-1NanVYHGOM7iVvMnycKp83FkyJxqAhj6OTCcaAqU6EALw_wcB> | <https://www.digikey.com/en/products/detail/u-blox-america-inc/ANN-MB1-00/14835875?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart> |
 | Total Cost: |     | \$319.95 |
 
-Table 1: _Bill of Materials_
+<p align="center"><b>Table 1:</b> <i>Bill of Materials</i></p>
 
 ## **Analysis**
 
@@ -135,15 +136,15 @@ The RF Module and Antenna Subsystem's function is to acquire GNSS signals and co
 
 The subsystem must:
 
-- Receive L1 and L5 GNSS signals
-- Measure pseudorange and carrier phase for L1 and L5 signals
-- Record satellite identification and position
-- Compute TEC accurately using the received signal data
-- Transfer computed TEC and associated data to the Data and Storage Subsystem
-- Comply with FCC Part 15 Class B to ensure that it does not emit harmful RF interference
-- Operate within a budget of \$375
+1. Receive L1 and L5 GNSS signals
+2. Measure pseudorange and carrier phase for L1 and L5 signals
+3. Record satellite identification and position
+4. Compute TEC accurately using the received signal data
+5. Transfer computed TEC and associated data to the Data and Storage Subsystem
+6. Comply with FCC Part 15 Class B to ensure that it does not emit harmful RF interference
+7. Operate within a budget of \$375
 
-Requirements 1, 2, 3, 5, 6, and 7 are satisfied by the chosen RF module and antenna. They can receive L1 and L5 signals, measure pseudorange and carrier phase, and record satellite positional and identification data. The UART interface supported by the RF module, as well as the UBX protocol, allow for fast and easy communication of the required data to the SBC. As shown in the BOM section of this document, these components are also well within the budget.
+Requirements 1, 2, 3, 5, 6, and 7 are satisfied by the chosen RF module and antenna. They can receive L1 and L5 signals, measure pseudorange and carrier phase, and record satellite positional and identification data. The UART interface supported by the RF module, as well as the UBX protocol, allow for fast and easy communication of the required data to the SBC. Since these items do not give off any RF signals, they also comply with FCC Part 15 Class B's guidelines. As shown in the BOM section of this document, these components are also well within the budget.
 
 Requirement 4 is satisfied by the methodology described in the TEC Computation Method subsection of this document, as well as the operational flow description in Flow section of this document. The proposed TEC computation in equation 3 is easily performed with the pseudorange data measured by the RF module, and the associated satellite data is easily received by the Data and Storage Subsystem along with the TEC computation.
 
@@ -155,7 +156,7 @@ Requirement 4 is satisfied by the methodology described in the TEC Computation M
 | Record satellite ID & positional data | NEO-F9P outputs satellite ID, elevation, and azimuth | UBX messages include this data; operational flow captures this before TEC computation |
 | Budget ≤ \$375 | NEO-F9P \$259.95 + ANN-MB1 \$60 = \$319.95 | Total cost is \$55.05 below budget limit |
 
-Table 2: _Design Analysis with respect to Constraints_
+<p align="center"><b>Table 2:</b> <i>Design Analysis with respect to Constraints</i></p>
 
 The proposed Antenna and RF Module Subsystem design fully meets the functional requirements and constraints. Therefore, the proposed design is highly likely to accomplish its intended function within the overall system.
 
