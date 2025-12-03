@@ -20,6 +20,8 @@ The following is a list of constraints applicable to this subsystem. The propose
 
 The proposed solution for this subsystem is to use a GNSS RF module with a dual-tuned patch antenna that can receive L1/L5 GNSS signals, extract the needed signal data, and transfer the data to the SBC of the Data and Storage Subsystem. The SBC will then compute the TEC computations, which will be stored by the Data and Storage Subsystem along with other satellite identification data.
 
+<img width="609" height="790" alt="image" src="https://github.com/user-attachments/assets/2b1621a9-241f-4d85-83bc-46f6d212090b" />
+
 __Figure 1:__ _Antenna and RF Module Hardware Diagram_
 
 ## **TEC Computation Method**
@@ -44,9 +46,13 @@ Applying these principles, it is necessary to select an RF module that can deter
 
 The RF module that has been selected to meet these constraints is the SparkFun GNSS-RTK L1/L5 NEO-F9P Breakout Board. This module contains a u-blox NEO-F9P chip, which is an L1/L5 GNSS receiver which boasts centimeter level accuracy, capable of connecting to four concurrent GNSS systems \[4\]. This module can easily measure the pseudorange and carrier phase of received GNSS signals, as well as determine satellite identification and positional data, making it ideal for gathering information for TEC measurements \[5\]. This module has configurable interfaces for UART, SPI, and I2C connections, allowing it to easily connect and communicate with a chosen SBC of the data storage system \[6\].
 
+<img width="513" height="513" alt="image" src="https://github.com/user-attachments/assets/598f23a6-2dcf-45af-9a3e-f2c93a63ec00" />
+
 __Figure 2:__ _SparkFun DNSS-RTK L1/L5 Breakout NEO-F9P_
 
 The antenna that has been selected for this subsystem is the u-blox ANN-MB1 L1/L5 multi-band high precision GNSS antenna. This antenna is tuned to the L1 and L5 GNSS frequencies, allowing the subsystem to receive both signals concurrently. It is also a patch antenna, which allows for affordability and quality of the signal. This antenna is also fully compatible with the NEO-F9P module, making it ideal for this solution \[7\].
+
+<img width="386" height="386" alt="image" src="https://github.com/user-attachments/assets/20c46f6a-b1c6-44c3-b6f9-4ba43f5d1ac8" />
 
 __Figure 3:__ _ANN-MB1 u-blox antenna_
 
@@ -54,6 +60,7 @@ __Figure 3:__ _ANN-MB1 u-blox antenna_
 
 The RF Module and Antenna Subsystem shall connect to the Power subsystem and the Data and Storage Subsystem via the System Interconnections Subsystem, all whilst being housed within the Enclosure Subsystem. Below is a diagram of the connections between the hardware of the RF Module and Antenna Subsystem and the other subsystems.
 
+<img width="814" height="461" alt="image" src="https://github.com/user-attachments/assets/9617886f-bf1c-4fb9-8164-4aa8d777ea70" />
 
 __Figure 4:__ _Subsystem Connections_
 
@@ -70,6 +77,7 @@ For the UART connection to work properly, both devices must have their baud rate
 The NEO-F9P uses the UBX protocol to communicate with host computers. This is a proprietary protocol designed by u-blox, the manufacturers of the NEO-F9P. This protocol sends frames consisting of two sync characters, a message class, a message ID, the length of the payload, the said payload, and a checksum. Each frame is formatted as in the following diagram from the NEO-F9P documentation \[5\]:
 
 
+<img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/bfc7fb8f-c5e6-4259-98ff-62d34aba22e1" />
 
 __Figure 5:__ _UBX Frame Structure_
 
@@ -99,6 +107,8 @@ The general operational flow of the RF Module and Antenna Subsystem is as follow
 - The data for each measured satellite which includes L1 and L5 signal data shall then be used to compute TEC measurements for those select satellites, following formula 3.
 - Finally, the data shall be passed to the Data and Storage Subsystem section of the operational program to be further processed and stored.
 - The RF Module and Antenna Subsystem shall repeat step 3 of this operational flow onward when requested to by the rest of the system.
+
+<img width="975" height="726" alt="image" src="https://github.com/user-attachments/assets/a91a7b81-5b9f-43d4-b2ad-c7da7481bfeb" />
 
 Figure 6: _Operational Flowchart_
 
