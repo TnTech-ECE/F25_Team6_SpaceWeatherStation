@@ -28,15 +28,15 @@ For more information on what TEC is and the physics behind it, refer to the Proj
 
 Before TEC computation can be discussed, it is necessary to define what a signal's pseudorange is, as it is used in determining TEC. A signal's pseudorange, P, is the estimated distance between a transmitter and receiver, computed by multiplying the difference of the received and sent timestamps of the transmitted signal by the speed of light, c \[3\].
 
-(1)
+$$P = c(t_s-t_r)$$ (1)
 
 The difference between two signals' pseudoranges along the same path can be rewritten as the following formula, with respect to the TEC of the pseudorange \[3\]:
 
-(2)
+$$P_1-P_2=40.3\frac{TEC_p}{f_1^2}-40.3\frac{TEC_p}{f_2^2}$$ (2)
 
 In the above formula, each frequency and pseudorange pair correspond to a signal that travels along the same path between the transmitter and receiver. The above equation can be rewritten as follows \[3\]:
 
-(3)
+$$TEC_p=\frac{1}{40.3}(\frac{f_1f_2}{f_1-f_2})(P_1-P_2)$$ (3)
 
 Equation 3 clearly shows that if the pseudorange and frequency of two separate signals transmitted across the same path is known, then the straight-line TEC for that path can be calculated. This TEC value is referred to as the slant TEC, as in reference to GNSS transmitters and receivers on the earth, the path the transmissions taken are "slanted" with respect to a vertical path through the atmosphere \[3\].
 
