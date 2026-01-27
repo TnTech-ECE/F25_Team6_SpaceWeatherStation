@@ -105,7 +105,7 @@ The power subsystem for Team 6’s TEC measurement device is implemented as a hy
 
 ## System Architecture
 The overall architecture of the system is defined as follows.
-1.  Energy is stored in a 12.8V LiFePO₄ battery sized to provide ≥ 235Wh usable capacity.
+1.  Energy is stored in a 12.8V LiFePO₄ battery sized to provide ≥ 235Wh usable energy capacity.
 2.  Storage solution can recharge from either a 120 VAC to 19.5V DC XT60 power supply or an optional 100W 12V solar panel.
 3.  All charge and discharge currents are managed through a 20A rated  LiFePO₄-compatible PWM charge controller.
 4.  Energy is distributed through the central PCB, which provides tightly regulated 5V and 3.3V rails with low ripple for the processing and RF components.
@@ -113,7 +113,7 @@ The overall architecture of the system is defined as follows.
 
 **Battery Component**: For Team 6’s functional prototype, we have chosen the ZapLitho 12V 22Ah with a 30A BMS [7].The integrated Battery Management System (BMS) provides over-charge, over-discharge, over-current, and over-temperature protections, satisfying the constraint that lithium storage must include internal fault mitigation to reduce thermal-runaway and short-circuit risk.
 
-Assuming 85–90% usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, which is  ≥ 235Wh  satisfying the subsystem specification. At a nominal system draw of ≈8W and a theoretical  maximum continuous draw of ≈21W, the system runtime equates to  30.0 and 11.9 hours respectively. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge. An XT60 to O-Ring Adapter purchased from amazon will be used to connect this battery to the charge controller. A 30A inline fuse will be connected to this device to protect the charge controller from electrical faults, and add a layer of protection in addition to the battery management system.
+Assuming 85–90% usable depth-of-discharge to preserve cycle life, this component  advertises 240Wh of usable energy, satisfying the subsystem specification of ≥235Wh of usable energy. At a nominal system power draw of ≈8W at 92.2% efficiency, the estimated system runtime equates to roughly 27.65 hours. Because of the lack of raw computation needed for TEC computation, a runtime assuming nominal power draw is more realistic than using the device thoeretical maximum. These values meet the conceptual design requirement for ~15 hours of average usage while still reserving margin to protect the battery from deep discharge. An XT60 to O-Ring Adapter purchased from amazon will be used to connect this battery to the charge controller. A 30A inline fuse will be connected to this device to protect the charge controller from electrical faults, and add a layer of protection in addition to the battery management system.
 
 <div align="center">
     <img width="712" height="735" alt="Screenshot 2025-11-24 205510" src="https://github.com/user-attachments/assets/3c99c4da-1631-43a0-a4ad-c0e22737c993" />
@@ -339,7 +339,7 @@ Team 6 also realized that the need for a LiFePO4 battery is needed for our desig
 Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This puts this subsystem over budget by $54.87. Analyzing this price point, by eliminating the optional solar panel and adapter, this would put this subsystem within Team 6’s allocated budget. 
 
 ## Analysis of Solution
-**Energy Storage**: The energy storage component has been chosen to be a nominal 12.8V LiFePO₄ pack with 22Ah capacity, providing roughly 240-280Wh nameplate capacity and > 4,000 charge cycles. The reasoning behind the choice of a lithium-based battery chemistry is the following. 
+**Energy Storage**: The energy storage component has been chosen to be a nominal 12.8V LiFePO₄ pack with 22Ah capacity, providing roughly 240Wh capacity and > 4,000 charge cycles. The reasoning behind the choice of a lithium-based battery chemistry is the following. 
 
 1.  High cycle life providing an average of 3,000+ deep cycles
     
@@ -404,7 +404,7 @@ The PCB also satisfies protection requirements through layered safeguarding: pol
 
 Overall, the PCB implementation provides stable, low-noise, fault-tolerant power routing that satisfies the subsystem’s performance, safety, and modularity constraints without unnecessary complexity.
 
-**High Level Solution**: At the broader system level, the power architecture meets all functional requirements for runtime, flexibility, and safe battery management. The selected LiFePO₄ pack provides ≥190 Wh of usable energy, exceeding the 15-hour operational requirement under the nominal 8–9 W load and still meeting conservative expectations under peak demand. All charging and discharging activity is routed through the 20 A PWM charge controller, satisfying the constraint that all battery current must be regulated and that lithium chemistries must use a dedicated management device.
+**High Level Solution**: At the broader system level, the power architecture meets all functional requirements for runtime, flexibility, and safe battery management. The selected LiFePO₄ pack provides ≥235 Wh of usable energy, exceeding the 15-hour operational requirement under the nominal 8W load and still meeting conservative expectations under peak demand. All charging and discharging activity is routed through the 20 A PWM charge controller, satisfying the constraint that all battery current must be regulated and that lithium chemistries must use a dedicated management device.
 
 The AC adapter and solar input both fall within the controller’s defined PV voltage and power limits, fulfilling the requirement for multiple charging pathways while maintaining electrical equivalence and system safety. The battery’s internal BMS, the charge controller’s protections, and external PCB-level fusing ensure that no unprotected fault path exists from any source to the battery or low-voltage electronics. This directly satisfies the constraints concerning over-current protection, reverse-polarity protection, and safe fault handling.
 
