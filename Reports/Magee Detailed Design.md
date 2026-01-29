@@ -17,16 +17,17 @@ The following shall statements comprise the constraints and specifications of th
 
 - The enclosure shall be protected against splashing water from any angle for broad field applications (IPX-4 waterproof rating at a minimum). \[IEC 60529-2020\]
 - The enclosure shall be properly ventilated to prevent the internal subsystems from overheating.
-- The enclosure shall implement waterproof grommets or liquid sealtight fittings at every point of exterior penetration to create a consistent seal.
+- The enclosure shall implement waterproof grommets or liquid sealtight fittings at every point of exterior penetration to create a consistent seal(excluding the air vents).
 - The enclosure shall include a small drain hole through the bottom of the enclosure to prevent water from being trapped inside the enclosure.
 - The enclosure shall hinder insects from accessing the interior by protecting any exterior penetration.
-- The enclosure shall be made of a NEMA 4 rated enclosure ensuring proper protection for indoor and outdoor use. Resilient to weather, abrasions, and general deterioration. \[ANSI/NEMA 250-2020\]
+- The enclosure shall be made of a NEMA 3R rated enclosure ensuring proper protection for indoor and outdoor use. Resilient to weather, abrasions, and general deterioration. \[ANSI/NEMA 250-2020\]
 - The enclosure shall have a transparent barrier for viewing all internal components for observation during operation.
 - The enclosure shall allow for easy access for interchanging parts to promote modularity and flexibility in field and home applications.
+- All components shall be secured using appropriately sized screws.
 
 ***Overview of Proposed Solution***
 
-&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. It is IP67 rated, exceeding the required waterproof rating. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. The enclosure is NEMA 4 rated, providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
+&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. Following these modifications, the box will maintain a rating of IP54 and NEMA 3R, exceeding the required waterproof rating and providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure.
 
 ![81I+3fD0CeL._AC_SL1500_](https://hackmd.io/_uploads/Hy4GOCeWbe.jpg)
 **Figure 1. Full View of Proposed Enclosure**
