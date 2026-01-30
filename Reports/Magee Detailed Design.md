@@ -27,7 +27,7 @@ The following shall statements comprise the constraints and specifications of th
 
 ***Overview of Proposed Solution***
 
-&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. Following these modifications, the box will maintain a rating of IP54 and NEMA 3R, exceeding the required waterproof rating and providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure. All hardware and components shall be mounted using M4 screws, excluding the PCB (M2) and the GPS module (M3). The battery shall be secured by installing corner brackets (figure ) above the top right and top left corners of the battery, creating a secure vertical fit. To secure the front and sides of the battery, two u-brackets (figure ) shall be installed 2" and 5" from the base.
+&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. Following these modifications, the box will maintain a rating of IP54 and NEMA 3R, exceeding the required waterproof rating and providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure. All hardware and components shall be mounted using M4 screws, excluding the PCB (M2) and the GPS module (M3). The battery shall be secured by installing corner brackets (figure 2) above the top right and top left corners of the battery, creating a secure vertical fit. To secure the front and sides of the battery, two u-brackets (figure 3) shall be installed 2" and 5" from the base.
 
 ![81I+3fD0CeL._AC_SL1500_](https://hackmd.io/_uploads/Hy4GOCeWbe.jpg)
 **Figure 1. Full View of Proposed Enclosure**
@@ -54,15 +54,15 @@ The following shall statements comprise the constraints and specifications of th
 
 ***BOM***
 
-| **Component** | **Enclosure Box** | **Wire Mesh Vents** | **Liquid Seal Tight ½" fitting** | **1/2" Liquid Seal Tight Ferrule** |
+| **Component** | **Enclosure Box** | **Wire Mesh Vents** | **Liquid Seal Tight ½" fitting** | **1/2" Liquid Seal Tight Ferrule** | **Fastener Kit** |
 | --- | --- | --- | --- | --- |
-| **Manufacturer** | **Gratury** | **Harfington** | **Phoenix Contact** | **Phoenix Contact** |
-| **Part Number** | **772467660195** | **1680132** | **1411153-ND** | **1411233-ND** |
-| **Distributor** | **Amazon** | **Harfington** | **DigiKey** | **DigiKey** |
-| **Distributor Part Number** | **B0BCVGHF1J** | **1680132** | **1411153** | **1411233** |
-| **Quantity** | **1** | **4** | **1** | **1** |
-| **Purchasing Website URL** | [3] | [4] | [5] | [6] |
-| **Total** | **66.99** | **30.64** | **1.63** | **0.46** |
+| **Manufacturer** | **Gratury** | **Harfington** | **Phoenix Contact** | **Phoenix Contact** | **Hilitchi** |
+| **Part Number** | **772467660195** | **1680132** | **1411153-ND** | **1411233-ND** | **‎H-M345-510** |
+| **Distributor** | **Amazon** | **Harfington** | **DigiKey** | **DigiKey** | **Amazon** |
+| **Distributor Part Number** | **B0BCVGHF1J** | **1680132** | **1411153** | **1411233** | **‎B073SW4S6C** |
+| **Quantity** | **1** | **4** | **1** | **1** | **1** |
+| **Purchasing Website URL** | [3] | [4] | [5] | [6] | [7] |
+| **Total** | **66.99** | **30.64** | **1.63** | **0.46** | **11.59** |
 
 ***Analysis***
 
@@ -81,3 +81,5 @@ The following shall statements comprise the constraints and specifications of th
 \[5\] <https://www.digikey.com/en/products/detail/phoenix-contact/1411153/5188749?gclsrc=aw.ds&gad_source=1&gad_campaignid=17336967819&gbraid=0AAAAADrbLlioVAEPkwSrWuIyQJqISDpQu&gclid=CjwKCAiAuIDJBhBoEiwAxhgyFogJXM6Pct3Bt6_00QRIS_GeVxmJupNwJiNd-5xfBqYYcaVc0cQjCRoCi-MQAvD_BwE>
 
 \[6\] <https://www.digikey.com/en/products/detail/phoenix-contact/1411233/5186528>
+
+\[7\] <https://www.amazon.com/Hilitchi-510pcs-Stainless-Socket-Assortment/dp/B073SW4S6C/ref=asc_df_B073SW4S6C?tag=bingshoppinga-20&linkCode=df0&hvadid=80539418193264&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=84181&hvtargid=pla-4584138888772003&msclkid=f9ab892a8825176c7cf5e057986c6775&th=1>
