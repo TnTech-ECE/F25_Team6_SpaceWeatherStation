@@ -27,7 +27,7 @@ The following shall statements comprise the constraints and specifications of th
 
 ***Overview of Proposed Solution***
 
-&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. Following these modifications, the box will maintain a rating of IP54 and NEMA 3R, exceeding the required waterproof rating and providing durability and protection in rugged environments. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure. All hardware and components shall be mounted using M4 screws, excluding the PCB (M2) and the GPS module (M3). The battery shall be secured by installing corner brackets (figure 2) above the top right and top left corners of the battery, creating a secure vertical fit. To secure the front and sides of the battery, two u-brackets (figure 3) shall be installed 2" and 5" from the base.
+&nbsp;&nbsp;&nbsp;&nbsp;Team 6 proposes the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box as the chosen enclosure. Openings for ventilation with metal mesh screens will need to be added to satisfy the requirements for temperature regulation and protection from insect entry. Following these modifications, the box will maintain a rating of IP54 and NEMA 3R, exceeding the required waterproof rating and providing durability and protection in rugged environments. The system will produce 20.65 W at max load, 1239 Joules, implying 3.2 CFM would need to circulate through the enclosure. By installing one meshed vent on either side, heat build up would be neutralized while ensuring internal components shall not descend below minimum temperature threshholds. The enclosure has a transparent front cover for internal observation during operation. The enclosure uses 304 stainless steel latches, enabling easy access to the internal components and providing a solution which will remain rust free through repeated outdoor exposure. All hardware and components shall be mounted using M4 screws, excluding the PCB (M2) and the GPS module (M3). The battery shall be secured by installing corner brackets (figure 2) above the top right and top left corners of the battery, creating a secure vertical fit. To secure the front and sides of the battery, two u-brackets (figure 3) shall be installed 2" and 5" from the base.
 
 ![81I+3fD0CeL._AC_SL1500_](https://hackmd.io/_uploads/Hy4GOCeWbe.jpg)
 **Figure 1. Full View of Proposed Enclosure**
@@ -60,9 +60,9 @@ The following shall statements comprise the constraints and specifications of th
 | **Part Number** | **772467660195** | **1680132** | **1411153-ND** | **1411233-ND** | **‎H-M345-510** |
 | **Distributor** | **Amazon** | **Harfington** | **DigiKey** | **DigiKey** | **Amazon** |
 | **Distributor Part Number** | **B0BCVGHF1J** | **1680132** | **1411153** | **1411233** | **‎B073SW4S6C** |
-| **Quantity** | **1** | **4** | **1** | **1** | **1** |
+| **Quantity** | **1** | **2** | **1** | **1** | **1** |
 | **Purchasing Website URL** | [3] | [4] | [5] | [6] | [7] |
-| **Total** | **66.99** | **30.64** | **1.63** | **0.46** | **11.59** |
+| **Total** | **66.99** | **15.32** | **1.63** | **0.46** | **11.59** |
 
 ***Analysis***
 
