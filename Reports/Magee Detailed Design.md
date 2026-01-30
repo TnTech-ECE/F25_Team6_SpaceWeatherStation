@@ -32,22 +32,25 @@ The following shall statements comprise the constraints and specifications of th
 ![81I+3fD0CeL._AC_SL1500_](https://hackmd.io/_uploads/Hy4GOCeWbe.jpg)
 **Figure 1. Full View of Proposed Enclosure**
 
+
 <img width="800" height="600" alt="Corner_Supports_V02" src="https://github.com/user-attachments/assets/691652df-bdd7-48bb-b9d9-4769b91831ca" />
 
-**Figure 2. 31x22x19 Corner Bracket**
+**Figure 2. 31x22x19 mm Corner Bracket**
+
+**Figure 3. U-Bracket**
 
 
 ![ux_a25020800ux0987_ux_d01_1800x1800](https://hackmd.io/_uploads/S1VGd0eb-e.jpg)
-**Figure 2. Vent with Stainless Steel Mesh**
+**Figure 4. Vent with Stainless Steel Mesh**
 
 ***Buildable Schematic***
 
 ![710B15JyV2L._AC_SL1500_](https://hackmd.io/_uploads/rJNC9QW-bl.jpg)
-**Figure 3. Exterior Dimensional View**
+**Figure 5. Exterior Dimensional View**
 
 ![Screenshot 2025-11-23 185257](https://hackmd.io/_uploads/Hkqdhm-W-g.png)
 
-**Figure 4. Internal Component Layout**
+**Figure 6. Internal Component Layout**
 
 ***BOM***
 
@@ -63,7 +66,7 @@ The following shall statements comprise the constraints and specifications of th
 
 ***Analysis***
 
-&nbsp;&nbsp;&nbsp;&nbsp;Team 6 has concluded the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box is the optimal solution for the needs of the TEC measurement prototype. This enclosure exceeds the minimum required IPX-4 waterproof rating. Air vents will need to be added to meet the system's ventilation needs, which will decrease the waterproof rating to IP54 and NEMA 3R. The vents included will be 4" x 4" with slats covering the exterior to deter water entry into the enclosure. The vents being a perfect square allow for the enclosure to be set up in a vertical or horizontal orientation, allowing users the flexibility of mounting to a wall, strapping to a tree, or simply lying flat on the ground. The enclosure is large enough to properly space components for ease of physical access, while leaving room for additional components, encouraging adaptability and modularity (as shown in figure 4). The orientation and spacing has been chosen to allow room for proper heat dissipation and creating the shortest distance for wire connections between devices. The internal back plate is removable, allowing the user to easily transfer the entire component platform in and out of the box, facilitating speed and convenience. The grid design of the backplate accepts a large size variation in fasteners, removing the annoyance of requiring uniform hardware. This will also encourage experimentation and additions to the minimal function of the prototype. Team 6 had the intention of mounting a small transparent faceplate to the chosen enclosure. However, this enclosure's entire latched door is transparent, allowing viewing of the complete interior of the enclosure. The door utilizing stainless steel latches satisfied the requirement for easy access to the internal components without sacrificing sturdiness. Overall, this enclosure exceeds expectations in every regard, and while this specific box may not be accessible anywhere in the world, it exemplifies the characteristics of any enclosure a hobbyist may want to use in their own application.
+&nbsp;&nbsp;&nbsp;&nbsp;Team 6 has concluded the Gratury 16.1" x 12.2" x 7.1" water-resistant outdoor enclosure box is the optimal solution for the needs of the TEC measurement prototype. This enclosure exceeds the minimum required IPX-4 waterproof rating. Air vents will need to be added to meet the system's ventilation needs, which will decrease the waterproof rating to IP54 and NEMA 3R. The vents included will be 4" x 4" with slats covering the exterior to deter water entry into the enclosure. The vents being a perfect square allow for the enclosure to be set up in a vertical or horizontal orientation, allowing users the flexibility of mounting to a wall, strapping to a tree, or simply lying flat on the ground. The enclosure is large enough to properly space components for ease of physical access, while leaving room for additional components, encouraging adaptability and modularity (as shown in figure 6). The orientation and spacing has been chosen to allow room for proper heat dissipation and creating the shortest distance for wire connections between devices. The internal back plate is removable, allowing the user to easily transfer the entire component platform in and out of the box, facilitating speed and convenience. The grid design of the backplate accepts a large size variation in fasteners, removing the annoyance of requiring uniform hardware. This will also encourage experimentation and additions to the minimal function of the prototype. Team 6 had the intention of mounting a small transparent faceplate to the chosen enclosure. However, this enclosure's entire latched door is transparent, allowing viewing of the complete interior of the enclosure. The door utilizing stainless steel latches satisfied the requirement for easy access to the internal components without sacrificing sturdiness. Overall, this enclosure exceeds expectations in every regard, and while this specific box may not be accessible anywhere in the world, it exemplifies the characteristics of any enclosure a hobbyist may want to use in their own application.
 
 ***References***
 
