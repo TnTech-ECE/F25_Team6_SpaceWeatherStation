@@ -55,7 +55,7 @@ The following shall statements comprise the constraints and specifications of th
 ***BOM***
 
 | **Component** | **Enclosure Box** | **Wire Mesh Vents** | **Liquid Seal Tight ½" fitting** | **1/2" Liquid Seal Tight Ferrule** | **Fastener Kit** |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | **Manufacturer** | **Gratury** | **Harfington** | **Phoenix Contact** | **Phoenix Contact** | **Hilitchi** |
 | **Part Number** | **772467660195** | **1680132** | **1411153-ND** | **1411233-ND** | **‎H-M345-510** |
 | **Distributor** | **Amazon** | **Harfington** | **DigiKey** | **DigiKey** | **Amazon** |
