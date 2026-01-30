@@ -33,7 +33,9 @@ The following shall statements comprise the constraints and specifications of th
 **Figure 1. Full View of Proposed Enclosure**
 
 <img width="800" height="600" alt="Corner_Supports_V02" src="https://github.com/user-attachments/assets/691652df-bdd7-48bb-b9d9-4769b91831ca" />
+
 **Figure 2. 31x22x19 Corner Bracket**
+
 
 ![ux_a25020800ux0987_ux_d01_1800x1800](https://hackmd.io/_uploads/S1VGd0eb-e.jpg)
 **Figure 2. Vent with Stainless Steel Mesh**
