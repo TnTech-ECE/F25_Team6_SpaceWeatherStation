@@ -1,0 +1,71 @@
+Meeting Minutes
+
+# **Meeting Information**
+
+| Date: | The year of our Lord: 2/2/26 |
+| Time: | 2:30 PM |
+| Location: | AIEB Study Room |
+| Meeting Called By: | Team Consensus |
+| Note Taker: | Nolan Magee |
+
+# **Attendees**
+
+Jack Bender, Jackson Taylor, Kenneth Creamer, Blake Hudson, Nolan Magee, Jeffery Austen
+
+**Discussion**
+
+- Discussed Gantt chart to confirm we are on the same page with deadlines
+- Discussed feedback on detailed designs
+
+  - Measuring heat load and dissipation
+
+  - How does carrier range factor in and where does pseudo range play a role in the system?
+- Discussed programming to find any potential errors in our logic
+
+# **Decisions**
+
+- Established we are meeting bi-weekly with Owen O'Connor on Mondays at 2:30 PM in an AIEB study room starting 2/9/26
+- Meeting with Dr. Austen on Monday 2/2/26
+
+- Everyone to have detailed designs resubmitted by Sunday night
+- Final Bill of Materials submitted by Wednesday 2/4/26
+
+- Jack to finish pin out for the pi
+- Send links to all milestone github repositories to Dr. Austen
+
+Meeting with Dr. Austen
+
+- Dr. Austen gave us articles on GNSS satellites
+- Where to publish (HamSCI Group, Hack-A-Day Website, QST - ARRL.ORG, QEX - ARRL.ORG)
+- Talk about how we would do it better if we did it again
+- Make a one page summary to disseminate the information
+- Answer the question of what successful data would look like (data set)
+  - Minimum functionality (does the data look right)
+  - Maximum functionality (testing the accuracy of the data)
+- Final product
+  - Have it published (have about a page sales pitch to draw people in)
+    - Use and background (point to the github for details)
+  - Measure good data
+  - Have a moving 2D scan of the ionosphere to be able to identify bubbles and holes (vertical TEC at a location)
+- Minimal functionality
+  - Blake (making sure data is storing properly and handling data transfer in specific formats)
+  - Jack (it working)
+  - Kenny(safely delivering power, confirming the MUX is setup right, does the battery charge and discharge safely, making sure multiple points of charging works effectively and safely)
+  - Nolan (controlling heat dissipation and moisture control)
+  - Jackson (noise filter and successful data handoff to Blake
+- Stay with the stock products
+- Be careful how much we process it
+- "One person's noise is another person's data." -Dr. Austen
+- Expectations of things to complete by next month's meeting
+  - Meet after we have our minimal functionality completed
+  - Practice our final presentation before Dr. Austen
+- Make a point of saying there are alternatives to the PCB in our documentation and the pinout/schematic diagrams
+- Put a power budget in our documentation (Peak and average)
+- Extra things Dr. Austen would put in his measurement apparatus
+  - Time frequency standards and an RTK base station
+
+# **Next Meeting**
+
+Date: 2/4/26  
+Time: 3 PM  
+Location: AIEB Study Room
