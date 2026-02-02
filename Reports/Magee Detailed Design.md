@@ -35,10 +35,11 @@ The following shall statements comprise the constraints and specifications of th
 
 <img width="800" height="600" alt="Corner_Supports_V02" src="https://github.com/user-attachments/assets/691652df-bdd7-48bb-b9d9-4769b91831ca" />
 
-**Figure 2. 31x22x19 mm Corner Bracket**
+**Figure 2. 31x22x19mm Corner Bracket**
 
 <img width="1180" height="568" alt="Screenshot 2026-02-02 141046" src="https://github.com/user-attachments/assets/54e23df9-0cf9-4238-aa52-f65842566deb" />
-**Figure 3. U-Bracket**
+
+**Figure 3. 7.1"x3"x3" U-Bracket**
 
 
 ![ux_a25020800ux0987_ux_d01_1800x1800](https://hackmd.io/_uploads/S1VGd0eb-e.jpg)
