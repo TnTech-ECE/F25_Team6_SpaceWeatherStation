@@ -24,6 +24,7 @@ The following shall statements comprise the constraints and specifications of th
 - The enclosure shall have a transparent barrier for viewing all internal components for observation during operation.
 - The enclosure shall allow for easy access for interchanging parts to promote modularity and flexibility in field and home applications.
 - All components shall be secured using appropriately sized screws for sustainable mounting.
+- All 3-D printed parts shall be made of PETG.
 
 ***Overview of Proposed Solution***
 
