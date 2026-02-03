@@ -347,7 +347,7 @@ Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This p
 2.  Stable voltage plateau around 12.8–13.2 V, which is ideal for 12 V-class DC/DC converters
 
    
-4.  Provides energy for an estimated runtime of 27.65 hours assuming nominal load of compoinents
+4.  Provides energy for an estimated runtime of 27.65 hours assuming nominal load
     
 
 5.  Inherently safer behavior and better thermal stability than other lithium chemistries, which aligns with IEEE/IEC safety considerations discussed in the conceptual design.
