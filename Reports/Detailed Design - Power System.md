@@ -345,9 +345,12 @@ Therefore, the total price for ALL COMPONENTS is estimated to be $316.83. This p
     
 
 2.  Stable voltage plateau around 12.8–13.2 V, which is ideal for 12 V-class DC/DC converters
+
+   
+4.  Provides energy for an estimated runtime of 27.65 hours assuming nominal load of compoinents
     
 
-3.  Inherently safer behavior and better thermal stability than other lithium chemistries, which aligns with IEEE/IEC safety considerations discussed in the conceptual design.
+5.  Inherently safer behavior and better thermal stability than other lithium chemistries, which aligns with IEEE/IEC safety considerations discussed in the conceptual design.
     
 
 LiFePO₄ chemistry provides better cycle life capacity than other battery chemistries, such as lead acid. It also provides a great energy-to-weight ratio, which is ideal for a portable device solution. Phosphate-based chemistry does make this choice worse than Lithium-Ion or LiPo-based batteries. However, it is less prone to dangerous reactions in the event of electrical failure. Since this system will run for prolonged periods of time unattended, this is an important consideration when choosing between battery chemistries. 
