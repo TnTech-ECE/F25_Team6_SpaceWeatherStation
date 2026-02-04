@@ -210,8 +210,8 @@ Below is a rough schematic of the PCB layout for the distribution of power rails
 | --- | --- | --- |
 | PJ-063AH Barrel Jack | J3 | https://www.sameskydevices.com/product/resource/pj-063ah.pdf |
 | UJC-HP2-3-SMT-TR USBC | J1 | https://www.sameskydevices.com/product/resource/ujc-hp2-3-smt-tr.pdf |
-| Bel Fuse 0ZCG0150BF2C 3A, 5A Hold, 3A Trip PTC Fuse | F2 | https://www.belfuse.com/media/datasheets/products/circuit-protection/ds-cp-0zcg-series.pdf |
-| YEGEO SMD2920B300TF/15 3A Hold, 5A trip PTC Fuse | F1 | https://www.yageogroup.com/content/Resource%20Library/Datasheet/SMD2920_1.pdf |
+| Bel Fuse 0ZCG0150BF2C 3A, 5A Hold, 3A Trip PTC Fuse | F1 | https://www.belfuse.com/media/datasheets/products/circuit-protection/ds-cp-0zcg-series.pdf |
+| YEGEO SMD2920B300TF/15 3A Hold, 5A trip PTC Fuse | F2 | https://www.yageogroup.com/content/Resource%20Library/Datasheet/SMD2920_1.pdf |
 | SMB15.0A-13-F TVS Diode | CR1 | https://www.littelfuse.com/assetdocs/tvs-diodes-smbj-series-datasheet?assetguid=ba555e99-a12d-4f72-a0b6-86b06c67171e |
 | SMB15CA TVS Diode | D5 | https://www.littelfuse.com/assetdocs/tvs-diodes-smbj-series-datasheet?assetguid=ba555e99-a12d-4f72-a0b6-86b06c67171e |
 | SS32 Schottky Diode | D1, D2, D3, D4, D7 | https://www.onsemi.com/pdf/datasheet/ss39-d.pdf |
