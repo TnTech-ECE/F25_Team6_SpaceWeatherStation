@@ -4,7 +4,7 @@
 
 The function of the subsystem is explained in the following shall statements
 
-- The subsystem shall interact with all other subsystems by providing protection and structure for easy accessibility and intuitive field implementation.
+- The subsystem shall enclose and secure all other subsystems by providing protection and structure for easy accessibility and intuitive field implementation.
 - The enclosure shall provide adequate air flow, allowing the prototype to be properly cooled for consistent operation.
 - The enclosure shall provide user friendly accessibility for troubleshooting and repairs.
 - The enclosure shall provide a robust waterproof case capable of withstanding insects and weather conditions within reason.
@@ -66,6 +66,7 @@ The following shall statements comprise the constraints and specifications of th
 | **Quantity** | **1** | **2** | **1** | **1** | **1** |
 | **Purchasing Website URL** | [3] | [4] | [5] | [6] | [7] |
 | **Total** | **66.99** | **15.32** | **1.63** | **0.46** | **11.59** |
+| **Grand Total** | **98.99** |
 
 ***Analysis***
 
