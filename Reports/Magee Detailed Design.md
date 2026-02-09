@@ -66,7 +66,7 @@ The following shall statements comprise the constraints and specifications of th
 | **Quantity** | **1** | **1** | **1** | **1** | **1** |
 | **Purchasing Website URL** | [3] | [4] | [5] | [6] | [7] |
 | **Total** | **66.99** | **14.42** | **1.63** | **0.46** | **11.59** |
-| **Grand Total** | **98.99** |
+| **Grand Total** | **95.09** |
 
 ***Analysis***
 
