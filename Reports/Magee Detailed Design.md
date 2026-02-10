@@ -5,8 +5,7 @@
 The function of the subsystem is explained in the following shall statements
 
 - The subsystem shall enclose and secure all other subsystems by providing protection and structure for easy accessibility and intuitive field implementation.
-- The enclosure shall provide adequate air flow, allowing the prototype to be properly cooled for consistent operation.
-- The enclosure shall provide user friendly accessibility for troubleshooting and repairs.
+- The enclosure shall provide adequate heat dissipation, allowing the prototype to be properly cooled for consistent operation.
 - The enclosure shall provide a robust waterproof case capable of withstanding insects and weather conditions within reason.
 - The enclosure shall secure all components during transportation and implementation.
 - The design shall provide accessibility for troubleshooting and repairing every component.
