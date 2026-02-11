@@ -121,7 +121,7 @@ The TEC Computation and Satellite Data Acquisition Function shall poll the NEO-F
 
 **Bill of Materials**
 
-A comprehensive list of all expenses required for this subsystem is provided below. The total cost is $55.05 less than the allocated $375 budget. Note that the cost of any connective wires for this subsystem is covered by the System Interconnections Subsystem.
+A comprehensive list of all expenses required for this subsystem is provided below. The total cost is $53.34 less than the allocated $375 budget. Note that the cost of any connective wires for this subsystem is covered by the System Interconnections Subsystem.
 
 | Component | SparkFun GNSS-RTK L1/L5 Breakout - NEO-F9P (Qwiic) | ANN-MB1 L1/L5 Multi-Band GNSS Antenna |
 | --- | --- | --- |
