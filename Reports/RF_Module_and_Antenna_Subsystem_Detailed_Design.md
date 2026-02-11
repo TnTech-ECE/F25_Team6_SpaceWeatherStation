@@ -132,7 +132,7 @@ A comprehensive list of all expenses required for this subsystem is provided bel
 | Quantity | x1  | x1  |
 | Price | \$259.95 | \$61.71 |
 | URL | <https://www.sparkfun.com/sparkfun-gnss-rtk-l1-l5-breakout-neo-f9p-qwiic.html?gad_source=1&gad_campaignid=17479024039&gclid=Cj0KCQiAoZDJBhC0ARIsAERP-F_VOQB7xlmAha4Z4P-1NanVYHGOM7iVvMnycKp83FkyJxqAhj6OTCcaAqU6EALw_wcB> | <https://www.digikey.com/en/products/detail/u-blox-america-inc/ANN-MB1-00/14835875?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart> |
-| Total Cost: |     | \$319.95 |
+| Total Cost: |     | \$321.66 |
 
 <p align="center"><b>Table 1:</b> <i>Bill of Materials</i></p>
 
