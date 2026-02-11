@@ -14,12 +14,12 @@ The function of the subsystem is explained in the following shall statements
 
 The following shall statements comprise the constraints and specifications of the enclosure.
 
-- The enclosure shall be protected against splashing water from any angle for broad field applications (IPX-4 waterproof rating at a minimum). \[IEC 60529-2020\]
+- The enclosure shall be protected against splashing water from any angle for broad field applications (IPX-4 waterproof rating at a minimum). \[IEC 60529-2020\][1]
 - The enclosure shall maintain appropriate temperatures to prevent the internal subsystems from overheating.
 - The enclosure shall implement waterproof grommets or liquid sealtight fittings at every point of exterior penetration to create a consistent seal.
 - The enclosure shall include a small drain hole through the bottom of the enclosure to prevent water from being trapped inside the enclosure.
 - The enclosure shall hinder insects from accessing the interior by protecting any exterior penetration.
-- The enclosure shall be made of a NEMA 4 rated enclosure ensuring proper protection for indoor and outdoor use. Resilient to weather, abrasions, and general deterioration. \[ANSI/NEMA 250-2020\]
+- The enclosure shall be made of a NEMA 4 rated enclosure ensuring proper protection for indoor and outdoor use. Resilient to weather, abrasions, and general deterioration. \[ANSI/NEMA 250-2020\][2]
 - The enclosure shall have a transparent barrier for viewing all internal components for observation during operation.
 - The enclosure shall allow for easy access for interchanging parts to promote modularity and flexibility in field and home applications.
 - All components shall be secured using appropriately sized screws for sustainable mounting.
