@@ -149,7 +149,7 @@ The subsystem must:
 3. Record satellite identification and position
 4. Compute TEC accurately using the received signal data
 5. Transfer computed TEC and associated data to the Data and Storage Subsystem
-6. Comply with FCC Part 15 Class B to ensure that it does not emit harmful RF interference
+6. Comply with FCC Part 15 Class B (Or an international equivalent) to ensure that it does not emit harmful RF interference
 7. Operate within a budget of \$375
 
 Requirements 1, 2, 3, 5, and 7 are satisfied by the chosen RF module and antenna. They can receive L1 and L5 signals, measure pseudorange and carrier phase, and record satellite positional and identification data. The UART interface supported by the RF module, as well as the UBX protocol, allow for fast and easy communication of the required data to the SBC. As shown in the BOM section of this document, these components are also well within the budget.
