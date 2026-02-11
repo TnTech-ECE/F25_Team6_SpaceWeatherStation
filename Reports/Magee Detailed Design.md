@@ -53,7 +53,7 @@ The following shall statements comprise the constraints and specifications of th
 ***BOM***
 
 | **Component** | **Enclosure Box** | **Liquid Seal Tight ½" fitting** | **1/2" Liquid Seal Tight Ferrule** | **Fastener Kit** |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | **Manufacturer** | **Gratury** | **Phoenix Contact** | **Phoenix Contact** | **Hilitchi** |
 | **Part Number** | **772467660195** | **1411153-ND** | **1411233-ND** | **‎H-M345-510** |
 | **Distributor** | **Amazon** | **DigiKey** | **DigiKey** | **Amazon** |
