@@ -1,11 +1,8 @@
-# {Name of the Project} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
+# Personal Space Weather Station
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
-
+Team 6 is developing a low-cost, modular, and replicable prototype capable of measuring total electron content (TEC) from dual-frequency GNSS signals. The system integrates an antenna, receiver, processing unit, and expandable modules within a single housing compartment to support mobility, while remaining under $1,000. Propagation of the prototype is supported by thorough documentation for seamless hobbyist replication. By normalizing access to TEC measurement, the project expands opportunities for education, grassroots research, and innovation. Moreover, it contributes to a distributed global database of ionospheric conditions, enhancing collective understanding of space weather and its implications for modern infrastructure.
 
 ## Capabilities
 
@@ -32,7 +29,7 @@ Give a brief bio for each team member and their broad contribution to the projec
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Mr. Owen O'Connor
 
 ### Stakeholders
 
