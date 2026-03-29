@@ -40,7 +40,7 @@ The difference between two signals' pseudoranges along the same path can be rewr
 
 In the above formula, each frequency and pseudorange pair correspond to a signal that travels along the same path between the transmitter and receiver. The above equation can be rewritten as follows, solving for the TEC along the path between the transmitter and receiver \[3\]:
 
-<p align="center">$$TEC_p=\frac{1}{40.3}(\frac{f_1^2f_2^2}{f_1^2-f_2^2})(P_1-P_2)$$ (3)</p>
+<p align="center">$$TEC_p=\frac{1}{40.3}(\frac{f_1^2f_2^2}{f_2^2-f_1^2})(P_1-P_2)$$ (3)</p>
 
 Equation 3 clearly shows that if the pseudorange and frequency of two separate signals transmitted across the same path are known, then the straight-line TEC for that path can be calculated. This TEC value is referred to as the slant TEC, because it is the TEC value of the "slanted" beam path of the signal through the atmosphere from the satellite to the receiver. \[3\].
 
