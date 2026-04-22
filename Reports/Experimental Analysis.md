@@ -155,8 +155,8 @@
 <div align="center">
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-    <img src="https://hackmd.io/_uploads/Hy_R-8I6-l.jpg" alt="Field Setup 1" width="45%">
-    <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" width="45%">
+    <img src="https://hackmd.io/_uploads/Hy_R-8I6-l.jpg" alt="Field Setup 1" style="height: 400px; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" style="height: 400px; object-fit: cover;">
   </div>
 
   <p><strong>Figure X:</strong> Two Examples of Field Implementation</p>
