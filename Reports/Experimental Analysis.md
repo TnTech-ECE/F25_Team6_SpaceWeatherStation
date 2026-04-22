@@ -141,7 +141,12 @@
   <p><strong>Figure 4:</strong> 3.3V Rail Voltage During Operation</p>
 </div>
 
-- __Storage Capacity and Data Logging Reliability__: 
+- __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for a minimum of 24 hours without data loss, corruption, or storage overflow. During testing, the system successfully logged GNSS data continuously throughout the 24-hour interval. Each recorded entry includes both local and UTC timestamps, along with corresponding satellite and measurement parameters, demonstrating consistent and structured data collection. No missing timestamps, gaps in logging, or corrupted entries were observed within the dataset. Figure 5 shows a representative segment of the logged data, illustrating continuous recording across multiple satellites and signal parameters. The presence of sequential timestamps and complete measurement fields confirms that data was captured reliably at the intended rate. Additionally, storage capacity was sufficient to support the full duration of testing without reaching capacity limits or impacting system performance. Logged files remained accessible and properly formatted for post-processing, including TEC computation. These results confirm that the system meets the requirements for reliable data logging and storage and is capable of supporting extended data collection for TEC analysis.  
+
+<div align="center">
+  <img src="https://hackmd.io/_uploads/Syl340UaWx.png" alt="GNSS Logged Data" width="900">
+  <p><strong>Figure 5:</strong> Example of Logged GNSS Data Showing Continuous Timestamped Measurements and Satellite Parameters</p>
+</div>
 
 - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
 
