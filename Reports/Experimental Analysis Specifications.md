@@ -62,7 +62,7 @@ This document is designed to define the measures of success for the Personal Spa
   - __Cost Compliance__: Document all system component costs and verify total cost.
   - __Documentation/Replicability__: Compile all required documentation including schematics, software setup, and operating procedures.
 
-   - **Data Collection**: For the following categories, pass or fail results will be stored in a System Performance Evaluation Table [1].
+- **Data Collection**: For the following categories, pass or fail results will be stored in a System Performance Evaluation Table [1].
    -  __Dual-frequency Reception Performance__: Confirm that L1 and L5 frequencies are occurring in the UBX data stream, and that TEC values are consistently computed. 
   - __TEC Measurement Accuracy__: Record time-aligned vTEC values from both the system and the reference dataset. Compute per-epoch error (TECU) and document statistical metrics including mean error and standard deviation.
   - __Signal Quality__: Record carrier-to-noise density ratio values in dB-Hz for each tracked satellite, along with timestamps and satellite identifiers. Data shall be logged at a consistent rate.
@@ -73,8 +73,8 @@ This document is designed to define the measures of success for the Personal Spa
   - __Field Implementation__: Record deployment conditions and successful system operation in outdoor environments.
   - __Cost Compliance__: Record total system cost.
   - __Documentation/Replicability__: Record completeness and clarity of documentation.
- 
-  - **Trials**: 
+
+- **Trials**: 
    -  __Dual-frequency Reception Performance__: Conduct at least three trials in an open-sky environment. In each trial, verify that both L1 and L5 signals are consistently received and logged over a continuous 30-minute interval.
   - __TEC Measurement Accuracy__: Perform a minimum of three trials using time-aligned system data and reference RINEX datasets. Each trial will span a minimum of 30 minutes, and computed vTEC values will be compared against reference values to evaluate accuracy.
   - __Signal Quality__: Record carrier-to-noise density ratio over at least three separate trials, each lasting a minimum of 30 minutes. Trials should be conducted at different times of day to account for satellite geometry variations.
