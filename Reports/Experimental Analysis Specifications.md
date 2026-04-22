@@ -111,67 +111,25 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 | Cost Compliance | Total prototype cost | Total cost ≤ $1,000 | Pass |
 | Documentation and Replicability | Ability to reproduce system | Documentation is complete, clear, and contains no missing or ambiguous steps | Pass |
 
-  - __Dual-frequency Reception Performance__: The Dual-Frequency Reception Performance criterion is classified as a pass, as shown in Table [1]. Successful operation requires continuous reception and processing of L1 and L5 GNSS signals, which are necessary for accurate TEC computation. Figure [1] shows a portion of the receiver output, where both L1 and L5 signals are clearly identified in the UBX data stream. The system consistently detected and logged both frequencies throughout the duration of testing, satisfying the requirement for dual-frequency operation.  
+- __Dual-frequency Reception Performance__: The Dual-Frequency Reception Performance criterion was classified as a pass, as shown in Table [1]. The system was required to continuously receive and process L1 and L5 GNSS signals for accurate TEC computation. Figure [1] shows a portion of the receiver output where both L1 and L5 signals are clearly identified in the UBX data stream. The system consistently detected and logged both frequencies throughout the duration of testing. Figure [2] shows the computed TEC values over time, confirming continuous processing of dual-frequency data. Overall, the system maintained dual-frequency reception for greater than 95% of the test duration, meeting the defined success metric.
 
-In addition, Figure [2] illustrates the computed TEC values over time, demonstrating that TEC calculations were continuously performed using the dual-frequency observations. The presence of stable and continuous TEC output further confirms that both signals were not only received but also successfully processed by the system.  
+- __TEC Measurement Accuracy__: The TEC Measurement Accuracy criterion was classified as marginal, as shown in Table [1]. The system was required to achieve a mean percent error less than or equal to 15% when compared to a reference dataset from [REFERENCE SITE]. Figures [X] and [Y] show the system-generated TEC values and corresponding reference TEC values over a 12-hour interval. The system follows the general trend of the reference data but exhibits noticeable deviations during certain periods. Figure [Z] shows the error between the datasets, including mean and standard deviation. The calculated mean percent error approached the 15% threshold but did not consistently remain below it, resulting in a marginal classification.
 
-Overall, the system maintained dual-frequency signal reception for greater than 95% of the test duration, meeting the defined success metric. These results confirm that the system can support reliable TEC computation through consistent L1 and L5 signal acquisition and processing.  
+- __Signal Quality__: The Signal Quality criterion was classified as a fail, as shown in Table [1]. The system was required to maintain at least 80% of carrier-to-noise density ratio values at or above 30 dB-Hz. Figure [X] shows the distribution of C/N₀ values over the test period. A significant portion of the recorded values fall below the required threshold, preventing the system from meeting the success metric. Reduced signal quality is likely attributed to environmental conditions, satellite geometry, and partial obstructions, which also contributed to reduced TEC accuracy.
 
-  - __TEC Measurement Accuracy__:
-  - __Signal Quality__:
-  - __Continuous Operating Duration and System Reliability__: The Continuous Operating Duration and System Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to operate continuously for a minimum of 24 hours without interruption, system failure, or data loss. 
+- __Continuous Operating Duration and System Reliability__: The Continuous Operating Duration and System Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to operate continuously for a minimum of 24 hours without interruption, failure, or data loss. During testing, the system operated for the full 24-hour interval without crashes, resets, or interruptions. All data was recorded successfully with no missing timestamps. These results confirm that the system is capable of stable, long-duration operation.
 
-During testing, the system operated continuously for the full 24-hour interval without any observed crashes, resets, or interruptions in functionality. Additionally, all data was successfully recorded throughout the test duration, with no missing timestamps or evidence of data loss. 
+- __Power System Performance__: The Power System Performance criterion was classified as a pass, as shown in Table [1]. The system was required to maintain continuous operation while providing stable power and successfully transitioning between power sources. During testing, the system operated continuously for the full duration while powered by battery and external sources. Transitions between power inputs were completed without interruption, system reset, or data loss. These results confirm that the power subsystem provides reliable and stable operation under varying conditions.
 
-These results demonstrate that the system is capable of stable, long-duration operation and is suitable for extended data collection in field environments. The absence of failures or interruptions indicates that the system design is robust and reliable under sustained operation. 
-  - __Power System Performance__: 
-  - __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for a minimum of 24 hours without data loss, corruption, or storage overflow. 
+- __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for at least 24 hours without loss, corruption, or storage overflow. During testing, data was logged continuously with no missing timestamps or corrupted files. Figure [X] shows data storage over a representative two-hour interval, where a steady increase in storage indicates continuous logging with no interruptions. Storage capacity was sufficient for the full duration of testing, confirming reliable data collection.
 
-During testing, the system successfully logged data continuously throughout the 24-hour interval. All recorded data contained consistent timestamps with no missing entries, and no corrupted or incomplete files were observed. 
+- __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
 
-Figure X shows the total data storage over a representative two-hour interval during system operation. The steady and continuous increase in data storage, without abrupt changes, gaps, or irregularities, indicates that data was recorded consistently during this period. This behavior is representative of the system’s performance over the full test duration. 
+- __Field Implementation__: The Field Implementation criterion was classified as a pass, as shown in Table [1]. The system was required to be deployable in an outdoor environment with minimal setup. During testing, the system was successfully deployed and operated outdoors under varying conditions, including partially clouded skies. Figures [3] and [4] show the deployed system and antenna configuration. The system operated continuously without interruption, demonstrating its suitability for real-world field applications.
 
-Additionally, storage capacity was sufficient to support the entire 24-hour test without reaching capacity limits or impacting system performance. 
+- __Cost Compliance__: The Cost Compliance criterion was classified as a pass, as shown in Table [1]. The system was required to maintain a total cost not exceeding $1,000. The total cost of the system was $991.31, including all major subsystems. This total includes components associated with stretch goals, indicating that a minimal implementation could be reproduced at a lower cost. These results confirm that the system meets cost requirements while remaining scalable and accessible.
 
-These results confirm that the system meets the requirements for reliable data logging and storage and can support extended data collection for TEC analysis. 
-  - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to allow component replacement or upgrade without requiring major redesign, rewiring, or modification to the overall system architecture. 
-
-During testing, system components were successfully removed and replaced without requiring changes to the overall system design. Following component replacement, the system remained fully operational and continued to perform all required functions without degradation in performance. 
-
-Additionally, the system architecture supported integration of non-essential components without impacting core functionality. This demonstrates that the system design is modular and can be adapted or expanded to support future modifications or additional features. 
-
-These results confirm that the system meets the requirement for modularity and can support maintenance, upgrades, and future development without significant redesign. 
-  - __Field Implementation__: The Field Implementation criterion was classified as a pass, as shown in Table [1]. The system was required to be deployable in an outdoor environment with self-contained power and minimal setup. 
-
-During testing, the system was successfully deployed and operated in outdoor environments under varying conditions. Setup was completed efficiently, and the system achieved operational status shortly after power-on. The system functioned as expected in real-world conditions, including periods of partially clouded sky. 
-
-Figures 3 and 4 show the system deployed in the field, including antenna placement and overall system configuration. The setup demonstrates that the system is compact, portable, and suitable for practical use outside of a controlled laboratory environment. 
-
-The system operated continuously during field deployment without interruption, confirming that it is capable of reliable performance in real-world environments. These results indicate that the system meets the requirements for field implementation and is suitable for portable space weather monitoring applications. 
-  - __Cost Compliance__: The Cost Compliance criterion was classified as a pass, as shown in Table [1]. The system was required to maintain a total cost not exceeding $1,000. 
-
-The total cost of the system was calculated by summing all major subsystem components, including data and storage, power, signal collection and processing, enclosure, and printed circuit board (PCB) fabrication. The cost breakdown is as follows: 
-
-  - Data and Storage: $183.40  
-  - Power: $327.48  
-  - Signal Collection and Processing: $321.66  
-  - Enclosure: $80.67  
-  - PCB: $78.10  
-
-The total system cost was $991.31, which falls within the $1,000 budget constraint. 
-
-It is important to note that this total includes additional components and design features associated with stretch goals. A minimal implementation of the system, focused solely on core functionality, could be reproduced at a lower cost. This indicates that the system design is not only within budget but also scalable and accessible for future users with varying resource constraints. 
-
-These results confirm that the system meets the cost compliance requirement while maintaining flexibility for cost optimization and broader usability. 
-  - __Documentation/Replicability__: The Documentation and Replicability criterion was classified as a pass, as shown in Table [1]. The system was required to be supported by complete and clear documentation sufficient for replication without requiring undocumented steps. 
-
-To support this requirement, all project materials were organized and maintained within a centralized GitHub repository. The repository includes structured documentation covering all aspects of the system design, implementation, and testing. Key documents include the project proposal, conceptual design, detailed subsystem designs (data and storage, power system, RF module and antenna, enclosure, and PCB interconnections), as well as experimental analysis. 
-
-In addition to hardware and system design documentation, the repository contains a dedicated README file that provides an overview of the project and guidance for navigating the available resources. A separate software section is also included to document all code written for the system. 
-
-The repository further includes supporting materials such as electrical design files, 3D models, and organized meeting records, providing a comprehensive record of system development. This level of organization ensures that all necessary information is accessible and logically structured for future users. 
-
-The completeness and organization of the documentation indicate that the system can be replicated by another user without requiring additional clarification or undocumented assumptions. These results confirm that the project meets the requirements for documentation and replicability. 
+- __Documentation/Replicability__: The Documentation and Replicability criterion was classified as a pass, as shown in Table [1]. The system was required to be supported by complete documentation sufficient for replication. All project materials were organized within a centralized GitHub repository, including design documentation, subsystem descriptions, and experimental analysis. A README file provides guidance for navigating the repository, and a dedicated software section documents all code written for the system. These materials ensure that the system can be replicated without requiring undocumented steps.
 
 
 ## Statement of Contributions
