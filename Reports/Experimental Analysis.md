@@ -124,6 +124,21 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 
 - __Power System Performance__: The Power System Performance criterion was classified as a pass, as shown in Table [1]. The system was required to maintain continuous operation while providing stable power and successfully transitioning between power sources. During testing, the system operated continuously for the full duration while powered by battery and external sources. Transitions between power inputs were completed without interruption, system reset, or data loss. These results confirm that the power subsystem provides reliable and stable operation under varying conditions.
 
+<div align="center">
+  <img src="IMAGE_12V_URL" alt="12V Rail" width="700">
+  <p><strong>Figure 2:</strong> 12V Rail During Operation</p>
+</div>
+
+<div align="center">
+  <img src="IMAGE_5V_URL" alt="5V Rail" width="700">
+  <p><strong>Figure 3:</strong> 5V Rail During Operation</p>
+</div>
+
+<div align="center">
+  <img src="IMAGE_3V3_URL" alt="3.3V Rail" width="700">
+  <p><strong>Figure 4:</strong> 3.3V Rail During Operation</p>
+</div>
+
 - __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for at least 24 hours without loss, corruption, or storage overflow. During testing, data was logged continuously with no missing timestamps or corrupted files. Figure [X] shows data storage over a representative two-hour interval, where a steady increase in storage indicates continuous logging with no interruptions. Storage capacity was sufficient for the full duration of testing, confirming reliable data collection.
 
 - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
