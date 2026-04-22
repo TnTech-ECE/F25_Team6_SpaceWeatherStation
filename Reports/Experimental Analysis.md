@@ -150,13 +150,16 @@
 
 - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
 
-- __Field Implementation__: The Field Implementation criterion was classified as a pass, as shown in Table [1]. The system was required to be deployable in an outdoor environment with minimal setup. During testing, the system was successfully deployed and operated outdoors under varying conditions, including partially clouded skies. Figures [3] and [4] show the deployed system and antenna configuration. The system operated continuously without interruption, demonstrating its suitability for real-world field applications.
+- __Field Implementation__: The Field Implementation criterion was classified as a pass, as shown in Table [1]. The system was required to be deployable in an outdoor environment with minimal setup. During testing, the system was successfully deployed and operated outdoors under varying conditions, including partially clouded skies. Figure 6 shows the deployed system and antenna configuration. The system operated continuously without interruption, demonstrating its suitability for real-world field applications.
 
-<div style="display: flex; justify-content: space-between;">
+<div align="center">
 
-<img src="https://hackmd.io/_uploads/Hy_R-8I6-l.jpg" alt="Left Image" width="48%">
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="https://hackmd.io/_uploads/Hy_R-8I6-l.jpg" alt="Field Setup 1" width="45%">
+    <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" width="45%">
+  </div>
 
-<img src="RIGHT_IMAGE_URL_HERE" alt="Right Image" width="48%">
+  <p><strong>Figure 6:</strong> Two Examples of Field Implementation</p>
 
 </div>
 
