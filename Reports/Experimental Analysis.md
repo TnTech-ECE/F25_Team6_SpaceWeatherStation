@@ -130,12 +130,12 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 </div>
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
+  <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700"> 
   <p><strong>Figure 3:</strong> 5V Rail Voltage During Operation</p>
 </div>
 
 <div align="center">
-  <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700">
+  <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
   <p><strong>Figure 4:</strong> 3.3V Rail Voltage During Operation</p>
 </div>
 - __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for at least 24 hours without loss, corruption, or storage overflow. During testing, data was logged continuously with no missing timestamps or corrupted files. Figure [X] shows data storage over a representative two-hour interval, where a steady increase in storage indicates continuous logging with no interruptions. Storage capacity was sufficient for the full duration of testing, confirming reliable data collection.
