@@ -23,7 +23,7 @@ This document is designed to define the measures of success for the Personal Spa
   - __Cost Compliance__: Total system cost remaining within the $1,000 budget constraint.
   - __Documentation/Replicability__: Completeness and clarity of documentation such that the system can be reproduced by another user. 
 
-- **Measures of Success**:
+- **Measures of Success**: The following criteria establish the key performance metrics used to evaluate the effectiveness of the prototype.
 
   - __Dual-frequency Reception Performance__: Successful operation requires continuous reception and logging of both L1 and L5 signals for at least 95% of the test duration during each trial. 
   - __TEC Measurement Accuracy__: The system shall produce TEC estimates with a mean percent error less than or equal to 15% when compared to time-aligned reference TEC data.
@@ -50,7 +50,7 @@ This document is designed to define the measures of success for the Personal Spa
 
 ## Conducting Experiments
 
-- **Procedure**
+- **Procedure**: The following steps outline how each performance criterion was tested and evaluated.
   - __Dual-frequency Reception Performance__: Position the dual tuned antenna in an open-sky environment. Monitor the receiver output for UBX data packets and verify that both L1 and L5 signals are present. Confirm that TEC values are consistently computed.  
   - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean error, standard deviation, and percentage error.
   - __Signal Quality__: Record the UBX data stream while tracking GNSS satellites. Extract and log carrier-to-noise density ratio values over the test period. 
@@ -74,7 +74,7 @@ This document is designed to define the measures of success for the Personal Spa
   - __Cost Compliance__: Record total system cost.
   - __Documentation/Replicability__: Record completeness and clarity of documentation.
 
-- **Trials**: 
+- **Trials**: The following outlines the frequency and number of trials conducted for each test category to ensure consistent and repeatable results.
    -  __Dual-frequency Reception Performance__: Conduct at least three trials in an open-sky environment. In each trial, verify that both L1 and L5 signals are consistently received and logged over a continuous 30-minute interval.
   - __TEC Measurement Accuracy__: Perform a minimum of three trials using time-aligned system data and reference RINEX datasets. Each trial will span a minimum of 30 minutes, and computed vTEC values will be compared against reference values to evaluate accuracy.
   - __Signal Quality__: Record carrier-to-noise density ratio over at least three separate trials, each lasting a minimum of 30 minutes. Trials should be conducted at different times of day to account for satellite geometry variations.
