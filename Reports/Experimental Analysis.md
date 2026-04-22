@@ -159,7 +159,7 @@
     <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" style="height: 400px; object-fit: cover;">
   </div>
 
-  <p><strong>Figure X:</strong> Two Examples of Field Implementation</p>
+  <p><strong>Figure 6:</strong> Two Examples of Field Implementation</p>
 
 </div>
 
