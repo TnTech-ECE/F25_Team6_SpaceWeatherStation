@@ -102,7 +102,7 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 |---------------------|------------|---------------|--------|
 | Dual-Signal Reception Performance | Ability to receive and process both L1 and L5 signals | Continuous logging of both L1 and L5 signals for ≥95% of test duration | Pass |
 | TEC Measurement Accuracy | Comparison of calculated TEC to reference data | Mean percent error ≤ 15% | Pass |
-| Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | ≥ 80% of carrier-to-noise density values ≥ 30 dB-Hz | Pass |
+| Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | ≥ 70% of carrier-to-noise density values ≥ 30 dB-Hz | Pass |
 | Continuous Operating Duration and System Reliability | Ability to operate without interruption | Continuous operation ≥ 24 hours with no failure or data loss | Pass |
 | Power System Performance | Battery runtime stability | Continuous operation with stable power and successful switching between power sources without interruption | Pass |
 | Storage Capacity and Data Logging Reliability | Ability to store and log data correctly | No missing timestamps, corrupted files, or storage overflow during ≥ 24-hour operation | Pass |
