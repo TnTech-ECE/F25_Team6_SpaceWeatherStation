@@ -67,7 +67,7 @@ This document is designed to define the measures of success for the Personal Spa
   - __TEC Measurement Accuracy__: Record time-aligned vTEC values from both the system and the reference dataset. Compute per-epoch error (TECU) and document statistical metrics including mean error and standard deviation.
   - __Signal Quality__: Record carrier-to-noise density ratio values in dB-Hz for each tracked satellite, along with timestamps and satellite identifiers. Data shall be logged at a consistent rate.
   - __Continuous Operating Duration and System Reliability__: Record total runtime and any system interruptions, failures, or resets.
-  - __Power System Performance__: Record system operation duration, battery performance, and successful transitions between power sources.
+  - __Power System Performance__: Record system operation duration, battery performance, and successful transitions between power sources. Additionally, monitor voltage stability across regulated rails.
   - __Storage Capacity and Data Logging Reliability__: Verify completeness and integrity of logged data, including timestamps and file consistency.  
   - __Modularity and Expandability__: Record results of component replacement and integration of additional modules. 
   - __Field Implementation__: Record deployment conditions and successful system operation in outdoor environments.
