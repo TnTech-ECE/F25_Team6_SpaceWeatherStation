@@ -160,4 +160,8 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 
 ## Statement of Contributions
 
-Each team member must contribute meaningfully to the experimental analysis and document their contributions clearly in this section. Contributions should be recorded individually, and one team member may not document contributions on behalf of another. Each team member must clearly outline their involvement in experiment design, execution, data analysis, and reporting. By submitting this report, the team collectively certifies the accuracy and completeness of each member's stated contributions.
+Jack Bender: Modularity and Expandability, Documentaion/Replicability
+Keneth Creamer-Harris: Power System Performance, Documentaion/Replicability
+Blake Hudson: Storage Capacity and Data Logging Reliability, Documentaion/Replicability
+Nolan Magee: Field Implementation, Cost Compliance, Documentaion/Replicability 
+Jackson Taylor: Dual-Frequency Reception Performance, TEC Measurement Accuracy, Signal Quality, Documentaion/Replicability
