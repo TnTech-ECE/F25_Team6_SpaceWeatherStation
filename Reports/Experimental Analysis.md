@@ -160,7 +160,7 @@ Based on the results, conclusions were drawn regarding the effectiveness of the 
 
 ## Statement of Contributions
 
-Jack Bender: Modularity and Expandability, Documentaion/Replicability
+Jack Bender: Modularity and Expandability, Documentaion/Replicability, Report Preperation
 
 Keneth Creamer-Harris: Power System Performance, Documentaion/Replicability
 
