@@ -98,7 +98,18 @@ Overall system performance was evaluated by examining both individual criteria a
 
 Based on the results, conclusions were drawn regarding the effectiveness of the system design, its readiness for field deployment, and its ability to meet the intended performance requirements. Areas of strong performance and areas requiring improvement were identified to guide future development and refinement. 
 
-
+| Evaluation Criterion | Description | Success Metric | Result |
+|---------------------|------------|---------------|--------|
+| Dual-Signal Reception Performance | Ability to receive and process both L1 and L5 signals | Continuous logging of both L1 and L5 signals for ≥95% of test duration | Pass |
+| TEC Measurement Accuracy | Comparison of calculated TEC to reference data | Mean percent error ≤ 15% | Marginal |
+| Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | ≥ 80% of carrier-to-noise density values ≥ 30 dB-Hz | Fail |
+| Continuous Operating Duration and System Reliability | Ability to operate without interruption | Continuous operation ≥ 24 hours with no failure or data loss | Pass |
+| Power System Performance | Battery runtime stability | Continuous operation with stable power and successful switching between power sources without interruption | Pass |
+| Storage Capacity and Data Logging Reliability | Ability to store and log data correctly | No missing timestamps, corrupted files, or storage overflow during ≥ 24-hour operation | Pass |
+| Modularity and Expandability | Ease of component replacement or upgrade | Components can be replaced or upgraded without major redesign, and system remains operational after replacement | Pass |
+| Field Implementation | Ease of setup and outdoor operation | Successful setup and operation outdoors and grid independent | Pass |
+| Cost Compliance | Total prototype cost | Total cost ≤ $1,000 | Pass |
+| Documentation and Replicability | Ability to reproduce system | Documentation is complete, clear, and contains no missing or ambiguous steps | Pass |
 
 ## Statement of Contributions
 
