@@ -154,12 +154,12 @@
 
 <div align="center">
 
-  <div style="display: flex; justify-content: center; gap: 10px;">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
     <img src="https://hackmd.io/_uploads/Hy_R-8I6-l.jpg" alt="Field Setup 1" width="45%">
     <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" width="45%">
   </div>
 
-  <p><strong>Figure 6:</strong> Two Examples of Field Implementation</p>
+  <p><strong>Figure X:</strong> Two Examples of Field Implementation</p>
 
 </div>
 
