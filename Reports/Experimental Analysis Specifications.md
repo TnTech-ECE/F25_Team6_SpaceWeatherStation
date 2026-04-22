@@ -42,9 +42,9 @@ This document is designed to define the measures of success for the Personal Spa
       - __Mitigation Strategy__: Conduct testing under clear sky conditions when possible. Document environmental conditions during each trial and compare results collected under similar conditions.
   - __Satellite Geometry Differences__: Variations in the number and position of visible satellites that influence signal quality and measurement accuracy.
       - __Mitigation Strategy__: Record the number and general position of tracked satellites during each trial and perform multiple trials at different times to account for variations in satellite availability.
-  -__Receiver Signal Quality Limitations__: Variations in carrier to noise values or signal loss that reduce measurement reliability and impact TEC accuracy
+  - __Receiver Signal Quality Limitations__: Variations in carrier to noise values or signal loss that reduce measurement reliability and impact TEC accuracy
       - __Mitigation Strategy__: Monitor carrier to noise values during operation; flag data collected below a defined threshold and exclude this data from analysis while retaining it for record-keeping.
-  -__Setup Differences__: Inconsistencies in antenna placement, orientation, or system setup that may influence signal reception and results. 
+  - __Setup Differences__: Inconsistencies in antenna placement, orientation, or system setup that may influence signal reception and results. 
       - __Mitigation Strategy__: Maintain consistent antenna placement and orientation across trials whenever possible. Additionally, perform controlled variations in antenna placement to evaluate the system’s sensitivity to setup differences and ensure consistent comparison between trials.
   
 
