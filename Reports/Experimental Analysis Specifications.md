@@ -50,60 +50,53 @@ This document is designed to define the measures of success for the Personal Spa
 
 ## Conducting Experiments
 
-When carrying out experiments:
+- **Procedure**
+  - __Dual-frequency Reception Performance__: Position the dual tuned antenna in an open-sky environment. Monitor the receiver output for UBX data packets and verify that both L1 and L5 signals are present. Confirm that TEC values are consistently computed.  
+  - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean error, standard deviation, and percentage error.
+  - __Signal Quality__: Record the UBX data stream while tracking GNSS satellites. Extract and log carrier-to-noise density ratio values over the test period. 
+  - __Continuous Operating Duration and System Reliability__: Operate the system continuously for a minimum of 24 hours while monitoring for system failures, resets, or interruptions. 
+  - __Power System Performance__: Operate the system for a minimum of 24 hours using battery power. Transition between outlet power and solar input during operation and verify uninterrupted functionality. 
+  - __Storage Capacity and Data Logging Reliability__: Operate the system continuously while recording GNSS data. Monitor storage usage and verify that all logged data is complete and timestamped correctly. 
+  - __Modularity and Expandability__: Demonstrate removal and replacement of key system components. Integrate a non-essential component to verify system expandability. 
+  - __Field Implementation__: Deploy and operate the system in multiple outdoor locations for a minimum of 24 hours per test.
+  - __Cost Compliance__: Document all system component costs and verify total cost.
+  - __Documentation/Replicability__: Compile all required documentation including schematics, software setup, and operating procedures.
 
-- Carefully adhere to the established experimental procedures.
-- Conduct each trial consistently to ensure reliable and comparable results.
-- Record all data accurately and methodically.
-- Organize your data clearly, using appropriate formats such as tables, charts, or graphs for ease of analysis.
-
-
+   - **Data Collection**: For the following categories, pass or fail results will be stored in a System Performance Evaluation Table [1].
+   -  __Dual-frequency Reception Performance__: Confirm that L1 and L5 frequencies are occurring in the UBX data stream, and that TEC values are consistently computed. 
+  - __TEC Measurement Accuracy__: Record time-aligned vTEC values from both the system and the reference dataset. Compute per-epoch error (TECU) and document statistical metrics including mean error and standard deviation.
+  - __Signal Quality__: Record carrier-to-noise density ratio values in dB-Hz for each tracked satellite, along with timestamps and satellite identifiers. Data shall be logged at a consistent rate.
+  - __Continuous Operating Duration and System Reliability__: Record total runtime and any system interruptions, failures, or resets.
+  - __Power System Performance__: Record system operation duration, battery performance, and successful transitions between power sources.
+  - __Storage Capacity and Data Logging Reliability__: Verify completeness and integrity of logged data, including timestamps and file consistency.  
+  - __Modularity and Expandability__: Record results of component replacement and integration of additional modules. 
+  - __Field Implementation__: Record deployment conditions and successful system operation in outdoor environments.
+  - __Cost Compliance__: Record total system cost.
+  - __Documentation/Replicability__: Record completeness and clarity of documentation.
+ 
+  - **Trials**: 
+   -  __Dual-frequency Reception Performance__: Conduct at least three trials in an open-sky environment. In each trial, verify that both L1 and L5 signals are consistently received and logged over a continuous 30-minute interval.
+  - __TEC Measurement Accuracy__: Perform a minimum of three trials using time-aligned system data and reference RINEX datasets. Each trial will span a minimum of 30 minutes, and computed vTEC values will be compared against reference values to evaluate accuracy.
+  - __Signal Quality__: Record carrier-to-noise density ratio over at least three separate trials, each lasting a minimum of 30 minutes. Trials should be conducted at different times of day to account for satellite geometry variations.
+  - __Continuous Operating Duration and System Reliability__: Conduct at least one full-duration trial of 24 hours. Additional trials may be performed if system instability is observed. Monitor for interruptions, resets, or data loss.
+  - __Power System Performance__: Perform at least three trials involving transitions between power sources (battery, outlet, and solar input). Each trial should include a minimum of one complete transition cycle while the system remains operational. 
+  - __Storage Capacity and Data Logging Reliability__: Conduct at least three trials involving continuous data logging for a minimum of 24 hours. Verify that no data corruption, loss, or timestamp inconsistencies occur. 
+  - __Modularity and Expandability__: Perform at least three trials involving component replacement or system modification. Demonstrate successful operation after each modification without requiring major redesign. 
+  - __Field Implementation__: Conduct at least three deployment trials in different outdoor locations. Each trial should include full system setup, operation for a minimum of 24 hours, and successful data collection.
+  - __Cost Compliance__: Perform a single comprehensive cost evaluation by documenting all system components. Verify total cost remains within the $1,000 constraint.
+  - __Documentation/Replicability__: Conduct at least one validation review of the project documentation to confirm that another user would have sufficient information to reproduce the system without requiring undocumented steps or assumptions.
 
 ## Analyzing Results and Drawing Conclusions
 
-After completing experiments:
+The results of system testing are summarized in the System Performance Evaluation Table, which evaluates each performance criterion against its defined success metric. This table serves as the primary reference for determining whether the Personal Space Weather Station meets its design objectives. 
 
-- Thoroughly analyze all collected data, paying close attention to consistency and patterns.
-- Evaluate your data to identify potential sources of error, bias, or abnormalities, and address their implications.
-- Clearly articulate conclusions derived from the data, emphasizing evidence-based insights and interpretations.
-- Identify correlations or suggest causal relationships, if supported by data.
+Performance outcomes were categorized as pass, marginal, or fail based on how closely the system met the defined measures of success. A “pass” indicates that the system fully satisfied the success criteria, while a “fail” indicates that the criteria were not met. A “marginal” classification was used in cases where performance approached the required thresholds but did not fully satisfy all conditions. 
 
-If analysis uncovers questions or uncertainties, consider designing and executing additional targeted experiments to refine your understanding.
+In cases where results were classified as marginal or failed to meet the success criteria, contributing factors such as environmental variability, signal quality limitations, or system constraints were considered during analysis. 
 
+Overall system performance was evaluated by examining both individual criteria and the system as a whole. Particular emphasis was placed on TEC measurement accuracy, continuous operation, and data logging reliability, as these represent the core functional objectives of the system. 
 
-
-## Writing the Report
-
-Your deliverable should be a comprehensive markdown document, clearly organized, and uploaded to your project's GitHub repository.
-
-
-
-For each documented experiment, you must include:
-
-1. **Purpose and Justification**:
-
-   - Explain why the experiment was designed, and how it relates to your critical success criteria.
-
-2. **Detailed Procedure**:
-
-   - Outline clearly the methods used, ensuring another team could reproduce your experiment.
-
-3. **Expected Results**:
-
-   - State your initial hypothesis or expectations clearly before conducting experiments.
-
-4. **Actual Results**:
-
-   - Present data collected during the experiments in an organized, easy-to-interpret format (tables, graphs, charts).
-
-5. **Interpretation and Conclusions**:
-
-   - Provide a detailed analysis explaining the significance of the results.
-   - State whether results matched your expectations and explain any discrepancies.
-
-
-
-When you have complete all of the experiments: clearly summarize whether your experiments demonstrated that your project meets the original success criteria outlined in your conceptual design. If success criteria were not met, discuss the reasons and outline steps for improvement.
+Based on the results, conclusions were drawn regarding the effectiveness of the system design, its readiness for field deployment, and its ability to meet the intended performance requirements. Areas of strong performance and areas requiring improvement were identified to guide future development and refinement. 
 
 
 
