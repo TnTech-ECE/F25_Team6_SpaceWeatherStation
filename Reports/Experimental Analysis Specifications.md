@@ -1,25 +1,27 @@
 # Experimental Analysis
 
-The goal of experimental analysis is to systematically evaluate how well your project meets its critical specifications, constraints, and measures of success. This process consists of three main stages:
+As stated in the conceptual design, Team 6’s prototype objective is to design and implement a low cost, modular prototype system capable of directly measuring ionospheric TEC using dual signal GNSS-based signal observations. The prototype will emphasize accuracy, reliability, and field implementation. It will integrate essential functionality for signal acquisition, system control and processing, data logging, and power management. The system will be optimized for efficient operation in field environments and implemented at a total cost not exceeding $1,000.
+
+This document is designed to define the measures of success for the Personal Space Weather Station, describe the methods of evaluation and verification, and assess how effectively the system meets its critical specifications and performance objectives. This process consists of three main stages: 
 
 1. **Designing Experiments**
 2. **Conducting Experiments**
 3. **Analyzing Results and Drawing Conclusions**
 
-After you are done with experimentation, write a report to document your findings.
-
 ## Designing Experiments
 
-Start by revisiting your conceptual design and clearly identifying the most critical requirements and success criteria impacting your project's overall goals. Collaborate as a team to determine these critical aspects. It is recommended to obtain instructor approval to confirm that these identified criteria are appropriate and sufficient for thorough evaluation.
+- **Purpose**: Below is a comprehensive list of criteria for defining a successful project and evaluating the effectiveness of the Personal Space Weather Station prototype.  
 
-Clearly define the following aspects for each experiment:
-
-- **Purpose**:
-
-  - Clearly state the exact criteria you intend to measure.
-  - Criteria should align directly with your project's critical requirements or detailed design objectives.
-  - Consider the customer's viewpoint: what features or performance attributes are most important from their perspective?
-  - Anticipate that your instructor may require additional criteria for comprehensive evaluation.
+  - __Dual-frequency Reception Performance__: Ability of the system to consistently receive and process both L1 and L5 GNSS signals required for TEC calculation.
+  - __TEC Measurement Accuracy__: Agreement between the system’s calculated TEC values and a credible reference dataset.
+  - __Signal Quality__: Quality of received GNSS signals, measured using carrier-to-noise density ratio, sufficient for reliable TEC computation.
+  - Continuous Operating Duration and System Reliability: Ability of the system to operate continuously for extended durations without crashes, resets, or data loss.
+  - __Power System Performance__: Ability of the power subsystem to provide sufficient runtime, maintain stable operation, and safe transition between power sources.
+  - __Storage Capacity and Data Logging Reliability__: Ability to store high-rate GNSS data without running out of space and to record complete, timestamped data without corruption or loss.
+  - __Modularity and Expandability__: Ease with which system components can be replaced, upgraded, or expanded without requiring major redesign.
+  - __Field Implementation__: Ability to deploy, operate, and maintain the system in real-world outdoor environments with minimal setup.
+  - __Cost Compliance__: Total system cost remaining within the $1,000 budget constraint.
+  - __Documentation/Replicability__: Completeness and clarity of documentation such that the system can be reproduced by another user. 
 
 - **Procedure**:
 
