@@ -15,7 +15,7 @@ This document is designed to define the measures of success for the Personal Spa
   - __Dual-frequency Reception Performance__: Ability of the system to consistently receive and process both L1 and L5 GNSS signals required for TEC calculation.
   - __TEC Measurement Accuracy__: Agreement between the system’s calculated TEC values and a credible reference dataset.
   - __Signal Quality__: Quality of received GNSS signals, measured using carrier-to-noise density ratio, sufficient for reliable TEC computation.
-  - Continuous Operating Duration and System Reliability: Ability of the system to operate continuously for extended durations without crashes, resets, or data loss.
+  - __Continuous Operating Duration and System Reliability__: Ability of the system to operate continuously for extended durations without crashes, resets, or data loss.
   - __Power System Performance__: Ability of the power subsystem to provide sufficient runtime, maintain stable operation, and safe transition between power sources.
   - __Storage Capacity and Data Logging Reliability__: Ability to store high-rate GNSS data without running out of space and to record complete, timestamped data without corruption or loss.
   - __Modularity and Expandability__: Ease with which system components can be replaced, upgraded, or expanded without requiring major redesign.
@@ -23,23 +23,23 @@ This document is designed to define the measures of success for the Personal Spa
   - __Cost Compliance__: Total system cost remaining within the $1,000 budget constraint.
   - __Documentation/Replicability__: Completeness and clarity of documentation such that the system can be reproduced by another user. 
 
-- **Procedure**:
+- **Measures of Success**:
 
-  - Provide detailed, step-by-step instructions outlining how the experiment will be conducted.
-  - Include specifics such as required equipment, environmental conditions, and preparation steps.
-  - Procedures should be detailed enough to ensure repeatability and clarity.
+  - __Dual-frequency Reception Performance__: Successful operation requires continuous reception and logging of both L1 and L5 signals for at least 95% of the test duration during each trial. 
+  - __TEC Measurement Accuracy__: The system shall produce TEC estimates with a mean percent error less than or equal to 15% when compared to time-aligned reference TEC data.
+  - __Signal Quality__: At least 70% of recorded carrier-to-noise density ratio values shall be greater than or equal to 30 dB-Hz during nominal operation.
+  - __Continuous Operating Duration and System Reliability__: The system shall operate continuously for a minimum of 24 hours with no system crashes, resets, or data loss events.
+  - __Power System Performance__:  The system shall maintain uninterrupted operation during transitions between power sources (battery, outlet, and solar input), with zero loss of functionality or data during switching events.
+  - __Storage Capacity and Data Logging Reliability__: The system shall record continuous, timestamped data for at least 24 hours with no missing timestamps, corrupted files, or storage overflow.
+  - __Modularity and Expandability__: System components shall be replaceable or upgradable without requiring major redesign, rewiring, or modification to the overall system architecture.
+  - __Field Implementation__: The system shall be deployable by one person in under 15 minutes and achieve operational status within 5 minutes of power-on in an outdoor environment.
+  - __Cost Compliance__: The total cost of all system components shall not exceed $1,000. 
+  - __Documentation/Replicability__: All required documentation (schematics, bill of materials, software setup, and operating procedures) shall be complete and organized such that no critical steps are missing or ambiguous.
 
-- **Data Collection**:
+- **Potential Biases**: Below is a list of potential sources of bias that impact the accuracy and reliability of the experimental results.
 
-  - Identify exactly what data will be recorded during the experiment.
-  - Clearly specify units, methods of measurement, and formats for recording.
-  - Include how frequently data points should be taken and how they will be documented (e.g., in tables, spreadsheets, video recordings).
-
-- **Trials**:
-
-  - Determine and justify how many repetitions of each experiment are necessary.
-  - Multiple trials (e.g., N ≥ 3) are highly recommended to ensure statistical significance and reliability.
-  - Consider using multiple copies or prototypes of your device to facilitate efficient testing and improve the robustness of your data.
+  - __Environmental Variability__: Changes in weather, obstructions, and atmospheric conditions that affect GNSS signal reception and TEC measurements.
+      - __Mitigation Strategy__: Conduct testing under clear sky conditions when possible. Document environmental conditions during each trial and compare results collected under similar conditions.
 
 - **Potential Biases**:
 
