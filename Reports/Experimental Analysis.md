@@ -98,6 +98,8 @@
 
 &nbsp; &nbsp; &nbsp; &nbsp;Based on the results, conclusions were drawn regarding the effectiveness of the system design, its readiness for field deployment, and its ability to meet the intended performance requirements. Areas of strong performance and areas requiring improvement were identified to guide future development and refinement. 
 
+
+**[1]System Performance Evaluation Table**
 | Evaluation Criterion | Description | Success Metric | Result |
 |---------------------|------------|---------------|--------|
 | Dual-Signal Reception Performance | Ability to receive and process both L1 and L5 signals | Continuous logging of both L1 and L5 signals for ≥95% of test duration | Pass |
