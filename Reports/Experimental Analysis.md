@@ -52,7 +52,7 @@
 
 - **Procedure**: The following steps outline how each performance criterion was tested and evaluated.
   - __Dual-frequency Reception Performance__: Position the dual tuned antenna in an open-sky environment. Monitor the receiver output for UBX data packets and verify that both L1 and L5 signals are present. Confirm that TEC values are consistently computed.  
-  - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean error, standard deviation, and percentage error.
+  - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean absolute error (TECU), root mean squared error (TECU), and standard deviation.
   - __Signal Quality__: Record the UBX data stream while tracking GNSS satellites. Extract and log carrier-to-noise density ratio values for each satellite at a 1 Hz rate. For each one-second interval, identify and record whether at least two signals have carrier-to-noise density ratio ≥ 30 dB-Hz. 
   - __Continuous Operating Duration and System Reliability__: Operate the system continuously for a minimum of 24 hours while monitoring for system failures, resets, or interruptions. 
   - __Power System Performance__: Operate the system for a minimum of 24 hours using battery power. Transition between outlet power and solar input during operation and verify uninterrupted functionality. Observe and record voltage behavior across regulated power rails during operation and power source transitions. 
@@ -104,7 +104,7 @@
 |---------------------|------------|---------------|--------|
 | Dual-Signal Reception Performance | Ability to receive and process both L1 and L5 signals | Continuous logging of both L1 and L5 signals for ≥95% of test duration | Pass |
 | TEC Measurement Accuracy | Comparison of calculated TEC to reference data | Mean absolute TEC error (TECU) demonstrating agreement with time-aligned reference data| Fail |
-| Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | 2 values of carrier-to-noise density values ≥ 30 dB-Hz per second  | Pass |
+| Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | For each one-second interval, at least two GNSS signals shall have carrier-to-noise density ratio ≥ 30 dB-Hz  | Pass |
 | Continuous Operating Duration and System Reliability | Ability to operate without interruption | Continuous operation ≥ 24 hours with no failure or data loss | Pass |
 | Power System Performance | Battery runtime stability | Continuous operation with stable power and successful switching between power sources without interruption | Pass |
 | Storage Capacity and Data Logging Reliability | Ability to store and log data correctly | No missing timestamps, corrupted files, or storage overflow during ≥ 24-hour operation | Pass |
