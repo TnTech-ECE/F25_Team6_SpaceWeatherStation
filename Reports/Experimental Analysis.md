@@ -123,7 +123,7 @@
 - __TEC Measurement Accuracy__: The TEC Measurement Accuracy criterion was classified as a fail, as shown in Table [1]. System performance was evaluated based on the agreement between calculated TEC values and time-aligned reference data using absolute error metrics in TEC units. Comparison of the system-generated TEC values with reference data shows that the overall trend is captured, with measured TEC generally following the same overall trend as the reference dataset. However, significant differences in magnitude are present throughout the test period. Quantitative analysis resulted in a mean absolute error of approximately 16.45 TECU, a root mean squared error of 23.82 TECU, and a mean bias error of 7.25 TECU. These values indicate that while the system reflects general TEC variation, the measurements contain substantial error and variability. This is further supported by the error plot, which shows large spikes and outliers across the dataset. These results indicate that the system demonstrates partial agreement with reference data but does not achieve a level of accuracy sufficient for reliable TEC measurement. A primary contributing factor to this performance is the test environment. Data for this trial was collected indoors with the system positioned near a window, allowing only partial satellite visibility. This setup likely introduced signal attenuation and multipath interference, degrading pseudorange measurements and increasing overall error. To address this limitation, a follow-up test is being conducted with the system deployed in an improved outdoor environment over a 24-hour period. This test is expected to improve signal quality, reduce measurement noise, and provide a more accurate evaluation of system performance under proper operating conditions.
 <div align="center">
   <img src="https://hackmd.io/_uploads/rk_s6ePp-e.png" alt="TEC Comparison and Error Plots" width="900">
-  <p><strong>Figure X:</strong> Comparison of System and Reference TEC with Corresponding Error Analysis</p>
+  <p><strong>Figure 2:</strong> Comparison of System and Reference TEC with Corresponding Error Analysis</p>
 </div>
 
 - __Signal Quality__: The Signal Quality criterion was classified as a pass, as shown in Table [1]. Signal quality was evaluated based on the availability of GNSS signals with carrier-to-noise density ratio values greater than or equal to 30 dB-Hz. To assess this, the dataset was filtered to display only signals meeting or exceeding the 30 dB-Hz threshold. The filtered results show that, for each one-second interval, at least two signals maintained carrier-to-noise density values at or above this level, confirming that the system consistently met the defined success metric. However, when the data was filtered using a higher threshold of 40 dB-Hz, very few signals remained. Additionally, filtering out values at or below 30 dB-Hz removed a large portion of the dataset, indicating that many signals were near the minimum acceptable level rather than significantly exceeding it. These results indicate that while the system achieved sufficient signal quality to meet the required criterion, overall signal strength was limited. This reduced signal margin likely contributed to lower TEC measurement accuracy and suggests that improvements in signal reception could enhance system performance.
@@ -134,24 +134,24 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/H1xR3OLTbe.png" width="700">
-  <p><strong>Figure 2:</strong> 12V Rail Voltage During Operation</p>
+  <p><strong>Figure 3:</strong> 12V Rail Voltage During Operation</p>
 </div>
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700"> 
-  <p><strong>Figure 3:</strong> 5V Rail Voltage During Operation</p>
+  <p><strong>Figure 4:</strong> 5V Rail Voltage During Operation</p>
 </div>
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
-  <p><strong>Figure 4:</strong> 3.3V Rail Voltage During Operation</p>
+  <p><strong>Figure 5:</strong> 3.3V Rail Voltage During Operation</p>
 </div>
 
 - __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for a minimum of 24 hours without data loss, corruption, or storage overflow. During testing, the system successfully logged GNSS data continuously throughout the 24-hour interval. Each recorded entry includes both local and UTC timestamps, along with corresponding satellite and measurement parameters, demonstrating consistent and structured data collection. No missing timestamps, gaps in logging, or corrupted entries were observed within the dataset. Figure 5 shows a representative segment of the logged data, illustrating continuous recording across multiple satellites and signal parameters. The presence of sequential timestamps and complete measurement fields confirms that data was captured reliably at the intended rate. Additionally, storage capacity was sufficient to support the full duration of testing without reaching capacity limits or impacting system performance. Logged files remained accessible and properly formatted for post-processing, including TEC computation. These results confirm that the system meets the requirements for reliable data logging and storage and is capable of supporting extended data collection for TEC analysis.  
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/Syl340UaWx.png" alt="GNSS Logged Data" width="900">
-  <p><strong>Figure 5:</strong> Example of Logged GNSS Data Showing Continuous Timestamped Measurements and Satellite Parameters</p>
+  <p><strong>Figure 6:</strong> Example of Logged GNSS Data Showing Continuous Timestamped Measurements and Satellite Parameters</p>
 </div>
 
 - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
@@ -165,7 +165,7 @@
     <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" style="height: 400px; object-fit: cover;">
   </div>
 
-  <p><strong>Figure 6:</strong> Two Examples of Field Implementation</p>
+  <p><strong>Figure 7:</strong> Two Examples of Field Implementation</p>
 
 </div>
 
