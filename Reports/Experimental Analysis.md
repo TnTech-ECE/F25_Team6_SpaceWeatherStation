@@ -133,7 +133,7 @@
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/rkN49OtTZg.png" alt="Outdoor TEC Comparison and Error Plots" width="900">
-    <p><strong>Figure 3:</strong> Outdoor TEC Comparison and Error Analysis</p>
+    <p><strong>Figure 3:</strong> Outdoor TEC Comparison and Error Analysis (Test 2)</p>
   </div>
 
   &nbsp; &nbsp; &nbsp; &nbsp;These results indicate that the system is capable of reliably capturing TEC trends, but currently exhibits a consistent positive bias that limits absolute measurement accuracy. The improvement in stability between tests suggests that measurement setup plays a significant role in system performance, and that remaining error is primarily systematic rather than random.
