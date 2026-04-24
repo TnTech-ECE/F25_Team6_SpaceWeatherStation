@@ -154,22 +154,22 @@
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/H1xR3OLTbe.png" width="700">
-    <p><strong>Figure 3:</strong> 12V Rail Voltage During Operation</p>
+    <p><strong>Figure 4:</strong> 12V Rail Voltage During Operation</p>
   </div>
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700"> 
-    <p><strong>Figure 4:</strong> 5V Rail Voltage During Operation</p>
+    <p><strong>Figure 5:</strong> 5V Rail Voltage During Operation</p>
   </div>
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
-    <p><strong>Figure 5:</strong> 3.3V Rail Voltage During Operation</p>
+    <p><strong>Figure 6:</strong> 3.3V Rail Voltage During Operation</p>
   </div>
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/SJXGgtFa-e.jpg" alt="Solar Power Generation and Consumption Over 7 Days" width="900">
-    <p><strong>Figure 6:</strong> Solar Power Generation and Consumption Over a 7-Day Period</p>
+    <p><strong>Figure 7:</strong> Solar Power Generation and Consumption Over a 7-Day Period</p>
   </div>
 
   Over a multi-day period, the system demonstrated the ability to generate sufficient energy through solar and wall input to support operation. As shown in Figure 6, generated energy meets or exceeds system consumption during multiple intervals, indicating that the system can sustain operation and recharge the battery under typical outdoor conditions.
@@ -180,7 +180,7 @@
 
 <div align="center">
   <img src="https://hackmd.io/_uploads/Syl340UaWx.png" alt="GNSS Logged Data" width="900">
-  <p><strong>Figure 6:</strong> Example of Logged GNSS Data Showing Continuous Timestamped Measurements and Satellite Parameters</p>
+  <p><strong>Figure 8:</strong> Example of Logged GNSS Data Showing Continuous Timestamped Measurements and Satellite Parameters</p>
 </div>
 
 - __Modularity and Expandability__: The Modularity and Expandability criterion was classified as a pass, as shown in Table [1]. The system was required to support component replacement or upgrade without major redesign. During testing, components were successfully removed and replaced without modifying the overall system architecture. The system remained fully operational after replacement, and additional components were integrated without affecting core functionality. These results confirm that the system supports modular design and future expansion.
@@ -194,7 +194,7 @@
     <img src="https://hackmd.io/_uploads/SJlPrCIa-e.jpg" alt="Field Setup 2" style="height: 400px; object-fit: cover;">
   </div>
 
-  <p><strong>Figure 7:</strong> Two Examples of Field Implementation</p>
+  <p><strong>Figure 9:</strong> Two Examples of Field Implementation</p>
 
 </div>
 
