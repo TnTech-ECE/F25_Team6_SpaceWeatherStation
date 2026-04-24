@@ -148,22 +148,33 @@
 
 - __Continuous Operating Duration and System Reliability__: The Continuous Operating Duration and System Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to operate continuously for a minimum of 24 hours without interruption, failure, or data loss. During testing, the system operated for the full 24-hour interval without crashes, resets, or interruptions. All data was recorded successfully with no missing timestamps. These results confirm that the system is capable of stable, long-duration operation.
 
-- __Power System Performance__: The Power System Performance criterion was classified as a pass, as shown in Table [1]. The system was required to support continuous operation for a minimum of 24 hours while maintaining stable power delivery and successfully transitioning between available power sources. During testing, the system operated continuously for the full 24-hour interval without interruption while powered by the battery and external sources. Transitions between power inputs, including outlet and solar power, were completed without system resets, loss of functionality, or interruption to data logging. A voltage ripple of less than 50 mVpp was recorded in both the 5V and 3.3V PCB rails as shown in the table below. During AC charging, a brief 60 Hz voltage ripple can be detected at the barrel jack input, and is successfully filtered. The system maintained stable operation throughout the duration of testing, indicating that the power subsystem provided consistent and reliable energy delivery under varying conditions. The absence of power-related disruptions confirms that the system is capable of sustained operation in field environments requiring flexible and autonomous power management. 
+- __Power System Performance__: - __Power System Performance__: The Power System Performance criterion was classified as a pass, as shown in Table [1]. The system was required to support continuous operation for a minimum of 24 hours while maintaining stable power delivery and successfully transitioning between available power sources. During testing, the system operated continuously for the full 24-hour interval without interruption while powered by the battery and external sources. Transitions between power inputs, including outlet and solar power, were completed without system resets, loss of functionality, or interruption to data logging.
 
-<div align="center">
-  <img src="https://hackmd.io/_uploads/H1xR3OLTbe.png" width="700">
-  <p><strong>Figure 3:</strong> 12V Rail Voltage During Operation</p>
-</div>
+  A voltage ripple of less than 50 mVpp was recorded in both the 5V and 3.3V PCB rails, as shown in Figures 4 and 5. During AC charging, a brief 60 Hz voltage ripple can be detected at the barrel jack input and is successfully filtered before reaching downstream components. The 12V, 5V, and 3.3V rails all maintained stable voltage levels throughout operation, as shown in Figures 3–5, confirming effective regulation across the power distribution system.
 
-<div align="center">
-  <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700"> 
-  <p><strong>Figure 4:</strong> 5V Rail Voltage During Operation</p>
-</div>
+  <div align="center">
+    <img src="https://hackmd.io/_uploads/H1xR3OLTbe.png" width="700">
+    <p><strong>Figure 3:</strong> 12V Rail Voltage During Operation</p>
+  </div>
 
-<div align="center">
-  <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
-  <p><strong>Figure 5:</strong> 3.3V Rail Voltage During Operation</p>
-</div>
+  <div align="center">
+    <img src="https://hackmd.io/_uploads/B1xC2dITZl.png" width="700"> 
+    <p><strong>Figure 4:</strong> 5V Rail Voltage During Operation</p>
+  </div>
+
+  <div align="center">
+    <img src="https://hackmd.io/_uploads/S1l02OITWx.png" width="700">
+    <p><strong>Figure 5:</strong> 3.3V Rail Voltage During Operation</p>
+  </div>
+
+  <div align="center">
+    <img src="https://hackmd.io/_uploads/SJXGgtFa-e.jpg" alt="Solar Power Generation and Consumption Over 7 Days" width="900">
+    <p><strong>Figure 6:</strong> Solar Power Generation and Consumption Over a 7-Day Period</p>
+  </div>
+
+  Over a multi-day period, the system demonstrated the ability to generate sufficient energy through solar and wall input to support operation. As shown in Figure 6, generated energy meets or exceeds system consumption during multiple intervals, indicating that the system can sustain operation and recharge the battery under typical outdoor conditions.
+
+  The system maintained stable operation throughout the duration of testing, indicating that the power subsystem provided consistent and reliable energy delivery under varying conditions. The absence of power-related disruptions confirms that the system is capable of sustained operation in field environments requiring flexible and autonomous power management.
 
 - __Storage Capacity and Data Logging Reliability__: The Storage Capacity and Data Logging Reliability criterion was classified as a pass, as shown in Table [1]. The system was required to record continuous, timestamped data for a minimum of 24 hours without data loss, corruption, or storage overflow. During testing, the system successfully logged GNSS data continuously throughout the 24-hour interval. Each recorded entry includes both local and UTC timestamps, along with corresponding satellite and measurement parameters, demonstrating consistent and structured data collection. No missing timestamps, gaps in logging, or corrupted entries were observed within the dataset. Figure 6 shows a representative segment of the logged data, illustrating continuous recording across multiple satellites and signal parameters. The presence of sequential timestamps and complete measurement fields confirms that data was captured reliably at the intended rate. Additionally, storage capacity was sufficient to support the full duration of testing without reaching capacity limits or impacting system performance. Logged files remained accessible and properly formatted for post-processing, including TEC computation. These results confirm that the system meets the requirements for reliable data logging and storage and is capable of supporting extended data collection for TEC analysis.  
 
