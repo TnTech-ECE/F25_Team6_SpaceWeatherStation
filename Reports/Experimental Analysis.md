@@ -26,7 +26,7 @@
 - **Measures of Success**: The following criteria establish the key performance metrics used to evaluate the effectiveness of the prototype.
 
   - __Dual-frequency Reception Performance__: Successful operation requires continuous reception and logging of both L1 and L5 signals for at least 95% of the test duration during each trial. 
-  - __TEC Measurement Accuracy__: The system shall produce TEC estimates with a mean absolute error (TECU) that demonstrates agreement with time-aligned reference TEC data.
+  - __TEC Measurement Accuracy__: The system shall demonstrate agreement with time-aligned reference TEC data by maintaining mean absolute TEC error within a prototype-appropriate TECU range and consistently follow the same overall TEC trend as the reference dataset
   - __Signal Quality__: For each one-second interval, at least two GNSS signals shall have a carrier-to-noise density ratio greater than or equal to 30 dB-Hz
   - __Continuous Operating Duration and System Reliability__: The system shall operate continuously for a minimum of 24 hours with no system crashes, resets, or data loss events.
   - __Power System Performance__: The system shall maintain uninterrupted operation during transitions between power sources (battery, outlet, and solar input), with zero loss of functionality or data during switching events. It shall also maintain stable regulated voltage rails and effectively filter input power fluctuations. 
@@ -52,7 +52,7 @@
 
 - **Procedure**: The following steps outline how each performance criterion was tested and evaluated.
   - __Dual-frequency Reception Performance__: Position the dual tuned antenna in an open-sky environment. Monitor the receiver output for UBX data packets and verify that both L1 and L5 signals are present. Confirm that TEC values are consistently computed.  
-  - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean absolute error (TECU), root mean squared error (TECU), and standard deviation.
+  - __TEC Measurement Accuracy__: Extract L1 and L5 observations from a credible RINEX dataset corresponding to the same time interval. Compute reference vTEC values and compare them to system-generated vTEC. Calculate statistical metrics including mean absolute error (TECU), root mean squared error (TECU), and mean bias error (TECU).
   - __Signal Quality__: Record the UBX data stream while tracking GNSS satellites. Extract and log carrier-to-noise density ratio values for each satellite at a 1 Hz rate. For each one-second interval, identify and record whether at least two signals have carrier-to-noise density ratio ≥ 30 dB-Hz. 
   - __Continuous Operating Duration and System Reliability__: Operate the system continuously for a minimum of 24 hours while monitoring for system failures, resets, or interruptions. 
   - __Power System Performance__: Operate the system for a minimum of 24 hours using battery power. Transition between outlet power and solar input during operation and verify uninterrupted functionality. Observe and record voltage behavior across regulated power rails during operation and power source transitions. 
@@ -64,7 +64,7 @@
 
 - **Data Collection**: For the following categories, pass or fail results will be stored in a System Performance Evaluation Table [1].
    -  __Dual-frequency Reception Performance__: Confirm that L1 and L5 frequencies are occurring in the UBX data stream, and that TEC values are consistently computed. 
-  - __TEC Measurement Accuracy__: Record time-aligned vTEC values from both the system and the reference dataset. Compute per-epoch error (TECU) and document statistical metrics including mean error and standard deviation.
+  - __TEC Measurement Accuracy__: Record time-aligned vTEC values from both the system and the reference dataset. Compute per-epoch error (TECU) and document statistical metrics including mean absolute error (TECU), root mean squared error (TECU), and mean bias error (TECU).
   - __Signal Quality__: Record carrier-to-noise density ratio values in dB-Hz for each tracked satellite, along with timestamps and satellite identifiers. Data shall be logged at a consistent rate.
   - __Continuous Operating Duration and System Reliability__: Record total runtime and any system interruptions, failures, or resets.
   - __Power System Performance__: Record system operation duration, battery performance, and successful transitions between power sources. Additionally, monitor voltage stability across regulated rails.
@@ -76,7 +76,7 @@
 
 - **Trials**: The following outlines the frequency and number of trials conducted for each test category to ensure consistent and repeatable results.
    -  __Dual-frequency Reception Performance__: Conduct at least three trials in an open-sky environment. In each trial, verify that both L1 and L5 signals are consistently received and logged over a continuous 30-minute interval.
-  - __TEC Measurement Accuracy__: Perform a minimum of three trials using time-aligned system data and reference RINEX datasets. Each trial will span a minimum of 30 minutes, and computed vTEC values will be compared against reference values to evaluate accuracy.
+  - __TEC Measurement Accuracy__: Perform a minimum of three trials using time-aligned system data and reference RINEX datasets. Each trial will span a minimum of 6 hours, and computed vTEC values will be compared against reference values to evaluate accuracy.
   - __Signal Quality__: Record carrier-to-noise density ratio over at least three separate trials, each lasting a minimum of 30 minutes. Trials should be conducted at different times of day to account for satellite geometry variations.
   - __Continuous Operating Duration and System Reliability__: Conduct at least one full-duration trial of 24 hours. Additional trials may be performed if system instability is observed. Monitor for interruptions, resets, or data loss.
   - __Power System Performance__: Perform at least three trials involving transitions between power sources (battery, outlet, and solar input). Each trial should include a minimum of one complete transition cycle while the system remains operational. 
@@ -103,7 +103,7 @@
 | Evaluation Criterion | Description | Success Metric | Result |
 |---------------------|------------|---------------|--------|
 | Dual-Signal Reception Performance | Ability to receive and process both L1 and L5 signals | Continuous logging of both L1 and L5 signals for ≥95% of test duration | Pass |
-| TEC Measurement Accuracy | Comparison of calculated TEC to reference data | Mean absolute TEC error (TECU) demonstrating agreement with time-aligned reference data| Fail |
+| TEC Measurement Accuracy | Comparison of calculated TEC to reference data | Mean absolute TEC error (TECU) and agreement with time-aligned reference TEC trend| Marginal |
 | Signal Quality (Carrier-to-Noise Density Ratio) | Quality of GNSS signals received | For each one-second interval, at least two GNSS signals shall have carrier-to-noise density ratio ≥ 30 dB-Hz  | Pass |
 | Continuous Operating Duration and System Reliability | Ability to operate without interruption | Continuous operation ≥ 24 hours with no failure or data loss | Pass |
 | Power System Performance | Battery runtime stability | Continuous operation with stable power and successful switching between power sources without interruption | Pass |
@@ -120,11 +120,23 @@
   <p><strong>Figure 1:</strong> GNSS Receiver Output Showing Raw Measurements and TEC Computation</p>
 </div>
 
-- __TEC Measurement Accuracy__: The TEC Measurement Accuracy criterion was classified as a fail, as shown in Table [1]. System performance was evaluated based on the agreement between calculated TEC values and time-aligned reference data using absolute error metrics in TEC units. Data collected was compared to measurements distributed by NOAA, recorded by station TN24 in Cookeville, TN. Comparison of the system-generated TEC values with reference data shows that the overall trend is captured, with measured TEC generally following the same overall trend as the reference dataset. However, significant differences in magnitude are present throughout the test period. Quantitative analysis resulted in a mean absolute error of approximately 16.45 TECU, a root mean squared error of 23.82 TECU, and a mean bias error of 7.25 TECU. These values indicate that while the system reflects general TEC variation, the measurements contain substantial error and variability. This is further supported by the error plot, which shows large spikes and outliers across the dataset. These results indicate that the system demonstrates partial agreement with reference data but does not achieve a level of accuracy sufficient for reliable TEC measurement. A primary contributing factor to this performance is the test environment. Data for this trial was collected indoors with the system positioned near a window, allowing only partial satellite visibility. This setup likely introduced signal attenuation and multipath interference, degrading pseudorange measurements and increasing overall error. To address this limitation, a follow-up test is being conducted with the system deployed in an improved outdoor environment over a 24-hour period. This test is expected to improve signal quality, reduce measurement noise, and provide a more accurate evaluation of system performance under proper operating conditions.
+- __TEC Measurement Accuracy__:The TEC Measurement Accuracy criterion was classified as marginal, as shown in Table [1]. System performance was evaluated based on the agreement between calculated TEC values and time-aligned reference data using absolute error metrics in TEC units. Data collected was compared to measurements distributed by NOAA, recorded by station TN24 in Cookeville, TN.
+
+An initial test was conducted with the system positioned indoors near a window. Comparison of the system-generated TEC values with reference data showed that the overall trend was captured; however, significant variability and large deviations in magnitude were observed. Quantitative analysis resulted in a mean absolute error of approximately 16.45 TECU, a root mean squared error of 23.82 TECU, and a mean bias error of 7.25 TECU. The error plot for this test shows large spikes and irregular fluctuations, indicating the presence of noise and instability in the measurements. These results suggest that while the system was able to detect general TEC variation, measurement accuracy was significantly degraded under these conditions.
+
 <div align="center">
   <img width="900" alt="TEC Comparison and Error Plots" src="https://github.com/user-attachments/assets/ff475db8-e5b8-44f8-885d-193fc0a70eef" />
-  <p><strong>Figure 2:</strong> Comparison of System and Reference TEC with Corresponding Error Analysis</p>
+  <p><strong>Figure 2:</strong> Comparison of System and Reference TEC with Corresponding Error Analysis Test 1</p>
 </div>
+
+A follow-up test was conducted in an improved outdoor environment to reduce signal attenuation and multipath interference. In this test, the system demonstrated strong agreement with the overall TEC trend of the reference dataset, with significantly improved stability and reduced variability in the error signal. Quantitative analysis resulted in a mean absolute error of approximately 18.45 TECU, a root mean squared error of 18.77 TECU, and a mean bias error of 18.44 TECU. While the error magnitude remained elevated, the error distribution was more consistent, indicating a reduction in random noise and the presence of a systematic bias.
+
+<div align="center">
+  <img src="https://hackmd.io/_uploads/rkN49OtTZg.png" alt="Outdoor TEC Comparison and Error Plots" width="900">
+  <p><strong>Figure 3:</strong> Outdoor TEC Comparison and Error Analysis</p>
+</div>
+
+These results indicate that the system is capable of reliably capturing TEC trends, but currently exhibits a consistent positive bias that limits absolute measurement accuracy. The improvement in stability between tests suggests that environmental conditions significantly impact performance, and that remaining error is primarily systematic rather than random.
 
 - __Signal Quality__: The Signal Quality criterion was classified as a pass, as shown in Table [1]. Signal quality was evaluated based on the availability of GNSS signals with carrier-to-noise density ratio values greater than or equal to 30 dB-Hz. To assess this, the dataset was filtered to display only signals meeting or exceeding the 30 dB-Hz threshold. The filtered results show that, for each one-second interval, at least two signals maintained carrier-to-noise density values at or above this level, confirming that the system consistently met the defined success metric. However, when the data was filtered using a higher threshold of 40 dB-Hz, very few signals remained. Additionally, filtering out values at or below 30 dB-Hz removed a large portion of the dataset, indicating that many signals were near the minimum acceptable level rather than significantly exceeding it. These results indicate that while the system achieved sufficient signal quality to meet the required criterion, overall signal strength was limited. This reduced signal margin likely contributed to lower TEC measurement accuracy and suggests that improvements in signal reception could enhance system performance.
 
