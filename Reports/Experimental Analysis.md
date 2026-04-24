@@ -138,7 +138,7 @@
 
   &nbsp; &nbsp; &nbsp; &nbsp;These results indicate that the system is capable of reliably capturing TEC trends, but currently exhibits a consistent positive bias that limits absolute measurement accuracy. The improvement in stability between tests suggests that measurement setup plays a significant role in system performance, and that remaining error is primarily systematic rather than random.
 
-- __Signal Quality__: : The Signal Quality criterion was classified as a pass, as shown in Table [1]. The system was required to maintain sufficient signal strength for reliable TEC computation, defined as at least two GNSS signals with carrier-to-noise density ratio (C/N₀) ≥ 30 dB-Hz at each one-second interval.
+- __Signal Quality__: The Signal Quality criterion was classified as a pass, as shown in Table [1]. The system was required to maintain sufficient signal strength for reliable TEC computation, defined as at least two GNSS signals with carrier-to-noise density ratio (C/N₀) ≥ 30 dB-Hz at each one-second interval.
 
   During the initial test, signal quality was inconsistent due to indoor placement of the system near a window. Carrier-to-noise density ratio values frequently dropped below the 30 dB-Hz threshold and exhibited significant variability. While some valid signals were observed, the requirement of maintaining at least two signals above the threshold at each epoch was not consistently met under these conditions.
 
