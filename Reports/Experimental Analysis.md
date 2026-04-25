@@ -203,11 +203,19 @@
 - __Documentation/Replicability__: The Documentation and Replicability criterion was classified as a pass, as shown in Table [1]. The system was required to be supported by complete documentation sufficient for replication. All project materials were organized within a centralized GitHub repository, including design documentation, subsystem descriptions, and experimental analysis. A README file provides guidance for navigating the repository, and a dedicated software section documents all code written for the system. These materials ensure that the system can be replicated without requiring undocumented steps.
 
 ## Conclusion
-&nbsp; &nbsp; &nbsp; &nbsp;The Personal Space Weather Station prototype successfully demonstrated core system functionality, including dual-frequency GNSS reception, continuous operation, reliable data logging, and field deployment capability. The system met all performance criteria related to reliability, modularity, cost, and implementation. However, TEC measurement accuracy did not meet the required performance level. While the system was able to capture general TEC trends, significant magnitude errors were observed, largely due to limitations in signal quality and indoor testing conditions. These results highlight the sensitivity of TEC calculations to signal integrity and measurement environment. Future work will focus on improving signal reception through optimized antenna placement and extended outdoor testing. Additional testing is currently in progress to improve TEC measurement accuracy and better evaluate system performance under ideal operating conditions. With these improvements, the system is expected to achieve higher accuracy and further validate its potential as a low-cost, distributed ionospheric monitoring solution.
+### **Conclusion**
+
+&nbsp; &nbsp; &nbsp; &nbsp;The Personal Space Weather Station prototype successfully demonstrated core system functionality, including dual-frequency GNSS reception, continuous operation, reliable data logging, and effective field deployment. The system met all performance criteria related to reliability, modularity, cost, and implementation, confirming that the overall design is robust and suitable for real-world use.
+
+&nbsp; &nbsp; &nbsp; &nbsp;However, TEC measurement accuracy did not fully meet the desired performance level. While the system was able to consistently capture the overall TEC trend when compared to NOAA reference data from station TN24, a significant positive bias was observed in the measured values. Error analysis indicates that this discrepancy is primarily systematic rather than random, suggesting that calibration of receiver and hardware delays is required to improve absolute TEC accuracy.
+
+&nbsp; &nbsp; &nbsp; &nbsp;Initial testing conditions, particularly indoor placement near a window, negatively impacted signal reception and contributed to measurement variability. Subsequent outdoor testing demonstrated improved signal quality and stability, reinforcing the importance of proper deployment conditions for accurate TEC measurement.
+
+&nbsp; &nbsp; &nbsp; &nbsp;Future work will focus on refining system calibration, improving signal reception through optimized antenna placement, and conducting extended outdoor testing under consistent conditions. With these improvements, the system is expected to achieve greater measurement accuracy while maintaining its strengths as a low-cost, modular, and deployable platform for ionospheric monitoring.
 
 ## Statement of Contributions
 
-Jack Bender: Modularity and Expandability, Documentaion/Replicability, Report Preperation
+Jack Bender: Modularity and Expandability, Documentaion/Replicability, Report Preparation
 
 Keneth Creamer-Harris: Power System Performance, Documentaion/Replicability
 
