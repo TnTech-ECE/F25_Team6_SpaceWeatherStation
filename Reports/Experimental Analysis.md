@@ -203,7 +203,6 @@
 - __Documentation/Replicability__: The Documentation and Replicability criterion was classified as a pass, as shown in Table [1]. The system was required to be supported by complete documentation sufficient for replication. All project materials were organized within a centralized GitHub repository, including design documentation, subsystem descriptions, and experimental analysis. A README file provides guidance for navigating the repository, and a dedicated software section documents all code written for the system. These materials ensure that the system can be replicated without requiring undocumented steps.
 
 ## Conclusion
-### **Conclusion**
 
 &nbsp; &nbsp; &nbsp; &nbsp;The Personal Space Weather Station prototype successfully demonstrated core system functionality, including dual-frequency GNSS reception, continuous operation, reliable data logging, and effective field deployment. The system met all performance criteria related to reliability, modularity, cost, and implementation, confirming that the overall design is robust and suitable for real-world use.
 
