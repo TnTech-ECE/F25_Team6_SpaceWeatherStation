@@ -26,7 +26,7 @@
 - **Measures of Success**: The following criteria establish the key performance metrics used to evaluate the effectiveness of the prototype.
 
   - __Dual-frequency Reception Performance__: Successful operation requires continuous reception and logging of both L1 and L5 signals for at least 95% of the test duration during each trial. 
-  - __TEC Measurement Accuracy__: The system shall demonstrate agreement with time-aligned reference TEC data by maintaining mean absolute TEC error within a prototype-appropriate TECU range and consistently follow the same overall TEC trend as the reference dataset
+  - __TEC Measurement Accuracy__: The system shall demonstrate agreement with time-aligned reference TEC data by maintaining mean absolute TEC error within a prototype-appropriate TECU range and consistently follows the same overall TEC trend as the reference dataset
   - __Signal Quality__: For each one-second interval, at least two GNSS signals shall have a carrier-to-noise density ratio greater than or equal to 30 dB-Hz
   - __Continuous Operating Duration and System Reliability__: The system shall operate continuously for a minimum of 24 hours with no system crashes, resets, or data loss events.
   - __Power System Performance__: The system shall maintain uninterrupted operation during transitions between power sources (battery, outlet, and solar input), with zero loss of functionality or data during switching events. It shall also maintain stable regulated voltage rails and effectively filter input power fluctuations. 
