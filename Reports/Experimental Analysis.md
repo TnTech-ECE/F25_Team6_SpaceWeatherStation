@@ -120,7 +120,7 @@
   <p><strong>Figure 1:</strong> GNSS Receiver Output Showing Raw Measurements and TEC Computation</p>
 </div>
 
-- __TEC Measurement Accuracy__:- __TEC Measurement Accuracy__: The TEC Measurement Accuracy criterion was classified as marginal, as shown in Table [1]. System performance was evaluated based on the agreement between calculated TEC values and time-aligned reference data using absolute error metrics in TEC units. Data collected was compared to measurements distributed by NOAA, recorded by station TN24 in Cookeville, TN.
+- __TEC Measurement Accuracy__:- The TEC Measurement Accuracy criterion was classified as marginal, as shown in Table [1]. System performance was evaluated based on the agreement between calculated TEC values and time-aligned reference data using absolute error metrics in TEC units. Data collected was compared to measurements distributed by NOAA, recorded by station TN24 in Cookeville, TN.
 
   &nbsp; &nbsp; &nbsp; &nbsp;An initial test was conducted with the system positioned indoors near a window. Comparison of the system-generated TEC values with reference data showed that the overall trend was captured; however, significant variability and large deviations in magnitude were observed. Quantitative analysis resulted in a mean absolute error of approximately 16.45 TECU, a root mean squared error of 23.82 TECU, and a mean bias error of 7.25 TECU. The error plot for this test shows large spikes and irregular fluctuations, indicating the presence of noise and instability in the measurements. These results suggest that while the system was able to detect general TEC variation, measurement accuracy was significantly degraded under these conditions.
 
