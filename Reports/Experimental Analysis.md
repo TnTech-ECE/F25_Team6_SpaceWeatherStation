@@ -166,7 +166,7 @@
 
 - __Power System Performance__: The Power System Performance criterion was classified as a pass, as shown in Table [1]. The system was required to support continuous operation for a minimum of 24 hours while maintaining stable power delivery and successfully transitioning between available power sources. During testing, the system operated continuously for the full 24-hour interval without interruption while powered by the battery and external sources. Transitions between power inputs, including outlet and solar power, were completed without system resets, loss of functionality, or interruption to data logging.
 
-  A voltage ripple of less than 50 mVpp was recorded in both the 5V and 3.3V PCB rails, as shown in Figures 5 and 6. During AC charging, a brief 60 Hz voltage ripple can be detected at the barrel jack input and is successfully filtered before reaching downstream components. The 12V, 5V, and 3.3V rails all maintained stable voltage levels throughout operation, as shown in Figures 3–5, confirming effective regulation across the power distribution system.
+  A voltage ripple of less than 50 mVpp was recorded in both the 5V and 3.3V PCB rails, as shown in Figures 7 and 8. During AC charging, a brief 60 Hz voltage ripple can be detected at the barrel jack input and is successfully filtered before reaching downstream components. The 12V, 5V, and 3.3V rails all maintained stable voltage levels throughout operation, as shown in Figures 6–8, confirming effective regulation across the power distribution system.
 
   <div align="center">
     <img src="https://hackmd.io/_uploads/H1xR3OLTbe.png" width="700">
