@@ -142,6 +142,18 @@
 
   &nbsp; &nbsp; &nbsp; &nbsp;Results from these extended trials demonstrated strong repeatability in both the TEC trend tracking and error characteristics observed in Test 2. Across both datasets, the system continued to closely follow the changes in TEC over time from the NOAA reference values while maintaining improved signal stability compared to indoor measurements.
 
+<div align="center">
+    <img src="https://hackmd.io/_uploads/Sk5xSRCTWl.png" alt="TEC Comparison and Error Plots Test 3" width="900">
+    <p><strong>Figure 4:</strong> TEC Comparison and Error Analysis (Test 3)</p>
+</div>
+
+<div align="center">
+    <img src="https://hackmd.io/_uploads/rJcxrCCpZg.png" alt="TEC Comparison and Error Plots Test 4" width="900">
+    <p><strong>Figure 5:</strong> TEC Comparison and Error Analysis (Test 4)</p>
+</div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp;These additional trials confirm that the observed bias is consistent and therefore systematic in nature rather than the result of random noise. Because this bias remains stable across multiple 24-hour datasets, it can be treated as a fixed offset in the system. For practical use, particularly in hobbyist applications, this offset can be compensated for by subtracting the estimated bias (approximately 17–20 TECU) from the measured TEC values. Applying this correction significantly improves absolute accuracy while preserving the system’s ability to reliably track TEC variation.
+
 - __Signal Quality__: The Signal Quality criterion was classified as a pass, as shown in Table [1]. The system was required to maintain sufficient signal strength for reliable TEC computation, defined as at least two GNSS signals with carrier-to-noise density ratio (C/N₀) ≥ 30 dB-Hz at each one-second interval.
 
   During the initial test, signal quality was inconsistent due to indoor placement of the system near a window. Carrier-to-noise density ratio values frequently dropped below the 30 dB-Hz threshold and exhibited significant variability. While some valid signals were observed, the requirement of maintaining at least two signals above the threshold at each epoch was not consistently met under these conditions.
