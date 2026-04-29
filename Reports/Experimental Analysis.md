@@ -230,12 +230,12 @@
 
 ## Statement of Contributions
 
-Jack Bender: Modularity and Expandability, Documentaion/Replicability, Report Preparation
+Jack Bender: Modularity and Expandability, Documentation/Replicability, Report Preparation
 
-Keneth Creamer-Harris: Power System Performance, Documentaion/Replicability
+Keneth Creamer-Harris: Power System Performance, Documentation/Replicability
 
-Blake Hudson: Storage Capacity and Data Logging Reliability, Documentaion/Replicability
+Blake Hudson: Storage Capacity and Data Logging Reliability, Documentation/Replicability
 
-Nolan Magee: Field Implementation, Cost Compliance, Documentaion/Replicability 
+Nolan Magee: Field Implementation, Cost Compliance, Documentation/Replicability 
 
-Jackson Taylor: Dual-Frequency Reception Performance, TEC Measurement Accuracy, Signal Quality, Documentaion/Replicability
+Jackson Taylor: Dual-Frequency Reception Performance, TEC Measurement Accuracy, Signal Quality, Documentation/Replicability
