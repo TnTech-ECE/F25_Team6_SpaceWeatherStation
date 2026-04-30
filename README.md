@@ -18,7 +18,17 @@ Overall, this implementation delivers a complete, low-cost (~$1000), field-deplo
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+Several outcomes of this project stand out as particularly impactful and insightful.
+
+One of the most significant results is that the system successfully demonstrated reliable dual-frequency GNSS reception and continuous TEC computation. The system consistently tracked multiple satellites and maintained uninterrupted operation for extended periods (>24 hours), confirming that a low-cost architecture can achieve performance comparable to more expensive research systems in terms of functionality and reliability.
+
+Another key outcome is the system’s ability to accurately capture TEC trends over time. While absolute accuracy showed a consistent bias, the system closely followed the variation and behavior of reference TEC datasets. This is important because it demonstrates that meaningful ionospheric observations can still be made even when calibration is not perfect. The identification of this bias as systematic rather than random is especially valuable, as it suggests that future calibration can significantly improve performance without requiring major hardware changes.
+
+Another interesting outcome is the success of the modular architecture. The system allowed components to be removed, replaced, and expanded without redesigning the overall system. This validates the design philosophy and shows that the platform can evolve over time, supporting future experimentation and upgrades.
+
+From a systems engineering perspective, the power subsystem performance was also notable. The system maintained stable voltage rails and transitioned seamlessly between battery, AC, and solar inputs without interruption. This demonstrates that the design is robust enough for real-world, long-duration field deployments.
+
+Finally, one of the most important outcomes is that the entire system was implemented within the $1000 budget while still meeting nearly all performance requirements. This confirms that high-value scientific instrumentation can be made accessible, supporting the broader goal of distributed, community-driven ionospheric research.
 
 
 ## Project Demonstration & Images
