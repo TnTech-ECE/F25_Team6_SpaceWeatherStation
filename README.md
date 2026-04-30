@@ -33,8 +33,9 @@ Finally, one of the most important outcomes is that the entire system was implem
 
 ## Project Demonstration & Images
 
-![IMG_0876 Large](https://hackmd.io/_uploads/BJzX61-0Ze.jpg)
+More pictures and video demonstration to come...
 
+![IMG_0876 Large](https://hackmd.io/_uploads/BJzX61-0Ze.jpg)
 
 ## About Us
 
