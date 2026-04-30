@@ -6,8 +6,15 @@ Team 6 has developed a low-cost, modular, and replicable prototype capable of me
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+The version of the Personal Space Weather Station developed in this repository is capable of performing end-to-end ionospheric Total Electron Content (TEC) measurement using dual-frequency GNSS signals. At its core, the system receives L1 and L5 satellite signals through a dual-tuned patch antenna and processes them using a dedicated GNSS RF module. These signals are converted into structured data containing pseudorange and carrier phase measurements, which are then used to compute TEC values in real time.
 
+The system supports continuous multi-satellite tracking, allowing it to collect data from up to ~20 GNSS satellites simultaneously. This enables consistent TEC monitoring with sufficient temporal resolution to observe ionospheric variations. The computed TEC values, along with raw GNSS observables and system health data, are logged to a local storage device and can also be accessed through a lightweight web-based interface for visualization and analysis.
+
+A major capability of the system is its ability to operate autonomously in field environments. The hybrid power subsystem allows operation from battery, wall power, or solar input, enabling deployment in both laboratory and remote outdoor settings. The system can sustain continuous operation for at least 24 hours without interruption while maintaining stable data logging and processing.
+
+The architecture is highly modular. A central PCB hub allows easy integration, removal, or replacement of subsystems such as the RF module, computing platform, sensors, and storage. This enables users to expand functionality beyond TEC measurement, including adding environmental sensors or experimenting with additional RF or signal processing modules.
+
+Overall, this implementation delivers a complete, low-cost (~$1000), field-deployable platform capable of contributing meaningful ionospheric data while remaining accessible to students, researchers, and hobbyists.
 
 ## Salient Outcomes
 
