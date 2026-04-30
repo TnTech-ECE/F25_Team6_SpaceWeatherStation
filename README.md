@@ -41,7 +41,20 @@ More pictures and video demonstration to come...
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Jack Bender – Systems Interconnections Subsystem
+Responsible for the design and implementation of the system interconnections architecture. This includes developing the PCB hub and ensuring proper routing of power, data, RF, and control signals between all subsystems. Responsibilities also include standardizing interfaces and connections to maintain modularity, reliability, and ease of expansion.
+
+Kenneth Creamer-Harris – Power Subsystem
+Lead the design and implementation of the power subsystem. Responsibilities include developing a stable and efficient power architecture, integrating battery management, voltage regulation, and AC/solar charging capabilities. This work ensures safe, continuous operation in both laboratory and field environments.
+
+Blake Hudson – Data and Storage Subsystem
+Responsible for the data and storage subsystem. This includes receiving processed GNSS data, implementing accurate timestamping, and ensuring reliable long-term storage. Additional responsibilities include designing and managing the system’s server interface for data visualization, access, and user interaction.
+
+Nolan Magee – Enclosure Subsystem
+Responsible for the design and implementation of the enclosure subsystem. This work focuses on selecting and configuring a protective housing that meets environmental requirements while maintaining accessibility, thermal management, and structural integrity for field deployment.
+
+Jackson Taylor – Signal Acquisition and Processing
+Responsible for GNSS signal acquisition and processing. Responsibilities include interfacing with the RF module, extracting GNSS measurements, and supporting TEC computation. This role ensures reliable signal reception and contributes to overall system performance and measurement accuracy.
 
 ### Faculty Supervisor
 
