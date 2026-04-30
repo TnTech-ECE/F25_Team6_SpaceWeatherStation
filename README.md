@@ -56,7 +56,7 @@ Responsible for the design and implementation of the enclosure subsystem. This w
 Jackson Taylor – Signal Acquisition and Processing
 Responsible for GNSS signal acquisition and processing. Responsibilities include interfacing with the RF module, extracting GNSS measurements, and supporting TEC computation. This role ensures reliable signal reception and contributes to overall system performance and measurement accuracy.
 
-### Faculty Supervisor
+### Faculty Advisor
 
 Mr. Owen O'Connor
 
