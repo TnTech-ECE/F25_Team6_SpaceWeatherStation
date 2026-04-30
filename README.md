@@ -62,7 +62,11 @@ Mr. Owen O'Connor
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The primary stakeholder for this project is Dr. Jeffrey Austen, a retired Tennessee Tech professor with a continued interest in supporting engineering education and innovation. Dr. Austen is particularly interested in ionospheric Total Electron Content (TEC) and has recognized that access to TEC measurement data is currently limited due to the cost and complexity of existing systems. This project directly addresses that gap by developing a low-cost, accessible solution for TEC data collection.
+
+Beyond the primary stakeholder, this project is expected to impact a broader group of users. These include students, educators, researchers, and hobbyists interested in GNSS systems, space weather, and signal processing. By lowering the barrier to entry, the system enables greater participation in ionospheric research and hands-on learning.
+
+Additionally, the project contributes to the larger scientific community by supporting the potential for distributed data collection. Increased accessibility to TEC measurement systems can improve data availability, which may enhance understanding of ionospheric behavior and its effects on communication and navigation systems.
 
 ### Recognitions
 
