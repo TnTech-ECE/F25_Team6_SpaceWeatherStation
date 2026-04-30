@@ -1,8 +1,8 @@
-# Personal Space Weather Station
+# What The TEC (Personal Space Weather Station)
 
 ## Executive Summary
 
-Team 6 is developing a low-cost, modular, and replicable prototype capable of measuring total electron content (TEC) from dual-frequency GNSS signals. The system integrates an antenna, receiver, processing unit, and expandable modules within a single housing compartment to support mobility, while remaining under $1,000. Propagation of the prototype is supported by thorough documentation for seamless hobbyist replication. By normalizing access to TEC measurement, the project expands opportunities for education, grassroots research, and innovation. Moreover, it contributes to a distributed global database of ionospheric conditions, enhancing collective understanding of space weather and its implications for modern infrastructure.
+Team 6 has developed a low-cost, modular, and replicable prototype capable of measuring total electron content (TEC) from dual-frequency GNSS signals. The system integrates an antenna, receiver, processing unit, and expandable modules within a single housing compartment to support mobility, while remaining under $1,000. Propagation of the prototype is supported by thorough documentation for seamless hobbyist replication. By normalizing access to TEC measurement, the project expands opportunities for education, grassroots research, and innovation. Moreover, it contributes to a distributed global database of ionospheric conditions, enhancing collective understanding of space weather and its implications for modern infrastructure.
 
 ## Capabilities
 
