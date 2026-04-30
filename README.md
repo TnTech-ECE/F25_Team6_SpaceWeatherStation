@@ -33,9 +33,7 @@ Finally, one of the most important outcomes is that the entire system was implem
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
-
-Below the video link show some well-taken, appropriately sized images of the project.
+![IMG_0876 Large](https://hackmd.io/_uploads/BJzX61-0Ze.jpg)
 
 
 ## About Us
