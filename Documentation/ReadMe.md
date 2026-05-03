@@ -44,11 +44,9 @@ Wiring schematics are provided in both PDF format for readability and source for
 
 ### PCB Files
 
-- Location:
-  - Source Files: `Documentation/Electrical/PCB/Sources/`
-  - Gerbers: `Documentation/Electrical/PCB/`
+- Location: `Documentation/Electrical/PCB/`
 
-All PCB designs were created using KiCad. This directory includes all source files required to modify the design, along with Gerber files required for manufacturing.
+All PCB design files are provided as a compressed `.zip` archive within this directory. The archive contains all KiCad source files and Gerber files required for modification and manufacturing.
 
 ---
 
