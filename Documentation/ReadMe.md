@@ -1,74 +1,103 @@
-# What should be in the documentation folder
+# Documentation
 
+This directory contains all final design artifacts, analysis, and supporting materials for the Personal Space Weather Station project. The goal of this documentation is to ensure that the system can be fully understood, evaluated, and reproduced by another user.
+
+Engineering design requires analysis and validation to reduce risk and ensure functionality. The materials provided here demonstrate the design process, system performance, and implementation details.
+
+---
 
 ## Signoffs
 
-An important part of engineering is analysis. Designs must be analyzed to show that the subsystem is **likely** to function (sometimes things still don't work). This reduces the overall risk that a client or firm will have wasted money on a solution that was destined to fail. For information about what must be included in each signof file, refer to the readme file in the signoff directory. 
+Signoff documents were completed for each subsystem prior to component selection and ordering. These documents summarize the analysis performed to verify that each subsystem design was likely to function as intended.
 
-A signoff must be completed and approved for each subsystem before the components for the subsystem may be ordered. Each of the signoff documents should be an appropriately named markdown file in the signoff directory. 
+- Location: `Documentation/Signoffs/`
+- Format: Markdown (`.md`)
 
+---
 
-## Final set of prints (final design artifacts)
+## Final Design Artifacts
 
-All schematics and artifacts should be in an appropriate file type. 
+All schematics and design files are included in appropriate formats to support replication and modification.
 
-### 3D Models
+---
 
-Required format: 
-- .stl
+## 3D Models
 
-3D models should be stored in the proper file type to facilitate editing, viewing, and printing. The best filetype for this is .stl, so all 3d models should be pushed to the repo as stl files. Stl files can be converted to solidworks models or autocad 3d models as necessary, can be 3d printed easily, and are 3d viewable natively in github. File (Documentation/3D Models)
+- Location: `Documentation/3D Models/`
+- Format: `.stl`
 
-Every constructed system of the project must have a complete (buildable) 3d model schematic.
+3D models are provided for all constructed components of the system. These models are suitable for viewing, editing, and 3D printing.
 
+---
+
+## Electrical Documentation
 
 ### Wiring Schematics
 
-Required software: 
-- autocad or autocad electrical
+- Location:
+  - PDFs: `Documentation/Electrical/Schematics/`
+  - Source Files: `Documentation/Electrical/Schematics/Sources/`
 
-For wiring schematics, use autocad or autocad electrical. All the source files must be included in the github repo along with pdf versions of all schematics. File (Documentation/Electrical/Schematics/Sources)
+Wiring schematics are provided in both PDF format for readability and source format for modification. These schematics represent complete, buildable electrical systems.
 
-Every electrical system must have a complete (buildable) pdf circuit schematic. File (Documentation/Electrical/Schematics)
+---
 
-Autocad is freely available to students with versions for mac, windows, and linux.
+### PCB Files
 
-#### PCB files
+- Location:
+  - Source Files: `Documentation/Electrical/PCB/Sources/`
+  - Gerbers: `Documentation/Electrical/PCB/`
 
-Required Software:
-- kicad 
+All PCB designs were created using KiCad. This directory includes all source files required to modify the design, along with Gerber files required for manufacturing.
 
-KiCad should be used for all PCB design. All source files must be deposited in the repo. File (Documentation/Electrical/PCB/Sources)
+---
 
-Along with the source files, a complete set of gerber files for each PCB must also be included in the repo. These should be included in a folder called gerber files. File (Documentation/Electrical/PCB)
+## Bill of Materials (BOM)
 
-kiCad is a free and open source software.
+- Location: `Documentation/BOM/`
 
+The final BOM is provided as both an Excel file and a PDF export. It includes all components required to build the system.
 
-## Final BOM
+---
 
-The final version of the BOM should be uploaded as a pdf output of the excel BOM file. The excel BOM file should also be included.
+## Datasheet
 
+- Location: `Documentation/Datasheet/`
 
-## Datasheet 
+The datasheet provides all information necessary for external systems to interface with this project. This includes:
+- Power requirements
+- System interfaces
+- Operational characteristics
+- Summary and interpretation of experimental results
 
-This must give all the information necessary for other systems to interface with your project in the intended manner. This must include the power expectations, interfacing, and compliance.
-	
-This must also include the results from all experimentation and the interpretation of the results.
-  
-  
-  
-  
-## The project poster
+---
 
-Include the project poster
+## Project Poster
 
+- Location: `Documentation/Poster/`
 
-## Detailed photos of the project
+The final project poster used for presentation is included.
 
-Include a folder of a set of detailed photos of the project. File (Documentation/Images)
+---
 
+## Images
 
-## Any additional documents that are appropriate to include
+- Location: `Documentation/Images/`
 
-If there are additional items that are important to understanding and working on or with the project, include them as well. 
+This folder contains detailed photos of the system, including:
+- Assembled system
+- PCB
+- Field deployment setup
+- Subsystems
+
+---
+
+## Additional Documentation
+
+Any additional materials relevant to understanding or extending the project are included in this directory.
+
+---
+
+## Summary
+
+This documentation is intended to provide a complete and organized record of the project, enabling replication, evaluation, and future development.
