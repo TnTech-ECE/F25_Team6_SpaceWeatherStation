@@ -113,7 +113,8 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 **Documentation and Replicability**
 
-- Documentation of the design and build process shall be published, enabling enthusiasts to replicate the system at a cost below $1,000.  
+- Documentation of the design and build process shall be published, enabling enthusiasts to replicate the system.
+- The system shall be replicable for a maximum cost of $1,000.  
 
 ### **Constraints**
 **Regulatory Compliance**
