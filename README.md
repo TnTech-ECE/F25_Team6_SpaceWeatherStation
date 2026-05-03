@@ -70,11 +70,13 @@ Additionally, the project contributes to the larger scientific community by supp
 
 ### Recognitions
 
+We would like to first extend our sincere thanks to our faculty advisor and stakeholders for their guidance, support, and continued involvement throughout the duration of this project.
+
 We would like to thank Conard Murray for allowing us to utilize his lab space for PCB assembly, which was critical to the successful implementation of our hardware.
 
 We also extend our gratitude to the professors at Tennessee Technological University for providing the foundational knowledge and guidance necessary to design and build this system.
 
-Finally, we would like to thank our families for their continued support and encouragement throughout the duration of this project.
+Finally, we would like to thank our families for their continued support and encouragement throughout the duration of this project and our college experience.
 
 ## Repo Organization
 
