@@ -37,6 +37,8 @@ $$
 
 &nbsp; &nbsp; &nbsp; &nbsp;Here, $\rho$ is the distance between the satellite and receiver excluding atmospheric delays and $f$ is the frequency of the delayed signal. From the derivations below, we can see the delay of ionospheric signals is entirely dependent on TEC. Knowing TEC and its characteristics enables more precise predictions of space-related phenomena such as solar activity. Additionally, the errors in radio wave propagation through the ionosphere can be better determined.
 
+&nbsp; &nbsp; &nbsp; &nbsp;While the ionospheric delay is directly proportional to TEC, other sources of error can corrupt its estimation. These include tropospheric delay, satellite and receiver clock biases, multipath effects, and instrumental biases within the GNSS hardware. Additionally, noise and orbital uncertainties can introduce further inaccuracies. To isolate TEC, these effects must be modeled, minimized, or corrected through dual-frequency measurements and calibration techniques.
+
 &nbsp; &nbsp; &nbsp; &nbsp; The following is a derivation of the ionospheric refractive index. If we assume a plane electromagnetic wave traveling along the $x$-axis of the orthogonal coordinate system in the presence of a uniform external magnetic field that makes an angle $\theta$ with the direction of wave propagation, we can find the ionospheric refractive index $n$ using the Appleton-Hartree equation [1].
 
 
