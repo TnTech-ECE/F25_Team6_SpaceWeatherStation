@@ -251,7 +251,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 
 - The system's ability to gather TEC data with minimal deviation from published TEC reference data. 
 
-    - TEC measurements shall be validated against published ionospheric data, with a deviation below 15%. 
+    - TEC measurements shall be validated against published ionospheric data, where the measured data demonstrates agreement to the reference data. 
     - Each set of TEC measurements taken shall be sufficiently large to confirm accuracy. Each set shall span at least 60 minutes of data.  
     - Team 6 is considering capturing a TEC measurement every 3 seconds per viewable satellite.
 - The system’s ability to reliably and accurately gather repeated readings under similar conditions.
