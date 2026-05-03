@@ -4,8 +4,6 @@
 
 This section summarizes key lessons learned during the design, implementation, and testing of the Personal Space Weather Station. It is intended to support future development efforts and enable other users to successfully replicate, modify, and extend the system. The following insights highlight practical considerations, design improvements, and recommendations based on observed system performance.
 
----
-
 ## PCB Design and Assembly
 
 - Redesign the PCB to improve ease of assembly for hobbyists and reduce overall complexity.
@@ -14,8 +12,6 @@ This section summarizes key lessons learned during the design, implementation, a
 - Minimize or eliminate surface-mount (SMD) components, or alternatively provide pre-soldered boards.
 - Include clearly visible on-board status LEDs for power, system state, and debugging.
 - Consider tariffs, availability, and sourcing constraints when selecting components and manufacturing vendors.
-
----
 
 ## Power System
 
@@ -26,14 +22,10 @@ This section summarizes key lessons learned during the design, implementation, a
   - Deployment environment
 - Future designs may benefit from modular battery configurations to support different use cases.
 
----
-
 ## Data Storage and Networking
 
 - Configure the system with a static IP address for the onboard server to improve reliability and simplify remote access.
 - Ensure that network configuration steps are clearly documented for ease of replication.
-
----
 
 ## Data Acquisition and Processing
 
@@ -42,15 +34,11 @@ This section summarizes key lessons learned during the design, implementation, a
 - Reference data in this project was obtained from NOAA station TN24 in Cookeville, TN.
 - Future implementations should support generating reference TEC values directly from raw RINEX files to improve flexibility and independence from external datasets.
 
----
-
 ## Measurement Considerations
 
 - Measurement accuracy is highly sensitive to environmental conditions, antenna placement, and satellite visibility.
 - Sampling rate should be selected with consideration of satellite motion and ionospheric traversal, as low sampling rates can introduce spatial averaging (“blurring”) of TEC measurements.
 - A consistent systematic bias was observed in TEC measurements, indicating the need for calibration of hardware and receiver delays.
-
----
 
 ## Future Work
 
@@ -60,7 +48,6 @@ This section summarizes key lessons learned during the design, implementation, a
 - Conduct additional long-duration outdoor testing under controlled and varying environmental conditions.
 - Further simplify system assembly to improve accessibility for hobbyists, educators, and researchers.
 
----
 
 ## Conclusion
 
