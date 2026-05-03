@@ -39,6 +39,7 @@ This section summarizes key lessons learned during the design, implementation, a
 - Measurement accuracy is highly sensitive to environmental conditions, antenna placement, and satellite visibility.
 - Sampling rate should be selected with consideration of satellite motion and ionospheric traversal, as low sampling rates can introduce spatial averaging (“blurring”) of TEC measurements.
 - A consistent systematic bias was observed in TEC measurements, indicating the need for calibration of hardware and receiver delays.
+- vTEC is not a measurement of the TEC directly above the receiver as initally assumed. It is instead a measurement of TEC in a line through the atmospheric pierce point, where the line is perpendicular to the ground. Thus, averaging all observed vTEC values at a given timestamp from every satellite is not a valid way to compute the TEC in a straight line above the receiver. However, this metric could be used to describe the relative "activeness" of the visible ionosphere at a given time.
 
 ## Future Work
 
@@ -47,7 +48,8 @@ This section summarizes key lessons learned during the design, implementation, a
 - Expand software capabilities to support automated processing of raw GNSS data (e.g., RINEX workflows).
 - Conduct additional long-duration outdoor testing under controlled and varying environmental conditions.
 - Further simplify system assembly to improve accessibility for hobbyists, educators, and researchers.
-- Currently, the rate of satellite measurements for the system is ~1 epoch per second. To increase this rate, the radioModulev3.py program would need to be modified from the polling based method it currently employs to a data stream method. Instead of polling the RF module for every epoch of data, the RF module can be configured to output the required data messages at a set rate, possibly increasing the epoch per second rate above 1 Hz.
+- Currently, the rate of satellite measurements for the system is ~1 epoch per second. To increase this rate, the data collection program would need to be modified from the polling based method it currently employs to a data stream method. Instead of polling the RF module for every epoch of data, the RF module can be configured to output the required data messages at a set rate, possibly increasing the epoch per second rate above 1 Hz. This may allow the device to measure scintillation events in the atmosphere.
+- Using the set of vTEC measurements collected, an added functionality of the device could be added to map the vTEC values in the atmosphere at a given timestamp, effectively creating a heat map of TEC in the visible atmosphere. A python script that could be modified for this purpose is included [here](https://www.google.com/?safe=active). This program maps slant TEC values to a compass graph, but can easily be modified to graph vTEC values.
 
 
 ## Conclusion
