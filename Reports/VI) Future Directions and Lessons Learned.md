@@ -30,7 +30,7 @@ This section summarizes key lessons learned during the design, implementation, a
 ## Data Acquisition and Processing
 
 - Reference TEC data was aligned using Lagrangian interpolation to synchronize datasets.
-- All testing should be conducted outdoors with clear sky visibility. Indoor testing (e.g., near windows) significantly degrades signal quality and measurement accuracy.
+- All testing should be conducted outdoors with adequate exposure to the sky. Indoor testing (e.g., near windows) significantly degrades signal quality and measurement accuracy.
 - Reference data in this project was obtained from NOAA station TN24 in Cookeville, TN.
 - Future implementations should include robust processing of raw RINEX files to generate reference TEC values, as preprocessed external datasets may not be readily available for all locations or time periods.
 
