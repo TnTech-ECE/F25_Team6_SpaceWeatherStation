@@ -58,7 +58,7 @@ Responsible for GNSS signal acquisition and processing. Responsibilities include
 
 ### Faculty Advisor
 
-Mr. Owen O'Connor: Received his Master's of Science in Computer Engineering from Tennessee Technological University in 2025, where he is currently enrolled as a doctoral candidate. His research, conducted under the supervision of Dr. Alouani and Dr. Elfouly, focuses on the development of high-efficiency mobile computing accelerators for machine learning applications. He has published multiple research publications, and hopes to contribute to advancements in assistive and adaptive technologies with his work.
+The faculaty advisor for this project is Mr. Owen O'Connor. He received his Master's of Science in Computer Engineering from Tennessee Technological University in 2025, where he is currently enrolled as a doctoral candidate. His research, conducted under the supervision of Dr. Alouani and Dr. Elfouly, focuses on the development of high-efficiency mobile computing accelerators for machine learning applications. He has published multiple research publications, and hopes to contribute to advancements in assistive and adaptive technologies with his work.
 
 ### Stakeholders
 
