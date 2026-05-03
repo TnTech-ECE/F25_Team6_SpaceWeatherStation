@@ -29,7 +29,7 @@ This section summarizes key lessons learned during the design, implementation, a
 
 ## Data Acquisition and Processing
 
-- Elevation angles for reference vTEC computation were derived from interpolated satellite positions using SP3 ephemeris data (CODE, via NASA CDDIS), as the reference dataset did not include elevation angles.
+- Elevation angles for reference vTEC computation were derived from interpolated satellite positions using SP3 ephemeris data (CODE, via NASA CDDIS), as the reference rinex navigation files did not include elevation angles.
 - All testing should be conducted outdoors with adequate exposure to the sky. Indoor testing (e.g., near windows) significantly degrades signal quality and measurement accuracy.
 - Reference data in this project was obtained from NOAA station TN24 in Cookeville, TN.
 - Future implementations should include robust processing of raw RINEX files to generate reference TEC values, as preprocessed external datasets may not be readily available for all locations or time periods.
@@ -42,11 +42,12 @@ This section summarizes key lessons learned during the design, implementation, a
 
 ## Future Work
 
-- Develop and implement calibration methods to correct for systematic TEC bias.
+- Develop and implement calibration methods to correct for systematic TEC bias, including satellite bias and receiver bias.
 - Improve antenna placement strategies and potentially antenna design to enhance signal quality.
 - Expand software capabilities to support automated processing of raw GNSS data (e.g., RINEX workflows).
 - Conduct additional long-duration outdoor testing under controlled and varying environmental conditions.
 - Further simplify system assembly to improve accessibility for hobbyists, educators, and researchers.
+- Currently, the rate of satellite measurements for the system is ~1 epoch per second. To increase this rate, the radioModulev3.py program would need to be modified from the polling based method it currently employs to a data stream method. Instead of polling the RF module for every epoch of data, the RF module can be configured to output the required data messages at a set rate, possibly increasing the epoch per second rate above 1 Hz.
 
 
 ## Conclusion
