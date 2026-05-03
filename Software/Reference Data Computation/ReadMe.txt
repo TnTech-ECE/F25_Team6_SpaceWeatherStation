@@ -25,32 +25,37 @@ Program Output Files:
     - File containing average vTEC per timestamp. Average vTEC value is computed by averaging vTEC values of all
       satellites at a given timestamp.
     - Used in the compareTECDatav03.py program as the set of reference data.
+      Link to comparison program:
+      https://github.com/TnTech-ECE/F25_Team6_SpaceWeatherStation/blob/main/Software/Compare%20Measured%20Data%20to%20Reference%20Data/compareTECDatav03.py
 
 Dependencies:
-Make sure all relevant python libraries are installed on your device first. Required Python libraries are as follows:
-  pandas
-  numpy
-  sys
-  os
-  warnings
-  matplotlib.pyplot
-  georinex
-  pymap3d
+  Make sure all relevant python libraries are installed on your device first. Required Python libraries are as follows:
+    pandas
+    numpy
+    sys
+    os
+    warnings
+    matplotlib.pyplot
+    georinex
+    pymap3d
 
 Running Program:
-To run this program, set the directories for the files you wish to use in lines 586, 589, and 595 in the main function.
+  To run this program, set the directories for the files you wish to use in lines 586, 589, and 595 in the main function.
+  Also, make sure a modern version of python is installed. This program was written for python 3.
+  To run this file, use the following command:
+  python3 TECFromRinex_OpusV1.py
 
 File Header for more information:
 
-File Name: TECFromRinex_OpusV1.py
-Authors: Kenneth Creamer, Jackson Taylor
-Last Updated: May 3, 2026
-Purpose: Creates a set of vTEC and sTEC csv data from a rinex .26o file.
-Input format: A .26o rinex obeservation file.
-   Uses a .sp3 file for elevation angles preferably. Also intakes
-   a rinex .26n file for elevation angle compuation fallback.
-Output Files: a CSV of all computed data,
-   and a seperate csv of average vTEC per timestamp, which is an average
-   of all vTEC computations for all satellites at each timestamp.
-   To set rinex files to be processed, change directory
-   in lines 586, 589, and 595
+  File Name: TECFromRinex_OpusV1.py
+  Authors: Kenneth Creamer, Jackson Taylor
+  Last Updated: May 3, 2026
+  Purpose: Creates a set of vTEC and sTEC csv data from a rinex .26o file.
+  Input format: A .26o rinex obeservation file.
+     Uses a .sp3 file for elevation angles preferably. Also intakes
+     a rinex .26n file for elevation angle compuation fallback.
+  Output Files: a CSV of all computed data,
+     and a seperate csv of average vTEC per timestamp, which is an average
+     of all vTEC computations for all satellites at each timestamp.
+     To set rinex files to be processed, change directory
+     in lines 586, 589, and 595
