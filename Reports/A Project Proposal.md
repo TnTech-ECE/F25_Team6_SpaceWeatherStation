@@ -126,7 +126,7 @@ Where $f_{N_e}^2 = 80.6 N \, (\text{Hz}^2)$ as a function of electron density $N
 **Operational Guidelines**
 
 - The system shall be designed for passive reception of satellite signals to perform TEC calculations.  
-- The system shall not transmit to satellites or external systems.  
+- The system shall not transmit to any satellites.  
 - The system may transmit collected data to a local host device, such as a personal computer at the deployment site, for storage or further processing.  
 
 **Safety and Environmental Guidelines**
